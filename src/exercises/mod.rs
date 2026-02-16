@@ -32,6 +32,6 @@ pub mod async_rust;
 pub mod threads;
 pub mod polymorphism;
 pub mod smart_pointers;
+pub mod options_result;
 // pub mod generics;
-// pub mod options_result;
-// pub mod enums;
+pub mod enums;
