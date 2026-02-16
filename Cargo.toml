@@ -12,3 +12,7 @@ name = "traits"
 path = "src/bin/traits/bin.rs"
 
 [dependencies]
+tokio = { version = "1.41", features = ["full"] }
+futures = "0.3"
+async-trait = "0.1"
+tokio-util = "0.7"
