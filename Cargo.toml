@@ -3,6 +3,10 @@ name = "Rusts-Basics"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+name = "rust_basics"
+path = "src/lib.rs"
+
 [[bin]]
 name = "traits"
 path = "src/bin/traits/bin.rs"
