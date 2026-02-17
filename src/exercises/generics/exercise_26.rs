@@ -82,7 +82,7 @@ where
 
 impl<'a, P, F, A, B> Parser<'a, B> for Map<P, F, A, B>
 where
-    P: Parser<'a, A>,
+    P: for<'b> Parser<'b, A>,
     F: Fn(A) -> B,
 {
     fn parse(&self, input: &'a str) -> ParseResult<'a, B> {

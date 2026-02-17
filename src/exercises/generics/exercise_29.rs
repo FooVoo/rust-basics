@@ -12,7 +12,7 @@ pub trait Processor {
 }
 
 /// Applies a processor to a string.
-pub fn apply_processor<P>(processor: &P, input: &str) -> &str
+pub fn apply_processor<'a, P>(processor: &P, input: &'a str) -> &'a str
 where
     P: Processor,
 {

@@ -120,7 +120,7 @@ mod tests {
 
     #[test]
     fn test_outcome_map() {
-        let outcome = Outcome::Success(5);
+        let outcome: Outcome<i32, String> = Outcome::Success(5);
         let result = outcome.map(|x| x * 2);
         assert_eq!(result.unwrap_or(0), 10);
     }

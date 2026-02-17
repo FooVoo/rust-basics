@@ -63,7 +63,7 @@ impl<'a, T> MaybeOwned<'a, T> {
     /// Gets a reference to the value regardless of ownership.
     pub fn as_ref(&self) -> &T {
         match self {
-            MaybeOwned::Owned(ref value) => value,
+            MaybeOwned::Owned(value) => value,
             MaybeOwned::Borrowed(value) => value,
         }
     }

@@ -73,7 +73,7 @@ impl<T> Deferred<T> {
     /// Polls the deferred for a value.
     pub fn poll(&mut self) -> Poll<&T> {
         match &self.state {
-            DeferredState::Ready(ref value) => Poll::Ready(value),
+            DeferredState::Ready(value) => Poll::Ready(value),
             _ => Poll::Pending,
         }
     }
