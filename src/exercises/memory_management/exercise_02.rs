@@ -7,18 +7,18 @@
 //! - Avoid ownership transfer when only reading data
 
 /// Calculate the length of a string without taking ownership.
-pub fn calculate_length(s: &String) -> usize {
-    s.len()
+pub fn calculate_length(s: &String) -> usize  {
+    todo!("Calculate the length of a string without taking ownership.")
 }
 
 /// Check if a string starts with a given prefix.
-pub fn starts_with(s: &String, prefix: &str) -> bool {
-    s.starts_with(prefix)
+pub fn starts_with(s: &String, prefix: &str) -> bool  {
+    todo!("Check if a string starts with a given prefix.")
 }
 
 /// Get the first character of a string if it exists.
-pub fn first_char(s: &String) -> Option<char> {
-    s.chars().next()
+pub fn first_char(s: &String) -> Option<char>  {
+    todo!("Get the first character of a string if it exists.")
 }
 
 #[cfg(test)]

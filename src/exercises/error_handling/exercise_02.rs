@@ -8,14 +8,8 @@
 
 /// Validate an age (must be between 0 and 150).
 /// Return Ok(age) if valid, Err with message otherwise.
-pub fn validate_age(age: i32) -> Result<i32, String> {
-    if age < 0 {
-        Err("Age cannot be negative".to_string())
-    } else if age > 150 {
-        Err("Age cannot be greater than 150".to_string())
-    } else {
-        Ok(age)
-    }
+pub fn validate_age(age: i32) -> Result<i32, String>  {
+    todo!("Return Ok(age) if valid, Err with message otherwise.")
 }
 
 #[cfg(test)]

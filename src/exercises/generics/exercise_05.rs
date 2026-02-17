@@ -7,13 +7,13 @@
 //! - Return boolean results from generic functions
 
 /// Checks if two values are equal.
-pub fn are_equal<T: PartialEq>(a: T, b: T) -> bool {
-    a == b
+pub fn are_equal<T: PartialEq>(a: T, b: T) -> bool  {
+    todo!("Check if two values are equal.")
 }
 
 /// Finds if a value exists in a slice.
-pub fn contains<T: PartialEq>(slice: &[T], value: &T) -> bool {
-    slice.iter().any(|item| item == value)
+pub fn contains<T: PartialEq>(slice: &[T], value: &T) -> bool  {
+    todo!("Finds if a value exists in a slice.")
 }
 
 /// A generic struct that checks for equality.
@@ -23,18 +23,18 @@ pub struct EqualityChecker<T: PartialEq> {
 
 impl<T: PartialEq> EqualityChecker<T> {
     /// Creates a new EqualityChecker with a reference value.
-    pub fn new(reference: T) -> Self {
-        EqualityChecker { reference }
+    pub fn new(reference: T) -> Self  {
+        todo!("Create a new EqualityChecker with a reference value.")
     }
 
     /// Checks if the given value equals the reference.
-    pub fn is_equal(&self, value: &T) -> bool {
-        &self.reference == value
+    pub fn is_equal(&self, value: &T) -> bool  {
+        todo!("Check if the given value equals the reference.")
     }
 
     /// Counts how many items in the slice equal the reference.
-    pub fn count_equal(&self, slice: &[T]) -> usize {
-        slice.iter().filter(|item| *item == &self.reference).count()
+    pub fn count_equal(&self, slice: &[T]) -> usize  {
+        todo!("Counts how many items in the slice equal the reference.")
     }
 }
 

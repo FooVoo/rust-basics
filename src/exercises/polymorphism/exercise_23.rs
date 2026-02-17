@@ -17,8 +17,8 @@ pub trait Combinable {
 pub fn process_and_display<T>(item: T) -> String
 where
     T: Display + Clone,
-{
-    format!("Processing: {}", item)
+ {
+    todo!("Function with simple where clause")
 }
 
 /// Function with multiple type parameters and where clause
@@ -26,8 +26,8 @@ pub fn combine_and_display<T, U>(first: T, second: U) -> String
 where
     T: Display + Clone,
     U: Display + Into<String>,
-{
-    format!("{} + {}", first, second.into())
+ {
+    todo!("Function with multiple type parameters and where clause")
 }
 
 /// Function with associated type bounds
@@ -35,12 +35,8 @@ pub fn process_iterator<I>(iter: I) -> Vec<I::Item>
 where
     I: Iterator,
     I::Item: Clone + Display,
-{
-    iter.map(|item| {
-        println!("Item: {}", item);
-        item.clone()
-    })
-    .collect()
+ {
+    todo!("Function with associated type bounds")
 }
 
 /// Function with complex bounds including lifetimes and closures
@@ -49,29 +45,24 @@ where
     T: Clone,
     F: Fn(T) -> U,
     U: Display,
-{
-    items.into_iter().map(|item| {
-        let result = f(item);
-        println!("Transformed: {}", result);
-        result
-    }).collect()
+ {
+    todo!("Function with complex bounds including lifetimes and closures")
 }
 
 /// Function requiring both Add and Default
 pub fn sum_and_scale<T>(items: &[T], scale: T) -> T
 where
     T: Add<Output = T> + Default + Copy + std::ops::Mul<Output = T>,
-{
-    let sum = items.iter().fold(T::default(), |acc, &x| acc + x);
-    sum * scale
+ {
+    todo!("Function requiring both Add and Default")
 }
 
 /// Function with trait object in where clause
 pub fn process_trait_objects<T>(items: &[Box<T>]) -> Vec<String>
 where
     T: ?Sized + Display,
-{
-    items.iter().map(|item| format!("{}", item)).collect()
+ {
+    todo!("Function with trait object in where clause")
 }
 
 /// Struct with where clause on impl block
@@ -83,23 +74,20 @@ impl<T> Processor<T>
 where
     T: Clone + Display + PartialOrd,
 {
-    pub fn new() -> Self {
-        Processor { data: Vec::new() }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn add(&mut self, item: T) {
-        self.data.push(item);
+    pub fn add(&mut self, item: T)  {
+        todo!("Implement add")
     }
     
-    pub fn get_max(&self) -> Option<T> {
-        self.data.iter().max_by(|a, b| a.partial_cmp(b).unwrap()).cloned()
+    pub fn get_max(&self) -> Option<T>  {
+        todo!("Implement get_max")
     }
     
-    pub fn display_all(&self) -> String {
-        self.data.iter()
-            .map(|item| format!("{}", item))
-            .collect::<Vec<_>>()
-            .join(", ")
+    pub fn display_all(&self) -> String  {
+        todo!("Implement display_all")
     }
 }
 

@@ -7,13 +7,13 @@
 //! - Write efficient iterator code
 
 /// Sum using fold vs manual loop comparison function.
-pub fn optimized_sum(numbers: &[i32]) -> i32 {
-    numbers.iter().copied().sum()
+pub fn optimized_sum(numbers: &[i32]) -> i32  {
+    todo!("Sum using fold vs manual loop comparison function.")
 }
 
 /// Find using short-circuiting.
-pub fn find_optimized(numbers: &[i32], target: i32) -> Option<usize> {
-    numbers.iter().position(|&n| n == target)
+pub fn find_optimized(numbers: &[i32], target: i32) -> Option<usize>  {
+    todo!("Find using short-circuiting.")
 }
 
 /// Custom iterator with accurate size_hint.
@@ -24,75 +24,33 @@ pub struct RangeMultiples {
 }
 
 impl RangeMultiples {
-    pub fn new(start: i32, end: i32, step: i32) -> Self {
-        RangeMultiples {
-            current: start,
-            end,
-            step,
-        }
+    pub fn new(start: i32, end: i32, step: i32) -> Self  {
+        todo!("Custom iterator with accurate size_hint.")
     }
 }
 
 impl Iterator for RangeMultiples {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item> {
-        if self.step > 0 && self.current < self.end {
-            let val = self.current;
-            self.current += self.step;
-            Some(val)
-        } else if self.step < 0 && self.current > self.end {
-            let val = self.current;
-            self.current += self.step;
-            Some(val)
-        } else {
-            None
-        }
+    fn next(&mut self) -> Option<Self::Item>  {
+        todo!("Implement next")
     }
     
-    fn size_hint(&self) -> (usize, Option<usize>) {
-        if self.step == 0 {
-            return (0, Some(0));
-        }
-        
-        let remaining = if self.step > 0 {
-            if self.current >= self.end {
-                0
-            } else {
-                ((self.end - self.current + self.step - 1) / self.step) as usize
-            }
-        } else {
-            if self.current <= self.end {
-                0
-            } else {
-                ((self.current - self.end - self.step - 1) / (-self.step)) as usize
-            }
-        };
-        
-        (remaining, Some(remaining))
+    fn size_hint(&self) -> (usize, Option<usize>)  {
+        todo!("Implement size_hint")
     }
 }
 
 impl ExactSizeIterator for RangeMultiples {}
 
 /// Efficiently process in chunks without allocating intermediate vectors.
-pub fn process_chunks_efficiently(numbers: &[i32], chunk_size: usize) -> Vec<i32> {
-    numbers
-        .chunks(chunk_size)
-        .map(|chunk| chunk.iter().sum())
-        .collect()
+pub fn process_chunks_efficiently(numbers: &[i32], chunk_size: usize) -> Vec<i32>  {
+    todo!("Efficiently process in chunks without allocating intermediate vectors.")
 }
 
 /// Reuse allocation with extend instead of multiple collects.
-pub fn merge_filtered_efficiently(a: &[i32], b: &[i32], c: &[i32]) -> Vec<i32> {
-    let capacity = a.len() + b.len() + c.len();
-    let mut result = Vec::with_capacity(capacity);
-    
-    result.extend(a.iter().filter(|&&n| n > 0));
-    result.extend(b.iter().filter(|&&n| n > 0));
-    result.extend(c.iter().filter(|&&n| n > 0));
-    
-    result
+pub fn merge_filtered_efficiently(a: &[i32], b: &[i32], c: &[i32]) -> Vec<i32>  {
+    todo!("Reuse allocation with extend instead of multiple collects.")
 }
 
 #[cfg(test)]

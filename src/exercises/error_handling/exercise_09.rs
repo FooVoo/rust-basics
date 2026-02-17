@@ -16,12 +16,8 @@ pub enum MathError {
 }
 
 impl fmt::Display for MathError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            MathError::DivisionByZero => write!(f, "Cannot divide by zero"),
-            MathError::NegativeSquareRoot => write!(f, "Cannot take square root of negative number"),
-            MathError::Overflow => write!(f, "Mathematical operation resulted in overflow"),
-        }
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
@@ -29,24 +25,14 @@ impl std::error::Error for MathError {}
 
 /// Calculate the square root of a number.
 /// Return MathError::NegativeSquareRoot if input is negative.
-pub fn sqrt(x: f64) -> Result<f64, MathError> {
-    if x < 0.0 {
-        Err(MathError::NegativeSquareRoot)
-    } else {
-        Ok(x.sqrt())
-    }
+pub fn sqrt(x: f64) -> Result<f64, MathError>  {
+    todo!("Return MathError::NegativeSquareRoot if input is negative.")
 }
 
 /// Divide two numbers, checking for overflow.
 /// Return appropriate MathError on failure.
-pub fn checked_divide(a: i32, b: i32) -> Result<i32, MathError> {
-    if b == 0 {
-        Err(MathError::DivisionByZero)
-    } else if a == i32::MIN && b == -1 {
-        Err(MathError::Overflow)
-    } else {
-        Ok(a / b)
-    }
+pub fn checked_divide(a: i32, b: i32) -> Result<i32, MathError>  {
+    todo!("Return appropriate MathError on failure.")
 }
 
 #[cfg(test)]

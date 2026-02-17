@@ -16,43 +16,24 @@ pub enum LogLevel {
 
 impl LogLevel {
     /// Converts log level to string
-    pub fn as_str(&self) -> &'static str {
-        match self {
-            LogLevel::Debug => "DEBUG",
-            LogLevel::Info => "INFO",
-            LogLevel::Warning => "WARNING",
-            LogLevel::Error => "ERROR",
-        }
+    pub fn as_str(&self) -> &'static str  {
+        todo!("Convert log level to string")
     }
 
     /// Parses a string into a LogLevel
-    pub fn from_str(s: &str) -> Result<Self, String> {
-        match s.to_uppercase().as_str() {
-            "DEBUG" => Ok(LogLevel::Debug),
-            "INFO" => Ok(LogLevel::Info),
-            "WARNING" => Ok(LogLevel::Warning),
-            "ERROR" => Ok(LogLevel::Error),
-            _ => Err(format!("Unknown log level: {}", s)),
-        }
+    pub fn from_str(s: &str) -> Result<Self, String>  {
+        todo!("Parse a string into a LogLevel")
     }
 
     /// Returns numeric value for the log level
-    pub fn to_number(&self) -> u8 {
-        match self {
-            LogLevel::Debug => 0,
-            LogLevel::Info => 1,
-            LogLevel::Warning => 2,
-            LogLevel::Error => 3,
-        }
+    pub fn to_number(&self) -> u8  {
+        todo!("Return numeric value for the log level")
     }
 }
 
 /// Filters log messages by minimum level
-pub fn filter_logs(logs: Vec<(LogLevel, String)>, min_level: LogLevel) -> Vec<String> {
-    logs.into_iter()
-        .filter(|(level, _)| level.to_number() >= min_level.to_number())
-        .map(|(_, msg)| msg)
-        .collect()
+pub fn filter_logs(logs: Vec<(LogLevel, String)>, min_level: LogLevel) -> Vec<String>  {
+    todo!("Filters log messages by minimum level")
 }
 
 #[cfg(test)]

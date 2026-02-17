@@ -10,17 +10,13 @@
 pub fn get_or_compute<F>(value: Option<i32>, compute: F) -> i32
 where
     F: FnOnce() -> i32,
-{
-    value.unwrap_or_else(compute)
+ {
+    todo!("Get value or compute default lazily.")
 }
 
 /// Get first even number or compute sum of all.
-pub fn first_even_or_sum(numbers: &[i32]) -> i32 {
-    numbers
-        .iter()
-        .find(|&&x| x % 2 == 0)
-        .copied()
-        .unwrap_or_else(|| numbers.iter().sum())
+pub fn first_even_or_sum(numbers: &[i32]) -> i32  {
+    todo!("Get first even number or compute sum of all.")
 }
 
 #[cfg(test)]

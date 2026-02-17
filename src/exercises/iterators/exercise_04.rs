@@ -7,35 +7,23 @@
 //! - Build custom aggregations
 
 /// Product of all numbers using fold.
-pub fn product(numbers: &[i32]) -> i32 {
-    numbers.iter().fold(1, |acc, &n| acc * n)
+pub fn product(numbers: &[i32]) -> i32  {
+    todo!("Product of all numbers using fold.")
 }
 
 /// Concatenate strings with a separator.
-pub fn join_strings(strings: &[&str], separator: &str) -> String {
-    if strings.is_empty() {
-        return String::new();
-    }
-    
-    strings[1..].iter().fold(strings[0].to_string(), |acc, &s| {
-        format!("{}{}{}", acc, separator, s)
-    })
+pub fn join_strings(strings: &[&str], separator: &str) -> String  {
+    todo!("Concatenate strings with a separator.")
 }
 
 /// Count occurrences of a character in strings.
-pub fn count_char_in_strings(strings: &[&str], target: char) -> usize {
-    strings
-        .iter()
-        .fold(0, |acc, s| acc + s.chars().filter(|&c| c == target).count())
+pub fn count_char_in_strings(strings: &[&str], target: char) -> usize  {
+    todo!("Count occurrences of a character in strings.")
 }
 
 /// Build a string of repeated characters.
-pub fn build_repeated_string(chars: &[char], repeat: usize) -> String {
-    chars
-        .iter()
-        .fold(String::new(), |acc, &c| {
-            format!("{}{}", acc, c.to_string().repeat(repeat))
-        })
+pub fn build_repeated_string(chars: &[char], repeat: usize) -> String  {
+    todo!("Build a string of repeated characters.")
 }
 
 #[cfg(test)]

@@ -17,27 +17,24 @@ pub struct Config {
 }
 
 impl Config {
-    pub fn new(max_connections: usize, timeout_seconds: u64) -> Self {
-        Config {
-            max_connections,
-            timeout_seconds,
-        }
+    pub fn new(max_connections: usize, timeout_seconds: u64) -> Self  {
+        todo!("Implement new")
     }
 }
 
 /// Initialize global config (can only be called once).
-pub fn init_config(config: Config) -> Result<(), Config> {
-    GLOBAL_CONFIG.set(config)
+pub fn init_config(config: Config) -> Result<(), Config>  {
+    todo!("Initialize global config (can only be called once).")
 }
 
 /// Get global config reference.
-pub fn get_config() -> Option<&'static Config> {
-    GLOBAL_CONFIG.get()
+pub fn get_config() -> Option<&'static Config>  {
+    todo!("Get global config reference.")
 }
 
 /// Get or initialize config with default.
-pub fn get_or_init_config() -> &'static Config {
-    GLOBAL_CONFIG.get_or_init(|| Config::new(10, 30))
+pub fn get_or_init_config() -> &'static Config  {
+    todo!("Get or initialize config with default.")
 }
 
 /// A cache that initializes on first use.
@@ -46,21 +43,16 @@ pub struct LazyCache {
 }
 
 impl LazyCache {
-    pub fn new() -> Self {
-        LazyCache {
-            data: OnceLock::new(),
-        }
+    pub fn new() -> Self  {
+        todo!("A cache that initializes on first use.")
     }
 
-    pub fn get_or_compute(&self) -> &Vec<i32> {
-        self.data.get_or_init(|| {
-            // Expensive computation (simulated)
-            (1..=100).collect()
-        })
+    pub fn get_or_compute(&self) -> &Vec<i32>  {
+        todo!("Implement get_or_compute")
     }
 
-    pub fn is_initialized(&self) -> bool {
-        self.data.get().is_some()
+    pub fn is_initialized(&self) -> bool  {
+        todo!("Implement is_initialized")
     }
 }
 

@@ -15,21 +15,18 @@ pub enum Status {
 }
 
 /// Counts how many items have the Completed status
-pub fn count_completed(statuses: &[Status]) -> usize {
-    statuses
-        .iter()
-        .filter(|s| matches!(s, Status::Completed))
-        .count()
+pub fn count_completed(statuses: &[Status]) -> usize  {
+    todo!("Counts how many items have the Completed status")
 }
 
 /// Returns true if all statuses are Completed
-pub fn all_completed(statuses: &[Status]) -> bool {
-    statuses.iter().all(|s| matches!(s, Status::Completed))
+pub fn all_completed(statuses: &[Status]) -> bool  {
+    todo!("Return true if all statuses are Completed")
 }
 
 /// Returns true if any status is Failed
-pub fn has_failure(statuses: &[Status]) -> bool {
-    statuses.iter().any(|s| matches!(s, Status::Failed))
+pub fn has_failure(statuses: &[Status]) -> bool  {
+    todo!("Return true if any status is Failed")
 }
 
 #[cfg(test)]

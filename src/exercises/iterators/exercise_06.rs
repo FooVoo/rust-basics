@@ -9,29 +9,23 @@
 use std::collections::{HashMap, HashSet};
 
 /// Collect unique numbers into a HashSet.
-pub fn unique_numbers(numbers: &[i32]) -> HashSet<i32> {
-    numbers.iter().copied().collect()
+pub fn unique_numbers(numbers: &[i32]) -> HashSet<i32>  {
+    todo!("Collect unique numbers into a HashSet.")
 }
 
 /// Create a frequency map of characters.
-pub fn char_frequency(s: &str) -> HashMap<char, usize> {
-    s.chars().fold(HashMap::new(), |mut map, c| {
-        *map.entry(c).or_insert(0) += 1;
-        map
-    })
+pub fn char_frequency(s: &str) -> HashMap<char, usize>  {
+    todo!("Create a frequency map of characters.")
 }
 
 /// Collect words and their lengths into a HashMap.
-pub fn word_lengths(words: &[&str]) -> HashMap<String, usize> {
-    words
-        .iter()
-        .map(|&w| (w.to_string(), w.len()))
-        .collect()
+pub fn word_lengths(words: &[&str]) -> HashMap<String, usize>  {
+    todo!("Collect words and their lengths into a HashMap.")
 }
 
 /// Partition numbers into even and odd groups.
-pub fn partition_even_odd(numbers: &[i32]) -> (Vec<i32>, Vec<i32>) {
-    numbers.iter().copied().partition(|&n| n % 2 == 0)
+pub fn partition_even_odd(numbers: &[i32]) -> (Vec<i32>, Vec<i32>)  {
+    todo!("Partition numbers into even and odd groups.")
 }
 
 #[cfg(test)]

@@ -7,19 +7,18 @@
 //! - Understand panic behavior with Result
 
 /// Parse a known-good number string using unwrap.
-pub fn parse_known_good(s: &str) -> i32 {
-    s.parse::<i32>().unwrap()
+pub fn parse_known_good(s: &str) -> i32  {
+    todo!("Parse a known-good number string using unwrap.")
 }
 
 /// Parse a number with a descriptive error using expect.
-pub fn parse_with_context(s: &str) -> i32 {
-    s.parse::<i32>()
-        .expect("String should contain a valid number")
+pub fn parse_with_context(s: &str) -> i32  {
+    todo!("Parse a number with a descriptive error using expect.")
 }
 
 /// Safely extract the Ok value if Result is Ok, panic otherwise.
-pub fn extract_ok<T, E: std::fmt::Debug>(result: Result<T, E>) -> T {
-    result.unwrap()
+pub fn extract_ok<T, E: std::fmt::Debug>(result: Result<T, E>) -> T  {
+    todo!("Safely extract the Ok value if Result is Ok, panic otherwise.")
 }
 
 #[cfg(test)]

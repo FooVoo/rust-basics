@@ -22,25 +22,18 @@ where
     F: FnOnce() -> T,
 {
     /// Creates a new lazy value.
-    pub fn new(func: F) -> Self {
-        Lazy {
-            func: Some(func),
-            value: None,
-        }
+    pub fn new(func: F) -> Self  {
+        todo!("Create a new lazy value.")
     }
 
     /// Forces evaluation and returns a reference to the value.
-    pub fn force(&mut self) -> &T {
-        if self.value.is_none() {
-            let func = self.func.take().unwrap();
-            self.value = Some(func());
-        }
-        self.value.as_ref().unwrap()
+    pub fn force(&mut self) -> &T  {
+        todo!("Forces evaluation and returns a reference to the value.")
     }
 
     /// Checks if the value has been computed.
-    pub fn is_evaluated(&self) -> bool {
-        self.value.is_some()
+    pub fn is_evaluated(&self) -> bool  {
+        todo!("Check if the value has been computed.")
     }
 }
 
@@ -57,52 +50,33 @@ enum DeferredState<T> {
 
 impl<T> Deferred<T> {
     /// Creates a new pending deferred.
-    pub fn pending() -> Self {
-        Deferred {
-            state: DeferredState::Pending,
-        }
+    pub fn pending() -> Self  {
+        todo!("Create a new pending deferred.")
     }
 
     /// Creates a deferred with a ready value.
-    pub fn ready(value: T) -> Self {
-        Deferred {
-            state: DeferredState::Ready(value),
-        }
+    pub fn ready(value: T) -> Self  {
+        todo!("Create a deferred with a ready value.")
     }
 
     /// Polls the deferred for a value.
-    pub fn poll(&mut self) -> Poll<&T> {
-        match &self.state {
-            DeferredState::Ready(value) => Poll::Ready(value),
-            _ => Poll::Pending,
-        }
+    pub fn poll(&mut self) -> Poll<&T>  {
+        todo!("Polls the deferred for a value.")
     }
 
     /// Sets the value, transitioning from Pending to Ready.
-    pub fn set(&mut self, value: T) -> Result<(), &'static str> {
-        match self.state {
-            DeferredState::Pending => {
-                self.state = DeferredState::Ready(value);
-                Ok(())
-            }
-            _ => Err("Deferred already has a value"),
-        }
+    pub fn set(&mut self, value: T) -> Result<(), &'static str>  {
+        todo!("Set the value, transitioning from Pending to Ready.")
     }
 
     /// Takes the value out, consuming it.
-    pub fn take(&mut self) -> Option<T> {
-        match std::mem::replace(&mut self.state, DeferredState::Consumed) {
-            DeferredState::Ready(value) => Some(value),
-            other => {
-                self.state = other;
-                None
-            }
-        }
+    pub fn take(&mut self) -> Option<T>  {
+        todo!("Takes the value out, consuming it.")
     }
 
     /// Checks if the deferred is ready.
-    pub fn is_ready(&self) -> bool {
-        matches!(self.state, DeferredState::Ready(_))
+    pub fn is_ready(&self) -> bool  {
+        todo!("Check if the deferred is ready.")
     }
 }
 
@@ -121,19 +95,13 @@ where
     F: FnOnce(T) -> U,
 {
     /// Creates a new chain.
-    pub fn new(value: T, func: F) -> Self {
-        Chain {
-            first: Some(value),
-            func: Some(func),
-            _phantom: std::marker::PhantomData,
-        }
+    pub fn new(value: T, func: F) -> Self  {
+        todo!("Create a new chain.")
     }
 
     /// Executes the chain and returns the result.
-    pub fn run(mut self) -> U {
-        let value = self.first.take().unwrap();
-        let func = self.func.take().unwrap();
-        func(value)
+    pub fn run(mut self) -> U  {
+        todo!("Executes the chain and returns the result.")
     }
 }
 

@@ -16,11 +16,8 @@ pub enum DatabaseError {
 }
 
 impl fmt::Display for DatabaseError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            DatabaseError::ConnectionError(msg) => write!(f, "Connection error: {}", msg),
-            DatabaseError::QueryError(msg) => write!(f, "Query error: {}", msg),
-        }
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
@@ -34,65 +31,36 @@ pub enum ServiceError {
 }
 
 impl fmt::Display for ServiceError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            ServiceError::Database(e) => write!(f, "Service database error: {}", e),
-            ServiceError::Validation(msg) => write!(f, "Validation error: {}", msg),
-            ServiceError::NotFound(msg) => write!(f, "Not found: {}", msg),
-        }
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
 impl Error for ServiceError {
-    fn source(&self) -> Option<&(dyn Error + 'static)> {
-        match self {
-            ServiceError::Database(e) => Some(e),
-            _ => None,
-        }
+    fn source(&self) -> Option<&(dyn Error + 'static)>  {
+        todo!("Implement source")
     }
 }
 
 impl From<DatabaseError> for ServiceError {
-    fn from(err: DatabaseError) -> Self {
-        ServiceError::Database(err)
+    fn from(err: DatabaseError) -> Self  {
+        todo!("Implement from")
     }
 }
 
 /// Simulate a database operation that can fail.
-pub fn database_query(success: bool) -> Result<String, DatabaseError> {
-    if success {
-        Ok("data".to_string())
-    } else {
-        Err(DatabaseError::QueryError("Table not found".to_string()))
-    }
+pub fn database_query(success: bool) -> Result<String, DatabaseError>  {
+    todo!("Simulate a database operation that can fail.")
 }
 
 /// Service layer that wraps database operations.
-pub fn fetch_user(id: u32, db_success: bool) -> Result<String, ServiceError> {
-    if id == 0 {
-        return Err(ServiceError::Validation("ID cannot be zero".to_string()));
-    }
-    
-    let data = database_query(db_success)?;
-    
-    if data.is_empty() {
-        return Err(ServiceError::NotFound(format!("User {} not found", id)));
-    }
-    
-    Ok(data)
+pub fn fetch_user(id: u32, db_success: bool) -> Result<String, ServiceError>  {
+    todo!("Service layer that wraps database operations.")
 }
 
 /// Count the depth of error chain.
-pub fn error_chain_depth(err: &dyn Error) -> usize {
-    let mut depth = 1;
-    let mut current = err.source();
-    
-    while let Some(source) = current {
-        depth += 1;
-        current = source.source();
-    }
-    
-    depth
+pub fn error_chain_depth(err: &dyn Error) -> usize  {
+    todo!("Count the depth of error chain.")
 }
 
 #[cfg(test)]

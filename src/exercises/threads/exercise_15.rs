@@ -9,26 +9,8 @@
 use std::thread;
 
 /// Sum a vector of numbers in parallel using n_threads.
-pub fn parallel_sum(numbers: Vec<i64>, n_threads: usize) -> i64 {
-    if numbers.is_empty() || n_threads == 0 {
-        return 0;
-    }
-
-    if n_threads == 1 {
-        return numbers.iter().sum();
-    }
-
-    let chunk_size = (numbers.len() + n_threads - 1) / n_threads;
-    
-    let handles: Vec<_> = numbers
-        .chunks(chunk_size)
-        .map(|chunk| {
-            let chunk = chunk.to_vec();
-            thread::spawn(move || chunk.iter().sum::<i64>())
-        })
-        .collect();
-
-    handles.into_iter().map(|h| h.join().unwrap()).sum()
+pub fn parallel_sum(numbers: Vec<i64>, n_threads: usize) -> i64  {
+    todo!("Sum a vector of numbers in parallel using n_threads.")
 }
 
 #[cfg(test)]

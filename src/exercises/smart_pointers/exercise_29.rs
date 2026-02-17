@@ -16,43 +16,25 @@ pub struct Arena {
 }
 
 impl Arena {
-    pub fn new(capacity: usize) -> Self {
-        Arena {
-            buffer: vec![0; capacity],
-            offset: 0,
-        }
+    pub fn new(capacity: usize) -> Self  {
+        todo!("A simple arena allocator using raw pointers.")
     }
 
     /// Allocate space for a value of type T.
-    pub fn alloc<T>(&mut self, value: T) -> Option<&mut T> {
-        let size = std::mem::size_of::<T>();
-        let align = std::mem::align_of::<T>();
-
-        // Align the offset
-        let offset = (self.offset + align - 1) & !(align - 1);
-
-        if offset + size > self.buffer.len() {
-            return None;
-        }
-
-        unsafe {
-            let ptr = self.buffer.as_mut_ptr().add(offset) as *mut T;
-            ptr.write(value);
-            self.offset = offset + size;
-            Some(&mut *ptr)
-        }
+    pub fn alloc<T>(&mut self, value: T) -> Option<&mut T>  {
+        todo!("Allocate space for a value of type T.")
     }
 
-    pub fn used(&self) -> usize {
-        self.offset
+    pub fn used(&self) -> usize  {
+        todo!("Allocate space for a value of type T.")
     }
 
-    pub fn capacity(&self) -> usize {
-        self.buffer.len()
+    pub fn capacity(&self) -> usize  {
+        todo!("Implement capacity")
     }
 
-    pub fn reset(&mut self) {
-        self.offset = 0;
+    pub fn reset(&mut self)  {
+        todo!("Implement reset")
     }
 }
 
@@ -68,47 +50,34 @@ struct Node<T> {
 }
 
 impl<T> RawLinkedList<T> {
-    pub fn new() -> Self {
-        RawLinkedList { head: None, len: 0 }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
 
-    pub fn push(&mut self, value: T) {
-        unsafe {
-            let new_node = Box::new(Node {
-                value,
-                next: self.head,
-            });
-            let new_node_ptr = NonNull::new_unchecked(Box::into_raw(new_node));
-            self.head = Some(new_node_ptr);
-            self.len += 1;
-        }
+    pub fn push(&mut self, value: T)  {
+        todo!("Implement push")
     }
 
-    pub fn pop(&mut self) -> Option<T> {
-        self.head.map(|head_ptr| unsafe {
-            let head = Box::from_raw(head_ptr.as_ptr());
-            self.head = head.next;
-            self.len -= 1;
-            head.value
-        })
+    pub fn pop(&mut self) -> Option<T>  {
+        todo!("Implement pop")
     }
 
-    pub fn len(&self) -> usize {
-        self.len
+    pub fn len(&self) -> usize  {
+        todo!("Implement len")
     }
 
-    pub fn is_empty(&self) -> bool {
-        self.len == 0
+    pub fn is_empty(&self) -> bool  {
+        todo!("Implement is_empty")
     }
 
-    pub fn peek(&self) -> Option<&T> {
-        self.head.map(|head_ptr| unsafe { &(*head_ptr.as_ptr()).value })
+    pub fn peek(&self) -> Option<&T>  {
+        todo!("Implement peek")
     }
 }
 
 impl<T> Drop for RawLinkedList<T> {
-    fn drop(&mut self) {
-        while self.pop().is_some() {}
+    fn drop(&mut self)  {
+        todo!("Implement drop")
     }
 }
 

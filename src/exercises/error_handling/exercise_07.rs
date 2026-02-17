@@ -8,24 +8,8 @@
 
 /// Validate a username.
 /// Must be 3-20 characters, alphanumeric, and not empty.
-pub fn validate_username(username: &str) -> Result<String, String> {
-    if username.is_empty() {
-        return Err("Username cannot be empty".to_string());
-    }
-    
-    if username.len() < 3 {
-        return Err("Username must be at least 3 characters".to_string());
-    }
-    
-    if username.len() > 20 {
-        return Err("Username must be at most 20 characters".to_string());
-    }
-    
-    if !username.chars().all(|c| c.is_alphanumeric()) {
-        return Err("Username must be alphanumeric".to_string());
-    }
-    
-    Ok(username.to_string())
+pub fn validate_username(username: &str) -> Result<String, String>  {
+    todo!("Must be 3-20 characters, alphanumeric, and not empty.")
 }
 
 #[cfg(test)]

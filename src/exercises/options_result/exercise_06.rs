@@ -7,18 +7,18 @@
 //! - Avoid explicit pattern matching
 
 /// Double a number if it exists in the Option.
-pub fn double_if_exists(opt: Option<i32>) -> Option<i32> {
-    opt.map(|x| x * 2)
+pub fn double_if_exists(opt: Option<i32>) -> Option<i32>  {
+    todo!("Double a number if it exists in the Option.")
 }
 
 /// Convert an optional string to uppercase.
-pub fn uppercase_if_exists(opt: Option<String>) -> Option<String> {
-    opt.map(|s| s.to_uppercase())
+pub fn uppercase_if_exists(opt: Option<String>) -> Option<String>  {
+    todo!("Convert an optional string to uppercase.")
 }
 
 /// Get the length of an optional string.
-pub fn length_if_exists(opt: Option<&str>) -> Option<usize> {
-    opt.map(|s| s.len())
+pub fn length_if_exists(opt: Option<&str>) -> Option<usize>  {
+    todo!("Get the length of an optional string.")
 }
 
 #[cfg(test)]

@@ -17,17 +17,14 @@ impl<T> OptionTryMap<T> for Option<T> {
     fn try_map<U, E, F>(self, f: F) -> Result<Option<U>, E>
     where
         F: FnOnce(T) -> Result<U, E>,
-    {
-        match self {
-            Some(value) => f(value).map(Some),
-            None => Ok(None),
-        }
+     {
+        todo!("Implement try_map")
     }
 }
 
 /// Parse optional string value.
-pub fn try_parse_option(s: Option<&str>) -> Result<Option<i32>, String> {
-    s.try_map(|s| s.parse::<i32>().map_err(|e| e.to_string()))
+pub fn try_parse_option(s: Option<&str>) -> Result<Option<i32>, String>  {
+    todo!("Parse optional string value.")
 }
 
 #[cfg(test)]

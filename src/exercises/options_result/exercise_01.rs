@@ -8,13 +8,8 @@
 
 /// Find the first positive number in a slice.
 /// Returns Some(number) if found, None otherwise.
-pub fn find_first_positive(numbers: &[i32]) -> Option<i32> {
-    for &num in numbers {
-        if num > 0 {
-            return Some(num);
-        }
-    }
-    None
+pub fn find_first_positive(numbers: &[i32]) -> Option<i32>  {
+    todo!("Return Some(number) if found, None otherwise.")
 }
 
 #[cfg(test)]

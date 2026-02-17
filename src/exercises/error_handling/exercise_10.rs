@@ -15,45 +15,27 @@ pub struct ParseError {
 }
 
 impl ParseError {
-    pub fn new(input: impl Into<String>, reason: impl Into<String>) -> Self {
-        ParseError {
-            input: input.into(),
-            reason: reason.into(),
-        }
+    pub fn new(input: impl Into<String>, reason: impl Into<String>) -> Self  {
+        todo!("Implement new")
     }
 }
 
 impl fmt::Display for ParseError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "Failed to parse '{}': {}", self.input, self.reason)
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
 impl std::error::Error for ParseError {}
 
 /// Parse a string to i32 with detailed error context.
-pub fn parse_with_context(s: &str) -> Result<i32, ParseError> {
-    s.parse::<i32>()
-        .map_err(|e| ParseError::new(s, e.to_string()))
+pub fn parse_with_context(s: &str) -> Result<i32, ParseError>  {
+    todo!("Parse a string to i32 with detailed error context.")
 }
 
 /// Parse multiple strings and collect all errors.
-pub fn parse_multiple(strings: &[&str]) -> Result<Vec<i32>, Vec<ParseError>> {
-    let mut results = Vec::new();
-    let mut errors = Vec::new();
-    
-    for s in strings {
-        match parse_with_context(s) {
-            Ok(n) => results.push(n),
-            Err(e) => errors.push(e),
-        }
-    }
-    
-    if errors.is_empty() {
-        Ok(results)
-    } else {
-        Err(errors)
-    }
+pub fn parse_multiple(strings: &[&str]) -> Result<Vec<i32>, Vec<ParseError>>  {
+    todo!("Parse multiple strings and collect all errors.")
 }
 
 #[cfg(test)]

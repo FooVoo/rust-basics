@@ -7,55 +7,23 @@
 //! - Maintain state across iterations
 
 /// Running sum of numbers.
-pub fn running_sum(numbers: &[i32]) -> Vec<i32> {
-    numbers
-        .iter()
-        .scan(0, |sum, &n| {
-            *sum += n;
-            Some(*sum)
-        })
-        .collect()
+pub fn running_sum(numbers: &[i32]) -> Vec<i32>  {
+    todo!("Running sum of numbers.")
 }
 
 /// Running product of numbers.
-pub fn running_product(numbers: &[i32]) -> Vec<i32> {
-    numbers
-        .iter()
-        .scan(1, |prod, &n| {
-            *prod *= n;
-            Some(*prod)
-        })
-        .collect()
+pub fn running_product(numbers: &[i32]) -> Vec<i32>  {
+    todo!("Running product of numbers.")
 }
 
 /// Running maximum.
-pub fn running_max(numbers: &[i32]) -> Vec<i32> {
-    let mut first = true;
-    numbers
-        .iter()
-        .scan(0, |max, &n| {
-            if first {
-                *max = n;
-                first = false;
-            } else if n > *max {
-                *max = n;
-            }
-            Some(*max)
-        })
-        .collect()
+pub fn running_max(numbers: &[i32]) -> Vec<i32>  {
+    todo!("Running maximum.")
 }
 
 /// Count occurrences up to each position.
-pub fn running_count(items: &[char], target: char) -> Vec<usize> {
-    items
-        .iter()
-        .scan(0, |count, &c| {
-            if c == target {
-                *count += 1;
-            }
-            Some(*count)
-        })
-        .collect()
+pub fn running_count(items: &[char], target: char) -> Vec<usize>  {
+    todo!("Count occurrences up to each position.")
 }
 
 #[cfg(test)]

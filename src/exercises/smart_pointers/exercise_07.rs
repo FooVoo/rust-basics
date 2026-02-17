@@ -16,43 +16,40 @@ pub struct Tracked {
 }
 
 impl Tracked {
-    pub fn new(id: usize) -> Self {
-        ALLOCATION_COUNT.fetch_add(1, Ordering::SeqCst);
-        Tracked { id }
+    pub fn new(id: usize) -> Self  {
+        todo!("Implement new")
     }
 }
 
 impl Drop for Tracked {
-    fn drop(&mut self) {
-        DEALLOCATION_COUNT.fetch_add(1, Ordering::SeqCst);
+    fn drop(&mut self)  {
+        todo!("Implement drop")
     }
 }
 
 /// Get current allocation count.
-pub fn allocations() -> usize {
-    ALLOCATION_COUNT.load(Ordering::SeqCst)
+pub fn allocations() -> usize  {
+    todo!("Get current allocation count.")
 }
 
 /// Get current deallocation count.
-pub fn deallocations() -> usize {
-    DEALLOCATION_COUNT.load(Ordering::SeqCst)
+pub fn deallocations() -> usize  {
+    todo!("Get current deallocation count.")
 }
 
 /// Reset counters.
-pub fn reset_counters() {
-    ALLOCATION_COUNT.store(0, Ordering::SeqCst);
-    DEALLOCATION_COUNT.store(0, Ordering::SeqCst);
+pub fn reset_counters()  {
+    todo!("Reset counters.")
 }
 
 /// Create and immediately drop a boxed value.
-pub fn create_and_drop() {
-    let _boxed = Box::new(Tracked::new(1));
-    // Automatically dropped here
+pub fn create_and_drop()  {
+    todo!("Create and immediately drop a boxed value.")
 }
 
 /// Create multiple boxed values in a vector.
-pub fn create_multiple(count: usize) -> Vec<Box<Tracked>> {
-    (0..count).map(|i| Box::new(Tracked::new(i))).collect()
+pub fn create_multiple(count: usize) -> Vec<Box<Tracked>>  {
+    todo!("Create multiple boxed values in a vector.")
 }
 
 #[cfg(test)]

@@ -13,18 +13,8 @@ pub async fn retry<F, Fut, T, E>(max_attempts: u32, mut operation: F) -> Result<
 where
     F: FnMut() -> Fut,
     Fut: std::future::Future<Output = Result<T, E>>,
-{
-    for attempt in 0..max_attempts {
-        match operation().await {
-            Ok(result) => return Ok(result),
-            Err(e) => {
-                if attempt == max_attempts - 1 {
-                    return Err(e);
-                }
-            }
-        }
-    }
-    unreachable!()
+ {
+    todo!("Retry an operation up to max_attempts times.")
 }
 
 /// Retry with exponential backoff.
@@ -36,20 +26,8 @@ pub async fn retry_with_backoff<F, Fut, T, E>(
 where
     F: FnMut() -> Fut,
     Fut: std::future::Future<Output = Result<T, E>>,
-{
-    for attempt in 0..max_attempts {
-        match operation().await {
-            Ok(result) => return Ok(result),
-            Err(e) => {
-                if attempt == max_attempts - 1 {
-                    return Err(e);
-                }
-                let delay = base_delay_ms * 2_u64.pow(attempt);
-                sleep(Duration::from_millis(delay)).await;
-            }
-        }
-    }
-    unreachable!()
+ {
+    todo!("Implement retry_with_backoff")
 }
 
 /// Counter for testing retry logic.
@@ -59,21 +37,12 @@ pub struct FailCounter {
 }
 
 impl FailCounter {
-    pub fn new(fail_until: u32) -> Self {
-        Self {
-            count: std::sync::Arc::new(tokio::sync::Mutex::new(0)),
-            fail_until,
-        }
+    pub fn new(fail_until: u32) -> Self  {
+        todo!("Counter for testing retry logic.")
     }
 
-    pub async fn try_operation(&self) -> Result<String, String> {
-        let mut count = self.count.lock().await;
-        *count += 1;
-        if *count <= self.fail_until {
-            Err(format!("Attempt {} failed", *count))
-        } else {
-            Ok("Success".to_string())
-        }
+    pub async fn try_operation(&self) -> Result<String, String>  {
+        todo!("Implement try_operation")
     }
 }
 

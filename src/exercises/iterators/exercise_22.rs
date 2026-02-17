@@ -13,23 +13,16 @@ pub struct RunningAverage {
 }
 
 impl RunningAverage {
-    pub fn new(values: Vec<f64>) -> Self {
-        RunningAverage { values, index: 0 }
+    pub fn new(values: Vec<f64>) -> Self  {
+        todo!("Iterator that yields running averages.")
     }
 }
 
 impl Iterator for RunningAverage {
     type Item = f64;
     
-    fn next(&mut self) -> Option<Self::Item> {
-        if self.index < self.values.len() {
-            let sum: f64 = self.values[..=self.index].iter().sum();
-            let avg = sum / (self.index + 1) as f64;
-            self.index += 1;
-            Some(avg)
-        } else {
-            None
-        }
+    fn next(&mut self) -> Option<Self::Item>  {
+        todo!("Implement next")
     }
 }
 
@@ -46,9 +39,8 @@ impl<I> Pairwise<I>
 where
     I: Iterator,
 {
-    pub fn new(mut iter: I) -> Self {
-        let prev = iter.next();
-        Pairwise { iter, prev }
+    pub fn new(mut iter: I) -> Self  {
+        todo!("Implement new")
     }
 }
 
@@ -59,14 +51,8 @@ where
 {
     type Item = (I::Item, I::Item);
     
-    fn next(&mut self) -> Option<Self::Item> {
-        if let Some(prev) = self.prev.take() {
-            if let Some(current) = self.iter.next() {
-                self.prev = Some(current.clone());
-                return Some((prev, current));
-            }
-        }
-        None
+    fn next(&mut self) -> Option<Self::Item>  {
+        todo!("Implement next")
     }
 }
 
@@ -78,31 +64,16 @@ pub struct SkipEveryNth<I> {
 }
 
 impl<I: Iterator> SkipEveryNth<I> {
-    pub fn new(iter: I, n: usize) -> Self {
-        SkipEveryNth {
-            iter,
-            n,
-            counter: 1,
-        }
+    pub fn new(iter: I, n: usize) -> Self  {
+        todo!("Iterator that skips every nth element.")
     }
 }
 
 impl<I: Iterator> Iterator for SkipEveryNth<I> {
     type Item = I::Item;
     
-    fn next(&mut self) -> Option<Self::Item> {
-        loop {
-            match self.iter.next() {
-                None => return None,
-                Some(item) => {
-                    if self.n == 0 || self.counter % self.n != 0 {
-                        self.counter += 1;
-                        return Some(item);
-                    }
-                    self.counter += 1;
-                }
-            }
-        }
+    fn next(&mut self) -> Option<Self::Item>  {
+        todo!("Implement next")
     }
 }
 

@@ -7,8 +7,8 @@
 //! - Understand when trait bounds are needed
 
 /// A generic function that duplicates a value.
-pub fn duplicate<T: Clone>(value: T) -> (T, T) {
-    (value.clone(), value)
+pub fn duplicate<T: Clone>(value: T) -> (T, T)  {
+    todo!("A generic function that duplicates a value.")
 }
 
 /// A generic struct that stores a cloneable value and provides a duplicate.
@@ -18,23 +18,23 @@ pub struct Duplicator<T: Clone> {
 
 impl<T: Clone> Duplicator<T> {
     /// Creates a new Duplicator.
-    pub fn new(value: T) -> Self {
-        Duplicator { original: value }
+    pub fn new(value: T) -> Self  {
+        todo!("Create a new Duplicator.")
     }
 
     /// Returns a clone of the original value.
-    pub fn get_copy(&self) -> T {
-        self.original.clone()
+    pub fn get_copy(&self) -> T  {
+        todo!("Return a clone of the original value.")
     }
 
     /// Returns a reference to the original value.
-    pub fn get_ref(&self) -> &T {
-        &self.original
+    pub fn get_ref(&self) -> &T  {
+        todo!("Return a reference to the original value.")
     }
 
     /// Creates a vector with n copies of the value.
-    pub fn make_copies(&self, n: usize) -> Vec<T> {
-        vec![self.original.clone(); n]
+    pub fn make_copies(&self, n: usize) -> Vec<T>  {
+        todo!("Create a vector with n copies of the value.")
     }
 }
 

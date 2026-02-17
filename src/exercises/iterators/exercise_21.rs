@@ -13,25 +13,16 @@ pub struct SquareIterator {
 }
 
 impl SquareIterator {
-    pub fn new(start: i32, end: i32) -> Self {
-        SquareIterator {
-            current: start,
-            end,
-        }
+    pub fn new(start: i32, end: i32) -> Self  {
+        todo!("An iterator that yields squares of numbers from start to end.")
     }
 }
 
 impl Iterator for SquareIterator {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item> {
-        if self.current <= self.end {
-            let square = self.current * self.current;
-            self.current += 1;
-            Some(square)
-        } else {
-            None
-        }
+    fn next(&mut self) -> Option<Self::Item>  {
+        todo!("Implement next")
     }
 }
 
@@ -43,26 +34,16 @@ pub struct Alternating<T> {
 }
 
 impl<T: Clone> Alternating<T> {
-    pub fn new(first: T, second: T) -> Self {
-        Alternating {
-            first,
-            second,
-            use_first: true,
-        }
+    pub fn new(first: T, second: T) -> Self  {
+        todo!("An iterator that alternates between two values.")
     }
 }
 
 impl<T: Clone> Iterator for Alternating<T> {
     type Item = T;
     
-    fn next(&mut self) -> Option<Self::Item> {
-        let item = if self.use_first {
-            self.first.clone()
-        } else {
-            self.second.clone()
-        };
-        self.use_first = !self.use_first;
-        Some(item)
+    fn next(&mut self) -> Option<Self::Item>  {
+        todo!("Implement next")
     }
 }
 
@@ -72,22 +53,16 @@ pub struct Countdown {
 }
 
 impl Countdown {
-    pub fn new(start: i32) -> Self {
-        Countdown { current: start }
+    pub fn new(start: i32) -> Self  {
+        todo!("An iterator that counts down from n to 0.")
     }
 }
 
 impl Iterator for Countdown {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item> {
-        if self.current >= 0 {
-            let value = self.current;
-            self.current -= 1;
-            Some(value)
-        } else {
-            None
-        }
+    fn next(&mut self) -> Option<Self::Item>  {
+        todo!("Implement next")
     }
 }
 

@@ -18,33 +18,28 @@ pub struct TreeNode {
 
 impl TreeNode {
     /// Create a new tree node.
-    pub fn new(value: i32) -> Rc<Self> {
-        Rc::new(TreeNode {
-            value,
-            parent: RefCell::new(Weak::new()),
-            children: RefCell::new(Vec::new()),
-        })
+    pub fn new(value: i32) -> Rc<Self>  {
+        todo!("Create a new tree node.")
     }
 
     /// Add a child to this node.
-    pub fn add_child(parent: &Rc<TreeNode>, child: Rc<TreeNode>) {
-        *child.parent.borrow_mut() = Rc::downgrade(parent);
-        parent.children.borrow_mut().push(child);
+    pub fn add_child(parent: &Rc<TreeNode>, child: Rc<TreeNode>)  {
+        todo!("Add a child to this node.")
     }
 
     /// Get parent value if it exists.
-    pub fn parent_value(node: &Rc<TreeNode>) -> Option<i32> {
-        node.parent.borrow().upgrade().map(|p| p.value)
+    pub fn parent_value(node: &Rc<TreeNode>) -> Option<i32>  {
+        todo!("Get parent value if it exists.")
     }
 
     /// Count children.
-    pub fn child_count(node: &Rc<TreeNode>) -> usize {
-        node.children.borrow().len()
+    pub fn child_count(node: &Rc<TreeNode>) -> usize  {
+        todo!("Count children.")
     }
 
     /// Get strong and weak counts.
-    pub fn counts(node: &Rc<TreeNode>) -> (usize, usize) {
-        (Rc::strong_count(node), Rc::weak_count(node))
+    pub fn counts(node: &Rc<TreeNode>) -> (usize, usize)  {
+        todo!("Get strong and weak counts.")
     }
 }
 

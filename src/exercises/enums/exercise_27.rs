@@ -22,38 +22,25 @@ pub struct Door<State> {
 
 impl Door<Locked> {
     /// Creates a new locked door
-    pub fn new(code: String) -> Self {
-        Door {
-            code,
-            _state: PhantomData,
-        }
+    pub fn new(code: String) -> Self  {
+        todo!("Create a new locked door")
     }
 
     /// Unlocks the door with the correct code
-    pub fn unlock(self, code: &str) -> Result<Door<Unlocked>, String> {
-        if self.code == code {
-            Ok(Door {
-                code: self.code,
-                _state: PhantomData,
-            })
-        } else {
-            Err("Incorrect code".to_string())
-        }
+    pub fn unlock(self, code: &str) -> Result<Door<Unlocked>, String>  {
+        todo!("Unlocks the door with the correct code")
     }
 }
 
 impl Door<Unlocked> {
     /// Locks the door
-    pub fn lock(self) -> Door<Locked> {
-        Door {
-            code: self.code,
-            _state: PhantomData,
-        }
+    pub fn lock(self) -> Door<Locked>  {
+        todo!("Locks the door")
     }
 
     /// Opens the door (only possible when unlocked)
-    pub fn open(&self) -> String {
-        "Door is now open".to_string()
+    pub fn open(&self) -> String  {
+        todo!("Opens the door (only possible when unlocked)")
     }
 }
 
@@ -66,41 +53,23 @@ pub enum DoorState {
 
 impl DoorState {
     /// Creates a new locked door
-    pub fn new(code: String) -> Self {
-        DoorState::Locked { code }
+    pub fn new(code: String) -> Self  {
+        todo!("Create a new locked door")
     }
 
     /// Attempts to unlock the door
-    pub fn unlock(&mut self, input_code: &str) -> Result<(), String> {
-        match self {
-            DoorState::Locked { code } => {
-                if code == input_code {
-                    let code = code.clone();
-                    *self = DoorState::Unlocked { code };
-                    Ok(())
-                } else {
-                    Err("Incorrect code".to_string())
-                }
-            }
-            DoorState::Unlocked { .. } => Err("Already unlocked".to_string()),
-        }
+    pub fn unlock(&mut self, input_code: &str) -> Result<(), String>  {
+        todo!("Attempts to unlock the door")
     }
 
     /// Locks the door
-    pub fn lock(&mut self) -> Result<(), String> {
-        match self {
-            DoorState::Unlocked { code } => {
-                let code = code.clone();
-                *self = DoorState::Locked { code };
-                Ok(())
-            }
-            DoorState::Locked { .. } => Err("Already locked".to_string()),
-        }
+    pub fn lock(&mut self) -> Result<(), String>  {
+        todo!("Locks the door")
     }
 
     /// Checks if door is locked
-    pub fn is_locked(&self) -> bool {
-        matches!(self, DoorState::Locked { .. })
+    pub fn is_locked(&self) -> bool  {
+        todo!("Check if door is locked")
     }
 }
 

@@ -17,59 +17,33 @@ pub enum Expr {
 
 impl Expr {
     /// Creates a number expression
-    pub fn num(n: f64) -> Self {
-        Expr::Num(n)
+    pub fn num(n: f64) -> Self  {
+        todo!("Create a number expression")
     }
 
     /// Creates an addition expression
-    pub fn add(left: Expr, right: Expr) -> Self {
-        Expr::Add(Box::new(left), Box::new(right))
+    pub fn add(left: Expr, right: Expr) -> Self  {
+        todo!("Create an addition expression")
     }
 
     /// Creates a subtraction expression
-    pub fn sub(left: Expr, right: Expr) -> Self {
-        Expr::Sub(Box::new(left), Box::new(right))
+    pub fn sub(left: Expr, right: Expr) -> Self  {
+        todo!("Create a subtraction expression")
     }
 
     /// Creates a multiplication expression
-    pub fn mul(left: Expr, right: Expr) -> Self {
-        Expr::Mul(Box::new(left), Box::new(right))
+    pub fn mul(left: Expr, right: Expr) -> Self  {
+        todo!("Create a multiplication expression")
     }
 
     /// Creates a division expression
-    pub fn div(left: Expr, right: Expr) -> Self {
-        Expr::Div(Box::new(left), Box::new(right))
+    pub fn div(left: Expr, right: Expr) -> Self  {
+        todo!("Create a division expression")
     }
 
     /// Evaluates the expression
-    pub fn eval(&self) -> Result<f64, String> {
-        match self {
-            Expr::Num(n) => Ok(*n),
-            Expr::Add(left, right) => {
-                let l = left.eval()?;
-                let r = right.eval()?;
-                Ok(l + r)
-            }
-            Expr::Sub(left, right) => {
-                let l = left.eval()?;
-                let r = right.eval()?;
-                Ok(l - r)
-            }
-            Expr::Mul(left, right) => {
-                let l = left.eval()?;
-                let r = right.eval()?;
-                Ok(l * r)
-            }
-            Expr::Div(left, right) => {
-                let l = left.eval()?;
-                let r = right.eval()?;
-                if r == 0.0 {
-                    Err("Division by zero".to_string())
-                } else {
-                    Ok(l / r)
-                }
-            }
-        }
+    pub fn eval(&self) -> Result<f64, String>  {
+        todo!("Evaluates the expression")
     }
 }
 

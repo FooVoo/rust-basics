@@ -8,10 +8,8 @@
 
 /// Parse two numbers from strings and return their sum.
 /// Use the ? operator to propagate errors.
-pub fn parse_and_add(a: &str, b: &str) -> Result<i32, String> {
-    let num_a = a.parse::<i32>().map_err(|e| e.to_string())?;
-    let num_b = b.parse::<i32>().map_err(|e| e.to_string())?;
-    Ok(num_a + num_b)
+pub fn parse_and_add(a: &str, b: &str) -> Result<i32, String>  {
+    todo!("Use the ? operator to propagate errors.")
 }
 
 #[cfg(test)]

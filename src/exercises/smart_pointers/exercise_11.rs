@@ -9,18 +9,18 @@
 use std::cell::RefCell;
 
 /// Create a RefCell containing a value.
-pub fn create_refcell(value: i32) -> RefCell<i32> {
-    RefCell::new(value)
+pub fn create_refcell(value: i32) -> RefCell<i32>  {
+    todo!("Create a RefCell containing a value.")
 }
 
 /// Modify a value through RefCell.
-pub fn modify_through_refcell(cell: &RefCell<i32>, delta: i32) {
-    *cell.borrow_mut() += delta;
+pub fn modify_through_refcell(cell: &RefCell<i32>, delta: i32)  {
+    todo!("Modify a value through RefCell.")
 }
 
 /// Read a value from RefCell.
-pub fn read_from_refcell(cell: &RefCell<i32>) -> i32 {
-    *cell.borrow()
+pub fn read_from_refcell(cell: &RefCell<i32>) -> i32  {
+    todo!("Read a value from RefCell.")
 }
 
 /// A struct with interior mutability.
@@ -29,22 +29,20 @@ pub struct Counter {
 }
 
 impl Counter {
-    pub fn new() -> Self {
-        Counter {
-            count: RefCell::new(0),
-        }
+    pub fn new() -> Self  {
+        todo!("A struct with interior mutability.")
     }
 
-    pub fn increment(&self) {
-        *self.count.borrow_mut() += 1;
+    pub fn increment(&self)  {
+        todo!("Implement increment")
     }
 
-    pub fn get(&self) -> i32 {
-        *self.count.borrow()
+    pub fn get(&self) -> i32  {
+        todo!("Implement get")
     }
 
-    pub fn add(&self, n: i32) {
-        *self.count.borrow_mut() += n;
+    pub fn add(&self, n: i32)  {
+        todo!("Implement add")
     }
 }
 

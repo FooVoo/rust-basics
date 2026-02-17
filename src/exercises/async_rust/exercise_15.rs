@@ -10,71 +10,18 @@ use tokio::sync::RwLock;
 use std::sync::Arc;
 
 /// Concurrent reads with RwLock.
-pub async fn concurrent_reads(value: i32, num_readers: usize) -> Vec<i32> {
-    let data = Arc::new(RwLock::new(value));
-    let mut handles = vec![];
-    
-    for _ in 0..num_readers {
-        let data_clone = Arc::clone(&data);
-        let handle = tokio::spawn(async move {
-            let read_value = data_clone.read().await;
-            *read_value
-        });
-        handles.push(handle);
-    }
-    
-    let mut results = vec![];
-    for handle in handles {
-        results.push(handle.await.unwrap());
-    }
-    
-    results
+pub async fn concurrent_reads(value: i32, num_readers: usize) -> Vec<i32>  {
+    todo!("Concurrent reads with RwLock.")
 }
 
 /// Mix reads and writes with RwLock.
-pub async fn mixed_read_write(initial: i32, operations: Vec<(&str, i32)>) -> i32 {
-    let data = Arc::new(RwLock::new(initial));
-    
-    for (op, value) in operations {
-        match op {
-            "read" => {
-                let _read = data.read().await;
-            }
-            "write" => {
-                let mut write = data.write().await;
-                *write += value;
-            }
-            _ => {}
-        }
-    }
-    
-    let final_value = data.read().await;
-    *final_value
+pub async fn mixed_read_write(initial: i32, operations: Vec<(&str, i32)>) -> i32  {
+    todo!("Mix reads and writes with RwLock.")
 }
 
 /// Shared cache with concurrent access.
-pub async fn shared_cache(operations: Vec<(String, Option<i32>)>) -> Vec<Option<i32>> {
-    use std::collections::HashMap;
-    
-    let cache = Arc::new(RwLock::new(HashMap::new()));
-    let mut results = vec![];
-    
-    for (key, value_opt) in operations {
-        match value_opt {
-            Some(value) => {
-                let mut cache_write = cache.write().await;
-                cache_write.insert(key, value);
-                results.push(Some(value));
-            }
-            None => {
-                let cache_read = cache.read().await;
-                let result = cache_read.get(&key).copied();
-                results.push(result);
-            }
-        }
-    }
-    
-    results
+pub async fn shared_cache(operations: Vec<(String, Option<i32>)>) -> Vec<Option<i32>>  {
+    todo!("Shared cache with concurrent access.")
 }
 
 #[cfg(test)]

@@ -7,20 +7,18 @@
 //! - Learn the difference between &T and &mut T
 
 /// Append a string to the end of another string.
-pub fn append_string(s: &mut String, suffix: &str) {
-    s.push_str(suffix);
+pub fn append_string(s: &mut String, suffix: &str)  {
+    todo!("Append a string to the end of another string.")
 }
 
 /// Clear a string (make it empty).
-pub fn clear_string(s: &mut String) {
-    s.clear();
+pub fn clear_string(s: &mut String)  {
+    todo!("Clear a string (make it empty).")
 }
 
 /// Convert a string to uppercase in place.
-pub fn uppercase_in_place(s: &mut String) {
-    let uppercase = s.to_uppercase();
-    s.clear();
-    s.push_str(&uppercase);
+pub fn uppercase_in_place(s: &mut String)  {
+    todo!("Convert a string to uppercase in place.")
 }
 
 #[cfg(test)]

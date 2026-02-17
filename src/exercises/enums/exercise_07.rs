@@ -15,26 +15,18 @@ pub enum Priority {
 }
 
 /// Returns true if the priority requires immediate attention (High or Critical)
-pub fn needs_immediate_attention(priority: Priority) -> bool {
-    matches!(priority, Priority::High | Priority::Critical)
+pub fn needs_immediate_attention(priority: Priority) -> bool  {
+    todo!("Return true if the priority requires immediate attention (High or Critical)")
 }
 
 /// Returns a numeric value for the priority
-pub fn priority_value(priority: Priority) -> u8 {
-    match priority {
-        Priority::Critical => 4,
-        Priority::High => 3,
-        Priority::Medium => 2,
-        Priority::Low => 1,
-    }
+pub fn priority_value(priority: Priority) -> u8  {
+    todo!("Return a numeric value for the priority")
 }
 
 /// Returns true if priority is not Low
-pub fn is_important(priority: Priority) -> bool {
-    match priority {
-        Priority::Low => false,
-        _ => true,
-    }
+pub fn is_important(priority: Priority) -> bool  {
+    todo!("Return true if priority is not Low")
 }
 
 #[cfg(test)]

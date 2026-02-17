@@ -14,8 +14,8 @@ pub trait Stringify {
 
 // Blanket implementation for all types implementing Display
 impl<T: Display> Stringify for T {
-    fn stringify(&self) -> String {
-        format!("String: {}", self)
+    fn stringify(&self) -> String  {
+        todo!("Implement stringify")
     }
 }
 
@@ -28,8 +28,8 @@ impl<T> Double for T
 where
     T: std::ops::Add<Output = T> + Copy,
 {
-    fn double(&self) -> Self {
-        *self + *self
+    fn double(&self) -> Self  {
+        todo!("Implement double")
     }
 }
 
@@ -39,8 +39,8 @@ pub trait Collector<T> {
 
 // Blanket implementation for any slice
 impl<T: Clone> Collector<T> for [T] {
-    fn collect_items(&self) -> Vec<T> {
-        self.to_vec()
+    fn collect_items(&self) -> Vec<T>  {
+        todo!("Implement collect_items")
     }
 }
 
@@ -57,8 +57,8 @@ where
 {
     type Item = T;
     
-    fn as_vec(&self) -> Vec<Self::Item> {
-        self.clone().collect()
+    fn as_vec(&self) -> Vec<Self::Item>  {
+        todo!("Implement as_vec")
     }
 }
 
@@ -73,8 +73,8 @@ impl<T> Mapper<T> for Vec<T> {
     fn map_all<F, U>(&self, f: F) -> Vec<U>
     where
         F: Fn(&T) -> U,
-    {
-        self.iter().map(f).collect()
+     {
+        todo!("Implement map_all")
     }
 }
 
@@ -95,8 +95,8 @@ where
     where
         F: Fn(&T) -> bool,
         T: Clone,
-    {
-        self.as_ref().iter().filter(|x| predicate(x)).cloned().collect()
+     {
+        todo!("Implement filter_by")
     }
 }
 

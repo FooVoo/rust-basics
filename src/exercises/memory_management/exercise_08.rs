@@ -13,31 +13,31 @@ pub struct Person {
 }
 
 impl Person {
-    pub fn new(name: String, age: u32) -> Self {
-        Person { name, age }
+    pub fn new(name: String, age: u32) -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn get_name(&self) -> &str {
-        &self.name
+    pub fn get_name(&self) -> &str  {
+        todo!("Implement get_name")
     }
     
-    pub fn get_age(&self) -> u32 {
-        self.age
+    pub fn get_age(&self) -> u32  {
+        todo!("Implement get_age")
     }
     
-    pub fn have_birthday(&mut self) {
-        self.age += 1;
+    pub fn have_birthday(&mut self)  {
+        todo!("Implement have_birthday")
     }
 }
 
 /// Create a person and return it.
-pub fn create_person(name: &str, age: u32) -> Person {
-    Person::new(name.to_string(), age)
+pub fn create_person(name: &str, age: u32) -> Person  {
+    todo!("Create a person and return it.")
 }
 
 /// Get a description of a person.
-pub fn describe_person(person: &Person) -> String {
-    format!("{} is {} years old", person.get_name(), person.get_age())
+pub fn describe_person(person: &Person) -> String  {
+    todo!("Get a description of a person.")
 }
 
 #[cfg(test)]

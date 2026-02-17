@@ -7,27 +7,18 @@
 //! - Handle success and error cases
 
 /// Divide two numbers, returning an error message if dividing by zero.
-pub fn divide(a: i32, b: i32) -> Result<i32, String> {
-    if b == 0 {
-        Err(String::from("Division by zero"))
-    } else {
-        Ok(a / b)
-    }
+pub fn divide(a: i32, b: i32) -> Result<i32, String>  {
+    todo!("Divide two numbers, returning an error message if dividing by zero.")
 }
 
 /// Parse a string to i32, converting parse error to custom message.
-pub fn parse_number(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|_| format!("Failed to parse '{}' as a number", s))
+pub fn parse_number(s: &str) -> Result<i32, String>  {
+    todo!("Parse a string to i32, converting parse error to custom message.")
 }
 
 /// Check if a number is positive, return error otherwise.
-pub fn validate_positive(n: i32) -> Result<i32, String> {
-    if n > 0 {
-        Ok(n)
-    } else {
-        Err(format!("{} is not positive", n))
-    }
+pub fn validate_positive(n: i32) -> Result<i32, String>  {
+    todo!("Check if a number is positive, return error otherwise.")
 }
 
 #[cfg(test)]

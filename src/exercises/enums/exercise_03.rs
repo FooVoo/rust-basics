@@ -7,21 +7,13 @@
 //! - Work with Option enum
 
 /// Extracts the value from Some, returns 0 for None
-pub fn unwrap_or_zero(opt: Option<i32>) -> i32 {
-    if let Some(value) = opt {
-        value
-    } else {
-        0
-    }
+pub fn unwrap_or_zero(opt: Option<i32>) -> i32  {
+    todo!("Extract the value from Some, returns 0 for None")
 }
 
 /// Returns true if the option contains a value greater than 10
-pub fn is_greater_than_ten(opt: Option<i32>) -> bool {
-    if let Some(value) = opt {
-        value > 10
-    } else {
-        false
-    }
+pub fn is_greater_than_ten(opt: Option<i32>) -> bool  {
+    todo!("Return true if the option contains a value greater than 10")
 }
 
 #[cfg(test)]

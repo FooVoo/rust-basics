@@ -7,42 +7,28 @@
 //! - Work with tuples in iterations
 
 /// Get indices of elements that match a predicate.
-pub fn indices_of_evens(numbers: &[i32]) -> Vec<usize> {
-    numbers
-        .iter()
-        .enumerate()
-        .filter(|&(_, n)| n % 2 == 0)
-        .map(|(i, _)| i)
-        .collect()
+pub fn indices_of_evens(numbers: &[i32]) -> Vec<usize>  {
+    todo!("Get indices of elements that match a predicate.")
 }
 
 /// Create pairs of elements from two slices.
-pub fn zip_slices(a: &[i32], b: &[i32]) -> Vec<(i32, i32)> {
-    a.iter().zip(b.iter()).map(|(&x, &y)| (x, y)).collect()
+pub fn zip_slices(a: &[i32], b: &[i32]) -> Vec<(i32, i32)>  {
+    todo!("Create pairs of elements from two slices.")
 }
 
 /// Sum corresponding elements from two slices.
-pub fn sum_corresponding(a: &[i32], b: &[i32]) -> Vec<i32> {
-    a.iter().zip(b.iter()).map(|(&x, &y)| x + y).collect()
+pub fn sum_corresponding(a: &[i32], b: &[i32]) -> Vec<i32>  {
+    todo!("Sum corresponding elements from two slices.")
 }
 
 /// Find indices where two slices differ.
-pub fn diff_indices(a: &[i32], b: &[i32]) -> Vec<usize> {
-    a.iter()
-        .zip(b.iter())
-        .enumerate()
-        .filter(|&(_, (x, y))| x != y)
-        .map(|(i, _)| i)
-        .collect()
+pub fn diff_indices(a: &[i32], b: &[i32]) -> Vec<usize>  {
+    todo!("Find indices where two slices differ.")
 }
 
 /// Create indexed strings.
-pub fn indexed_strings(strings: &[&str]) -> Vec<String> {
-    strings
-        .iter()
-        .enumerate()
-        .map(|(i, s)| format!("{}: {}", i, s))
-        .collect()
+pub fn indexed_strings(strings: &[&str]) -> Vec<String>  {
+    todo!("Create indexed strings.")
 }
 
 #[cfg(test)]

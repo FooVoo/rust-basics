@@ -10,71 +10,18 @@ use tokio::task::JoinSet;
 use tokio::time::{sleep, Duration};
 
 /// Spawn tasks dynamically and collect results.
-pub async fn dynamic_task_set(tasks: Vec<(i32, u64)>) -> Vec<i32> {
-    let mut set = JoinSet::new();
-    
-    for (value, delay) in tasks {
-        set.spawn(async move {
-            sleep(Duration::from_millis(delay)).await;
-            value * 2
-        });
-    }
-    
-    let mut results = vec![];
-    while let Some(result) = set.join_next().await {
-        results.push(result.unwrap());
-    }
-    
-    results.sort();
-    results
+pub async fn dynamic_task_set(tasks: Vec<(i32, u64)>) -> Vec<i32>  {
+    todo!("Spawn tasks dynamically and collect results.")
 }
 
 /// Process results as they arrive.
-pub async fn process_as_completed(num_tasks: usize) -> Vec<usize> {
-    let mut set = JoinSet::new();
-    
-    for i in 0..num_tasks {
-        let delay = (num_tasks - i) as u64 * 10;
-        set.spawn(async move {
-            sleep(Duration::from_millis(delay)).await;
-            i
-        });
-    }
-    
-    let mut completion_order = vec![];
-    while let Some(result) = set.join_next().await {
-        completion_order.push(result.unwrap());
-    }
-    
-    completion_order
+pub async fn process_as_completed(num_tasks: usize) -> Vec<usize>  {
+    todo!("Process results as they arrive.")
 }
 
 /// Spawn tasks conditionally based on results.
-pub async fn conditional_spawning(initial_values: Vec<i32>) -> Vec<i32> {
-    let mut set = JoinSet::new();
-    let mut results = vec![];
-    
-    for value in initial_values {
-        set.spawn(async move {
-            sleep(Duration::from_millis(10)).await;
-            value * 2
-        });
-    }
-    
-    while let Some(result) = set.join_next().await {
-        let value = result.unwrap();
-        results.push(value);
-        
-        if value < 50 && results.len() < 10 {
-            set.spawn(async move {
-                sleep(Duration::from_millis(10)).await;
-                value + 10
-            });
-        }
-    }
-    
-    results.sort();
-    results
+pub async fn conditional_spawning(initial_values: Vec<i32>) -> Vec<i32>  {
+    todo!("Spawn tasks conditionally based on results.")
 }
 
 #[cfg(test)]

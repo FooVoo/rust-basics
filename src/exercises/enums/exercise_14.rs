@@ -15,35 +15,23 @@ pub enum DataSet {
 
 impl DataSet {
     /// Returns the count of elements in the dataset
-    pub fn len(&self) -> usize {
-        match self {
-            DataSet::Empty => 0,
-            DataSet::Single(_) => 1,
-            DataSet::Multiple(vec) => vec.len(),
-        }
+    pub fn len(&self) -> usize  {
+        todo!("Return the count of elements in the dataset")
     }
 
     /// Returns the sum of all elements
-    pub fn sum(&self) -> i32 {
-        match self {
-            DataSet::Empty => 0,
-            DataSet::Single(n) => *n,
-            DataSet::Multiple(vec) => vec.iter().sum(),
-        }
+    pub fn sum(&self) -> i32  {
+        todo!("Return the sum of all elements")
     }
 
     /// Returns the maximum value if present
-    pub fn max(&self) -> Option<i32> {
-        match self {
-            DataSet::Empty => None,
-            DataSet::Single(n) => Some(*n),
-            DataSet::Multiple(vec) => vec.iter().max().copied(),
-        }
+    pub fn max(&self) -> Option<i32>  {
+        todo!("Return the maximum value if present")
     }
 
     /// Returns true if the dataset is empty
-    pub fn is_empty(&self) -> bool {
-        matches!(self, DataSet::Empty)
+    pub fn is_empty(&self) -> bool  {
+        todo!("Return true if the dataset is empty")
     }
 }
 

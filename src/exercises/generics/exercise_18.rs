@@ -19,8 +19,8 @@ pub struct RangeValidator<T> {
 }
 
 impl<T> RangeValidator<T> {
-    pub fn new(min: T, max: T) -> Self {
-        RangeValidator { min, max }
+    pub fn new(min: T, max: T) -> Self  {
+        todo!("A range validator for comparable types.")
     }
 }
 
@@ -30,14 +30,8 @@ where
 {
     type Error = String;
 
-    fn validate(&self, value: &T) -> Result<(), Self::Error> {
-        if value < &self.min {
-            Err(format!("Value is below minimum"))
-        } else if value > &self.max {
-            Err(format!("Value is above maximum"))
-        } else {
-            Ok(())
-        }
+    fn validate(&self, value: &T) -> Result<(), Self::Error>  {
+        todo!("Implement validate")
     }
 }
 
@@ -48,38 +42,24 @@ pub struct LengthValidator {
 }
 
 impl LengthValidator {
-    pub fn new(min_len: usize, max_len: usize) -> Self {
-        LengthValidator { min_len, max_len }
+    pub fn new(min_len: usize, max_len: usize) -> Self  {
+        todo!("A length validator for types with length.")
     }
 }
 
 impl<T> Validator<Vec<T>> for LengthValidator {
     type Error = String;
 
-    fn validate(&self, value: &Vec<T>) -> Result<(), Self::Error> {
-        let len = value.len();
-        if len < self.min_len {
-            Err(format!("Length {} is below minimum {}", len, self.min_len))
-        } else if len > self.max_len {
-            Err(format!("Length {} is above maximum {}", len, self.max_len))
-        } else {
-            Ok(())
-        }
+    fn validate(&self, value: &Vec<T>) -> Result<(), Self::Error>  {
+        todo!("Implement validate")
     }
 }
 
 impl Validator<String> for LengthValidator {
     type Error = String;
 
-    fn validate(&self, value: &String) -> Result<(), Self::Error> {
-        let len = value.len();
-        if len < self.min_len {
-            Err(format!("Length {} is below minimum {}", len, self.min_len))
-        } else if len > self.max_len {
-            Err(format!("Length {} is above maximum {}", len, self.max_len))
-        } else {
-            Ok(())
-        }
+    fn validate(&self, value: &String) -> Result<(), Self::Error>  {
+        todo!("Implement validate")
     }
 }
 
@@ -87,11 +67,8 @@ impl Validator<String> for LengthValidator {
 pub fn validate_all<T, V>(value: &T, validators: &[V]) -> Result<(), String>
 where
     V: Validator<T, Error = String>,
-{
-    for validator in validators {
-        validator.validate(value)?;
-    }
-    Ok(())
+ {
+    todo!("Validate a value with multiple validators.")
 }
 
 #[cfg(test)]

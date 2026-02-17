@@ -10,28 +10,18 @@
 pub fn find_parse_validate(
     strings: &[&str],
     index: usize,
-) -> Result<i32, String> {
-    strings
-        .get(index)
-        .ok_or(String::from("Index out of bounds"))?
-        .parse::<i32>()
-        .map_err(|e| e.to_string())?
-        .checked_sub(0)
-        .filter(|&n| n > 0)
-        .ok_or(String::from("Number is not positive"))
+) -> Result<i32, String>  {
+    todo!("Find a number, parse it, and validate it's positive.")
 }
 
 /// Get a character from a string and convert to uppercase.
-pub fn get_char_uppercase(s: &str, index: usize) -> Option<char> {
-    s.chars().nth(index).map(|c| c.to_ascii_uppercase())
+pub fn get_char_uppercase(s: &str, index: usize) -> Option<char>  {
+    todo!("Get a character from a string and convert to uppercase.")
 }
 
 /// Parse first element of slice or use default.
-pub fn parse_first_or_default(strings: &[&str], default: i32) -> i32 {
-    strings
-        .first()
-        .and_then(|s| s.parse::<i32>().ok())
-        .unwrap_or(default)
+pub fn parse_first_or_default(strings: &[&str], default: i32) -> i32  {
+    todo!("Parse first element of slice or use default.")
 }
 
 #[cfg(test)]

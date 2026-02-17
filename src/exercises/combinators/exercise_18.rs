@@ -7,13 +7,13 @@
 //! - Simplify common patterns
 
 /// Double value or return 0.
-pub fn double_or_zero(value: Option<i32>) -> i32 {
-    value.map_or(0, |x| x * 2)
+pub fn double_or_zero(value: Option<i32>) -> i32  {
+    todo!("Double value or return 0.")
 }
 
 /// Get length of optional string or 0.
-pub fn length_or_zero(s: Option<&str>) -> usize {
-    s.map_or(0, |s| s.len())
+pub fn length_or_zero(s: Option<&str>) -> usize  {
+    todo!("Get length of optional string or 0.")
 }
 
 #[cfg(test)]

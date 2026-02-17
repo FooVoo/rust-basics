@@ -7,8 +7,8 @@
 //! - Provide custom error messages
 
 /// Convert an Option<T> to Result<T, String>.
-pub fn option_to_result<T>(opt: Option<T>, error_msg: &str) -> Result<T, String> {
-    opt.ok_or_else(|| error_msg.to_string())
+pub fn option_to_result<T>(opt: Option<T>, error_msg: &str) -> Result<T, String>  {
+    todo!("Convert an Option<T> to Result<T, String>.")
 }
 
 #[cfg(test)]

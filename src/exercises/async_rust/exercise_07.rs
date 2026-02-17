@@ -7,43 +7,18 @@
 //! - Work with async closures
 
 /// Create and execute an async block.
-pub async fn execute_async_block(value: i32) -> i32 {
-    let future = async move {
-        value * 2 + 10
-    };
-    
-    future.await
+pub async fn execute_async_block(value: i32) -> i32  {
+    todo!("Create and execute an async block.")
 }
 
 /// Map values using an async operation.
-pub async fn async_map(values: Vec<i32>) -> Vec<i32> {
-    let mut results = vec![];
-    
-    for value in values {
-        let result = async move {
-            value * 2
-        }.await;
-        results.push(result);
-    }
-    
-    results
+pub async fn async_map(values: Vec<i32>) -> Vec<i32>  {
+    todo!("Map values using an async operation.")
 }
 
 /// Chain multiple async blocks.
-pub async fn chain_async_blocks(x: i32) -> i32 {
-    let step1 = async move {
-        x + 10
-    }.await;
-    
-    let step2 = async move {
-        step1 * 2
-    }.await;
-    
-    let step3 = async move {
-        step2 - 5
-    }.await;
-    
-    step3
+pub async fn chain_async_blocks(x: i32) -> i32  {
+    todo!("Chain multiple async blocks.")
 }
 
 #[cfg(test)]

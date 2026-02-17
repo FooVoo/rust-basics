@@ -7,23 +7,18 @@
 //! - Recover from errors with defaults
 
 /// Parse a number or return a default value.
-pub fn parse_or_default(s: &str, default: i32) -> i32 {
-    s.parse::<i32>().unwrap_or(default)
+pub fn parse_or_default(s: &str, default: i32) -> i32  {
+    todo!("Parse a number or return a default value.")
 }
 
 /// Parse a number or compute a default from the error.
-pub fn parse_or_length(s: &str) -> i32 {
-    s.parse::<i32>().unwrap_or_else(|_| s.len() as i32)
+pub fn parse_or_length(s: &str) -> i32  {
+    todo!("Parse a number or compute a default from the error.")
 }
 
 /// Divide or return zero on error.
-pub fn divide_or_zero(a: i32, b: i32) -> i32 {
-    if b == 0 {
-        Err("Division by zero")
-    } else {
-        Ok(a / b)
-    }
-    .unwrap_or(0)
+pub fn divide_or_zero(a: i32, b: i32) -> i32  {
+    todo!("Divide or return zero on error.")
 }
 
 #[cfg(test)]

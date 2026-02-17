@@ -16,36 +16,24 @@ pub enum MathError {
 }
 
 impl fmt::Display for MathError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            MathError::DivisionByZero => write!(f, "Division by zero"),
-            MathError::NegativeSquareRoot => write!(f, "Square root of negative number"),
-            MathError::Overflow => write!(f, "Arithmetic overflow"),
-        }
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
 /// Divide two numbers with custom error.
-pub fn divide(a: i32, b: i32) -> Result<i32, MathError> {
-    if b == 0 {
-        Err(MathError::DivisionByZero)
-    } else {
-        Ok(a / b)
-    }
+pub fn divide(a: i32, b: i32) -> Result<i32, MathError>  {
+    todo!("Divide two numbers with custom error.")
 }
 
 /// Check if square root is possible (non-negative).
-pub fn sqrt_check(n: i32) -> Result<i32, MathError> {
-    if n < 0 {
-        Err(MathError::NegativeSquareRoot)
-    } else {
-        Ok(n)
-    }
+pub fn sqrt_check(n: i32) -> Result<i32, MathError>  {
+    todo!("Check if square root is possible (non-negative).")
 }
 
 /// Checked addition that returns custom error on overflow.
-pub fn checked_add(a: i32, b: i32) -> Result<i32, MathError> {
-    a.checked_add(b).ok_or(MathError::Overflow)
+pub fn checked_add(a: i32, b: i32) -> Result<i32, MathError>  {
+    todo!("Checked addition that returns custom error on overflow.")
 }
 
 #[cfg(test)]

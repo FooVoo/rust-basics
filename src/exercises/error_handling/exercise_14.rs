@@ -17,52 +17,15 @@ pub enum PasswordError {
 }
 
 impl std::fmt::Display for PasswordError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            PasswordError::TooShort => write!(f, "Password must be at least 8 characters"),
-            PasswordError::TooLong => write!(f, "Password must be at most 128 characters"),
-            PasswordError::NoUppercase => write!(f, "Password must contain an uppercase letter"),
-            PasswordError::NoLowercase => write!(f, "Password must contain a lowercase letter"),
-            PasswordError::NoDigit => write!(f, "Password must contain a digit"),
-            PasswordError::NoSpecialChar => write!(f, "Password must contain a special character"),
-        }
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
 /// Validate a password against security requirements.
 /// Must be 8-128 chars, contain upper, lower, digit, and special char.
-pub fn validate_password(password: &str) -> Result<(), Vec<PasswordError>> {
-    let mut errors = Vec::new();
-    
-    if password.len() < 8 {
-        errors.push(PasswordError::TooShort);
-    }
-    
-    if password.len() > 128 {
-        errors.push(PasswordError::TooLong);
-    }
-    
-    if !password.chars().any(|c| c.is_uppercase()) {
-        errors.push(PasswordError::NoUppercase);
-    }
-    
-    if !password.chars().any(|c| c.is_lowercase()) {
-        errors.push(PasswordError::NoLowercase);
-    }
-    
-    if !password.chars().any(|c| c.is_ascii_digit()) {
-        errors.push(PasswordError::NoDigit);
-    }
-    
-    if !password.chars().any(|c| !c.is_alphanumeric()) {
-        errors.push(PasswordError::NoSpecialChar);
-    }
-    
-    if errors.is_empty() {
-        Ok(())
-    } else {
-        Err(errors)
-    }
+pub fn validate_password(password: &str) -> Result<(), Vec<PasswordError>>  {
+    todo!("Must be 8-128 chars, contain upper, lower, digit, and special char.")
 }
 
 #[cfg(test)]

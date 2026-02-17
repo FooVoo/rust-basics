@@ -17,17 +17,17 @@ pub struct SafeImpl {
 }
 
 impl ObjectSafe for SafeImpl {
-    fn process(&self) -> String {
-        format!("Processing: {}", self.value)
+    fn process(&self) -> String  {
+        todo!("Implement process")
     }
     
-    fn get_value(&self) -> i32 {
-        self.value
+    fn get_value(&self) -> i32  {
+        todo!("Implement get_value")
     }
 }
 
-pub fn use_as_trait_object(obj: &dyn ObjectSafe) -> String {
-    format!("{} - Value: {}", obj.process(), obj.get_value())
+pub fn use_as_trait_object(obj: &dyn ObjectSafe) -> String  {
+    todo!("Implement use_as_trait_object")
 }
 
 // Trait with generic method - NOT object safe
@@ -46,12 +46,12 @@ pub trait ObjectSafeAlternative {
 pub struct AlternativeImpl;
 
 impl ObjectSafeAlternative for AlternativeImpl {
-    fn process_string(&self, value: &str) -> String {
-        format!("String: {}", value)
+    fn process_string(&self, value: &str) -> String  {
+        todo!("Implement process_string")
     }
     
-    fn process_i32(&self, value: i32) -> String {
-        format!("i32: {}", value)
+    fn process_i32(&self, value: i32) -> String  {
+        todo!("Implement process_i32")
     }
 }
 
@@ -74,14 +74,12 @@ pub struct FactoryImpl {
 }
 
 impl ObjectSafeFactory for FactoryImpl {
-    fn create_boxed() -> Box<Self> {
-        Box::new(FactoryImpl {
-            name: "Factory".to_string(),
-        })
+    fn create_boxed() -> Box<Self>  {
+        todo!("Implement create_boxed")
     }
     
-    fn describe(&self) -> String {
-        format!("FactoryImpl: {}", self.name)
+    fn describe(&self) -> String  {
+        todo!("Implement describe")
     }
 }
 
@@ -91,19 +89,19 @@ pub trait MaybeSized {
 }
 
 impl MaybeSized for str {
-    fn get_data(&self) -> String {
-        self.to_string()
+    fn get_data(&self) -> String  {
+        todo!("Implement get_data")
     }
 }
 
 impl MaybeSized for String {
-    fn get_data(&self) -> String {
-        self.clone()
+    fn get_data(&self) -> String  {
+        todo!("Implement get_data")
     }
 }
 
-pub fn use_maybe_sized(obj: &dyn MaybeSized) -> String {
-    obj.get_data()
+pub fn use_maybe_sized(obj: &dyn MaybeSized) -> String  {
+    todo!("Implement use_maybe_sized")
 }
 
 #[cfg(test)]

@@ -17,15 +17,12 @@ pub struct House {
 }
 
 impl Buildable for House {
-    fn new(name: String) -> Self {
-        House { name, rooms: 1 }
+    fn new(name: String) -> Self  {
+        todo!("Implement new")
     }
     
-    fn default() -> Self {
-        House {
-            name: "Default House".to_string(),
-            rooms: 3,
-        }
+    fn default() -> Self  {
+        todo!("Implement default")
     }
 }
 
@@ -35,15 +32,12 @@ pub struct Vehicle {
 }
 
 impl Buildable for Vehicle {
-    fn new(name: String) -> Self {
-        Vehicle { name, wheels: 4 }
+    fn new(name: String) -> Self  {
+        todo!("Implement new")
     }
     
-    fn default() -> Self {
-        Vehicle {
-            name: "Default Vehicle".to_string(),
-            wheels: 4,
-        }
+    fn default() -> Self  {
+        todo!("Implement default")
     }
 }
 

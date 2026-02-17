@@ -10,16 +10,16 @@
 pub fn filter<T, F>(vec: Vec<T>, predicate: F) -> Vec<T>
 where
     F: Fn(&T) -> bool,
-{
-    vec.into_iter().filter(|item| predicate(item)).collect()
+ {
+    todo!("Filters a vector based on a predicate.")
 }
 
 /// Maps a vector from type T to type U.
 pub fn map<T, U, F>(vec: Vec<T>, f: F) -> Vec<U>
 where
     F: Fn(T) -> U,
-{
-    vec.into_iter().map(f).collect()
+ {
+    todo!("Maps a vector from type T to type U.")
 }
 
 /// A generic collection wrapper with utility methods.
@@ -29,52 +29,52 @@ pub struct Collection<T> {
 
 impl<T> Collection<T> {
     /// Creates a new empty collection.
-    pub fn new() -> Self {
-        Collection { items: Vec::new() }
+    pub fn new() -> Self  {
+        todo!("Create a new empty collection.")
     }
 
     /// Creates a collection from a vector.
-    pub fn from_vec(items: Vec<T>) -> Self {
-        Collection { items }
+    pub fn from_vec(items: Vec<T>) -> Self  {
+        todo!("Create a collection from a vector.")
     }
 
     /// Adds an item to the collection.
-    pub fn add(&mut self, item: T) {
-        self.items.push(item);
+    pub fn add(&mut self, item: T)  {
+        todo!("Add an item to the collection.")
     }
 
     /// Returns the number of items.
-    pub fn len(&self) -> usize {
-        self.items.len()
+    pub fn len(&self) -> usize  {
+        todo!("Return the number of items.")
     }
 
     /// Returns true if the collection is empty.
-    pub fn is_empty(&self) -> bool {
-        self.items.is_empty()
+    pub fn is_empty(&self) -> bool  {
+        todo!("Return true if the collection is empty.")
     }
 
     /// Converts the collection into a vector.
-    pub fn into_vec(self) -> Vec<T> {
-        self.items
+    pub fn into_vec(self) -> Vec<T>  {
+        todo!("Convert the collection into a vector.")
     }
 }
 
 impl<T: Clone> Collection<T> {
     /// Gets a clone of the item at the given index.
-    pub fn get(&self, index: usize) -> Option<T> {
-        self.items.get(index).cloned()
+    pub fn get(&self, index: usize) -> Option<T>  {
+        todo!("Get a clone of the item at the given index.")
     }
 }
 
 impl<T: PartialEq> Collection<T> {
     /// Checks if the collection contains an item.
-    pub fn contains(&self, item: &T) -> bool {
-        self.items.contains(item)
+    pub fn contains(&self, item: &T) -> bool  {
+        todo!("Check if the collection contains an item.")
     }
 
     /// Removes all occurrences of an item.
-    pub fn remove_all(&mut self, item: &T) {
-        self.items.retain(|x| x != item);
+    pub fn remove_all(&mut self, item: &T)  {
+        todo!("Removes all occurrences of an item.")
     }
 }
 

@@ -7,29 +7,18 @@
 //! - Understand slice syntax and ranges
 
 /// Get the first word from a string.
-pub fn first_word(s: &str) -> &str {
-    let bytes = s.as_bytes();
-    
-    for (i, &byte) in bytes.iter().enumerate() {
-        if byte == b' ' {
-            return &s[..i];
-        }
-    }
-    
-    s
+pub fn first_word(s: &str) -> &str  {
+    todo!("Get the first word from a string.")
 }
 
 /// Get a slice of a vector.
-pub fn get_slice(v: &[i32], start: usize, end: usize) -> &[i32] {
-    &v[start..end]
+pub fn get_slice(v: &[i32], start: usize, end: usize) -> &[i32]  {
+    todo!("Get a slice of a vector.")
 }
 
 /// Count words in a string.
-pub fn count_words(s: &str) -> usize {
-    if s.is_empty() {
-        return 0;
-    }
-    s.split_whitespace().count()
+pub fn count_words(s: &str) -> usize  {
+    todo!("Count words in a string.")
 }
 
 #[cfg(test)]

@@ -11,43 +11,36 @@ pub struct Counter {
 }
 
 impl Counter {
-    pub fn new() -> Self {
-        Counter { count: 0 }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn increment(&mut self) {
-        self.count += 1;
+    pub fn increment(&mut self)  {
+        todo!("Implement increment")
     }
     
-    pub fn get(&self) -> i32 {
-        self.count
+    pub fn get(&self) -> i32  {
+        todo!("Implement get")
     }
     
-    pub fn add(&mut self, amount: i32) {
-        self.count += amount;
+    pub fn add(&mut self, amount: i32)  {
+        todo!("Implement add")
     }
 }
 
 /// Increment counter and return new value.
-pub fn increment_and_get(counter: &mut Counter) -> i32 {
-    counter.increment();
-    counter.get()
+pub fn increment_and_get(counter: &mut Counter) -> i32  {
+    todo!("Increment counter and return new value.")
 }
 
 /// Add multiple values to counter.
-pub fn add_all(counter: &mut Counter, values: &[i32]) {
-    for &value in values {
-        counter.add(value);
-    }
+pub fn add_all(counter: &mut Counter, values: &[i32])  {
+    todo!("Add multiple values to counter.")
 }
 
 /// Process a vector by doubling even numbers in place.
-pub fn double_evens(numbers: &mut Vec<i32>) {
-    for num in numbers.iter_mut() {
-        if *num % 2 == 0 {
-            *num *= 2;
-        }
-    }
+pub fn double_evens(numbers: &mut Vec<i32>)  {
+    todo!("Process a vector by doubling even numbers in place.")
 }
 
 #[cfg(test)]

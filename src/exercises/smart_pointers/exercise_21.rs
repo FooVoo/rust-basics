@@ -9,40 +9,28 @@
 use std::borrow::Cow;
 
 /// Return a Cow that borrows if no modification needed.
-pub fn maybe_uppercase(s: &str) -> Cow<str> {
-    if s.chars().all(|c| c.is_uppercase() || !c.is_alphabetic()) {
-        Cow::Borrowed(s)
-    } else {
-        Cow::Owned(s.to_uppercase())
-    }
+pub fn maybe_uppercase(s: &str) -> Cow<str>  {
+    todo!("Return a Cow that borrows if no modification needed.")
 }
 
 /// Process a slice, modifying only if needed.
-pub fn ensure_positive(nums: &[i32]) -> Cow<[i32]> {
-    if nums.iter().all(|&n| n >= 0) {
-        Cow::Borrowed(nums)
-    } else {
-        Cow::Owned(nums.iter().map(|&n| n.abs()).collect())
-    }
+pub fn ensure_positive(nums: &[i32]) -> Cow<[i32]>  {
+    todo!("Process a slice, modifying only if needed.")
 }
 
 /// Append to string only if it doesn't end with suffix.
-pub fn ensure_suffix<'a>(s: &'a str, suffix: &str) -> Cow<'a, str> {
-    if s.ends_with(suffix) {
-        Cow::Borrowed(s)
-    } else {
-        Cow::Owned(format!("{}{}", s, suffix))
-    }
+pub fn ensure_suffix<'a>(s: &'a str, suffix: &str) -> Cow<'a, str>  {
+    todo!("Append to string only if it doesn't end with suffix.")
 }
 
 /// Count how many Cow instances actually own their data.
-pub fn count_owned(cows: &[Cow<str>]) -> usize {
-    cows.iter().filter(|cow| matches!(cow, Cow::Owned(_))).count()
+pub fn count_owned(cows: &[Cow<str>]) -> usize  {
+    todo!("Count how many Cow instances actually own their data.")
 }
 
 /// Convert Cow to owned String.
-pub fn cow_to_owned(cow: Cow<str>) -> String {
-    cow.into_owned()
+pub fn cow_to_owned(cow: Cow<str>) -> String  {
+    todo!("Convert Cow to owned String.")
 }
 
 #[cfg(test)]

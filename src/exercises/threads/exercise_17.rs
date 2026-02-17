@@ -16,51 +16,13 @@ pub fn safe_transfer(
     account1: Arc<Mutex<i32>>,
     account2: Arc<Mutex<i32>>,
     amount: i32,
-) {
-    // Lock in consistent order based on pointer address
-    let (first, second) = if Arc::as_ptr(&account1) < Arc::as_ptr(&account2) {
-        (&account1, &account2)
-    } else {
-        (&account2, &account1)
-    };
-
-    let mut first_lock = first.lock().unwrap();
-    let mut second_lock = second.lock().unwrap();
-
-    // Determine which is which for the actual transfer
-    if Arc::ptr_eq(&account1, first) {
-        *first_lock -= amount;
-        *second_lock += amount;
-    } else {
-        *second_lock -= amount;
-        *first_lock += amount;
-    }
+)  {
+    todo!("Use consistent lock ordering to avoid deadlock.")
 }
 
 /// Run multiple transfers in parallel and return final balances.
-pub fn parallel_transfers(initial_balance: i32, n_transfers: usize) -> (i32, i32) {
-    let account1 = Arc::new(Mutex::new(initial_balance));
-    let account2 = Arc::new(Mutex::new(initial_balance));
-
-    let handles: Vec<_> = (0..n_transfers)
-        .map(|i| {
-            let acc1 = Arc::clone(&account1);
-            let acc2 = Arc::clone(&account2);
-            thread::spawn(move || {
-                if i % 2 == 0 {
-                    safe_transfer(acc1, acc2, 10);
-                } else {
-                    safe_transfer(acc2, acc1, 10);
-                }
-            })
-        })
-        .collect();
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    (*account1.lock().unwrap(), *account2.lock().unwrap())
+pub fn parallel_transfers(initial_balance: i32, n_transfers: usize) -> (i32, i32)  {
+    todo!("Run multiple transfers in parallel and return final balances.")
 }
 
 #[cfg(test)]

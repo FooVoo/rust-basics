@@ -16,23 +16,18 @@ pub enum Direction {
 
 impl Direction {
     /// Returns the opposite direction
-    pub fn opposite(&self) -> Direction {
-        match self {
-            Direction::North => Direction::South,
-            Direction::South => Direction::North,
-            Direction::East => Direction::West,
-            Direction::West => Direction::East,
-        }
+    pub fn opposite(&self) -> Direction  {
+        todo!("Return the opposite direction")
     }
 
     /// Returns true if the direction is horizontal (East or West)
-    pub fn is_horizontal(&self) -> bool {
-        matches!(self, Direction::East | Direction::West)
+    pub fn is_horizontal(&self) -> bool  {
+        todo!("Return true if the direction is horizontal (East or West)")
     }
 
     /// Returns true if the direction is vertical (North or South)
-    pub fn is_vertical(&self) -> bool {
-        matches!(self, Direction::North | Direction::South)
+    pub fn is_vertical(&self) -> bool  {
+        todo!("Return true if the direction is vertical (North or South)")
     }
 }
 

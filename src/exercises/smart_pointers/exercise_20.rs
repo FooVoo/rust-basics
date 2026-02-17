@@ -10,38 +10,38 @@ use std::rc::Rc;
 use std::sync::Arc;
 
 /// Convert Box to Rc.
-pub fn box_to_rc<T>(boxed: Box<T>) -> Rc<T> {
-    Rc::from(boxed)
+pub fn box_to_rc<T>(boxed: Box<T>) -> Rc<T>  {
+    todo!("Convert Box to Rc.")
 }
 
 /// Convert Box to Arc.
-pub fn box_to_arc<T>(boxed: Box<T>) -> Arc<T> {
-    Arc::from(boxed)
+pub fn box_to_arc<T>(boxed: Box<T>) -> Arc<T>  {
+    todo!("Convert Box to Arc.")
 }
 
 /// Convert Vec to Box slice.
-pub fn vec_to_boxed_slice<T>(vec: Vec<T>) -> Box<[T]> {
-    vec.into_boxed_slice()
+pub fn vec_to_boxed_slice<T>(vec: Vec<T>) -> Box<[T]>  {
+    todo!("Convert Vec to Box slice.")
 }
 
 /// Convert String to Box str.
-pub fn string_to_boxed_str(s: String) -> Box<str> {
-    s.into_boxed_str()
+pub fn string_to_boxed_str(s: String) -> Box<str>  {
+    todo!("Convert String to Box str.")
 }
 
 /// Try to unwrap Rc if it's the only reference.
-pub fn try_unwrap_rc<T>(rc: Rc<T>) -> Result<T, Rc<T>> {
-    Rc::try_unwrap(rc)
+pub fn try_unwrap_rc<T>(rc: Rc<T>) -> Result<T, Rc<T>>  {
+    todo!("Try to unwrap Rc if it's the only reference.")
 }
 
 /// Try to unwrap Arc if it's the only reference.
-pub fn try_unwrap_arc<T>(arc: Arc<T>) -> Result<T, Arc<T>> {
-    Arc::try_unwrap(arc)
+pub fn try_unwrap_arc<T>(arc: Arc<T>) -> Result<T, Arc<T>>  {
+    todo!("Try to unwrap Arc if it's the only reference.")
 }
 
 /// Make Rc mutable if possible.
-pub fn make_rc_mut<T: Clone>(rc: &mut Rc<T>) -> &mut T {
-    Rc::make_mut(rc)
+pub fn make_rc_mut<T: Clone>(rc: &mut Rc<T>) -> &mut T  {
+    todo!("Make Rc mutable if possible.")
 }
 
 #[cfg(test)]

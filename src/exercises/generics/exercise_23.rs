@@ -17,56 +17,44 @@ impl<T, const N: usize> Stack<T, N> {
     pub fn new() -> Self
     where
         T: Copy,
-    {
-        Stack {
-            data: [None; N],
-            len: 0,
-        }
+     {
+        todo!("Create a new empty stack.")
     }
 
     /// Pushes a value onto the stack.
-    pub fn push(&mut self, value: T) -> Result<(), &'static str> {
-        if self.len >= N {
-            return Err("Stack overflow");
-        }
-        self.data[self.len] = Some(value);
-        self.len += 1;
-        Ok(())
+    pub fn push(&mut self, value: T) -> Result<(), &'static str>  {
+        todo!("Pushes a value onto the stack.")
     }
 
     /// Pops a value from the stack.
-    pub fn pop(&mut self) -> Option<T> {
-        if self.len == 0 {
-            return None;
-        }
-        self.len -= 1;
-        self.data[self.len].take()
+    pub fn pop(&mut self) -> Option<T>  {
+        todo!("Pops a value from the stack.")
     }
 
     /// Returns the current length of the stack.
-    pub fn len(&self) -> usize {
-        self.len
+    pub fn len(&self) -> usize  {
+        todo!("Return the current length of the stack.")
     }
 
     /// Checks if the stack is empty.
-    pub fn is_empty(&self) -> bool {
-        self.len == 0
+    pub fn is_empty(&self) -> bool  {
+        todo!("Check if the stack is empty.")
     }
 
     /// Checks if the stack is full.
-    pub fn is_full(&self) -> bool {
-        self.len == N
+    pub fn is_full(&self) -> bool  {
+        todo!("Check if the stack is full.")
     }
 
     /// Returns the capacity of the stack.
-    pub fn capacity(&self) -> usize {
-        N
+    pub fn capacity(&self) -> usize  {
+        todo!("Return the capacity of the stack.")
     }
 }
 
 impl<T: Copy, const N: usize> Default for Stack<T, N> {
-    fn default() -> Self {
-        Self::new()
+    fn default() -> Self  {
+        todo!("Return the capacity of the stack.")
     }
 }
 
@@ -83,56 +71,39 @@ where
     T: Copy,
 {
     /// Creates a new empty ring buffer.
-    pub fn new() -> Self {
-        RingBuffer {
-            data: [None; N],
-            read_pos: 0,
-            write_pos: 0,
-            count: 0,
-        }
+    pub fn new() -> Self  {
+        todo!("Create a new empty ring buffer.")
     }
 
     /// Writes a value to the buffer.
-    pub fn write(&mut self, value: T) -> Result<(), &'static str> {
-        if self.count >= N {
-            return Err("Buffer full");
-        }
-        self.data[self.write_pos] = Some(value);
-        self.write_pos = (self.write_pos + 1) % N;
-        self.count += 1;
-        Ok(())
+    pub fn write(&mut self, value: T) -> Result<(), &'static str>  {
+        todo!("Writes a value to the buffer.")
     }
 
     /// Reads a value from the buffer.
-    pub fn read(&mut self) -> Option<T> {
-        if self.count == 0 {
-            return None;
-        }
-        let value = self.data[self.read_pos].take();
-        self.read_pos = (self.read_pos + 1) % N;
-        self.count -= 1;
-        value
+    pub fn read(&mut self) -> Option<T>  {
+        todo!("Reads a value from the buffer.")
     }
 
     /// Returns the number of elements in the buffer.
-    pub fn len(&self) -> usize {
-        self.count
+    pub fn len(&self) -> usize  {
+        todo!("Return the number of elements in the buffer.")
     }
 
     /// Checks if the buffer is empty.
-    pub fn is_empty(&self) -> bool {
-        self.count == 0
+    pub fn is_empty(&self) -> bool  {
+        todo!("Check if the buffer is empty.")
     }
 
     /// Checks if the buffer is full.
-    pub fn is_full(&self) -> bool {
-        self.count == N
+    pub fn is_full(&self) -> bool  {
+        todo!("Check if the buffer is full.")
     }
 }
 
 impl<T: Copy, const N: usize> Default for RingBuffer<T, N> {
-    fn default() -> Self {
-        Self::new()
+    fn default() -> Self  {
+        todo!("Check if the buffer is full.")
     }
 }
 

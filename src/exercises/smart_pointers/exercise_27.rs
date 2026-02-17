@@ -21,83 +21,44 @@ pub struct GraphNode {
 }
 
 impl GraphNode {
-    pub fn new(id: usize, value: i32) -> NodeRef {
-        Rc::new(RefCell::new(GraphNode {
-            id,
-            value,
-            edges: Vec::new(),
-            parent: None,
-        }))
+    pub fn new(id: usize, value: i32) -> NodeRef  {
+        todo!("Implement new")
     }
 
-    pub fn add_edge(from: &NodeRef, to: &NodeRef) {
-        from.borrow_mut().edges.push(Rc::clone(to));
+    pub fn add_edge(from: &NodeRef, to: &NodeRef)  {
+        todo!("Implement add_edge")
     }
 
-    pub fn add_bidirectional(a: &NodeRef, b: &NodeRef) {
-        Self::add_edge(a, b);
-        Self::add_edge(b, a);
+    pub fn add_bidirectional(a: &NodeRef, b: &NodeRef)  {
+        todo!("Implement add_bidirectional")
     }
 
-    pub fn set_parent(child: &NodeRef, parent: &NodeRef) {
-        child.borrow_mut().parent = Some(Rc::downgrade(parent));
+    pub fn set_parent(child: &NodeRef, parent: &NodeRef)  {
+        todo!("Implement set_parent")
     }
 
-    pub fn degree(node: &NodeRef) -> usize {
-        node.borrow().edges.len()
+    pub fn degree(node: &NodeRef) -> usize  {
+        todo!("Implement degree")
     }
 
-    pub fn has_edge_to(from: &NodeRef, to_id: usize) -> bool {
-        from.borrow()
-            .edges
-            .iter()
-            .any(|n| n.borrow().id == to_id)
+    pub fn has_edge_to(from: &NodeRef, to_id: usize) -> bool  {
+        todo!("Implement has_edge_to")
     }
 }
 
 /// Build a simple graph: A <-> B <-> C
-pub fn create_simple_graph() -> (NodeRef, NodeRef, NodeRef) {
-    let a = GraphNode::new(1, 10);
-    let b = GraphNode::new(2, 20);
-    let c = GraphNode::new(3, 30);
-
-    GraphNode::add_bidirectional(&a, &b);
-    GraphNode::add_bidirectional(&b, &c);
-
-    (a, b, c)
+pub fn create_simple_graph() -> (NodeRef, NodeRef, NodeRef)  {
+    todo!("Build a simple graph: A <-> B <-> C")
 }
 
 /// Calculate sum of all neighbor values.
-pub fn sum_neighbor_values(node: &NodeRef) -> i32 {
-    node.borrow()
-        .edges
-        .iter()
-        .map(|n| n.borrow().value)
-        .sum()
+pub fn sum_neighbor_values(node: &NodeRef) -> i32  {
+    todo!("Calculate sum of all neighbor values.")
 }
 
 /// Visit all reachable nodes (BFS).
-pub fn count_reachable(start: &NodeRef) -> usize {
-    use std::collections::{HashSet, VecDeque};
-
-    let mut visited = HashSet::new();
-    let mut queue = VecDeque::new();
-
-    queue.push_back(Rc::clone(start));
-    visited.insert(start.borrow().id);
-
-    let mut count = 0;
-    while let Some(node) = queue.pop_front() {
-        count += 1;
-        for neighbor in &node.borrow().edges {
-            let id = neighbor.borrow().id;
-            if visited.insert(id) {
-                queue.push_back(Rc::clone(neighbor));
-            }
-        }
-    }
-
-    count
+pub fn count_reachable(start: &NodeRef) -> usize  {
+    todo!("Visit all reachable nodes (BFS).")
 }
 
 #[cfg(test)]

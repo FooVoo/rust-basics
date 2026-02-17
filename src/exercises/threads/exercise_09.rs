@@ -11,25 +11,8 @@ use std::thread;
 
 /// Increment a counter from multiple threads using Mutex.
 /// Spawn n_threads threads, each incrementing the counter n_times.
-pub fn concurrent_counter(n_threads: usize, n_times: usize) -> usize {
-    let counter = Arc::new(Mutex::new(0));
-    let handles: Vec<_> = (0..n_threads)
-        .map(|_| {
-            let counter = Arc::clone(&counter);
-            thread::spawn(move || {
-                for _ in 0..n_times {
-                    let mut num = counter.lock().unwrap();
-                    *num += 1;
-                }
-            })
-        })
-        .collect();
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    *counter.lock().unwrap()
+pub fn concurrent_counter(n_threads: usize, n_times: usize) -> usize  {
+    todo!("Spawn n_threads threads, each incrementing the counter n_times.")
 }
 
 #[cfg(test)]

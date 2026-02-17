@@ -7,26 +7,23 @@
 //! - Understand when to discard errors
 
 /// Convert Result to Option, discarding the error.
-pub fn result_to_option(result: Result<i32, String>) -> Option<i32> {
-    result.ok()
+pub fn result_to_option(result: Result<i32, String>) -> Option<i32>  {
+    todo!("Convert Result to Option, discarding the error.")
 }
 
 /// Parse a string to Option, ignoring parse errors.
-pub fn parse_to_option(s: &str) -> Option<i32> {
-    s.parse::<i32>().ok()
+pub fn parse_to_option(s: &str) -> Option<i32>  {
+    todo!("Parse a string to Option, ignoring parse errors.")
 }
 
 /// Extract the error from a Result as an Option.
-pub fn get_error(result: Result<i32, String>) -> Option<String> {
-    result.err()
+pub fn get_error(result: Result<i32, String>) -> Option<String>  {
+    todo!("Extract the error from a Result as an Option.")
 }
 
 /// Try parsing and return Ok values only.
-pub fn collect_valid_numbers(strings: &[&str]) -> Vec<i32> {
-    strings
-        .iter()
-        .filter_map(|s| s.parse::<i32>().ok())
-        .collect()
+pub fn collect_valid_numbers(strings: &[&str]) -> Vec<i32>  {
+    todo!("Try parsing and return Ok values only.")
 }
 
 #[cfg(test)]

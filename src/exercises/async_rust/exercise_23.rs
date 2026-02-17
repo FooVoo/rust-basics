@@ -11,12 +11,8 @@ use async_trait::async_trait;
 #[async_trait]
 pub trait AsyncProcessor: Send + Sync {
     async fn process(&self, value: i32) -> i32;
-    async fn process_batch(&self, values: Vec<i32>) -> Vec<i32> {
-        let mut results = vec![];
-        for value in values {
-            results.push(self.process(value).await);
-        }
-        results
+    async fn process_batch(&self, values: Vec<i32>) -> Vec<i32>  {
+        todo!("Implement process_batch")
     }
 }
 
@@ -24,8 +20,8 @@ pub struct Doubler;
 
 #[async_trait]
 impl AsyncProcessor for Doubler {
-    async fn process(&self, value: i32) -> i32 {
-        value * 2
+    async fn process(&self, value: i32) -> i32  {
+        todo!("Implement process")
     }
 }
 
@@ -33,23 +29,19 @@ pub struct Incrementer;
 
 #[async_trait]
 impl AsyncProcessor for Incrementer {
-    async fn process(&self, value: i32) -> i32 {
-        value + 1
+    async fn process(&self, value: i32) -> i32  {
+        todo!("Implement process")
     }
 }
 
 /// Use async trait with dynamic dispatch.
-pub async fn process_with_trait(processor: &dyn AsyncProcessor, values: Vec<i32>) -> Vec<i32> {
-    processor.process_batch(values).await
+pub async fn process_with_trait(processor: &dyn AsyncProcessor, values: Vec<i32>) -> Vec<i32>  {
+    todo!("Use async trait with dynamic dispatch.")
 }
 
 /// Chain async processors.
-pub async fn chain_processors(value: i32) -> i32 {
-    let doubler = Doubler;
-    let incrementer = Incrementer;
-    
-    let step1 = doubler.process(value).await;
-    incrementer.process(step1).await
+pub async fn chain_processors(value: i32) -> i32  {
+    todo!("Chain async processors.")
 }
 
 #[cfg(test)]

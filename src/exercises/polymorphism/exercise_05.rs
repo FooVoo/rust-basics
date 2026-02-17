@@ -14,8 +14,8 @@ pub trait Doubling {
 pub struct MyInt(pub i32);
 
 impl Doubling for MyInt {
-    fn double(&self) -> Self {
-        MyInt(self.0 * 2)
+    fn double(&self) -> Self  {
+        todo!("Implement double")
     }
 }
 
@@ -23,8 +23,8 @@ impl Doubling for MyInt {
 pub struct MyString(pub String);
 
 impl Doubling for MyString {
-    fn double(&self) -> Self {
-        MyString(format!("{}{}", self.0, self.0))
+    fn double(&self) -> Self  {
+        todo!("Implement double")
     }
 }
 
@@ -33,8 +33,8 @@ pub trait Tripling {
 }
 
 impl Tripling for MyInt {
-    fn triple(&self) -> Self {
-        MyInt(self.0 * 3)
+    fn triple(&self) -> Self  {
+        todo!("Implement triple")
     }
 }
 

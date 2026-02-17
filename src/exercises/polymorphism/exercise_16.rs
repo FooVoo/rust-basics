@@ -15,8 +15,8 @@ pub struct EmailNotifier {
 }
 
 impl Notifier for EmailNotifier {
-    fn send(&self, message: &str) -> String {
-        format!("Email to {}: {}", self.email, message)
+    fn send(&self, message: &str) -> String  {
+        todo!("Implement send")
     }
 }
 
@@ -25,8 +25,8 @@ pub struct SmsNotifier {
 }
 
 impl Notifier for SmsNotifier {
-    fn send(&self, message: &str) -> String {
-        format!("SMS to {}: {}", self.phone, message)
+    fn send(&self, message: &str) -> String  {
+        todo!("Implement send")
     }
 }
 
@@ -35,40 +35,29 @@ pub struct PushNotifier {
 }
 
 impl Notifier for PushNotifier {
-    fn send(&self, message: &str) -> String {
-        format!("Push to device {}: {}", self.device_id, message)
+    fn send(&self, message: &str) -> String  {
+        todo!("Implement send")
     }
 }
 
 /// Create a notifier based on preference
-pub fn create_notifier(preference: &str, target: String) -> Box<dyn Notifier> {
-    match preference {
-        "email" => Box::new(EmailNotifier { email: target }),
-        "sms" => Box::new(SmsNotifier { phone: target }),
-        "push" => Box::new(PushNotifier { device_id: target }),
-        _ => Box::new(EmailNotifier { email: target }),
-    }
+pub fn create_notifier(preference: &str, target: String) -> Box<dyn Notifier>  {
+    todo!("Create a notifier based on preference")
 }
 
 /// Get default notifier
-pub fn default_notifier() -> Box<dyn Notifier> {
-    Box::new(EmailNotifier {
-        email: "default@example.com".to_string(),
-    })
+pub fn default_notifier() -> Box<dyn Notifier>  {
+    todo!("Get default notifier")
 }
 
 /// Create multiple notifiers
-pub fn create_all_notifiers(target: String) -> Vec<Box<dyn Notifier>> {
-    vec![
-        Box::new(EmailNotifier { email: target.clone() }),
-        Box::new(SmsNotifier { phone: target.clone() }),
-        Box::new(PushNotifier { device_id: target }),
-    ]
+pub fn create_all_notifiers(target: String) -> Vec<Box<dyn Notifier>>  {
+    todo!("Create multiple notifiers")
 }
 
 /// Send via all notifiers
-pub fn broadcast(message: &str, notifiers: &[Box<dyn Notifier>]) -> Vec<String> {
-    notifiers.iter().map(|n| n.send(message)).collect()
+pub fn broadcast(message: &str, notifiers: &[Box<dyn Notifier>]) -> Vec<String>  {
+    todo!("Send via all notifiers")
 }
 
 #[cfg(test)]

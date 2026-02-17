@@ -14,19 +14,18 @@ pub struct Logger {
 }
 
 impl Logger {
-    pub fn new(logs: Rc<RefCell<Vec<String>>>) -> Self {
-        logs.borrow_mut().push("Logger created".to_string());
-        Logger { logs }
+    pub fn new(logs: Rc<RefCell<Vec<String>>>) -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn log(&self, message: &str) {
-        self.logs.borrow_mut().push(message.to_string());
+    pub fn log(&self, message: &str)  {
+        todo!("Implement log")
     }
 }
 
 impl Drop for Logger {
-    fn drop(&mut self) {
-        self.logs.borrow_mut().push("Logger dropped".to_string());
+    fn drop(&mut self)  {
+        todo!("Implement drop")
     }
 }
 
@@ -36,32 +35,26 @@ pub struct Connection {
 }
 
 impl Connection {
-    pub fn new(id: u32) -> Self {
-        Connection {
-            id,
-            connected: true,
-        }
+    pub fn new(id: u32) -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn disconnect(&mut self) {
-        self.connected = false;
+    pub fn disconnect(&mut self)  {
+        todo!("Implement disconnect")
     }
     
-    pub fn is_connected(&self) -> bool {
-        self.connected
+    pub fn is_connected(&self) -> bool  {
+        todo!("Implement is_connected")
     }
     
-    pub fn id(&self) -> u32 {
-        self.id
+    pub fn id(&self) -> u32  {
+        todo!("Implement id")
     }
 }
 
 impl Drop for Connection {
-    fn drop(&mut self) {
-        if self.connected {
-            // Ensure we disconnect before dropping
-            self.disconnect();
-        }
+    fn drop(&mut self)  {
+        todo!("Implement drop")
     }
 }
 
@@ -70,30 +63,22 @@ pub struct ConnectionPool {
 }
 
 impl ConnectionPool {
-    pub fn new(size: usize) -> Self {
-        let connections = (0..size)
-            .map(|i| Connection::new(i as u32))
-            .collect();
-        ConnectionPool { connections }
+    pub fn new(size: usize) -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn get(&mut self, index: usize) -> Option<&mut Connection> {
-        self.connections.get_mut(index)
+    pub fn get(&mut self, index: usize) -> Option<&mut Connection>  {
+        todo!("Implement get")
     }
     
-    pub fn size(&self) -> usize {
-        self.connections.len()
+    pub fn size(&self) -> usize  {
+        todo!("Implement size")
     }
 }
 
 impl Drop for ConnectionPool {
-    fn drop(&mut self) {
-        // Explicitly disconnect all connections
-        for conn in &mut self.connections {
-            if conn.is_connected() {
-                conn.disconnect();
-            }
-        }
+    fn drop(&mut self)  {
+        todo!("Implement drop")
     }
 }
 

@@ -7,28 +7,18 @@
 //! - Work with borrowed values in match expressions
 
 /// Match on a reference and return a description.
-pub fn describe_number(n: &i32) -> String {
-    match n {
-        0 => String::from("zero"),
-        1..=10 => String::from("small"),
-        11..=100 => String::from("medium"),
-        _ => String::from("large"),
-    }
+pub fn describe_number(n: &i32) -> String  {
+    todo!("Match on a reference and return a description.")
 }
 
 /// Find the first even number in a slice.
-pub fn first_even(numbers: &[i32]) -> Option<i32> {
-    numbers.iter().find(|&&n| n % 2 == 0).copied()
+pub fn first_even(numbers: &[i32]) -> Option<i32>  {
+    todo!("Find the first even number in a slice.")
 }
 
 /// Classify a string by length.
-pub fn classify_by_length(s: &str) -> &'static str {
-    match s.len() {
-        0 => "empty",
-        1..=5 => "short",
-        6..=15 => "medium",
-        _ => "long",
-    }
+pub fn classify_by_length(s: &str) -> &'static str  {
+    todo!("Classify a string by length.")
 }
 
 #[cfg(test)]

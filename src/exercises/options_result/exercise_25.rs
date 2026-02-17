@@ -7,45 +7,24 @@
 //! - Build informative error messages
 
 /// Read a "file" (simulated) and parse its contents.
-pub fn read_and_parse(filename: &str, content: &str) -> Result<i32, String> {
-    content
-        .parse::<i32>()
-        .map_err(|e| format!("Failed to parse {}: {}", filename, e))
+pub fn read_and_parse(filename: &str, content: &str) -> Result<i32, String>  {
+    todo!("Read a \"file\" (simulated) and parse its contents.")
 }
 
 /// Process a value with context.
 pub fn process_with_context(
     value: &str,
     context: &str,
-) -> Result<i32, String> {
-    value
-        .parse::<i32>()
-        .map_err(|e| format!("Error in {}: {}", context, e))
-        .and_then(|n| {
-            if n >= 0 {
-                Ok(n)
-            } else {
-                Err(format!("Negative value in {}: {}", context, n))
-            }
-        })
+) -> Result<i32, String>  {
+    todo!("Process a value with context.")
 }
 
 /// Chain multiple operations with context preservation.
 pub fn multi_step_with_context(
     step1: &str,
     step2: &str,
-) -> Result<i32, String> {
-    let value1 = step1
-        .parse::<i32>()
-        .map_err(|e| format!("Step 1 failed: {}", e))?;
-
-    let value2 = step2
-        .parse::<i32>()
-        .map_err(|e| format!("Step 2 failed: {}", e))?;
-
-    value1
-        .checked_add(value2)
-        .ok_or_else(|| String::from("Addition overflow in final step"))
+) -> Result<i32, String>  {
+    todo!("Chain multiple operations with context preservation.")
 }
 
 #[cfg(test)]

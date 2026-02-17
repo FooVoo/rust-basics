@@ -7,22 +7,18 @@
 //! - Practice with closures
 
 /// Get a value from Option or compute it lazily.
-pub fn get_or_compute(opt: Option<i32>, compute: impl FnOnce() -> i32) -> i32 {
-    opt.unwrap_or_else(compute)
+pub fn get_or_compute(opt: Option<i32>, compute: impl FnOnce() -> i32) -> i32  {
+    todo!("Get a value from Option or compute it lazily.")
 }
 
 /// Get the length of an optional string, or compute default length.
-pub fn length_or_default(opt: Option<String>) -> usize {
-    opt.unwrap_or_else(|| String::from("default")).len()
+pub fn length_or_default(opt: Option<String>) -> usize  {
+    todo!("Get the length of an optional string, or compute default length.")
 }
 
 /// Find a value in a slice, or return the sum of all elements.
-pub fn find_or_sum(numbers: &[i32], target: i32) -> i32 {
-    numbers
-        .iter()
-        .find(|&&x| x == target)
-        .copied()
-        .unwrap_or_else(|| numbers.iter().sum())
+pub fn find_or_sum(numbers: &[i32], target: i32) -> i32  {
+    todo!("Find a value in a slice, or return the sum of all elements.")
 }
 
 #[cfg(test)]

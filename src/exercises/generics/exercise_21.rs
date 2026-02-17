@@ -13,20 +13,20 @@ pub struct Ref<'a, T> {
 
 impl<'a, T> Ref<'a, T> {
     /// Creates a new Ref.
-    pub fn new(value: &'a T) -> Self {
-        Ref { value }
+    pub fn new(value: &'a T) -> Self  {
+        todo!("Create a new Ref.")
     }
 
     /// Gets the referenced value.
-    pub fn get(&self) -> &T {
-        self.value
+    pub fn get(&self) -> &T  {
+        todo!("Get the referenced value.")
     }
 }
 
 impl<'a, T: Clone> Ref<'a, T> {
     /// Clones the referenced value.
-    pub fn cloned(&self) -> T {
-        self.value.clone()
+    pub fn cloned(&self) -> T  {
+        todo!("Clones the referenced value.")
     }
 }
 
@@ -38,18 +38,18 @@ pub struct RefPair<'a, 'b, T, U> {
 
 impl<'a, 'b, T, U> RefPair<'a, 'b, T, U> {
     /// Creates a new RefPair.
-    pub fn new(first: &'a T, second: &'b U) -> Self {
-        RefPair { first, second }
+    pub fn new(first: &'a T, second: &'b U) -> Self  {
+        todo!("Create a new RefPair.")
     }
 
     /// Gets the first reference.
-    pub fn first(&self) -> &T {
-        self.first
+    pub fn first(&self) -> &T  {
+        todo!("Get the first reference.")
     }
 
     /// Gets the second reference.
-    pub fn second(&self) -> &U {
-        self.second
+    pub fn second(&self) -> &U  {
+        todo!("Get the second reference.")
     }
 }
 
@@ -61,31 +61,25 @@ pub enum MaybeOwned<'a, T> {
 
 impl<'a, T> MaybeOwned<'a, T> {
     /// Gets a reference to the value regardless of ownership.
-    pub fn as_ref(&self) -> &T {
-        match self {
-            MaybeOwned::Owned(value) => value,
-            MaybeOwned::Borrowed(value) => value,
-        }
+    pub fn as_ref(&self) -> &T  {
+        todo!("Get a reference to the value regardless of ownership.")
     }
 
     /// Checks if the value is owned.
-    pub fn is_owned(&self) -> bool {
-        matches!(self, MaybeOwned::Owned(_))
+    pub fn is_owned(&self) -> bool  {
+        todo!("Check if the value is owned.")
     }
 
     /// Checks if the value is borrowed.
-    pub fn is_borrowed(&self) -> bool {
-        matches!(self, MaybeOwned::Borrowed(_))
+    pub fn is_borrowed(&self) -> bool  {
+        todo!("Check if the value is borrowed.")
     }
 }
 
 impl<'a, T: Clone> MaybeOwned<'a, T> {
     /// Converts to an owned value.
-    pub fn into_owned(self) -> T {
-        match self {
-            MaybeOwned::Owned(value) => value,
-            MaybeOwned::Borrowed(value) => value.clone(),
-        }
+    pub fn into_owned(self) -> T  {
+        todo!("Convert to an owned value.")
     }
 }
 
@@ -94,8 +88,8 @@ where
     T::Owned: From<T>,
 {
     /// Creates an owned variant from a value.
-    pub fn from_value(value: T) -> MaybeOwned<'a, T::Owned> {
-        MaybeOwned::Owned(value.into())
+    pub fn from_value(value: T) -> MaybeOwned<'a, T::Owned>  {
+        todo!("Create an owned variant from a value.")
     }
 }
 

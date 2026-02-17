@@ -12,25 +12,8 @@ use std::thread;
 /// Create a bounded channel and test that it blocks when full.
 /// Producer sends n_items, consumer receives with delay.
 /// Return all received items.
-pub fn bounded_channel_test(capacity: usize, n_items: usize) -> Vec<i32> {
-    let (tx, rx) = mpsc::sync_channel(capacity);
-
-    let producer = thread::spawn(move || {
-        for i in 0..n_items as i32 {
-            tx.send(i).unwrap();
-        }
-    });
-
-    let consumer = thread::spawn(move || {
-        let mut result = Vec::new();
-        while let Ok(val) = rx.recv() {
-            result.push(val);
-        }
-        result
-    });
-
-    producer.join().unwrap();
-    consumer.join().unwrap()
+pub fn bounded_channel_test(capacity: usize, n_items: usize) -> Vec<i32>  {
+    todo!("Return all received items.")
 }
 
 #[cfg(test)]

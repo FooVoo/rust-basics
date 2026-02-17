@@ -20,58 +20,38 @@ pub struct TrackedAlloc<T> {
 }
 
 impl<T> TrackedAlloc<T> {
-    pub fn new(value: T) -> Self {
-        let layout = Layout::new::<T>();
-        unsafe {
-            let ptr = alloc(layout) as *mut T;
-            if ptr.is_null() {
-                panic!("Allocation failed");
-            }
-            ptr.write(value);
-            
-            ALLOCATED_BYTES.fetch_add(layout.size(), Ordering::SeqCst);
-            ALLOCATION_COUNT.fetch_add(1, Ordering::SeqCst);
-            
-            TrackedAlloc {
-                ptr: NonNull::new_unchecked(ptr),
-                layout,
-            }
-        }
+    pub fn new(value: T) -> Self  {
+        todo!("A wrapper around raw allocation that tracks memory usage.")
     }
 
-    pub fn get(&self) -> &T {
-        unsafe { self.ptr.as_ref() }
+    pub fn get(&self) -> &T  {
+        todo!("Implement get")
     }
 
-    pub fn get_mut(&mut self) -> &mut T {
-        unsafe { self.ptr.as_mut() }
+    pub fn get_mut(&mut self) -> &mut T  {
+        todo!("Implement get_mut")
     }
 }
 
 impl<T> Drop for TrackedAlloc<T> {
-    fn drop(&mut self) {
-        unsafe {
-            std::ptr::drop_in_place(self.ptr.as_ptr());
-            dealloc(self.ptr.as_ptr() as *mut u8, self.layout);
-            ALLOCATED_BYTES.fetch_sub(self.layout.size(), Ordering::SeqCst);
-        }
+    fn drop(&mut self)  {
+        todo!("Implement drop")
     }
 }
 
 /// Get total allocated bytes.
-pub fn get_allocated_bytes() -> usize {
-    ALLOCATED_BYTES.load(Ordering::SeqCst)
+pub fn get_allocated_bytes() -> usize  {
+    todo!("Get total allocated bytes.")
 }
 
 /// Get total allocation count.
-pub fn get_allocation_count() -> usize {
-    ALLOCATION_COUNT.load(Ordering::SeqCst)
+pub fn get_allocation_count() -> usize  {
+    todo!("Get total allocation count.")
 }
 
 /// Reset allocation tracking.
-pub fn reset_allocation_tracking() {
-    ALLOCATED_BYTES.store(0, Ordering::SeqCst);
-    ALLOCATION_COUNT.store(0, Ordering::SeqCst);
+pub fn reset_allocation_tracking()  {
+    todo!("Reset allocation tracking.")
 }
 
 /// A pool allocator concept (simplified).
@@ -81,34 +61,28 @@ pub struct MemoryPool {
 }
 
 impl MemoryPool {
-    pub fn new(capacity: usize) -> Self {
-        MemoryPool { capacity, used: 0 }
+    pub fn new(capacity: usize) -> Self  {
+        todo!("A pool allocator concept (simplified).")
     }
 
-    pub fn allocate(&mut self, size: usize) -> Result<usize, &'static str> {
-        if self.used + size <= self.capacity {
-            let offset = self.used;
-            self.used += size;
-            Ok(offset)
-        } else {
-            Err("Out of memory")
-        }
+    pub fn allocate(&mut self, size: usize) -> Result<usize, &'static str>  {
+        todo!("Implement allocate")
     }
 
-    pub fn free(&mut self, size: usize) {
-        self.used = self.used.saturating_sub(size);
+    pub fn free(&mut self, size: usize)  {
+        todo!("Implement free")
     }
 
-    pub fn available(&self) -> usize {
-        self.capacity - self.used
+    pub fn available(&self) -> usize  {
+        todo!("Implement available")
     }
 
-    pub fn used(&self) -> usize {
-        self.used
+    pub fn used(&self) -> usize  {
+        todo!("Implement used")
     }
 
-    pub fn reset(&mut self) {
-        self.used = 0;
+    pub fn reset(&mut self)  {
+        todo!("Implement reset")
     }
 }
 

@@ -15,21 +15,13 @@ pub enum Shape {
 
 impl Shape {
     /// Calculate the area of the shape
-    pub fn area(&self) -> f64 {
-        match self {
-            Shape::Circle { radius } => std::f64::consts::PI * radius * radius,
-            Shape::Rectangle { width, height } => width * height,
-            Shape::Triangle { base, height } => 0.5 * base * height,
-        }
+    pub fn area(&self) -> f64  {
+        todo!("Calculate the area of the shape")
     }
 
     /// Returns the shape type as a string
-    pub fn shape_type(&self) -> &'static str {
-        match self {
-            Shape::Circle { .. } => "circle",
-            Shape::Rectangle { .. } => "rectangle",
-            Shape::Triangle { .. } => "triangle",
-        }
+    pub fn shape_type(&self) -> &'static str  {
+        todo!("Return the shape type as a string")
     }
 }
 

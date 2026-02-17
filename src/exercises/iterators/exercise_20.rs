@@ -7,44 +7,33 @@
 //! - Choose appropriate consumption methods
 
 /// Find if predicate matches at least n elements.
-pub fn at_least_n_match(numbers: &[i32], predicate: impl Fn(i32) -> bool, n: usize) -> bool {
-    numbers.iter().filter(|&&x| predicate(x)).count() >= n
+pub fn at_least_n_match(numbers: &[i32], predicate: impl Fn(i32) -> bool, n: usize) -> bool  {
+    todo!("Find if predicate matches at least n elements.")
 }
 
 /// Get product of numbers, stopping early if zero found.
-pub fn product_until_zero(numbers: &[i32]) -> i32 {
-    numbers
-        .iter()
-        .take_while(|&&n| n != 0)
-        .product()
+pub fn product_until_zero(numbers: &[i32]) -> i32  {
+    todo!("Get product of numbers, stopping early if zero found.")
 }
 
 /// Check if slice is sorted.
-pub fn is_sorted(numbers: &[i32]) -> bool {
-    numbers.windows(2).all(|w| w[0] <= w[1])
+pub fn is_sorted(numbers: &[i32]) -> bool  {
+    todo!("Check if slice is sorted.")
 }
 
 /// Count elements between two values (exclusive).
-pub fn count_between(numbers: &[i32], low: i32, high: i32) -> usize {
-    numbers.iter().filter(|&&n| n > low && n < high).count()
+pub fn count_between(numbers: &[i32], low: i32, high: i32) -> usize  {
+    todo!("Count elements between two values (exclusive).")
 }
 
 /// Get last n elements.
-pub fn last_n(numbers: &[i32], n: usize) -> Vec<i32> {
-    numbers
-        .iter()
-        .rev()
-        .take(n)
-        .copied()
-        .collect::<Vec<_>>()
-        .into_iter()
-        .rev()
-        .collect()
+pub fn last_n(numbers: &[i32], n: usize) -> Vec<i32>  {
+    todo!("Get last n elements.")
 }
 
 /// Find the nth element that matches predicate.
-pub fn nth_match(numbers: &[i32], predicate: impl Fn(i32) -> bool, n: usize) -> Option<i32> {
-    numbers.iter().filter(|&&x| predicate(x)).nth(n).copied()
+pub fn nth_match(numbers: &[i32], predicate: impl Fn(i32) -> bool, n: usize) -> Option<i32>  {
+    todo!("Find the nth element that matches predicate.")
 }
 
 #[cfg(test)]

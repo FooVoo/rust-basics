@@ -16,15 +16,13 @@ impl<I, O> Parser<I, O> {
     pub fn new<F>(parse: F) -> Self
     where
         F: Fn(I) -> Option<(O, I)> + 'static,
-    {
-        Parser {
-            parse: Box::new(parse),
-        }
+     {
+        todo!("Create a new parser.")
     }
 
     /// Run the parser on input.
-    pub fn parse(&self, input: I) -> Option<(O, I)> {
-        (self.parse)(input)
+    pub fn parse(&self, input: I) -> Option<(O, I)>  {
+        todo!("Run the parser on input.")
     }
 
     /// Map the output of the parser.
@@ -33,8 +31,8 @@ impl<I, O> Parser<I, O> {
         F: Fn(O) -> O2 + 'static,
         I: 'static,
         O: 'static,
-    {
-        Parser::new(move |input| self.parse(input).map(|(output, rest)| (f(output), rest)))
+     {
+        todo!("Map the output of the parser.")
     }
 
     /// Chain two parsers together.
@@ -43,11 +41,8 @@ impl<I, O> Parser<I, O> {
         F: Fn(O) -> Parser<I, O2> + 'static,
         I: Clone + 'static,
         O: 'static,
-    {
-        Parser::new(move |input: I| {
-            self.parse(input.clone())
-                .and_then(|(output, rest)| f(output).parse(rest))
-        })
+     {
+        todo!("Chain two parsers together.")
     }
 
     /// Try this parser, or try another if it fails.
@@ -55,61 +50,34 @@ impl<I, O> Parser<I, O> {
     where
         I: Clone + 'static,
         O: 'static,
-    {
-        Parser::new(move |input: I| {
-            self.parse(input.clone()).or_else(|| other.parse(input))
-        })
+     {
+        todo!("Try this parser, or try another if it fails.")
     }
 }
 
 /// Parser for a single character.
-pub fn char_parser(expected: char) -> Parser<String, char> {
-    Parser::new(move |input: String| {
-        let mut chars = input.chars();
-        match chars.next() {
-            Some(ch) if ch == expected => Some((ch, chars.collect())),
-            _ => None,
-        }
-    })
+pub fn char_parser(expected: char) -> Parser<String, char>  {
+    todo!("Parser for a single character.")
 }
 
 /// Parser for any digit.
-pub fn digit_parser() -> Parser<String, char> {
-    Parser::new(|input: String| {
-        let mut chars = input.chars();
-        match chars.next() {
-            Some(ch) if ch.is_ascii_digit() => Some((ch, chars.collect())),
-            _ => None,
-        }
-    })
+pub fn digit_parser() -> Parser<String, char>  {
+    todo!("Parser for any digit.")
 }
 
 /// Parse a digit and convert to number.
-pub fn digit_value_parser() -> Parser<String, i32> {
-    digit_parser().map(|ch| ch.to_digit(10).unwrap() as i32)
+pub fn digit_value_parser() -> Parser<String, i32>  {
+    todo!("Parse a digit and convert to number.")
 }
 
 /// Parse two digits and add them.
-pub fn two_digit_sum_parser() -> Parser<String, i32> {
-    let parser = digit_value_parser();
-    Parser::new(move |input: String| {
-        parser.parse(input.clone()).and_then(|(first, rest1)| {
-            digit_value_parser()
-                .parse(rest1)
-                .map(|(second, rest2)| (first + second, rest2))
-        })
-    })
+pub fn two_digit_sum_parser() -> Parser<String, i32>  {
+    todo!("Parse two digits and add them.")
 }
 
 /// Parse a specific string literal.
-pub fn string_parser(expected: &'static str) -> Parser<String, String> {
-    Parser::new(move |input: String| {
-        if input.starts_with(expected) {
-            Some((expected.to_string(), input[expected.len()..].to_string()))
-        } else {
-            None
-        }
-    })
+pub fn string_parser(expected: &'static str) -> Parser<String, String>  {
+    todo!("Parse a specific string literal.")
 }
 
 #[cfg(test)]

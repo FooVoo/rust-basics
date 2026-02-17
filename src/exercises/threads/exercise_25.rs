@@ -16,30 +16,8 @@ thread_local! {
 
 /// Each thread increments its thread-local counter n times.
 /// Return sum of all thread-local final values.
-pub fn thread_local_sum(n_threads: usize, increments_per_thread: usize) -> usize {
-    let (tx, rx) = mpsc::channel();
-
-    let handles: Vec<_> = (0..n_threads)
-        .map(|_| {
-            let tx = tx.clone();
-            thread::spawn(move || {
-                THREAD_COUNTER.with(|counter| {
-                    for _ in 0..increments_per_thread {
-                        *counter.borrow_mut() += 1;
-                    }
-                    tx.send(*counter.borrow()).unwrap();
-                });
-            })
-        })
-        .collect();
-
-    drop(tx);
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    rx.iter().sum()
+pub fn thread_local_sum(n_threads: usize, increments_per_thread: usize) -> usize  {
+    todo!("Return sum of all thread-local final values.")
 }
 
 #[cfg(test)]

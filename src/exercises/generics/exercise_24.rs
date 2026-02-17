@@ -28,11 +28,8 @@ where
     F: Fn(I) -> O,
 {
     /// Creates a new function converter.
-    pub fn new(func: F) -> Self {
-        FunctionConverter {
-            func,
-            _phantom: std::marker::PhantomData,
-        }
+    pub fn new(func: F) -> Self  {
+        todo!("Create a new function converter.")
     }
 }
 
@@ -43,8 +40,8 @@ where
     type Input = I;
     type Output = O;
 
-    fn convert(&self, input: Self::Input) -> Self::Output {
-        (self.func)(input)
+    fn convert(&self, input: Self::Input) -> Self::Output  {
+        todo!("Implement convert")
     }
 }
 
@@ -55,8 +52,8 @@ pub trait Container {
     
     fn iter(&self) -> Self::Iter;
     fn len(&self) -> usize;
-    fn is_empty(&self) -> bool {
-        self.len() == 0
+    fn is_empty(&self) -> bool  {
+        todo!("A trait for containers that can be iterated.")
     }
 }
 
@@ -67,8 +64,8 @@ pub struct Wrapper<T> {
 
 impl<T> Wrapper<T> {
     /// Creates a new wrapper.
-    pub fn new(items: Vec<T>) -> Self {
-        Wrapper { items }
+    pub fn new(items: Vec<T>) -> Self  {
+        todo!("Create a new wrapper.")
     }
 }
 
@@ -76,12 +73,12 @@ impl<T: Clone> Container for Wrapper<T> {
     type Item = T;
     type Iter = std::vec::IntoIter<T>;
 
-    fn iter(&self) -> Self::Iter {
-        self.items.clone().into_iter()
+    fn iter(&self) -> Self::Iter  {
+        todo!("Implement iter")
     }
 
-    fn len(&self) -> usize {
-        self.items.len()
+    fn len(&self) -> usize  {
+        todo!("Implement len")
     }
 }
 
@@ -101,18 +98,18 @@ pub struct MappedResult<T> {
 
 impl<T> MappedResult<T> {
     /// Creates a new MappedResult.
-    pub fn new(value: Option<T>) -> Self {
-        MappedResult { value }
+    pub fn new(value: Option<T>) -> Self  {
+        todo!("Create a new MappedResult.")
     }
 
     /// Unwraps the value.
-    pub fn unwrap(self) -> T {
-        self.value.unwrap()
+    pub fn unwrap(self) -> T  {
+        todo!("Unwraps the value.")
     }
 
     /// Gets the value or a default.
-    pub fn unwrap_or(self, default: T) -> T {
-        self.value.unwrap_or(default)
+    pub fn unwrap_or(self, default: T) -> T  {
+        todo!("Get the value or a default.")
     }
 }
 
@@ -122,8 +119,8 @@ impl<T> Mappable for Option<T> {
     fn map<U, F>(self, f: F) -> MappedResult<U>
     where
         F: FnOnce(Self::Item) -> U,
-    {
-        MappedResult::new(self.map(f))
+     {
+        todo!("Implement map")
     }
 }
 

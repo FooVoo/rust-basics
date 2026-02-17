@@ -10,20 +10,20 @@ pub trait Measurable {
     fn width(&self) -> f64;
     fn height(&self) -> f64;
     
-    fn area(&self) -> f64 {
-        self.width() * self.height()
+    fn area(&self) -> f64  {
+        todo!("Implement area")
     }
     
-    fn perimeter(&self) -> f64 {
-        2.0 * (self.width() + self.height())
+    fn perimeter(&self) -> f64  {
+        todo!("Implement perimeter")
     }
     
-    fn is_square(&self) -> bool {
-        (self.width() - self.height()).abs() < 0.001
+    fn is_square(&self) -> bool  {
+        todo!("Implement is_square")
     }
     
-    fn is_larger_than(&self, other: &impl Measurable) -> bool {
-        self.area() > other.area()
+    fn is_larger_than(&self, other: &impl Measurable) -> bool  {
+        todo!("Implement is_larger_than")
     }
 }
 
@@ -33,12 +33,12 @@ pub struct Rectangle {
 }
 
 impl Measurable for Rectangle {
-    fn width(&self) -> f64 {
-        self.width
+    fn width(&self) -> f64  {
+        todo!("Implement width")
     }
     
-    fn height(&self) -> f64 {
-        self.height
+    fn height(&self) -> f64  {
+        todo!("Implement height")
     }
 }
 
@@ -48,28 +48,22 @@ pub struct Monitor {
 }
 
 impl Measurable for Monitor {
-    fn width(&self) -> f64 {
-        self.width_inches
+    fn width(&self) -> f64  {
+        todo!("Implement width")
     }
     
-    fn height(&self) -> f64 {
-        self.height_inches
+    fn height(&self) -> f64  {
+        todo!("Implement height")
     }
     
     // Override area to compute diagonal
-    fn area(&self) -> f64 {
-        (self.width_inches.powi(2) + self.height_inches.powi(2)).sqrt()
+    fn area(&self) -> f64  {
+        todo!("Implement area")
     }
 }
 
-pub fn compare_sizes<T: Measurable, U: Measurable>(a: &T, b: &U) -> String {
-    if a.area() > b.area() {
-        format!("First is larger: {} vs {}", a.area(), b.area())
-    } else if a.area() < b.area() {
-        format!("Second is larger: {} vs {}", b.area(), a.area())
-    } else {
-        "Both are equal in size".to_string()
-    }
+pub fn compare_sizes<T: Measurable, U: Measurable>(a: &T, b: &U) -> String  {
+    todo!("Implement compare_sizes")
 }
 
 #[cfg(test)]

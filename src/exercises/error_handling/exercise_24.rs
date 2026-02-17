@@ -23,18 +23,8 @@ pub enum StateError {
 }
 
 impl std::fmt::Display for StateError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            StateError::InvalidTransition { from, to } => {
-                write!(f, "Cannot transition from {:?} to {:?}", from, to)
-            }
-            StateError::AlreadyInState(state) => {
-                write!(f, "Already in state {:?}", state)
-            }
-            StateError::FinalState(state) => {
-                write!(f, "Cannot transition from final state {:?}", state)
-            }
-        }
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
@@ -47,57 +37,30 @@ pub struct Order {
 }
 
 impl Order {
-    pub fn new(id: u32) -> Self {
-        Order {
-            id,
-            state: OrderState::Pending,
-        }
+    pub fn new(id: u32) -> Self  {
+        todo!("Implement new")
     }
     
     /// Transition to a new state if valid.
-    pub fn transition(&mut self, new_state: OrderState) -> Result<(), StateError> {
-        if self.state == new_state {
-            return Err(StateError::AlreadyInState(new_state));
-        }
-        
-        let valid = match (&self.state, &new_state) {
-            (OrderState::Pending, OrderState::Processing) => true,
-            (OrderState::Pending, OrderState::Cancelled) => true,
-            (OrderState::Processing, OrderState::Shipped) => true,
-            (OrderState::Processing, OrderState::Cancelled) => true,
-            (OrderState::Shipped, OrderState::Delivered) => true,
-            _ => false,
-        };
-        
-        if !valid {
-            if matches!(self.state, OrderState::Delivered | OrderState::Cancelled) {
-                return Err(StateError::FinalState(self.state.clone()));
-            }
-            return Err(StateError::InvalidTransition {
-                from: self.state.clone(),
-                to: new_state,
-            });
-        }
-        
-        self.state = new_state;
-        Ok(())
+    pub fn transition(&mut self, new_state: OrderState) -> Result<(), StateError>  {
+        todo!("Transition to a new state if valid.")
     }
     
     /// Convenience methods for common transitions
-    pub fn process(&mut self) -> Result<(), StateError> {
-        self.transition(OrderState::Processing)
+    pub fn process(&mut self) -> Result<(), StateError>  {
+        todo!("Convenience methods for common transitions")
     }
     
-    pub fn ship(&mut self) -> Result<(), StateError> {
-        self.transition(OrderState::Shipped)
+    pub fn ship(&mut self) -> Result<(), StateError>  {
+        todo!("Convenience methods for common transitions")
     }
     
-    pub fn deliver(&mut self) -> Result<(), StateError> {
-        self.transition(OrderState::Delivered)
+    pub fn deliver(&mut self) -> Result<(), StateError>  {
+        todo!("Implement deliver")
     }
     
-    pub fn cancel(&mut self) -> Result<(), StateError> {
-        self.transition(OrderState::Cancelled)
+    pub fn cancel(&mut self) -> Result<(), StateError>  {
+        todo!("Implement cancel")
     }
 }
 

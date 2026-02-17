@@ -18,18 +18,18 @@ pub struct Context<T, U> {
 
 impl<T, U> Context<T, U> {
     /// Creates a new context with a strategy.
-    pub fn new(strategy: Box<dyn Strategy<T, U>>) -> Self {
-        Context { strategy }
+    pub fn new(strategy: Box<dyn Strategy<T, U>>) -> Self  {
+        todo!("Create a new context with a strategy.")
     }
 
     /// Executes the strategy.
-    pub fn execute(&self, input: T) -> U {
-        self.strategy.execute(input)
+    pub fn execute(&self, input: T) -> U  {
+        todo!("Executes the strategy.")
     }
 
     /// Changes the strategy.
-    pub fn set_strategy(&mut self, strategy: Box<dyn Strategy<T, U>>) {
-        self.strategy = strategy;
+    pub fn set_strategy(&mut self, strategy: Box<dyn Strategy<T, U>>)  {
+        todo!("Changes the strategy.")
     }
 }
 
@@ -37,8 +37,8 @@ impl<T, U> Context<T, U> {
 pub struct DoublingStrategy;
 
 impl Strategy<i32, i32> for DoublingStrategy {
-    fn execute(&self, input: i32) -> i32 {
-        input * 2
+    fn execute(&self, input: i32) -> i32  {
+        todo!("A doubling strategy for numbers.")
     }
 }
 
@@ -46,8 +46,8 @@ impl Strategy<i32, i32> for DoublingStrategy {
 pub struct SquaringStrategy;
 
 impl Strategy<i32, i32> for SquaringStrategy {
-    fn execute(&self, input: i32) -> i32 {
-        input * input
+    fn execute(&self, input: i32) -> i32  {
+        todo!("A squaring strategy for numbers.")
     }
 }
 
@@ -55,8 +55,8 @@ impl Strategy<i32, i32> for SquaringStrategy {
 pub struct UppercaseStrategy;
 
 impl Strategy<String, String> for UppercaseStrategy {
-    fn execute(&self, input: String) -> String {
-        input.to_uppercase()
+    fn execute(&self, input: String) -> String  {
+        todo!("An uppercase strategy for strings.")
     }
 }
 
@@ -64,8 +64,8 @@ impl Strategy<String, String> for UppercaseStrategy {
 pub struct ReverseStrategy;
 
 impl Strategy<String, String> for ReverseStrategy {
-    fn execute(&self, input: String) -> String {
-        input.chars().rev().collect()
+    fn execute(&self, input: String) -> String  {
+        todo!("A reverse strategy for strings.")
     }
 }
 
@@ -76,27 +76,24 @@ pub struct Pipeline<T> {
 
 impl<T> Pipeline<T> {
     /// Creates a new empty pipeline.
-    pub fn new() -> Self {
-        Pipeline { steps: Vec::new() }
+    pub fn new() -> Self  {
+        todo!("Create a new empty pipeline.")
     }
 
     /// Adds a strategy to the pipeline.
-    pub fn add_step(&mut self, strategy: Box<dyn Strategy<T, T>>) {
-        self.steps.push(strategy);
+    pub fn add_step(&mut self, strategy: Box<dyn Strategy<T, T>>)  {
+        todo!("Add a strategy to the pipeline.")
     }
 
     /// Executes all strategies in sequence.
-    pub fn process(&self, mut input: T) -> T {
-        for step in &self.steps {
-            input = step.execute(input);
-        }
-        input
+    pub fn process(&self, mut input: T) -> T  {
+        todo!("Executes all strategies in sequence.")
     }
 }
 
 impl<T> Default for Pipeline<T> {
-    fn default() -> Self {
-        Self::new()
+    fn default() -> Self  {
+        todo!("Executes all strategies in sequence.")
     }
 }
 

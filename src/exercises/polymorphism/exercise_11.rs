@@ -10,26 +10,26 @@ pub trait Logger {
     fn log(&self, message: &str) -> String;
     
     // Default implementation
-    fn log_info(&self, message: &str) -> String {
-        self.log(&format!("INFO: {}", message))
+    fn log_info(&self, message: &str) -> String  {
+        todo!("Implement log_info")
     }
     
     // Default implementation
-    fn log_error(&self, message: &str) -> String {
-        self.log(&format!("ERROR: {}", message))
+    fn log_error(&self, message: &str) -> String  {
+        todo!("Implement log_error")
     }
     
     // Default implementation that calls other methods
-    fn log_debug(&self, message: &str) -> String {
-        self.log(&format!("DEBUG: {}", message))
+    fn log_debug(&self, message: &str) -> String  {
+        todo!("Implement log_debug")
     }
 }
 
 pub struct ConsoleLogger;
 
 impl Logger for ConsoleLogger {
-    fn log(&self, message: &str) -> String {
-        format!("[Console] {}", message)
+    fn log(&self, message: &str) -> String  {
+        todo!("Implement log")
     }
 }
 
@@ -38,34 +38,34 @@ pub struct FileLogger {
 }
 
 impl Logger for FileLogger {
-    fn log(&self, message: &str) -> String {
-        format!("[File: {}] {}", self.filename, message)
+    fn log(&self, message: &str) -> String  {
+        todo!("Implement log")
     }
     
     // Override default method
-    fn log_error(&self, message: &str) -> String {
-        self.log(&format!("!!! ERROR !!! {}", message))
+    fn log_error(&self, message: &str) -> String  {
+        todo!("Implement log_error")
     }
 }
 
 pub struct SilentLogger;
 
 impl Logger for SilentLogger {
-    fn log(&self, _message: &str) -> String {
-        String::new()
+    fn log(&self, _message: &str) -> String  {
+        todo!("Implement log")
     }
     
     // Override all methods to be silent
-    fn log_info(&self, _message: &str) -> String {
-        String::new()
+    fn log_info(&self, _message: &str) -> String  {
+        todo!("Implement log_info")
     }
     
-    fn log_error(&self, _message: &str) -> String {
-        String::new()
+    fn log_error(&self, _message: &str) -> String  {
+        todo!("Implement log_error")
     }
     
-    fn log_debug(&self, _message: &str) -> String {
-        String::new()
+    fn log_debug(&self, _message: &str) -> String  {
+        todo!("Implement log_debug")
     }
 }
 

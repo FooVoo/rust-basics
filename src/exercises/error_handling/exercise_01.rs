@@ -8,8 +8,8 @@
 
 /// Parse a string to an i32.
 /// Return Ok(value) if successful, Err(message) otherwise.
-pub fn parse_number(s: &str) -> Result<i32, String> {
-    s.parse::<i32>().map_err(|e| e.to_string())
+pub fn parse_number(s: &str) -> Result<i32, String>  {
+    todo!("Return Ok(value) if successful, Err(message) otherwise.")
 }
 
 #[cfg(test)]

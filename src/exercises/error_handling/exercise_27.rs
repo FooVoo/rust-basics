@@ -29,23 +29,14 @@ impl ErrorLog {
         message: impl Into<String>,
         severity: ErrorSeverity,
         location: impl Into<String>,
-    ) -> Self {
-        ErrorLog {
-            message: message.into(),
-            timestamp: SystemTime::now(),
-            severity,
-            location: location.into(),
-        }
+    ) -> Self  {
+        todo!("Implement new")
     }
 }
 
 impl fmt::Display for ErrorLog {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(
-            f,
-            "[{:?}] {} at {}",
-            self.severity, self.message, self.location
-        )
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
@@ -59,30 +50,28 @@ pub struct ErrorLogger {
 }
 
 impl ErrorLogger {
-    pub fn new() -> Self {
-        ErrorLogger { logs: Vec::new() }
+    pub fn new() -> Self  {
+        todo!("Logger that tracks all errors.")
     }
     
-    pub fn log(&mut self, log: ErrorLog) {
-        self.logs.push(log);
+    pub fn log(&mut self, log: ErrorLog)  {
+        todo!("Implement log")
     }
     
-    pub fn logs(&self) -> &[ErrorLog] {
-        &self.logs
+    pub fn logs(&self) -> &[ErrorLog]  {
+        todo!("Implement logs")
     }
     
-    pub fn count_by_severity(&self, severity: ErrorSeverity) -> usize {
-        self.logs.iter().filter(|log| log.severity == severity).count()
+    pub fn count_by_severity(&self, severity: ErrorSeverity) -> usize  {
+        todo!("Implement count_by_severity")
     }
     
-    pub fn has_critical_errors(&self) -> bool {
-        self.logs
-            .iter()
-            .any(|log| log.severity == ErrorSeverity::Critical)
+    pub fn has_critical_errors(&self) -> bool  {
+        todo!("Implement has_critical_errors")
     }
     
-    pub fn clear(&mut self) {
-        self.logs.clear();
+    pub fn clear(&mut self)  {
+        todo!("Implement clear")
     }
 }
 
@@ -94,45 +83,18 @@ pub fn with_logging<F, T>(
 ) -> LoggedResult<T>
 where
     F: FnOnce() -> LoggedResult<T>,
-{
-    match operation() {
-        Ok(value) => Ok(value),
-        Err(mut error) => {
-            if error.location.is_empty() {
-                error.location = location.to_string();
-            }
-            logger.log(error.clone());
-            Err(error)
-        }
-    }
+ {
+    todo!("Perform an operation with error logging.")
 }
 
 /// Parse a number with logging.
-pub fn parse_logged(s: &str, logger: &mut ErrorLogger) -> LoggedResult<i32> {
-    with_logging(logger, "parse_logged", || {
-        s.parse::<i32>().map_err(|e| {
-            ErrorLog::new(
-                format!("Failed to parse '{}': {}", s, e),
-                ErrorSeverity::Error,
-                "parse_logged",
-            )
-        })
-    })
+pub fn parse_logged(s: &str, logger: &mut ErrorLogger) -> LoggedResult<i32>  {
+    todo!("Parse a number with logging.")
 }
 
 /// Divide numbers with logging.
-pub fn divide_logged(a: i32, b: i32, logger: &mut ErrorLogger) -> LoggedResult<i32> {
-    with_logging(logger, "divide_logged", || {
-        if b == 0 {
-            Err(ErrorLog::new(
-                "Division by zero",
-                ErrorSeverity::Critical,
-                "divide_logged",
-            ))
-        } else {
-            Ok(a / b)
-        }
-    })
+pub fn divide_logged(a: i32, b: i32, logger: &mut ErrorLogger) -> LoggedResult<i32>  {
+    todo!("Divide numbers with logging.")
 }
 
 #[cfg(test)]

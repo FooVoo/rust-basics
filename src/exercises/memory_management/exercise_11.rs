@@ -7,31 +7,23 @@
 //! - Work with references in collections
 
 /// Find the maximum value in a slice and return a reference to it.
-pub fn find_max<'a>(slice: &'a [i32]) -> Option<&'a i32> {
-    slice.iter().max()
+pub fn find_max<'a>(slice: &'a [i32]) -> Option<&'a i32>  {
+    todo!("Find the maximum value in a slice and return a reference to it.")
 }
 
 /// Return references to both min and max values.
-pub fn find_min_max<'a>(slice: &'a [i32]) -> Option<(&'a i32, &'a i32)> {
-    if slice.is_empty() {
-        return None;
-    }
-    let min = slice.iter().min()?;
-    let max = slice.iter().max()?;
-    Some((min, max))
+pub fn find_min_max<'a>(slice: &'a [i32]) -> Option<(&'a i32, &'a i32)>  {
+    todo!("Return references to both min and max values.")
 }
 
 /// Filter and return references to even numbers.
-pub fn filter_even<'a>(numbers: &'a [i32]) -> Vec<&'a i32> {
-    numbers.iter().filter(|&&n| n % 2 == 0).collect()
+pub fn filter_even<'a>(numbers: &'a [i32]) -> Vec<&'a i32>  {
+    todo!("Filter and return references to even numbers.")
 }
 
 /// Find the first and last elements.
-pub fn first_and_last<'a, T>(slice: &'a [T]) -> Option<(&'a T, &'a T)> {
-    if slice.is_empty() {
-        return None;
-    }
-    Some((&slice[0], &slice[slice.len() - 1]))
+pub fn first_and_last<'a, T>(slice: &'a [T]) -> Option<(&'a T, &'a T)>  {
+    todo!("Find the first and last elements.")
 }
 
 #[cfg(test)]

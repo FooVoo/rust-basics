@@ -15,24 +15,20 @@ pub struct CountedBox<T> {
 }
 
 impl<T> CountedBox<T> {
-    pub fn new(value: T) -> Self {
-        CountedBox {
-            value: Box::new(value),
-            deref_count: std::cell::Cell::new(0),
-        }
+    pub fn new(value: T) -> Self  {
+        todo!("A simple wrapper that counts dereferences.")
     }
 
-    pub fn deref_count(&self) -> usize {
-        self.deref_count.get()
+    pub fn deref_count(&self) -> usize  {
+        todo!("Implement deref_count")
     }
 }
 
 impl<T> Deref for CountedBox<T> {
     type Target = T;
 
-    fn deref(&self) -> &Self::Target {
-        self.deref_count.set(self.deref_count.get() + 1);
-        &self.value
+    fn deref(&self) -> &Self::Target  {
+        todo!("Implement deref")
     }
 }
 
@@ -44,24 +40,20 @@ pub struct Selector<T> {
 }
 
 impl<T> Selector<T> {
-    pub fn new(flag: bool, left: T, right: T) -> Self {
-        Selector { flag, left, right }
+    pub fn new(flag: bool, left: T, right: T) -> Self  {
+        todo!("A selector that returns one of two values based on a flag.")
     }
 
-    pub fn flip(&mut self) {
-        self.flag = !self.flag;
+    pub fn flip(&mut self)  {
+        todo!("Implement flip")
     }
 }
 
 impl<T> Deref for Selector<T> {
     type Target = T;
 
-    fn deref(&self) -> &Self::Target {
-        if self.flag {
-            &self.left
-        } else {
-            &self.right
-        }
+    fn deref(&self) -> &Self::Target  {
+        todo!("Implement deref")
     }
 }
 

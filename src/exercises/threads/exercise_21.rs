@@ -11,51 +11,8 @@ use std::thread;
 
 /// Each thread increments a counter, waits at barrier, then increments again.
 /// Return the counter value after first phase and final value.
-pub fn barrier_phases(n_threads: usize) -> (usize, usize) {
-    let counter = Arc::new(Mutex::new(0));
-    let barrier1 = Arc::new(Barrier::new(n_threads));
-    let barrier2 = Arc::new(Barrier::new(n_threads));
-    let phase1_result = Arc::new(Mutex::new(0));
-
-    let handles: Vec<_> = (0..n_threads)
-        .map(|_| {
-            let counter = Arc::clone(&counter);
-            let barrier1 = Arc::clone(&barrier1);
-            let barrier2 = Arc::clone(&barrier2);
-            let phase1_result = Arc::clone(&phase1_result);
-            
-            thread::spawn(move || {
-                // Phase 1
-                {
-                    let mut c = counter.lock().unwrap();
-                    *c += 1;
-                }
-                
-                // Wait at barrier after phase 1
-                let wait_result = barrier1.wait();
-                
-                // Record phase 1 result (only leader thread)
-                if wait_result.is_leader() {
-                    *phase1_result.lock().unwrap() = *counter.lock().unwrap();
-                }
-                
-                // Wait for all threads to pass the recording point
-                barrier2.wait();
-                
-                // Phase 2
-                {
-                    let mut c = counter.lock().unwrap();
-                    *c += 1;
-                }
-            })
-        })
-        .collect();
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    (*phase1_result.lock().unwrap(), *counter.lock().unwrap())
+pub fn barrier_phases(n_threads: usize) -> (usize, usize)  {
+    todo!("Return the counter value after first phase and final value.")
 }
 
 #[cfg(test)]

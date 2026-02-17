@@ -12,36 +12,8 @@ use std::thread;
 /// Simulate a simple thread pool: spawn n_workers threads.
 /// Send n_tasks work items through a channel, each worker processes tasks.
 /// Return sum of all task results (each task returns its index * 2).
-pub fn simple_thread_pool(n_workers: usize, n_tasks: usize) -> usize {
-    let (tx, rx) = mpsc::channel();
-    let rx = std::sync::Arc::new(std::sync::Mutex::new(rx));
-
-    // Spawn workers
-    let sum = std::sync::Arc::new(std::sync::Mutex::new(0));
-    let handles: Vec<_> = (0..n_workers)
-        .map(|_| {
-            let rx = std::sync::Arc::clone(&rx);
-            let sum = std::sync::Arc::clone(&sum);
-            thread::spawn(move || {
-                while let Ok(task) = rx.lock().unwrap().recv() {
-                    let result: usize = task;
-                    *sum.lock().unwrap() += result * 2;
-                }
-            })
-        })
-        .collect();
-
-    // Send tasks
-    for i in 0..n_tasks {
-        tx.send(i).unwrap();
-    }
-    drop(tx);
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    *sum.lock().unwrap()
+pub fn simple_thread_pool(n_workers: usize, n_tasks: usize) -> usize  {
+    todo!("Return sum of all task results (each task returns its index * 2).")
 }
 
 #[cfg(test)]

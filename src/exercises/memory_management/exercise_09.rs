@@ -7,22 +7,18 @@
 //! - Learn when lifetimes are needed
 
 /// Return the longer of two string slices.
-pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() {
-        x
-    } else {
-        y
-    }
+pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str  {
+    todo!("Return the longer of two string slices.")
 }
 
 /// Get the first element of a slice if it exists.
-pub fn first_element<'a, T>(slice: &'a [T]) -> Option<&'a T> {
-    slice.first()
+pub fn first_element<'a, T>(slice: &'a [T]) -> Option<&'a T>  {
+    todo!("Get the first element of a slice if it exists.")
 }
 
 /// Concatenate two strings with a separator.
-pub fn concat_with_sep<'a>(a: &'a str, b: &'a str, sep: &str) -> String {
-    format!("{}{}{}", a, sep, b)
+pub fn concat_with_sep<'a>(a: &'a str, b: &'a str, sep: &str) -> String  {
+    todo!("Concatenate two strings with a separator.")
 }
 
 #[cfg(test)]

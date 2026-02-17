@@ -7,15 +7,13 @@
 //! - Handle paired operations
 
 /// Add two optional values.
-pub fn add_options(a: Option<i32>, b: Option<i32>) -> Option<i32> {
-    a.zip(b).map(|(x, y)| x + y)
+pub fn add_options(a: Option<i32>, b: Option<i32>) -> Option<i32>  {
+    todo!("Add two optional values.")
 }
 
 /// Multiply three optional values.
-pub fn multiply_three(a: Option<i32>, b: Option<i32>, c: Option<i32>) -> Option<i32> {
-    a.zip(b)
-        .zip(c)
-        .map(|((x, y), z)| x * y * z)
+pub fn multiply_three(a: Option<i32>, b: Option<i32>, c: Option<i32>) -> Option<i32>  {
+    todo!("Multiply three optional values.")
 }
 
 #[cfg(test)]

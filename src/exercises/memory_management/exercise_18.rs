@@ -11,26 +11,26 @@ pub struct Container<'a, T> {
 }
 
 impl<'a, T> Container<'a, T> {
-    pub fn new(data: &'a T) -> Self {
-        Container { data }
+    pub fn new(data: &'a T) -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn get(&self) -> &T {
-        self.data
+    pub fn get(&self) -> &T  {
+        todo!("Implement get")
     }
 }
 
 /// Create a container with the given data.
-pub fn make_container<'a, T>(data: &'a T) -> Container<'a, T> {
-    Container::new(data)
+pub fn make_container<'a, T>(data: &'a T) -> Container<'a, T>  {
+    todo!("Create a container with the given data.")
 }
 
 /// Compare two containers.
 pub fn compare_containers<'a, T: PartialEq>(
     c1: &Container<'a, T>,
     c2: &Container<'a, T>,
-) -> bool {
-    c1.get() == c2.get()
+) -> bool  {
+    todo!("Compare two containers.")
 }
 
 pub struct Pair<'a, T, U> {
@@ -39,16 +39,16 @@ pub struct Pair<'a, T, U> {
 }
 
 impl<'a, T, U> Pair<'a, T, U> {
-    pub fn new(first: &'a T, second: &'a U) -> Self {
-        Pair { first, second }
+    pub fn new(first: &'a T, second: &'a U) -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn first(&self) -> &T {
-        self.first
+    pub fn first(&self) -> &T  {
+        todo!("Implement first")
     }
     
-    pub fn second(&self) -> &U {
-        self.second
+    pub fn second(&self) -> &U  {
+        todo!("Implement second")
     }
 }
 

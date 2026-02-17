@@ -13,40 +13,8 @@ use std::thread;
 /// Spawn n_producers that each send values 0..items_per_producer.
 /// Spawn n_consumers that receive and sum all values.
 /// Return the total sum.
-pub fn producer_consumer(n_producers: usize, n_consumers: usize, items_per_producer: usize) -> usize {
-    let (tx, rx) = mpsc::channel();
-    let rx = Arc::new(Mutex::new(rx));
-
-    // Spawn producers
-    for _ in 0..n_producers {
-        let tx = tx.clone();
-        thread::spawn(move || {
-            for i in 0..items_per_producer {
-                tx.send(i).unwrap();
-            }
-        });
-    }
-    drop(tx);
-
-    // Spawn consumers
-    let sum = Arc::new(Mutex::new(0));
-    let handles: Vec<_> = (0..n_consumers)
-        .map(|_| {
-            let rx = Arc::clone(&rx);
-            let sum = Arc::clone(&sum);
-            thread::spawn(move || {
-                while let Ok(value) = rx.lock().unwrap().recv() {
-                    *sum.lock().unwrap() += value;
-                }
-            })
-        })
-        .collect();
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    *sum.lock().unwrap()
+pub fn producer_consumer(n_producers: usize, n_consumers: usize, items_per_producer: usize) -> usize  {
+    todo!("Return the total sum.")
 }
 
 #[cfg(test)]

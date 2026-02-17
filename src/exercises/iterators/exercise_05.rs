@@ -7,39 +7,23 @@
 //! - Write fluent iterator code
 
 /// Filter even numbers and double them.
-pub fn filter_and_double_evens(numbers: &[i32]) -> Vec<i32> {
-    numbers
-        .iter()
-        .filter(|&&n| n % 2 == 0)
-        .map(|&n| n * 2)
-        .collect()
+pub fn filter_and_double_evens(numbers: &[i32]) -> Vec<i32>  {
+    todo!("Filter even numbers and double them.")
 }
 
 /// Get lengths of strings longer than min_length, then sum them.
-pub fn sum_long_string_lengths(strings: &[&str], min_length: usize) -> usize {
-    strings
-        .iter()
-        .filter(|s| s.len() > min_length)
-        .map(|s| s.len())
-        .sum()
+pub fn sum_long_string_lengths(strings: &[&str], min_length: usize) -> usize  {
+    todo!("Get lengths of strings longer than min_length, then sum them.")
 }
 
 /// Square positive numbers and collect them.
-pub fn square_positive(numbers: &[i32]) -> Vec<i32> {
-    numbers
-        .iter()
-        .filter(|&&n| n > 0)
-        .map(|&n| n * n)
-        .collect()
+pub fn square_positive(numbers: &[i32]) -> Vec<i32>  {
+    todo!("Square positive numbers and collect them.")
 }
 
 /// Convert strings to uppercase, filter those starting with 'A', and collect.
-pub fn uppercase_starting_with_a(strings: &[&str]) -> Vec<String> {
-    strings
-        .iter()
-        .map(|s| s.to_uppercase())
-        .filter(|s| s.starts_with('A'))
-        .collect()
+pub fn uppercase_starting_with_a(strings: &[&str]) -> Vec<String>  {
+    todo!("Convert strings to uppercase, filter those starting with 'A', and collect.")
 }
 
 #[cfg(test)]

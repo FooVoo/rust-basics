@@ -19,38 +19,34 @@ pub struct GraphNode {
 
 impl GraphNode {
     /// Create a new shared node.
-    pub fn new(value: i32) -> SharedNode {
-        Rc::new(RefCell::new(GraphNode {
-            value,
-            neighbors: Vec::new(),
-        }))
+    pub fn new(value: i32) -> SharedNode  {
+        todo!("Create a new shared node.")
     }
 
     /// Add a neighbor to this node.
-    pub fn add_neighbor(node: &SharedNode, neighbor: SharedNode) {
-        node.borrow_mut().neighbors.push(neighbor);
+    pub fn add_neighbor(node: &SharedNode, neighbor: SharedNode)  {
+        todo!("Add a neighbor to this node.")
     }
 
     /// Get the value from a shared node.
-    pub fn get_value(node: &SharedNode) -> i32 {
-        node.borrow().value
+    pub fn get_value(node: &SharedNode) -> i32  {
+        todo!("Get the value from a shared node.")
     }
 
     /// Set the value of a shared node.
-    pub fn set_value(node: &SharedNode, value: i32) {
-        node.borrow_mut().value = value;
+    pub fn set_value(node: &SharedNode, value: i32)  {
+        todo!("Set the value of a shared node.")
     }
 
     /// Count neighbors.
-    pub fn neighbor_count(node: &SharedNode) -> usize {
-        node.borrow().neighbors.len()
+    pub fn neighbor_count(node: &SharedNode) -> usize  {
+        todo!("Count neighbors.")
     }
 }
 
 /// Create a bidirectional link between two nodes.
-pub fn create_bidirectional_link(a: &SharedNode, b: &SharedNode) {
-    GraphNode::add_neighbor(a, Rc::clone(b));
-    GraphNode::add_neighbor(b, Rc::clone(a));
+pub fn create_bidirectional_link(a: &SharedNode, b: &SharedNode)  {
+    todo!("Create a bidirectional link between two nodes.")
 }
 
 #[cfg(test)]

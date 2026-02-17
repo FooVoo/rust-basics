@@ -9,62 +9,23 @@
 use std::collections::HashMap;
 
 /// Process text: split words, filter long ones, count frequencies.
-pub fn word_frequency(text: &str, min_length: usize) -> HashMap<String, usize> {
-    text.split_whitespace()
-        .filter(|word| word.len() >= min_length)
-        .map(|word| word.to_lowercase())
-        .fold(HashMap::new(), |mut map, word| {
-            *map.entry(word).or_insert(0) += 1;
-            map
-        })
+pub fn word_frequency(text: &str, min_length: usize) -> HashMap<String, usize>  {
+    todo!("Process text: split words, filter long ones, count frequencies.")
 }
 
 /// Get squares of even numbers, sum them, but cap at limit.
-pub fn capped_even_squares_sum(numbers: &[i32], limit: i32) -> i32 {
-    numbers
-        .iter()
-        .filter(|&&n| n % 2 == 0)
-        .map(|&n| n * n)
-        .scan(0, |sum, n| {
-            *sum += n;
-            if *sum <= limit {
-                Some(n)
-            } else {
-                None
-            }
-        })
-        .sum()
+pub fn capped_even_squares_sum(numbers: &[i32], limit: i32) -> i32  {
+    todo!("Get squares of even numbers, sum them, but cap at limit.")
 }
 
 /// Process scores: filter passing, normalize to 0-1, take top n.
-pub fn top_normalized_scores(scores: &[f64], passing: f64, n: usize) -> Vec<f64> {
-    let max_score = scores.iter().copied().fold(f64::NEG_INFINITY, f64::max);
-    
-    if max_score <= 0.0 {
-        return vec![];
-    }
-    
-    let mut normalized: Vec<_> = scores
-        .iter()
-        .filter(|&&s| s >= passing)
-        .map(|&s| s / max_score)
-        .collect();
-    
-    normalized.sort_by(|a, b| b.partial_cmp(a).unwrap());
-    normalized.into_iter().take(n).collect()
+pub fn top_normalized_scores(scores: &[f64], passing: f64, n: usize) -> Vec<f64>  {
+    todo!("Process scores: filter passing, normalize to 0-1, take top n.")
 }
 
 /// Extract unique digits from numbers, sort them.
-pub fn unique_sorted_digits(numbers: &[i32]) -> Vec<u32> {
-    let mut digits: Vec<_> = numbers
-        .iter()
-        .flat_map(|&n| n.abs().to_string().chars().collect::<Vec<_>>())
-        .filter_map(|c| c.to_digit(10))
-        .collect();
-    
-    digits.sort_unstable();
-    digits.dedup();
-    digits
+pub fn unique_sorted_digits(numbers: &[i32]) -> Vec<u32>  {
+    todo!("Extract unique digits from numbers, sort them.")
 }
 
 #[cfg(test)]

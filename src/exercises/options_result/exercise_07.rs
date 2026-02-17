@@ -7,30 +7,18 @@
 //! - Avoid nested Options
 
 /// Parse a string to i32, then check if it's positive.
-pub fn parse_positive(s: &str) -> Option<i32> {
-    s.parse::<i32>().ok().and_then(|n| {
-        if n > 0 {
-            Some(n)
-        } else {
-            None
-        }
-    })
+pub fn parse_positive(s: &str) -> Option<i32>  {
+    todo!("Parse a string to i32, then check if it's positive.")
 }
 
 /// Get the first element, then check if it's even.
-pub fn first_even(numbers: &[i32]) -> Option<i32> {
-    numbers.first().copied().and_then(|n| {
-        if n % 2 == 0 {
-            Some(n)
-        } else {
-            None
-        }
-    })
+pub fn first_even(numbers: &[i32]) -> Option<i32>  {
+    todo!("Get the first element, then check if it's even.")
 }
 
 /// Safely divide two optional numbers.
-pub fn safe_divide(a: Option<i32>, b: Option<i32>) -> Option<i32> {
-    a.and_then(|x| b.and_then(|y| if y != 0 { Some(x / y) } else { None }))
+pub fn safe_divide(a: Option<i32>, b: Option<i32>) -> Option<i32>  {
+    todo!("Safely divide two optional numbers.")
 }
 
 #[cfg(test)]

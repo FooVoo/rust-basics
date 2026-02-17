@@ -26,63 +26,20 @@ pub struct WorkItem {
 }
 
 impl PriorityWorkQueue {
-    pub fn new(max_concurrent: usize) -> Self {
-        Self {
-            high_priority: Arc::new(RwLock::new(Vec::new())),
-            low_priority: Arc::new(RwLock::new(Vec::new())),
-            semaphore: Arc::new(Semaphore::new(max_concurrent)),
-            results: Arc::new(RwLock::new(Vec::new())),
-        }
+    pub fn new(max_concurrent: usize) -> Self  {
+        todo!("Implement new")
     }
     
-    pub async fn add_work(&self, item: WorkItem, high_priority: bool) {
-        if high_priority {
-            let mut queue = self.high_priority.write().await;
-            queue.push(item);
-        } else {
-            let mut queue = self.low_priority.write().await;
-            queue.push(item);
-        }
+    pub async fn add_work(&self, item: WorkItem, high_priority: bool)  {
+        todo!("Implement add_work")
     }
     
-    pub async fn process_all(&self) {
-        loop {
-            let item = {
-                let mut high = self.high_priority.write().await;
-                if let Some(item) = high.pop() {
-                    Some(item)
-                } else {
-                    let mut low = self.low_priority.write().await;
-                    low.pop()
-                }
-            };
-            
-            match item {
-                Some(work) => {
-                    let sem = self.semaphore.clone();
-                    let results = self.results.clone();
-                    
-                    tokio::spawn(async move {
-                        let _permit = sem.acquire().await.unwrap();
-                        sleep(Duration::from_millis(10)).await;
-                        let result = work.value * 2;
-                        
-                        let mut r = results.write().await;
-                        r.push(result);
-                    });
-                }
-                None => break,
-            }
-        }
-        
-        sleep(Duration::from_millis(100)).await;
+    pub async fn process_all(&self)  {
+        todo!("Implement process_all")
     }
     
-    pub async fn get_results(&self) -> Vec<i32> {
-        let results = self.results.read().await;
-        let mut sorted = results.clone();
-        sorted.sort();
-        sorted
+    pub async fn get_results(&self) -> Vec<i32>  {
+        todo!("Implement get_results")
     }
 }
 
@@ -98,45 +55,20 @@ struct CacheEntry {
 }
 
 impl AsyncCache {
-    pub fn new(max_size: usize) -> Self {
-        Self {
-            data: Arc::new(RwLock::new(HashMap::new())),
-            max_size,
-        }
+    pub fn new(max_size: usize) -> Self  {
+        todo!("Implement new")
     }
     
-    pub async fn get(&self, key: &str) -> Option<i32> {
-        let cache = self.data.read().await;
-        
-        if let Some(entry) = cache.get(key) {
-            if entry.expires_at > std::time::Instant::now() {
-                return Some(entry.value);
-            }
-        }
-        
-        None
+    pub async fn get(&self, key: &str) -> Option<i32>  {
+        todo!("Implement get")
     }
     
-    pub async fn set(&self, key: String, value: i32, ttl_ms: u64) -> Result<(), String> {
-        let mut cache = self.data.write().await;
-        
-        if cache.len() >= self.max_size && !cache.contains_key(&key) {
-            return Err("Cache full".to_string());
-        }
-        
-        cache.insert(key, CacheEntry {
-            value,
-            expires_at: std::time::Instant::now() + Duration::from_millis(ttl_ms),
-        });
-        
-        Ok(())
+    pub async fn set(&self, key: String, value: i32, ttl_ms: u64) -> Result<(), String>  {
+        todo!("Implement set")
     }
     
-    pub async fn evict_expired(&self) {
-        let mut cache = self.data.write().await;
-        let now = std::time::Instant::now();
-        
-        cache.retain(|_, entry| entry.expires_at > now);
+    pub async fn evict_expired(&self)  {
+        todo!("Implement evict_expired")
     }
 }
 
@@ -152,56 +84,20 @@ pub struct Task {
 }
 
 impl TaskCoordinator {
-    pub fn new() -> Self {
-        Self {
-            completed: Arc::new(RwLock::new(HashMap::new())),
-        }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
     
-    pub async fn execute(&self, task: Task) -> Result<i32, String> {
-        for dep in &task.dependencies {
-            loop {
-                let completed = self.completed.read().await;
-                if completed.contains_key(dep) {
-                    break;
-                }
-                drop(completed);
-                sleep(Duration::from_millis(10)).await;
-            }
-        }
-        
-        sleep(Duration::from_millis(20)).await;
-        let result = task.work * 2;
-        
-        let mut completed = self.completed.write().await;
-        completed.insert(task.id, result);
-        
-        Ok(result)
+    pub async fn execute(&self, task: Task) -> Result<i32, String>  {
+        todo!("Implement execute")
     }
     
-    pub async fn execute_all(&self, tasks: Vec<Task>) -> HashMap<String, i32> {
-        let mut handles = vec![];
-        
-        for task in tasks {
-            let coordinator = self.clone_arc();
-            let handle = tokio::spawn(async move {
-                coordinator.execute(task).await
-            });
-            handles.push(handle);
-        }
-        
-        for handle in handles {
-            let _ = handle.await;
-        }
-        
-        let completed = self.completed.read().await;
-        completed.clone()
+    pub async fn execute_all(&self, tasks: Vec<Task>) -> HashMap<String, i32>  {
+        todo!("Implement execute_all")
     }
     
-    fn clone_arc(&self) -> Self {
-        Self {
-            completed: self.completed.clone(),
-        }
+    fn clone_arc(&self) -> Self  {
+        todo!("Implement clone_arc")
     }
 }
 

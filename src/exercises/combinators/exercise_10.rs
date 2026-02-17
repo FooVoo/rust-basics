@@ -7,33 +7,13 @@
 //! - Propagate errors elegantly
 
 /// Parse two strings and add them.
-pub fn parse_and_add(a: &str, b: &str) -> Result<i32, String> {
-    a.parse::<i32>()
-        .map_err(|_| format!("Failed to parse '{}'", a))
-        .and_then(|x| {
-            b.parse::<i32>()
-                .map_err(|_| format!("Failed to parse '{}'", b))
-                .map(|y| x + y)
-        })
+pub fn parse_and_add(a: &str, b: &str) -> Result<i32, String>  {
+    todo!("Parse two strings and add them.")
 }
 
 /// Parse and divide with error handling.
-pub fn parse_and_divide(numerator: &str, denominator: &str) -> Result<i32, String> {
-    numerator
-        .parse::<i32>()
-        .map_err(|_| format!("Invalid numerator: '{}'", numerator))
-        .and_then(|n| {
-            denominator
-                .parse::<i32>()
-                .map_err(|_| format!("Invalid denominator: '{}'", denominator))
-                .and_then(|d| {
-                    if d == 0 {
-                        Err("Division by zero".to_string())
-                    } else {
-                        Ok(n / d)
-                    }
-                })
-        })
+pub fn parse_and_divide(numerator: &str, denominator: &str) -> Result<i32, String>  {
+    todo!("Parse and divide with error handling.")
 }
 
 #[cfg(test)]

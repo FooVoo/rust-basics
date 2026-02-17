@@ -9,16 +9,16 @@
 use std::ops::Add;
 
 /// Adds two values together.
-pub fn add<T: Add<Output = T>>(a: T, b: T) -> T {
-    a + b
+pub fn add<T: Add<Output = T>>(a: T, b: T) -> T  {
+    todo!("Add two values together.")
 }
 
 /// Sums all elements in a slice.
 pub fn sum_all<T>(slice: &[T]) -> T
 where
     T: Add<Output = T> + Copy + Default,
-{
-    slice.iter().copied().fold(T::default(), |acc, x| acc + x)
+ {
+    todo!("Sums all elements in a slice.")
 }
 
 /// A generic accumulator for addable types.
@@ -34,23 +34,23 @@ where
     T: Add<Output = T> + Copy,
 {
     /// Creates a new Accumulator with an initial value.
-    pub fn new(initial: T) -> Self {
-        Accumulator { total: initial }
+    pub fn new(initial: T) -> Self  {
+        todo!("Create a new Accumulator with an initial value.")
     }
 
     /// Adds a value to the accumulator.
-    pub fn add(&mut self, value: T) {
-        self.total = self.total + value;
+    pub fn add(&mut self, value: T)  {
+        todo!("Add a value to the accumulator.")
     }
 
     /// Returns the current total.
-    pub fn total(&self) -> T {
-        self.total
+    pub fn total(&self) -> T  {
+        todo!("Return the current total.")
     }
 
     /// Resets to a new value.
-    pub fn reset(&mut self, value: T) {
-        self.total = value;
+    pub fn reset(&mut self, value: T)  {
+        todo!("Resets to a new value.")
     }
 }
 

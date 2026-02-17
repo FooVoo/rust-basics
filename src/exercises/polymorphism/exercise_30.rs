@@ -21,12 +21,8 @@ pub struct WindowIterator<'data, T> {
 }
 
 impl<'data, T> WindowIterator<'data, T> {
-    pub fn new(data: &'data [T], window_size: usize) -> Self {
-        WindowIterator {
-            data,
-            window_size,
-            position: 0,
-        }
+    pub fn new(data: &'data [T], window_size: usize) -> Self  {
+        todo!("Implement new")
     }
 }
 
@@ -35,14 +31,8 @@ impl<'data, T> LendingIterator for WindowIterator<'data, T> {
     where
         Self: 'a;
     
-    fn next(&mut self) -> Option<Self::Item<'_>> {
-        if self.position + self.window_size <= self.data.len() {
-            let window = &self.data[self.position..self.position + self.window_size];
-            self.position += 1;
-            Some(window)
-        } else {
-            None
-        }
+    fn next(&mut self) -> Option<Self::Item<'_>>  {
+        todo!("Implement next")
     }
 }
 
@@ -60,12 +50,12 @@ pub struct StringContainer {
 }
 
 impl StringContainer {
-    pub fn new() -> Self {
-        StringContainer { data: Vec::new() }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn push(&mut self, s: String) {
-        self.data.push(s);
+    pub fn push(&mut self, s: String)  {
+        todo!("Implement push")
     }
 }
 
@@ -74,12 +64,12 @@ impl Container for StringContainer {
     where
         Self: 'a;
     
-    fn get(&self, index: usize) -> Option<Self::Item<'_>> {
-        self.data.get(index).map(|s| s.as_str())
+    fn get(&self, index: usize) -> Option<Self::Item<'_>>  {
+        todo!("Implement get")
     }
     
-    fn len(&self) -> usize {
-        self.data.len()
+    fn len(&self) -> usize  {
+        todo!("Implement len")
     }
 }
 
@@ -94,13 +84,8 @@ pub trait StreamingIterator {
     fn count(mut self) -> usize
     where
         Self: Sized,
-    {
-        let mut count = 0;
-        while self.get().is_some() {
-            count += 1;
-            self.advance();
-        }
-        count
+     {
+        todo!("Implement count")
     }
 }
 
@@ -111,12 +96,8 @@ pub struct ChunkIterator<'data, T> {
 }
 
 impl<'data, T> ChunkIterator<'data, T> {
-    pub fn new(data: &'data [T], chunk_size: usize) -> Self {
-        ChunkIterator {
-            data,
-            chunk_size,
-            position: 0,
-        }
+    pub fn new(data: &'data [T], chunk_size: usize) -> Self  {
+        todo!("Implement new")
     }
 }
 
@@ -125,17 +106,12 @@ impl<'data, T> StreamingIterator for ChunkIterator<'data, T> {
     where
         Self: 'a;
     
-    fn advance(&mut self) {
-        self.position += self.chunk_size;
+    fn advance(&mut self)  {
+        todo!("Implement advance")
     }
     
-    fn get(&self) -> Option<Self::Item<'_>> {
-        if self.position < self.data.len() {
-            let end = (self.position + self.chunk_size).min(self.data.len());
-            Some(&self.data[self.position..end])
-        } else {
-            None
-        }
+    fn get(&self) -> Option<Self::Item<'_>>  {
+        todo!("Implement get")
     }
 }
 
@@ -150,8 +126,8 @@ pub struct BoxFamily;
 impl PointerFamily for BoxFamily {
     type Pointer<T> = Box<T>;
     
-    fn new<T>(value: T) -> Self::Pointer<T> {
-        Box::new(value)
+    fn new<T>(value: T) -> Self::Pointer<T>  {
+        todo!("Implement new")
     }
 }
 
@@ -160,8 +136,8 @@ pub struct RcFamily;
 impl PointerFamily for RcFamily {
     type Pointer<T> = std::rc::Rc<T>;
     
-    fn new<T>(value: T) -> Self::Pointer<T> {
-        std::rc::Rc::new(value)
+    fn new<T>(value: T) -> Self::Pointer<T>  {
+        todo!("Implement new")
     }
 }
 
@@ -186,8 +162,8 @@ impl Mapper for StringMapper {
     where
         Self: 'a;
     
-    fn map<'a>(&'a self, input: Self::Input<'a>) -> Self::Output<'a> {
-        input.to_uppercase()
+    fn map<'a>(&'a self, input: Self::Input<'a>) -> Self::Output<'a>  {
+        todo!("Implement map")
     }
 }
 

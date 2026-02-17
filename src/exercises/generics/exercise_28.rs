@@ -21,59 +21,47 @@ pub struct Document<State> {
 
 impl Document<Draft> {
     /// Creates a new draft document.
-    pub fn new(content: String) -> Self {
-        Document {
-            content,
-            _state: PhantomData,
-        }
+    pub fn new(content: String) -> Self  {
+        todo!("Create a new draft document.")
     }
 
     /// Edits the content (only available in Draft state).
-    pub fn edit(&mut self, new_content: String) {
-        self.content = new_content;
+    pub fn edit(&mut self, new_content: String)  {
+        todo!("Edits the content (only available in Draft state).")
     }
 
     /// Submits the document for review.
-    pub fn submit_for_review(self) -> Document<Review> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+    pub fn submit_for_review(self) -> Document<Review>  {
+        todo!("Submits the document for review.")
     }
 }
 
 impl Document<Review> {
     /// Approves the document for publishing.
-    pub fn approve(self) -> Document<Published> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+    pub fn approve(self) -> Document<Published>  {
+        todo!("Approves the document for publishing.")
     }
 
     /// Rejects the document back to draft.
-    pub fn reject(self) -> Document<Draft> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+    pub fn reject(self) -> Document<Draft>  {
+        todo!("Rejects the document back to draft.")
     }
 
     /// Gets the content for review.
-    pub fn content(&self) -> &str {
-        &self.content
+    pub fn content(&self) -> &str  {
+        todo!("Get the content for review.")
     }
 }
 
 impl Document<Published> {
     /// Gets the published content.
-    pub fn content(&self) -> &str {
-        &self.content
+    pub fn content(&self) -> &str  {
+        todo!("Get the published content.")
     }
 
     /// Archives the document (ends its lifecycle).
-    pub fn archive(self) -> String {
-        self.content
+    pub fn archive(self) -> String  {
+        todo!("Archives the document (ends its lifecycle).")
     }
 }
 
@@ -91,78 +79,47 @@ pub struct Connection<State> {
 
 impl Connection<Disconnected> {
     /// Creates a new disconnected connection.
-    pub fn new(host: String, port: u16) -> Self {
-        Connection {
-            host,
-            port,
-            _state: PhantomData,
-        }
+    pub fn new(host: String, port: u16) -> Self  {
+        todo!("Create a new disconnected connection.")
     }
 
     /// Connects to the server.
-    pub fn connect(self) -> Result<Connection<Connected>, String> {
-        if self.host.is_empty() {
-            return Err("Invalid host".to_string());
-        }
-        Ok(Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        })
+    pub fn connect(self) -> Result<Connection<Connected>, String>  {
+        todo!("Connects to the server.")
     }
 }
 
 impl Connection<Connected> {
     /// Authenticates the connection.
-    pub fn authenticate(self, _password: &str) -> Result<Connection<Authenticated>, String> {
-        // In a real scenario, would check password
-        Ok(Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        })
+    pub fn authenticate(self, _password: &str) -> Result<Connection<Authenticated>, String>  {
+        todo!("Authenticates the connection.")
     }
 
     /// Disconnects from the server.
-    pub fn disconnect(self) -> Connection<Disconnected> {
-        Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        }
+    pub fn disconnect(self) -> Connection<Disconnected>  {
+        todo!("Disconnects from the server.")
     }
 
     /// Gets the connection info.
-    pub fn info(&self) -> String {
-        format!("{}:{}", self.host, self.port)
+    pub fn info(&self) -> String  {
+        todo!("Get the connection info.")
     }
 }
 
 impl Connection<Authenticated> {
     /// Sends data (only available when authenticated).
-    pub fn send(&self, data: &str) -> Result<(), String> {
-        if data.is_empty() {
-            return Err("Cannot send empty data".to_string());
-        }
-        Ok(())
+    pub fn send(&self, data: &str) -> Result<(), String>  {
+        todo!("Sends data (only available when authenticated).")
     }
 
     /// Logs out and returns to connected state.
-    pub fn logout(self) -> Connection<Connected> {
-        Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        }
+    pub fn logout(self) -> Connection<Connected>  {
+        todo!("Logs out and returns to connected state.")
     }
 
     /// Disconnects and logs out.
-    pub fn disconnect(self) -> Connection<Disconnected> {
-        Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        }
+    pub fn disconnect(self) -> Connection<Disconnected>  {
+        todo!("Disconnects and logs out.")
     }
 }
 

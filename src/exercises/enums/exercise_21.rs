@@ -18,54 +18,35 @@ pub enum BinaryTree<T> {
 
 impl<T> BinaryTree<T> {
     /// Creates an empty tree
-    pub fn empty() -> Self {
-        BinaryTree::Empty
+    pub fn empty() -> Self  {
+        todo!("Create an empty tree")
     }
 
     /// Creates a leaf node
-    pub fn leaf(value: T) -> Self {
-        BinaryTree::Node {
-            value,
-            left: Box::new(BinaryTree::Empty),
-            right: Box::new(BinaryTree::Empty),
-        }
+    pub fn leaf(value: T) -> Self  {
+        todo!("Create a leaf node")
     }
 
     /// Creates a node with children
-    pub fn node(value: T, left: BinaryTree<T>, right: BinaryTree<T>) -> Self {
-        BinaryTree::Node {
-            value,
-            left: Box::new(left),
-            right: Box::new(right),
-        }
+    pub fn node(value: T, left: BinaryTree<T>, right: BinaryTree<T>) -> Self  {
+        todo!("Create a node with children")
     }
 
     /// Returns the height of the tree
-    pub fn height(&self) -> usize {
-        match self {
-            BinaryTree::Empty => 0,
-            BinaryTree::Node { left, right, .. } => {
-                1 + std::cmp::max(left.height(), right.height())
-            }
-        }
+    pub fn height(&self) -> usize  {
+        todo!("Return the height of the tree")
     }
 
     /// Counts the number of nodes in the tree
-    pub fn size(&self) -> usize {
-        match self {
-            BinaryTree::Empty => 0,
-            BinaryTree::Node { left, right, .. } => 1 + left.size() + right.size(),
-        }
+    pub fn size(&self) -> usize  {
+        todo!("Counts the number of nodes in the tree")
     }
 }
 
 impl BinaryTree<i32> {
     /// Returns the sum of all values in the tree
-    pub fn sum(&self) -> i32 {
-        match self {
-            BinaryTree::Empty => 0,
-            BinaryTree::Node { value, left, right } => value + left.sum() + right.sum(),
-        }
+    pub fn sum(&self) -> i32  {
+        todo!("Return the sum of all values in the tree")
     }
 }
 

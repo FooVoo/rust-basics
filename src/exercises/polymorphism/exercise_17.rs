@@ -42,26 +42,23 @@ impl Serializable for SecretKey {}
 // Not Cacheable or NetworkSafe
 
 /// Only works with Serializable types
-pub fn serialize<T: Serializable>(_item: &T) -> String {
-    format!("Serialized: {:?}", std::any::type_name::<T>())
+pub fn serialize<T: Serializable>(_item: &T) -> String  {
+    todo!("Only works with Serializable types")
 }
 
 /// Only works with Cacheable types
-pub fn cache<T: Cacheable + Clone>(item: &T) -> T {
-    item.clone()
+pub fn cache<T: Cacheable + Clone>(item: &T) -> T  {
+    todo!("Only works with Cacheable types")
 }
 
 /// Only works with NetworkSafe types
-pub fn send_over_network<T: NetworkSafe>(_item: &T) -> String {
-    format!("Sending {} over network", std::any::type_name::<T>())
+pub fn send_over_network<T: NetworkSafe>(_item: &T) -> String  {
+    todo!("Only works with NetworkSafe types")
 }
 
 /// Works with all three markers
-pub fn full_process<T: Serializable + Cacheable + NetworkSafe + Clone>(item: &T) -> (String, T, String) {
-    let serialized = serialize(item);
-    let cached = cache(item);
-    let sent = send_over_network(item);
-    (serialized, cached, sent)
+pub fn full_process<T: Serializable + Cacheable + NetworkSafe + Clone>(item: &T) -> (String, T, String)  {
+    todo!("Works with all three markers")
 }
 
 #[cfg(test)]

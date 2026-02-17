@@ -10,56 +10,18 @@ use tokio::sync::oneshot;
 use tokio::time::{sleep, Duration};
 
 /// Send a computed value through oneshot channel.
-pub async fn compute_and_send(value: i32, delay_ms: u64) -> i32 {
-    let (tx, rx) = oneshot::channel();
-    
-    tokio::spawn(async move {
-        sleep(Duration::from_millis(delay_ms)).await;
-        let result = value * 2;
-        let _ = tx.send(result);
-    });
-    
-    rx.await.unwrap()
+pub async fn compute_and_send(value: i32, delay_ms: u64) -> i32  {
+    todo!("Send a computed value through oneshot channel.")
 }
 
 /// Request-response pattern with oneshot.
-pub async fn request_response(requests: Vec<i32>) -> Vec<i32> {
-    let mut handles = vec![];
-    
-    for value in requests {
-        let (tx, rx) = oneshot::channel();
-        
-        tokio::spawn(async move {
-            sleep(Duration::from_millis(10)).await;
-            let _ = tx.send(value + 100);
-        });
-        
-        handles.push(rx);
-    }
-    
-    let mut results = vec![];
-    for handle in handles {
-        results.push(handle.await.unwrap());
-    }
-    
-    results
+pub async fn request_response(requests: Vec<i32>) -> Vec<i32>  {
+    todo!("Request-response pattern with oneshot.")
 }
 
 /// Handle oneshot cancellation.
-pub async fn with_cancellation(value: i32, should_cancel: bool) -> Result<i32, String> {
-    let (tx, rx) = oneshot::channel();
-    
-    tokio::spawn(async move {
-        sleep(Duration::from_millis(50)).await;
-        if !should_cancel {
-            let _ = tx.send(value * 2);
-        }
-    });
-    
-    match rx.await {
-        Ok(result) => Ok(result),
-        Err(_) => Err("Cancelled".to_string()),
-    }
+pub async fn with_cancellation(value: i32, should_cancel: bool) -> Result<i32, String>  {
+    todo!("Handle oneshot cancellation.")
 }
 
 #[cfg(test)]

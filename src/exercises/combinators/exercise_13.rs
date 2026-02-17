@@ -7,25 +7,13 @@
 //! - Simplify when errors don't matter
 
 /// Parse multiple strings, keep only successful ones.
-pub fn parse_all_valid(strings: &[&str]) -> Vec<i32> {
-    strings
-        .iter()
-        .filter_map(|s| s.parse::<i32>().ok())
-        .collect()
+pub fn parse_all_valid(strings: &[&str]) -> Vec<i32>  {
+    todo!("Parse multiple strings, keep only successful ones.")
 }
 
 /// Try operations and collect successes.
-pub fn safe_divisions(numerators: &[i32], denominator: i32) -> Vec<i32> {
-    numerators
-        .iter()
-        .filter_map(|&n| {
-            if denominator == 0 {
-                None
-            } else {
-                Some(n / denominator)
-            }
-        })
-        .collect()
+pub fn safe_divisions(numerators: &[i32], denominator: i32) -> Vec<i32>  {
+    todo!("Try operations and collect successes.")
 }
 
 #[cfg(test)]

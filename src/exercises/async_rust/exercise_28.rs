@@ -17,66 +17,32 @@ pub struct RequestContext {
 }
 
 impl RequestContext {
-    pub fn new(request_id: String) -> Self {
-        Self {
-            request_id,
-            user_id: None,
-            trace: vec![],
-        }
+    pub fn new(request_id: String) -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn with_user(mut self, user_id: String) -> Self {
-        self.user_id = Some(user_id);
-        self
+    pub fn with_user(mut self, user_id: String) -> Self  {
+        todo!("Implement with_user")
     }
     
-    pub fn add_trace(&mut self, entry: String) {
-        self.trace.push(entry);
+    pub fn add_trace(&mut self, entry: String)  {
+        todo!("Implement add_trace")
     }
 }
 
 /// Chain operations with context.
-pub async fn process_with_context(mut ctx: RequestContext, value: i32) -> (RequestContext, i32) {
-    ctx.add_trace(format!("Processing value: {}", value));
-    sleep(Duration::from_millis(10)).await;
-    
-    let result = value * 2;
-    ctx.add_trace(format!("Result: {}", result));
-    
-    (ctx, result)
+pub async fn process_with_context(mut ctx: RequestContext, value: i32) -> (RequestContext, i32)  {
+    todo!("Chain operations with context.")
 }
 
 /// Multi-step pipeline with context propagation.
-pub async fn pipeline_with_context(ctx: RequestContext, values: Vec<i32>) -> RequestContext {
-    let mut current_ctx = ctx;
-    
-    for value in values {
-        let (updated_ctx, _) = process_with_context(current_ctx, value).await;
-        current_ctx = updated_ctx;
-    }
-    
-    current_ctx
+pub async fn pipeline_with_context(ctx: RequestContext, values: Vec<i32>) -> RequestContext  {
+    todo!("Multi-step pipeline with context propagation.")
 }
 
 /// Parallel operations with shared context.
-pub async fn parallel_with_context(ctx: RequestContext, values: Vec<i32>) -> Vec<RequestContext> {
-    let mut handles = vec![];
-    
-    for value in values {
-        let ctx_clone = ctx.clone();
-        let handle = tokio::spawn(async move {
-            let (updated_ctx, _) = process_with_context(ctx_clone, value).await;
-            updated_ctx
-        });
-        handles.push(handle);
-    }
-    
-    let mut results = vec![];
-    for handle in handles {
-        results.push(handle.await.unwrap());
-    }
-    
-    results
+pub async fn parallel_with_context(ctx: RequestContext, values: Vec<i32>) -> Vec<RequestContext>  {
+    todo!("Parallel operations with shared context.")
 }
 
 /// Context with Arc for shared immutable data.
@@ -93,14 +59,13 @@ pub struct Config {
 }
 
 impl SharedContext {
-    pub fn new(config: Arc<Config>, request_id: String) -> Self {
-        Self { config, request_id }
+    pub fn new(config: Arc<Config>, request_id: String) -> Self  {
+        todo!("Implement new")
     }
 }
 
-pub async fn operation_with_shared_context(ctx: SharedContext) -> u64 {
-    sleep(Duration::from_millis(10)).await;
-    ctx.config.timeout_ms
+pub async fn operation_with_shared_context(ctx: SharedContext) -> u64  {
+    todo!("Implement operation_with_shared_context")
 }
 
 #[cfg(test)]

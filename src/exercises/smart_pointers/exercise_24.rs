@@ -15,38 +15,26 @@ pub struct ValidatedBox<T> {
 }
 
 impl<T> ValidatedBox<T> {
-    pub fn new(value: T, validator: Box<dyn Fn(&T) -> bool>) -> Result<Self, &'static str> {
-        if validator(&value) {
-            Ok(ValidatedBox {
-                value: Box::new(value),
-                validator,
-            })
-        } else {
-            Err("Initial value failed validation")
-        }
+    pub fn new(value: T, validator: Box<dyn Fn(&T) -> bool>) -> Result<Self, &'static str>  {
+        todo!("A wrapper that validates values on mutation.")
     }
 
-    pub fn set(&mut self, new_value: T) -> Result<(), &'static str> {
-        if (self.validator)(&new_value) {
-            self.value = Box::new(new_value);
-            Ok(())
-        } else {
-            Err("New value failed validation")
-        }
+    pub fn set(&mut self, new_value: T) -> Result<(), &'static str>  {
+        todo!("Implement set")
     }
 }
 
 impl<T> Deref for ValidatedBox<T> {
     type Target = T;
 
-    fn deref(&self) -> &Self::Target {
-        &self.value
+    fn deref(&self) -> &Self::Target  {
+        todo!("Implement deref")
     }
 }
 
 impl<T> DerefMut for ValidatedBox<T> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.value
+    fn deref_mut(&mut self) -> &mut Self::Target  {
+        todo!("Implement deref_mut")
     }
 }
 
@@ -57,36 +45,30 @@ pub struct LazyBox<T> {
 }
 
 impl<T> LazyBox<T> {
-    pub fn new(initializer: Box<dyn Fn() -> T>) -> Self {
-        LazyBox {
-            value: None,
-            initializer,
-        }
+    pub fn new(initializer: Box<dyn Fn() -> T>) -> Self  {
+        todo!("A lazy box that initializes on first mutable access.")
     }
 
-    pub fn is_initialized(&self) -> bool {
-        self.value.is_some()
+    pub fn is_initialized(&self) -> bool  {
+        todo!("Implement is_initialized")
     }
 
-    fn ensure_initialized(&mut self) {
-        if self.value.is_none() {
-            self.value = Some(Box::new((self.initializer)()));
-        }
+    fn ensure_initialized(&mut self)  {
+        todo!("Implement ensure_initialized")
     }
 }
 
 impl<T> Deref for LazyBox<T> {
     type Target = T;
 
-    fn deref(&self) -> &Self::Target {
-        self.value.as_ref().expect("LazyBox accessed before initialization")
+    fn deref(&self) -> &Self::Target  {
+        todo!("Implement deref")
     }
 }
 
 impl<T> DerefMut for LazyBox<T> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        self.ensure_initialized();
-        self.value.as_mut().unwrap()
+    fn deref_mut(&mut self) -> &mut Self::Target  {
+        todo!("Implement deref_mut")
     }
 }
 

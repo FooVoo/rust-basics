@@ -7,32 +7,23 @@
 //! - Convert between string types
 
 /// Return a static string.
-pub fn get_greeting() -> &'static str {
-    "Hello, Rust!"
+pub fn get_greeting() -> &'static str  {
+    todo!("Return a static string.")
 }
 
 /// Choose between a static string and a reference based on condition.
-pub fn choose_string<'a>(use_static: bool, dynamic: &'a str) -> &'a str {
-    if use_static {
-        "static string"
-    } else {
-        dynamic
-    }
+pub fn choose_string<'a>(use_static: bool, dynamic: &'a str) -> &'a str  {
+    todo!("Choose between a static string and a reference based on condition.")
 }
 
 /// Create a string with proper lifetime management.
-pub fn format_name(first: &str, last: &str) -> String {
-    format!("{} {}", first, last)
+pub fn format_name(first: &str, last: &str) -> String  {
+    todo!("Create a string with proper lifetime management.")
 }
 
 /// Return the appropriate error message.
-pub fn get_error_message(code: i32) -> &'static str {
-    match code {
-        404 => "Not Found",
-        500 => "Internal Server Error",
-        403 => "Forbidden",
-        _ => "Unknown Error",
-    }
+pub fn get_error_message(code: i32) -> &'static str  {
+    todo!("Return the appropriate error message.")
 }
 
 #[cfg(test)]

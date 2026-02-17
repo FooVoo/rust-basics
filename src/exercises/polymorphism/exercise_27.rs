@@ -23,8 +23,8 @@ impl Converter for StringToIntConverter {
     type Output = i32;
     type Error = String;
     
-    fn convert(&self, input: Self::Input) -> Result<Self::Output, Self::Error> {
-        input.parse::<i32>().map_err(|e| e.to_string())
+    fn convert(&self, input: Self::Input) -> Result<Self::Output, Self::Error>  {
+        todo!("Implement convert")
     }
 }
 
@@ -35,8 +35,8 @@ impl Converter for IntToStringConverter {
     type Output = String;
     type Error = ();
     
-    fn convert(&self, input: Self::Input) -> Result<Self::Output, Self::Error> {
-        Ok(input.to_string())
+    fn convert(&self, input: Self::Input) -> Result<Self::Output, Self::Error>  {
+        todo!("Implement convert")
     }
 }
 
@@ -51,12 +51,8 @@ where
     C2: Converter<Input = C1::Output>,
     C1::Error: Display,
     C2::Error: Display,
-{
-    let intermediate = converter1.convert(input)
-        .map_err(|e| format!("First conversion: {}", e))?;
-    
-    converter2.convert(intermediate)
-        .map_err(|e| format!("Second conversion: {}", e))
+ {
+    todo!("Implement chain_convert")
 }
 
 pub trait Collection {
@@ -75,22 +71,22 @@ impl<T: Clone> Collection for SimpleVec<T> {
     type Item = T;
     type Iterator = std::vec::IntoIter<T>;
     
-    fn iter(&self) -> Self::Iterator {
-        self.data.clone().into_iter()
+    fn iter(&self) -> Self::Iterator  {
+        todo!("Implement iter")
     }
     
-    fn len(&self) -> usize {
-        self.data.len()
+    fn len(&self) -> usize  {
+        todo!("Implement len")
     }
 }
 
 impl<T> SimpleVec<T> {
-    pub fn new() -> Self {
-        SimpleVec { data: Vec::new() }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn push(&mut self, item: T) {
-        self.data.push(item);
+    pub fn push(&mut self, item: T)  {
+        todo!("Implement push")
     }
 }
 
@@ -110,19 +106,16 @@ pub struct SimpleGraph {
 }
 
 impl SimpleGraph {
-    pub fn new() -> Self {
-        SimpleGraph {
-            nodes: Vec::new(),
-            edges: Vec::new(),
-        }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn add_node(&mut self, name: String) {
-        self.nodes.push(name);
+    pub fn add_node(&mut self, name: String)  {
+        todo!("Implement add_node")
     }
     
-    pub fn add_edge(&mut self, from: usize, to: usize) {
-        self.edges.push((from, to));
+    pub fn add_edge(&mut self, from: usize, to: usize)  {
+        todo!("Implement add_edge")
     }
 }
 
@@ -132,12 +125,12 @@ impl Graph for SimpleGraph {
     type NodeIter = std::vec::IntoIter<String>;
     type EdgeIter = std::vec::IntoIter<(usize, usize)>;
     
-    fn nodes(&self) -> Self::NodeIter {
-        self.nodes.clone().into_iter()
+    fn nodes(&self) -> Self::NodeIter  {
+        todo!("Implement nodes")
     }
     
-    fn edges(&self) -> Self::EdgeIter {
-        self.edges.clone().into_iter()
+    fn edges(&self) -> Self::EdgeIter  {
+        todo!("Implement edges")
     }
 }
 
@@ -146,8 +139,8 @@ pub fn process_collection<C>(collection: &C) -> Vec<String>
 where
     C: Collection,
     C::Item: Display,
-{
-    collection.iter().map(|item| format!("{}", item)).collect()
+ {
+    todo!("Implement process_collection")
 }
 
 #[cfg(test)]

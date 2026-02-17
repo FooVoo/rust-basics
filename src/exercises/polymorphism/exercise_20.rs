@@ -13,55 +13,50 @@ pub trait Processor {
 pub struct UpperCaseProcessor;
 
 impl Processor for UpperCaseProcessor {
-    fn process(&self, input: &str) -> String {
-        input.to_uppercase()
+    fn process(&self, input: &str) -> String  {
+        todo!("Implement process")
     }
 }
 
 pub struct LowerCaseProcessor;
 
 impl Processor for LowerCaseProcessor {
-    fn process(&self, input: &str) -> String {
-        input.to_lowercase()
+    fn process(&self, input: &str) -> String  {
+        todo!("Implement process")
     }
 }
 
 pub struct ReverseProcessor;
 
 impl Processor for ReverseProcessor {
-    fn process(&self, input: &str) -> String {
-        input.chars().rev().collect()
+    fn process(&self, input: &str) -> String  {
+        todo!("Implement process")
     }
 }
 
 /// Static dispatch using generics - monomorphization
-pub fn process_static<T: Processor>(processor: &T, input: &str) -> String {
-    format!("Static: {}", processor.process(input))
+pub fn process_static<T: Processor>(processor: &T, input: &str) -> String  {
+    todo!("Static dispatch using generics - monomorphization")
 }
 
 /// Dynamic dispatch using trait objects - vtable
-pub fn process_dynamic(processor: &dyn Processor, input: &str) -> String {
-    format!("Dynamic: {}", processor.process(input))
+pub fn process_dynamic(processor: &dyn Processor, input: &str) -> String  {
+    todo!("Dynamic dispatch using trait objects - vtable")
 }
 
 /// Collection with static dispatch - all same type
-pub fn process_all_same<T: Processor>(processors: &[T], input: &str) -> Vec<String> {
-    processors.iter().map(|p| p.process(input)).collect()
+pub fn process_all_same<T: Processor>(processors: &[T], input: &str) -> Vec<String>  {
+    todo!("Collection with static dispatch - all same type")
 }
 
 /// Collection with dynamic dispatch - different types
-pub fn process_all_different(processors: &[&dyn Processor], input: &str) -> Vec<String> {
-    processors.iter().map(|p| p.process(input)).collect()
+pub fn process_all_different(processors: &[&dyn Processor], input: &str) -> Vec<String>  {
+    todo!("Collection with dynamic dispatch - different types")
 }
 
 /// Factory returning trait object - runtime polymorphism
-pub fn create_processor(kind: &str) -> Box<dyn Processor> {
-    match kind {
-        "upper" => Box::new(UpperCaseProcessor),
-        "lower" => Box::new(LowerCaseProcessor),
-        "reverse" => Box::new(ReverseProcessor),
-        _ => Box::new(UpperCaseProcessor),
-    }
+pub fn create_processor(kind: &str) -> Box<dyn Processor>  {
+    todo!("Factory returning trait object - runtime polymorphism")
 }
 
 #[cfg(test)]

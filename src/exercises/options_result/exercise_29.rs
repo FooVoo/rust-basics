@@ -8,24 +8,24 @@
 //! - Implement custom monadic operations
 
 /// Functor: Apply a function inside a context (map).
-pub fn functor_map<T, U>(opt: Option<T>, f: impl FnOnce(T) -> U) -> Option<U> {
-    opt.map(f)
+pub fn functor_map<T, U>(opt: Option<T>, f: impl FnOnce(T) -> U) -> Option<U>  {
+    todo!("Functor: Apply a function inside a context (map).")
 }
 
 /// Monad: Chain computations that return contexts (and_then).
 pub fn monad_bind<T, U>(
     opt: Option<T>,
     f: impl FnOnce(T) -> Option<U>,
-) -> Option<U> {
-    opt.and_then(f)
+) -> Option<U>  {
+    todo!("Monad: Chain computations that return contexts (and_then).")
 }
 
 /// Applicative: Apply a function in a context to a value in a context.
 pub fn applicative_apply<T, U>(
     opt_f: Option<impl FnOnce(T) -> U>,
     opt_val: Option<T>,
-) -> Option<U> {
-    opt_f.and_then(|f| opt_val.map(f))
+) -> Option<U>  {
+    todo!("Applicative: Apply a function in a context to a value in a context.")
 }
 
 /// Implement liftA2 - lift a binary function to work with Options.
@@ -33,29 +33,29 @@ pub fn lift_a2<A, B, C>(
     f: impl FnOnce(A, B) -> C,
     opt_a: Option<A>,
     opt_b: Option<B>,
-) -> Option<C> {
-    opt_a.and_then(|a| opt_b.map(|b| f(a, b)))
+) -> Option<C>  {
+    todo!("Implement liftA2 - lift a binary function to work with Options.")
 }
 
 /// Implement sequence - convert Vec<Option<T>> to Option<Vec<T>>.
-pub fn sequence<T>(vec: Vec<Option<T>>) -> Option<Vec<T>> {
-    vec.into_iter().collect()
+pub fn sequence<T>(vec: Vec<Option<T>>) -> Option<Vec<T>>  {
+    todo!("Implement sequence - convert Vec<Option<T>> to Option<Vec<T>>.")
 }
 
 /// Implement traverse - map and sequence in one operation.
 pub fn traverse<T, U>(
     vec: Vec<T>,
     f: impl Fn(T) -> Option<U>,
-) -> Option<Vec<U>> {
-    vec.into_iter().map(f).collect()
+) -> Option<Vec<U>>  {
+    todo!("Implement traverse - map and sequence in one operation.")
 }
 
 /// Kleisli composition: compose two monadic functions.
 pub fn kleisli_compose<A, B, C>(
     f: impl Fn(A) -> Option<B>,
     g: impl Fn(B) -> Option<C>,
-) -> impl Fn(A) -> Option<C> {
-    move |a| f(a).and_then(&g)
+) -> impl Fn(A) -> Option<C>  {
+    todo!("Kleisli composition: compose two monadic functions.")
 }
 
 #[cfg(test)]

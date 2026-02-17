@@ -14,21 +14,13 @@ pub enum TrafficLight {
 }
 
 /// Returns the action to take for a given traffic light
-pub fn get_action(light: TrafficLight) -> &'static str {
-    match light {
-        TrafficLight::Red => "Stop",
-        TrafficLight::Yellow => "Slow down",
-        TrafficLight::Green => "Go",
-    }
+pub fn get_action(light: TrafficLight) -> &'static str  {
+    todo!("Return the action to take for a given traffic light")
 }
 
 /// Returns the next traffic light state
-pub fn next_light(light: TrafficLight) -> TrafficLight {
-    match light {
-        TrafficLight::Red => TrafficLight::Green,
-        TrafficLight::Yellow => TrafficLight::Red,
-        TrafficLight::Green => TrafficLight::Yellow,
-    }
+pub fn next_light(light: TrafficLight) -> TrafficLight  {
+    todo!("Return the next traffic light state")
 }
 
 #[cfg(test)]

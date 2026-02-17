@@ -28,60 +28,30 @@ pub struct DoublyLinkedList<T> {
 }
 
 impl<T> ListNode<T> {
-    pub fn new(value: T) -> NodeRef<T> {
-        Rc::new(RefCell::new(ListNode {
-            value,
-            prev: None,
-            next: None,
-        }))
+    pub fn new(value: T) -> NodeRef<T>  {
+        todo!("Implement new")
     }
 }
 
 impl<T> DoublyLinkedList<T> {
-    pub fn new() -> Self {
-        DoublyLinkedList {
-            head: None,
-            tail: None,
-            len: 0,
-        }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
 
-    pub fn push_back(&mut self, value: T) {
-        let new_node = ListNode::new(value);
-
-        if let Some(tail_weak) = &self.tail {
-            if let Some(tail_node) = tail_weak.upgrade() {
-                new_node.borrow_mut().prev = Some(Rc::downgrade(&tail_node));
-                tail_node.borrow_mut().next = Some(Rc::clone(&new_node));
-            }
-        } else {
-            self.head = Some(Rc::clone(&new_node));
-        }
-
-        self.tail = Some(Rc::downgrade(&new_node));
-        self.len += 1;
+    pub fn push_back(&mut self, value: T)  {
+        todo!("Implement push_back")
     }
 
-    pub fn push_front(&mut self, value: T) {
-        let new_node = ListNode::new(value);
-
-        if let Some(head) = &self.head {
-            new_node.borrow_mut().next = Some(Rc::clone(head));
-            head.borrow_mut().prev = Some(Rc::downgrade(&new_node));
-        } else {
-            self.tail = Some(Rc::downgrade(&new_node));
-        }
-
-        self.head = Some(new_node);
-        self.len += 1;
+    pub fn push_front(&mut self, value: T)  {
+        todo!("Implement push_front")
     }
 
-    pub fn len(&self) -> usize {
-        self.len
+    pub fn len(&self) -> usize  {
+        todo!("Implement len")
     }
 
-    pub fn is_empty(&self) -> bool {
-        self.len == 0
+    pub fn is_empty(&self) -> bool  {
+        todo!("Implement is_empty")
     }
 }
 
@@ -93,51 +63,24 @@ pub struct LRUCache<K, V> {
 }
 
 impl<K: Clone + Eq + std::hash::Hash, V> LRUCache<K, V> {
-    pub fn new(capacity: usize) -> Self {
-        LRUCache {
-            capacity,
-            map: HashMap::new(),
-            access_order: Vec::new(),
-        }
+    pub fn new(capacity: usize) -> Self  {
+        todo!("A cache with smart pointer-based eviction policy.")
     }
 
-    pub fn get(&mut self, key: &K) -> Option<&V> {
-        if self.map.contains_key(key) {
-            // Move to front (most recently used)
-            self.access_order.retain(|k| k != key);
-            self.access_order.push(key.clone());
-            self.map.get(key)
-        } else {
-            None
-        }
+    pub fn get(&mut self, key: &K) -> Option<&V>  {
+        todo!("Implement get")
     }
 
-    pub fn put(&mut self, key: K, value: V) {
-        if self.map.contains_key(&key) {
-            // Update existing
-            self.map.insert(key.clone(), value);
-            self.access_order.retain(|k| k != &key);
-            self.access_order.push(key);
-        } else {
-            // Add new entry
-            if self.map.len() >= self.capacity {
-                // Evict least recently used
-                if let Some(lru_key) = self.access_order.first().cloned() {
-                    self.map.remove(&lru_key);
-                    self.access_order.remove(0);
-                }
-            }
-            self.map.insert(key.clone(), value);
-            self.access_order.push(key);
-        }
+    pub fn put(&mut self, key: K, value: V)  {
+        todo!("Implement put")
     }
 
-    pub fn len(&self) -> usize {
-        self.map.len()
+    pub fn len(&self) -> usize  {
+        todo!("Implement len")
     }
 
-    pub fn capacity(&self) -> usize {
-        self.capacity
+    pub fn capacity(&self) -> usize  {
+        todo!("Implement capacity")
     }
 }
 
@@ -151,30 +94,20 @@ impl<T> ObjectPool<T> {
     pub fn new<F>(factory: F) -> Self
     where
         F: Fn() -> T + 'static,
-    {
-        ObjectPool {
-            available: RefCell::new(Vec::new()),
-            factory: Box::new(factory),
-        }
+     {
+        todo!("Implement new")
     }
 
-    pub fn acquire(&self) -> Rc<RefCell<T>> {
-        let mut available = self.available.borrow_mut();
-        if let Some(obj) = available.pop() {
-            obj
-        } else {
-            Rc::new(RefCell::new((self.factory)()))
-        }
+    pub fn acquire(&self) -> Rc<RefCell<T>>  {
+        todo!("Implement acquire")
     }
 
-    pub fn release(&self, obj: Rc<RefCell<T>>) {
-        if Rc::strong_count(&obj) == 1 {
-            self.available.borrow_mut().push(obj);
-        }
+    pub fn release(&self, obj: Rc<RefCell<T>>)  {
+        todo!("Implement release")
     }
 
-    pub fn available_count(&self) -> usize {
-        self.available.borrow().len()
+    pub fn available_count(&self) -> usize  {
+        todo!("Implement available_count")
     }
 }
 

@@ -14,26 +14,23 @@ pub enum List {
 
 impl List {
     /// Create an empty list.
-    pub fn new() -> Self {
-        List::Nil
+    pub fn new() -> Self  {
+        todo!("Create an empty list.")
     }
 
     /// Prepend a value to the list.
-    pub fn prepend(self, value: i32) -> Self {
-        List::Cons(value, Box::new(self))
+    pub fn prepend(self, value: i32) -> Self  {
+        todo!("Prepend a value to the list.")
     }
 
     /// Get the length of the list.
-    pub fn len(&self) -> usize {
-        match self {
-            List::Nil => 0,
-            List::Cons(_, tail) => 1 + tail.len(),
-        }
+    pub fn len(&self) -> usize  {
+        todo!("Get the length of the list.")
     }
 
     /// Check if the list is empty.
-    pub fn is_empty(&self) -> bool {
-        matches!(self, List::Nil)
+    pub fn is_empty(&self) -> bool  {
+        todo!("Check if the list is empty.")
     }
 }
 

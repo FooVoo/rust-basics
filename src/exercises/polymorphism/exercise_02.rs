@@ -17,22 +17,22 @@ pub struct Counter {
 }
 
 impl Counter {
-    pub fn new(initial: i32) -> Self {
-        Counter { value: initial }
+    pub fn new(initial: i32) -> Self  {
+        todo!("Implement new")
     }
 }
 
 impl Processable for Counter {
-    fn process(&mut self) {
-        self.value += 1;
+    fn process(&mut self)  {
+        todo!("Implement process")
     }
     
-    fn get_value(&self) -> i32 {
-        self.value
+    fn get_value(&self) -> i32  {
+        todo!("Implement get_value")
     }
     
-    fn consume(self) -> i32 {
-        self.value * 2
+    fn consume(self) -> i32  {
+        todo!("Implement consume")
     }
 }
 

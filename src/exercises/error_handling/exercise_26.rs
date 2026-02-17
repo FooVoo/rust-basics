@@ -16,12 +16,8 @@ pub enum ResourceError {
 }
 
 impl fmt::Display for ResourceError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            ResourceError::AlreadyAcquired => write!(f, "Resource already acquired"),
-            ResourceError::NotAcquired => write!(f, "Resource not acquired"),
-            ResourceError::OperationFailed(msg) => write!(f, "Operation failed: {}", msg),
-        }
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
@@ -35,33 +31,20 @@ pub struct TrackedResource {
 }
 
 impl TrackedResource {
-    pub fn new(name: impl Into<String>) -> Self {
-        TrackedResource {
-            name: name.into(),
-            acquired: false,
-        }
+    pub fn new(name: impl Into<String>) -> Self  {
+        todo!("A resource that tracks acquisition and release.")
     }
     
-    pub fn acquire(&mut self) -> Result<(), ResourceError> {
-        if self.acquired {
-            Err(ResourceError::AlreadyAcquired)
-        } else {
-            self.acquired = true;
-            Ok(())
-        }
+    pub fn acquire(&mut self) -> Result<(), ResourceError>  {
+        todo!("Implement acquire")
     }
     
-    pub fn release(&mut self) -> Result<(), ResourceError> {
-        if !self.acquired {
-            Err(ResourceError::NotAcquired)
-        } else {
-            self.acquired = false;
-            Ok(())
-        }
+    pub fn release(&mut self) -> Result<(), ResourceError>  {
+        todo!("Implement release")
     }
     
-    pub fn is_acquired(&self) -> bool {
-        self.acquired
+    pub fn is_acquired(&self) -> bool  {
+        todo!("Implement is_acquired")
     }
 }
 
@@ -71,23 +54,18 @@ pub struct ResourceGuard<'a> {
 }
 
 impl<'a> ResourceGuard<'a> {
-    pub fn acquire(resource: &'a mut TrackedResource) -> Result<Self, ResourceError> {
-        resource.acquire()?;
-        Ok(ResourceGuard { resource })
+    pub fn acquire(resource: &'a mut TrackedResource) -> Result<Self, ResourceError>  {
+        todo!("RAII guard that ensures resource is released.")
     }
     
-    pub fn perform_operation(&mut self, should_fail: bool) -> Result<(), ResourceError> {
-        if should_fail {
-            Err(ResourceError::OperationFailed("Test failure".to_string()))
-        } else {
-            Ok(())
-        }
+    pub fn perform_operation(&mut self, should_fail: bool) -> Result<(), ResourceError>  {
+        todo!("Implement perform_operation")
     }
 }
 
 impl<'a> Drop for ResourceGuard<'a> {
-    fn drop(&mut self) {
-        let _ = self.resource.release();
+    fn drop(&mut self)  {
+        todo!("Implement drop")
     }
 }
 
@@ -98,9 +76,8 @@ pub fn with_resource<F, T>(
 ) -> Result<T, ResourceError>
 where
     F: FnOnce(&mut ResourceGuard) -> Result<T, ResourceError>,
-{
-    let mut guard = ResourceGuard::acquire(resource)?;
-    operation(&mut guard)
+ {
+    todo!("Perform operations with automatic cleanup.")
 }
 
 #[cfg(test)]

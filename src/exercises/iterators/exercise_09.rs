@@ -7,30 +7,23 @@
 //! - Work with nested collections
 
 /// Flatten a vector of vectors.
-pub fn flatten_vectors(nested: &[Vec<i32>]) -> Vec<i32> {
-    nested.iter().flat_map(|v| v.iter().copied()).collect()
+pub fn flatten_vectors(nested: &[Vec<i32>]) -> Vec<i32>  {
+    todo!("Flatten a vector of vectors.")
 }
 
 /// Split strings and collect all words.
-pub fn split_and_collect(strings: &[&str]) -> Vec<String> {
-    strings
-        .iter()
-        .flat_map(|s| s.split_whitespace())
-        .map(|s| s.to_string())
-        .collect()
+pub fn split_and_collect(strings: &[&str]) -> Vec<String>  {
+    todo!("Split strings and collect all words.")
 }
 
 /// Get all characters from strings.
-pub fn all_chars(strings: &[&str]) -> Vec<char> {
-    strings.iter().flat_map(|s| s.chars()).collect()
+pub fn all_chars(strings: &[&str]) -> Vec<char>  {
+    todo!("Get all characters from strings.")
 }
 
 /// Generate pairs for each number with a list of multipliers.
-pub fn generate_pairs(numbers: &[i32], multipliers: &[i32]) -> Vec<(i32, i32)> {
-    numbers
-        .iter()
-        .flat_map(|&n| multipliers.iter().map(move |&m| (n, n * m)))
-        .collect()
+pub fn generate_pairs(numbers: &[i32], multipliers: &[i32]) -> Vec<(i32, i32)>  {
+    todo!("Generate pairs for each number with a list of multipliers.")
 }
 
 #[cfg(test)]

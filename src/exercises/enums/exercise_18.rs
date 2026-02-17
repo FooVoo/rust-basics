@@ -15,38 +15,25 @@ pub enum Priority {
 }
 
 impl PartialOrd for Priority {
-    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
-        Some(self.cmp(other))
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering>  {
+        todo!("Implement partial_cmp")
     }
 }
 
 impl Ord for Priority {
-    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
-        let self_rank = match self {
-            Priority::Low => 0,
-            Priority::Medium => 1,
-            Priority::High => 2,
-            Priority::Critical => 3,
-        };
-        let other_rank = match other {
-            Priority::Low => 0,
-            Priority::Medium => 1,
-            Priority::High => 2,
-            Priority::Critical => 3,
-        };
-        self_rank.cmp(&other_rank)
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering  {
+        todo!("Implement cmp")
     }
 }
 
 /// Returns the higher priority
-pub fn max_priority(a: Priority, b: Priority) -> Priority {
-    if a > b { a } else { b }
+pub fn max_priority(a: Priority, b: Priority) -> Priority  {
+    todo!("Return the higher priority")
 }
 
 /// Sorts priorities in descending order (highest first)
-pub fn sort_by_priority(mut priorities: Vec<Priority>) -> Vec<Priority> {
-    priorities.sort_by(|a, b| b.cmp(a));
-    priorities
+pub fn sort_by_priority(mut priorities: Vec<Priority>) -> Vec<Priority>  {
+    todo!("Sorts priorities in descending order (highest first)")
 }
 
 #[cfg(test)]

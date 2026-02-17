@@ -15,53 +15,33 @@ pub struct ValidationError {
 }
 
 impl fmt::Display for ValidationError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "Validation error in {}: {}", self.field, self.message)
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
 impl ValidationError {
-    pub fn new(field: &str, message: &str) -> Self {
-        ValidationError {
-            field: field.to_string(),
-            message: message.to_string(),
-        }
+    pub fn new(field: &str, message: &str) -> Self  {
+        todo!("Implement new")
     }
 }
 
 /// Validate a username (non-empty, alphanumeric).
-pub fn validate_username(username: &str) -> Result<String, ValidationError> {
-    if username.is_empty() {
-        return Err(ValidationError::new("username", "Cannot be empty"));
-    }
-    if !username.chars().all(|c| c.is_alphanumeric()) {
-        return Err(ValidationError::new(
-            "username",
-            "Must be alphanumeric",
-        ));
-    }
-    Ok(username.to_string())
+pub fn validate_username(username: &str) -> Result<String, ValidationError>  {
+    todo!("Validate a username (non-empty, alphanumeric).")
 }
 
 /// Validate an age (positive, reasonable range).
-pub fn validate_age(age: i32) -> Result<i32, ValidationError> {
-    if age <= 0 {
-        return Err(ValidationError::new("age", "Must be positive"));
-    }
-    if age > 150 {
-        return Err(ValidationError::new("age", "Must be realistic"));
-    }
-    Ok(age)
+pub fn validate_age(age: i32) -> Result<i32, ValidationError>  {
+    todo!("Validate an age (positive, reasonable range).")
 }
 
 /// Combine multiple validations.
 pub fn validate_user(
     username: &str,
     age: i32,
-) -> Result<(String, i32), ValidationError> {
-    let valid_username = validate_username(username)?;
-    let valid_age = validate_age(age)?;
-    Ok((valid_username, valid_age))
+) -> Result<(String, i32), ValidationError>  {
+    todo!("Combine multiple validations.")
 }
 
 #[cfg(test)]

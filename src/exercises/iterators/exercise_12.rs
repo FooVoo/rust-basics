@@ -7,34 +7,23 @@
 //! - Work with multiple iterator sources
 
 /// Concatenate multiple slices.
-pub fn concat_slices(a: &[i32], b: &[i32], c: &[i32]) -> Vec<i32> {
-    a.iter()
-        .chain(b.iter())
-        .chain(c.iter())
-        .copied()
-        .collect()
+pub fn concat_slices(a: &[i32], b: &[i32], c: &[i32]) -> Vec<i32>  {
+    todo!("Concatenate multiple slices.")
 }
 
 /// Alternate elements from two slices.
-pub fn interleave(a: &[i32], b: &[i32]) -> Vec<i32> {
-    a.iter()
-        .zip(b.iter())
-        .flat_map(|(&x, &y)| vec![x, y])
-        .collect()
+pub fn interleave(a: &[i32], b: &[i32]) -> Vec<i32>  {
+    todo!("Alternate elements from two slices.")
 }
 
 /// Repeat a pattern n times.
-pub fn repeat_pattern(pattern: &[i32], times: usize) -> Vec<i32> {
-    pattern.iter().cycle().take(pattern.len() * times).copied().collect()
+pub fn repeat_pattern(pattern: &[i32], times: usize) -> Vec<i32>  {
+    todo!("Repeat a pattern n times.")
 }
 
 /// Chain filtered results from multiple sources.
-pub fn chain_filtered(a: &[i32], b: &[i32]) -> Vec<i32> {
-    a.iter()
-        .filter(|&&n| n > 0)
-        .chain(b.iter().filter(|&&n| n > 0))
-        .copied()
-        .collect()
+pub fn chain_filtered(a: &[i32], b: &[i32]) -> Vec<i32>  {
+    todo!("Chain filtered results from multiple sources.")
 }
 
 #[cfg(test)]

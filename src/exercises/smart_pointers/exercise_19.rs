@@ -20,26 +20,16 @@ struct Node {
 }
 
 impl UniqueList {
-    pub fn new() -> Self {
-        UniqueList { head: None }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
 
-    pub fn push_front(&mut self, value: i32) {
-        let new_node = Box::new(Node {
-            value,
-            next: self.head.take(),
-        });
-        self.head = Some(new_node);
+    pub fn push_front(&mut self, value: i32)  {
+        todo!("Implement push_front")
     }
 
-    pub fn len(&self) -> usize {
-        let mut count = 0;
-        let mut current = &self.head;
-        while let Some(node) = current {
-            count += 1;
-            current = &node.next;
-        }
-        count
+    pub fn len(&self) -> usize  {
+        todo!("Implement len")
     }
 }
 
@@ -55,27 +45,16 @@ struct SharedNode {
 }
 
 impl SharedList {
-    pub fn new() -> Self {
-        SharedList { head: None }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
 
-    pub fn prepend(&self, value: i32) -> Self {
-        SharedList {
-            head: Some(Rc::new(SharedNode {
-                value,
-                next: self.head.clone(),
-            })),
-        }
+    pub fn prepend(&self, value: i32) -> Self  {
+        todo!("Implement prepend")
     }
 
-    pub fn len(&self) -> usize {
-        let mut count = 0;
-        let mut current = &self.head;
-        while let Some(node) = current {
-            count += 1;
-            current = &node.next;
-        }
-        count
+    pub fn len(&self) -> usize  {
+        todo!("Implement len")
     }
 }
 
@@ -90,29 +69,20 @@ struct MutableNode {
 }
 
 impl MutableSharedList {
-    pub fn new() -> Self {
-        MutableSharedList { head: None }
+    pub fn new() -> Self  {
+        todo!("Implement new")
     }
 
-    pub fn push_front(&mut self, value: i32) {
-        let new_node = Rc::new(RefCell::new(MutableNode {
-            value,
-            next: self.head.take(),
-        }));
-        self.head = Some(new_node);
+    pub fn push_front(&mut self, value: i32)  {
+        todo!("Implement push_front")
     }
 
-    pub fn modify_first(&self, new_value: i32) -> bool {
-        if let Some(node) = &self.head {
-            node.borrow_mut().value = new_value;
-            true
-        } else {
-            false
-        }
+    pub fn modify_first(&self, new_value: i32) -> bool  {
+        todo!("Implement modify_first")
     }
 
-    pub fn first_value(&self) -> Option<i32> {
-        self.head.as_ref().map(|node| node.borrow().value)
+    pub fn first_value(&self) -> Option<i32>  {
+        todo!("Implement first_value")
     }
 }
 

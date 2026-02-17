@@ -12,51 +12,36 @@ pub struct Node {
 }
 
 impl Node {
-    pub fn new(value: i32) -> Self {
-        Node {
-            value,
-            children: Vec::new(),
-        }
+    pub fn new(value: i32) -> Self  {
+        todo!("Implement new")
     }
     
-    pub fn add_child(&mut self, child: Node) {
-        self.children.push(child);
+    pub fn add_child(&mut self, child: Node)  {
+        todo!("Implement add_child")
     }
     
-    pub fn value(&self) -> i32 {
-        self.value
+    pub fn value(&self) -> i32  {
+        todo!("Implement value")
     }
     
-    pub fn children(&self) -> &[Node] {
-        &self.children
+    pub fn children(&self) -> &[Node]  {
+        todo!("Implement children")
     }
 }
 
 /// Sum all values in a tree.
-pub fn sum_tree(node: &Node) -> i32 {
-    let mut sum = node.value;
-    for child in &node.children {
-        sum += sum_tree(child);
-    }
-    sum
+pub fn sum_tree(node: &Node) -> i32  {
+    todo!("Sum all values in a tree.")
 }
 
 /// Count total nodes in tree.
-pub fn count_nodes(node: &Node) -> usize {
-    let mut count = 1;
-    for child in &node.children {
-        count += count_nodes(child);
-    }
-    count
+pub fn count_nodes(node: &Node) -> usize  {
+    todo!("Count total nodes in tree.")
 }
 
 /// Find maximum value in tree.
-pub fn max_value(node: &Node) -> i32 {
-    let mut max = node.value;
-    for child in &node.children {
-        max = max.max(max_value(child));
-    }
-    max
+pub fn max_value(node: &Node) -> i32  {
+    todo!("Find maximum value in tree.")
 }
 
 #[cfg(test)]

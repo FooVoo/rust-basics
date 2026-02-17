@@ -7,46 +7,31 @@
 //! - Handle collections of optional values
 
 /// Find the first even number in a slice.
-pub fn find_first_even(numbers: &[i32]) -> Option<i32> {
-    numbers.iter().find(|&&x| x % 2 == 0).copied()
+pub fn find_first_even(numbers: &[i32]) -> Option<i32>  {
+    todo!("Find the first even number in a slice.")
 }
 
 /// Parse and sum all valid numbers.
-pub fn sum_valid_numbers(strings: &[&str]) -> i32 {
-    strings
-        .iter()
-        .filter_map(|s| s.parse::<i32>().ok())
-        .sum()
+pub fn sum_valid_numbers(strings: &[&str]) -> i32  {
+    todo!("Parse and sum all valid numbers.")
 }
 
 /// Find the maximum of parsed numbers.
-pub fn max_parsed(strings: &[&str]) -> Option<i32> {
-    strings
-        .iter()
-        .filter_map(|s| s.parse::<i32>().ok())
-        .max()
+pub fn max_parsed(strings: &[&str]) -> Option<i32>  {
+    todo!("Find the maximum of parsed numbers.")
 }
 
 /// Chain multiple optional iterators.
 pub fn chain_options(
     first: Option<Vec<i32>>,
     second: Option<Vec<i32>>,
-) -> Vec<i32> {
-    first
-        .into_iter()
-        .flatten()
-        .chain(second.into_iter().flatten())
-        .collect()
+) -> Vec<i32>  {
+    todo!("Chain multiple optional iterators.")
 }
 
 /// Map and filter in one pass.
-pub fn process_strings(strings: &[&str]) -> Vec<i32> {
-    strings
-        .iter()
-        .filter_map(|s| s.parse::<i32>().ok())
-        .filter(|&n| n > 0)
-        .map(|n| n * 2)
-        .collect()
+pub fn process_strings(strings: &[&str]) -> Vec<i32>  {
+    todo!("Map and filter in one pass.")
 }
 
 #[cfg(test)]

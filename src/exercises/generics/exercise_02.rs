@@ -13,23 +13,23 @@ pub struct Container<T> {
 
 impl<T> Container<T> {
     /// Creates a new Container with the given value.
-    pub fn new(value: T) -> Self {
-        Container { value }
+    pub fn new(value: T) -> Self  {
+        todo!("Create a new Container with the given value.")
     }
 
     /// Returns a reference to the contained value.
-    pub fn get(&self) -> &T {
-        &self.value
+    pub fn get(&self) -> &T  {
+        todo!("Return a reference to the contained value.")
     }
 
     /// Consumes the container and returns the value.
-    pub fn into_inner(self) -> T {
-        self.value
+    pub fn into_inner(self) -> T  {
+        todo!("Consumes the container and returns the value.")
     }
 
     /// Replaces the value and returns the old value.
-    pub fn replace(&mut self, value: T) -> T {
-        std::mem::replace(&mut self.value, value)
+    pub fn replace(&mut self, value: T) -> T  {
+        todo!("Replaces the value and returns the old value.")
     }
 }
 

@@ -17,25 +17,16 @@ pub struct SelfReferential {
 }
 
 impl SelfReferential {
-    pub fn new(data: String) -> Pin<Box<Self>> {
-        let mut boxed = Box::new(SelfReferential {
-            data,
-            pointer: std::ptr::null(),
-            _pin: PhantomPinned,
-        });
-
-        let ptr: *const String = &boxed.data;
-        boxed.pointer = ptr;
-
-        Box::into_pin(boxed)
+    pub fn new(data: String) -> Pin<Box<Self>>  {
+        todo!("A self-referential struct (needs Pin to be safe).")
     }
 
-    pub fn get_data(&self) -> &str {
-        &self.data
+    pub fn get_data(&self) -> &str  {
+        todo!("Implement get_data")
     }
 
-    pub fn pointer_is_valid(&self) -> bool {
-        !self.pointer.is_null() && self.pointer == &self.data as *const String
+    pub fn pointer_is_valid(&self) -> bool  {
+        todo!("Implement pointer_is_valid")
     }
 }
 
@@ -46,22 +37,16 @@ pub struct PinnedCounter {
 }
 
 impl PinnedCounter {
-    pub fn new(initial: i32) -> Pin<Box<Self>> {
-        Box::pin(PinnedCounter {
-            count: initial,
-            _pin: PhantomPinned,
-        })
+    pub fn new(initial: i32) -> Pin<Box<Self>>  {
+        todo!("A simple pinned counter.")
     }
 
-    pub fn get(&self) -> i32 {
-        self.count
+    pub fn get(&self) -> i32  {
+        todo!("Implement get")
     }
 
-    pub fn increment(self: Pin<&mut Self>) {
-        unsafe {
-            let this = self.get_unchecked_mut();
-            this.count += 1;
-        }
+    pub fn increment(self: Pin<&mut Self>)  {
+        todo!("Implement increment")
     }
 }
 
@@ -71,22 +56,20 @@ pub struct UnpinBox<T> {
 }
 
 impl<T> UnpinBox<T> {
-    pub fn new(value: T) -> Self {
-        UnpinBox {
-            value: Box::new(value),
-        }
+    pub fn new(value: T) -> Self  {
+        todo!("A normal (Unpin) smart pointer wrapper.")
     }
 
-    pub fn get(&self) -> &T {
-        &self.value
+    pub fn get(&self) -> &T  {
+        todo!("Implement get")
     }
 
-    pub fn get_mut(&mut self) -> &mut T {
-        &mut self.value
+    pub fn get_mut(&mut self) -> &mut T  {
+        todo!("Implement get_mut")
     }
 
-    pub fn into_inner(self) -> T {
-        *self.value
+    pub fn into_inner(self) -> T  {
+        todo!("Implement into_inner")
     }
 }
 

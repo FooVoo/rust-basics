@@ -10,42 +10,23 @@ use futures::stream::{self, StreamExt};
 use tokio::time::{sleep, Duration};
 
 /// Process stream items concurrently with buffer_unordered.
-pub async fn concurrent_stream_processing(values: Vec<i32>) -> Vec<i32> {
-    stream::iter(values)
-        .map(|x| async move {
-            sleep(Duration::from_millis(10)).await;
-            x * 2
-        })
-        .buffer_unordered(5)
-        .collect::<Vec<_>>()
-        .await
+pub async fn concurrent_stream_processing(values: Vec<i32>) -> Vec<i32>  {
+    todo!("Process stream items concurrently with buffer_unordered.")
 }
 
 /// Process stream with buffered map.
-pub async fn buffered_map(values: Vec<i32>, buffer_size: usize) -> Vec<i32> {
-    stream::iter(values)
-        .map(|x| async move {
-            sleep(Duration::from_millis(5)).await;
-            x + 10
-        })
-        .buffered(buffer_size)
-        .collect()
-        .await
+pub async fn buffered_map(values: Vec<i32>, buffer_size: usize) -> Vec<i32>  {
+    todo!("Process stream with buffered map.")
 }
 
 /// Fold over a stream asynchronously.
-pub async fn stream_fold(values: Vec<i32>) -> i32 {
-    stream::iter(values)
-        .fold(0, |acc, x| async move { acc + x })
-        .await
+pub async fn stream_fold(values: Vec<i32>) -> i32  {
+    todo!("Fold over a stream asynchronously.")
 }
 
 /// Chunks stream items.
-pub async fn stream_chunks(values: Vec<i32>, chunk_size: usize) -> Vec<Vec<i32>> {
-    stream::iter(values)
-        .chunks(chunk_size)
-        .collect()
-        .await
+pub async fn stream_chunks(values: Vec<i32>, chunk_size: usize) -> Vec<Vec<i32>>  {
+    todo!("Chunks stream items.")
 }
 
 #[cfg(test)]

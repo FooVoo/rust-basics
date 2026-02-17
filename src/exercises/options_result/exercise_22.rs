@@ -7,29 +7,26 @@
 //! - Avoid deeply nested structures
 
 /// Flatten a nested Option.
-pub fn flatten_option(opt: Option<Option<i32>>) -> Option<i32> {
-    opt.flatten()
+pub fn flatten_option(opt: Option<Option<i32>>) -> Option<i32>  {
+    todo!("Flatten a nested Option.")
 }
 
 /// Parse a string that might contain another parseable value.
-pub fn parse_nested(s: &str) -> Option<i32> {
-    s.parse::<i32>()
-        .ok()
-        .map(|_| s.parse::<i32>().ok())
-        .flatten()
+pub fn parse_nested(s: &str) -> Option<i32>  {
+    todo!("Parse a string that might contain another parseable value.")
 }
 
 /// Get a value from a nested structure.
 pub fn get_nested_value(
     outer: Option<Vec<i32>>,
     index: usize,
-) -> Option<i32> {
-    outer.and_then(|vec| vec.get(index).copied())
+) -> Option<i32>  {
+    todo!("Get a value from a nested structure.")
 }
 
 /// Flatten a vector of Options, keeping only Some values.
-pub fn flatten_vec_options(vec: Vec<Option<i32>>) -> Vec<i32> {
-    vec.into_iter().flatten().collect()
+pub fn flatten_vec_options(vec: Vec<Option<i32>>) -> Vec<i32>  {
+    todo!("Flatten a vector of Options, keeping only Some values.")
 }
 
 #[cfg(test)]

@@ -18,33 +18,16 @@ pub struct DelayFuture {
 }
 
 impl DelayFuture {
-    pub fn new(duration: Duration) -> Self {
-        Self {
-            when: Instant::now() + duration,
-        }
+    pub fn new(duration: Duration) -> Self  {
+        todo!("A future that completes after a delay.")
     }
 }
 
 impl Future for DelayFuture {
     type Output = ();
     
-    fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output> {
-        if Instant::now() >= self.when {
-            Poll::Ready(())
-        } else {
-            let waker = cx.waker().clone();
-            let when = self.when;
-            
-            tokio::spawn(async move {
-                let now = Instant::now();
-                if when > now {
-                    sleep(when - now).await;
-                }
-                waker.wake();
-            });
-            
-            Poll::Pending
-        }
+    fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output>  {
+        todo!("Implement poll")
     }
 }
 
@@ -54,17 +37,16 @@ pub struct ReadyFuture<T> {
 }
 
 impl<T> ReadyFuture<T> {
-    pub fn new(value: T) -> Self {
-        Self { value: Some(value) }
+    pub fn new(value: T) -> Self  {
+        todo!("A future that resolves with a value.")
     }
 }
 
 impl<T> Future for ReadyFuture<T> {
     type Output = T;
     
-    fn poll(self: Pin<&mut Self>, _cx: &mut Context<'_>) -> Poll<Self::Output> {
-        let this = unsafe { self.get_unchecked_mut() };
-        Poll::Ready(this.value.take().unwrap())
+    fn poll(self: Pin<&mut Self>, _cx: &mut Context<'_>) -> Poll<Self::Output>  {
+        todo!("Implement poll")
     }
 }
 
@@ -80,37 +62,16 @@ struct SharedState<T> {
 }
 
 impl<T> CompletableFuture<T> {
-    pub fn new() -> (Self, Completer<T>) {
-        let shared_state = Arc::new(Mutex::new(SharedState {
-            completed: false,
-            value: None,
-            waker: None,
-        }));
-        
-        let future = CompletableFuture {
-            shared_state: shared_state.clone(),
-        };
-        
-        let completer = Completer {
-            shared_state,
-        };
-        
-        (future, completer)
+    pub fn new() -> (Self, Completer<T>)  {
+        todo!("Implement new")
     }
 }
 
 impl<T> Future for CompletableFuture<T> {
     type Output = T;
     
-    fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output> {
-        let mut state = self.shared_state.lock().unwrap();
-        
-        if state.completed {
-            Poll::Ready(state.value.take().unwrap())
-        } else {
-            state.waker = Some(cx.waker().clone());
-            Poll::Pending
-        }
+    fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output>  {
+        todo!("Implement poll")
     }
 }
 
@@ -119,14 +80,8 @@ pub struct Completer<T> {
 }
 
 impl<T> Completer<T> {
-    pub fn complete(self, value: T) {
-        let mut state = self.shared_state.lock().unwrap();
-        state.completed = true;
-        state.value = Some(value);
-        
-        if let Some(waker) = state.waker.take() {
-            waker.wake();
-        }
+    pub fn complete(self, value: T)  {
+        todo!("Implement complete")
     }
 }
 

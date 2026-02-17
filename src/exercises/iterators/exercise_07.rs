@@ -7,31 +7,28 @@
 //! - Work with any() and all()
 
 /// Find the first even number.
-pub fn find_first_even(numbers: &[i32]) -> Option<i32> {
-    numbers.iter().find(|&&n| n % 2 == 0).copied()
+pub fn find_first_even(numbers: &[i32]) -> Option<i32>  {
+    todo!("Find the first even number.")
 }
 
 /// Find the position of the first negative number.
-pub fn find_negative_position(numbers: &[i32]) -> Option<usize> {
-    numbers.iter().position(|&n| n < 0)
+pub fn find_negative_position(numbers: &[i32]) -> Option<usize>  {
+    todo!("Find the position of the first negative number.")
 }
 
 /// Check if all numbers are positive.
-pub fn all_positive(numbers: &[i32]) -> bool {
-    numbers.iter().all(|&n| n > 0)
+pub fn all_positive(numbers: &[i32]) -> bool  {
+    todo!("Check if all numbers are positive.")
 }
 
 /// Check if any string contains a target character.
-pub fn any_contains_char(strings: &[&str], target: char) -> bool {
-    strings.iter().any(|s| s.contains(target))
+pub fn any_contains_char(strings: &[&str], target: char) -> bool  {
+    todo!("Check if any string contains a target character.")
 }
 
 /// Find the first string longer than the given length.
-pub fn find_long_string(strings: &[&str], min_length: usize) -> Option<String> {
-    strings
-        .iter()
-        .find(|s| s.len() > min_length)
-        .map(|&s| s.to_string())
+pub fn find_long_string(strings: &[&str], min_length: usize) -> Option<String>  {
+    todo!("Find the first string longer than the given length.")
 }
 
 #[cfg(test)]

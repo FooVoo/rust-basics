@@ -7,37 +7,28 @@
 //! - Find extremes based on transformations
 
 /// Find the longest string.
-pub fn longest_string(strings: &[&str]) -> Option<String> {
-    strings.iter().max_by_key(|s| s.len()).map(|&s| s.to_string())
+pub fn longest_string(strings: &[&str]) -> Option<String>  {
+    todo!("Find the longest string.")
 }
 
 /// Find the string with most vowels.
-pub fn most_vowels(strings: &[&str]) -> Option<String> {
-    strings
-        .iter()
-        .max_by_key(|s| {
-            s.chars()
-                .filter(|c| matches!(c.to_ascii_lowercase(), 'a' | 'e' | 'i' | 'o' | 'u'))
-                .count()
-        })
-        .map(|&s| s.to_string())
+pub fn most_vowels(strings: &[&str]) -> Option<String>  {
+    todo!("Find the string with most vowels.")
 }
 
 /// Find number closest to target.
-pub fn closest_to_target(numbers: &[i32], target: i32) -> Option<i32> {
-    numbers.iter().min_by_key(|&&n| (n - target).abs()).copied()
+pub fn closest_to_target(numbers: &[i32], target: i32) -> Option<i32>  {
+    todo!("Find number closest to target.")
 }
 
 /// Find minimum by absolute value.
-pub fn min_absolute(numbers: &[i32]) -> Option<i32> {
-    numbers.iter().min_by_key(|&&n| n.abs()).copied()
+pub fn min_absolute(numbers: &[i32]) -> Option<i32>  {
+    todo!("Find minimum by absolute value.")
 }
 
 /// Get the top n largest numbers.
-pub fn top_n(numbers: &[i32], n: usize) -> Vec<i32> {
-    let mut sorted = numbers.to_vec();
-    sorted.sort_unstable_by(|a, b| b.cmp(a));
-    sorted.into_iter().take(n).collect()
+pub fn top_n(numbers: &[i32], n: usize) -> Vec<i32>  {
+    todo!("Get the top n largest numbers.")
 }
 
 #[cfg(test)]

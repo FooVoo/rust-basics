@@ -16,12 +16,8 @@ pub enum JsonError {
 }
 
 impl std::fmt::Display for JsonError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            JsonError::MissingField(field) => write!(f, "Missing required field: {}", field),
-            JsonError::InvalidType(msg) => write!(f, "Invalid type: {}", msg),
-            JsonError::InvalidValue(msg) => write!(f, "Invalid value: {}", msg),
-        }
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
@@ -35,38 +31,8 @@ pub struct User {
 }
 
 /// Parse a user from a simple key-value map.
-pub fn parse_user(data: &HashMap<String, String>) -> Result<User, JsonError> {
-    let name = data
-        .get("name")
-        .ok_or_else(|| JsonError::MissingField("name".to_string()))?
-        .clone();
-    
-    if name.is_empty() {
-        return Err(JsonError::InvalidValue("name cannot be empty".to_string()));
-    }
-    
-    let age_str = data
-        .get("age")
-        .ok_or_else(|| JsonError::MissingField("age".to_string()))?;
-    
-    let age = age_str
-        .parse::<u32>()
-        .map_err(|_| JsonError::InvalidType("age must be a number".to_string()))?;
-    
-    if age > 150 {
-        return Err(JsonError::InvalidValue("age must be <= 150".to_string()));
-    }
-    
-    let email = data
-        .get("email")
-        .ok_or_else(|| JsonError::MissingField("email".to_string()))?
-        .clone();
-    
-    if !email.contains('@') {
-        return Err(JsonError::InvalidValue("email must contain @".to_string()));
-    }
-    
-    Ok(User { name, age, email })
+pub fn parse_user(data: &HashMap<String, String>) -> Result<User, JsonError>  {
+    todo!("Parse a user from a simple key-value map.")
 }
 
 #[cfg(test)]

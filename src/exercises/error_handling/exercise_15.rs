@@ -15,39 +15,27 @@ pub enum ConversionError {
 }
 
 impl From<ParseIntError> for ConversionError {
-    fn from(err: ParseIntError) -> Self {
-        ConversionError::ParseError(err.to_string())
+    fn from(err: ParseIntError) -> Self  {
+        todo!("Implement from")
     }
 }
 
 impl std::fmt::Display for ConversionError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            ConversionError::ParseError(msg) => write!(f, "Parse error: {}", msg),
-            ConversionError::RangeError(msg) => write!(f, "Range error: {}", msg),
-        }
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+        todo!("Implement fmt")
     }
 }
 
 impl std::error::Error for ConversionError {}
 
 /// Parse a string to u8, checking it's in valid range.
-pub fn parse_to_u8(s: &str) -> Result<u8, ConversionError> {
-    let num: i32 = s.parse()?;
-    
-    if num < 0 || num > 255 {
-        Err(ConversionError::RangeError(format!(
-            "{} is out of range for u8 (0-255)",
-            num
-        )))
-    } else {
-        Ok(num as u8)
-    }
+pub fn parse_to_u8(s: &str) -> Result<u8, ConversionError>  {
+    todo!("Parse a string to u8, checking it's in valid range.")
 }
 
 /// Parse multiple strings to u8 values.
-pub fn parse_many_u8(strings: &[&str]) -> Result<Vec<u8>, ConversionError> {
-    strings.iter().map(|s| parse_to_u8(s)).collect()
+pub fn parse_many_u8(strings: &[&str]) -> Result<Vec<u8>, ConversionError>  {
+    todo!("Parse multiple strings to u8 values.")
 }
 
 #[cfg(test)]

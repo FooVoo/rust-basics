@@ -16,44 +16,28 @@ pub enum ConnectionState {
 
 impl ConnectionState {
     /// Attempts to transition to the Connecting state
-    pub fn connect(&mut self) -> Result<(), String> {
-        match self {
-            ConnectionState::Disconnected => {
-                *self = ConnectionState::Connecting;
-                Ok(())
-            }
-            ConnectionState::Error(_) => {
-                *self = ConnectionState::Connecting;
-                Ok(())
-            }
-            _ => Err("Already connecting or connected".to_string()),
-        }
+    pub fn connect(&mut self) -> Result<(), String>  {
+        todo!("Attempts to transition to the Connecting state")
     }
 
     /// Completes the connection
-    pub fn complete_connection(&mut self) -> Result<(), String> {
-        match self {
-            ConnectionState::Connecting => {
-                *self = ConnectionState::Connected;
-                Ok(())
-            }
-            _ => Err("Not in connecting state".to_string()),
-        }
+    pub fn complete_connection(&mut self) -> Result<(), String>  {
+        todo!("Completes the connection")
     }
 
     /// Disconnects
-    pub fn disconnect(&mut self) {
-        *self = ConnectionState::Disconnected;
+    pub fn disconnect(&mut self)  {
+        todo!("Disconnects")
     }
 
     /// Sets error state
-    pub fn set_error(&mut self, msg: String) {
-        *self = ConnectionState::Error(msg);
+    pub fn set_error(&mut self, msg: String)  {
+        todo!("Set error state")
     }
 
     /// Returns true if connected
-    pub fn is_connected(&self) -> bool {
-        matches!(self, ConnectionState::Connected)
+    pub fn is_connected(&self) -> bool  {
+        todo!("Return true if connected")
     }
 }
 

@@ -20,48 +20,33 @@ pub enum JsonValue {
 
 impl JsonValue {
     /// Returns true if the value is null
-    pub fn is_null(&self) -> bool {
-        matches!(self, JsonValue::Null)
+    pub fn is_null(&self) -> bool  {
+        todo!("Return true if the value is null")
     }
 
     /// Gets a value from an object by key
-    pub fn get(&self, key: &str) -> Option<&JsonValue> {
-        match self {
-            JsonValue::Object(map) => map.get(key),
-            _ => None,
-        }
+    pub fn get(&self, key: &str) -> Option<&JsonValue>  {
+        todo!("Get a value from an object by key")
     }
 
     /// Gets a value from an array by index
-    pub fn get_index(&self, index: usize) -> Option<&JsonValue> {
-        match self {
-            JsonValue::Array(vec) => vec.get(index),
-            _ => None,
-        }
+    pub fn get_index(&self, index: usize) -> Option<&JsonValue>  {
+        todo!("Get a value from an array by index")
     }
 
     /// Extracts a string value
-    pub fn as_string(&self) -> Option<&str> {
-        match self {
-            JsonValue::String(s) => Some(s),
-            _ => None,
-        }
+    pub fn as_string(&self) -> Option<&str>  {
+        todo!("Extract a string value")
     }
 
     /// Extracts a number value
-    pub fn as_number(&self) -> Option<f64> {
-        match self {
-            JsonValue::Number(n) => Some(*n),
-            _ => None,
-        }
+    pub fn as_number(&self) -> Option<f64>  {
+        todo!("Extract a number value")
     }
 
     /// Extracts a boolean value
-    pub fn as_bool(&self) -> Option<bool> {
-        match self {
-            JsonValue::Bool(b) => Some(*b),
-            _ => None,
-        }
+    pub fn as_bool(&self) -> Option<bool>  {
+        todo!("Extract a boolean value")
     }
 }
 

@@ -15,56 +15,46 @@ pub enum State<T, U, V> {
 
 impl<T, U, V> State<T, U, V> {
     /// Creates a new state machine in the Initial state.
-    pub fn new(value: T) -> Self {
-        State::Initial(value)
+    pub fn new(value: T) -> Self  {
+        todo!("Create a new state machine in the Initial state.")
     }
 
     /// Checks if the state is Initial.
-    pub fn is_initial(&self) -> bool {
-        matches!(self, State::Initial(_))
+    pub fn is_initial(&self) -> bool  {
+        todo!("Check if the state is Initial.")
     }
 
     /// Checks if the state is Processing.
-    pub fn is_processing(&self) -> bool {
-        matches!(self, State::Processing(_))
+    pub fn is_processing(&self) -> bool  {
+        todo!("Check if the state is Processing.")
     }
 
     /// Checks if the state is Complete.
-    pub fn is_complete(&self) -> bool {
-        matches!(self, State::Complete(_))
+    pub fn is_complete(&self) -> bool  {
+        todo!("Check if the state is Complete.")
     }
 
     /// Transitions from Initial to Processing.
     pub fn start_processing<F>(self, f: F) -> Result<State<T, U, V>, &'static str>
     where
         F: FnOnce(T) -> U,
-    {
-        match self {
-            State::Initial(value) => Ok(State::Processing(f(value))),
-            _ => Err("Can only start processing from Initial state"),
-        }
+     {
+        todo!("Transitions from Initial to Processing.")
     }
 
     /// Transitions from Processing to Complete.
     pub fn complete<F>(self, f: F) -> Result<State<T, U, V>, &'static str>
     where
         F: FnOnce(U) -> V,
-    {
-        match self {
-            State::Processing(value) => Ok(State::Complete(f(value))),
-            _ => Err("Can only complete from Processing state"),
-        }
+     {
+        todo!("Transitions from Processing to Complete.")
     }
 }
 
 impl<T: Clone, U: Clone, V: Clone> State<T, U, V> {
     /// Gets a clone of the current state value.
-    pub fn get_value(&self) -> StateValue<T, U, V> {
-        match self {
-            State::Initial(v) => StateValue::Initial(v.clone()),
-            State::Processing(v) => StateValue::Processing(v.clone()),
-            State::Complete(v) => StateValue::Complete(v.clone()),
-        }
+    pub fn get_value(&self) -> StateValue<T, U, V>  {
+        todo!("Get a clone of the current state value.")
     }
 }
 

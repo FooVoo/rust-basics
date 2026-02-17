@@ -23,25 +23,18 @@ pub enum OptimizedEnum {
 }
 
 /// Demonstrates that Option<&T> has the same size as &T due to niche optimization
-pub fn option_reference_size_demo() -> (usize, usize) {
-    let ref_size = mem::size_of::<&u32>();
-    let option_ref_size = mem::size_of::<Option<&u32>>();
-    (ref_size, option_ref_size)
+pub fn option_reference_size_demo() -> (usize, usize)  {
+    todo!("Demonstrates that Option<&T> has the same size as &T due to niche optimization")
 }
 
 /// Demonstrates that Option<Box<T>> has the same size as Box<T> due to niche optimization
-pub fn option_box_size_demo() -> (usize, usize) {
-    let box_size = mem::size_of::<Box<u32>>();
-    let option_box_size = mem::size_of::<Option<Box<u32>>>();
-    (box_size, option_box_size)
+pub fn option_box_size_demo() -> (usize, usize)  {
+    todo!("Demonstrates that Option<Box<T>> has the same size as Box<T> due to niche optimization")
 }
 
 /// Compares the size of an enum with and without data
-pub fn enum_size_comparison() -> (usize, usize, usize) {
-    let simple_enum_size = mem::size_of::<Status>();
-    let enum_with_data = mem::size_of::<Result<u64, String>>();
-    let option_enum = mem::size_of::<Option<Status>>();
-    (simple_enum_size, enum_with_data, option_enum)
+pub fn enum_size_comparison() -> (usize, usize, usize)  {
+    todo!("Compares the size of an enum with and without data")
 }
 
 #[derive(Debug)]
@@ -54,18 +47,14 @@ pub enum ExplicitDiscriminant {
 
 impl ExplicitDiscriminant {
     /// Gets the discriminant value as u8
-    pub fn discriminant(&self) -> u8 {
-        match self {
-            ExplicitDiscriminant::First => 10,
-            ExplicitDiscriminant::Second => 20,
-            ExplicitDiscriminant::Third => 30,
-        }
+    pub fn discriminant(&self) -> u8  {
+        todo!("Get the discriminant value as u8")
     }
 }
 
 /// Demonstrates enum with explicit discriminants
-pub fn explicit_discriminant_demo(value: ExplicitDiscriminant) -> u8 {
-    value.discriminant()
+pub fn explicit_discriminant_demo(value: ExplicitDiscriminant) -> u8  {
+    todo!("Demonstrates enum with explicit discriminants")
 }
 
 /// Complex enum to demonstrate layout
@@ -78,8 +67,8 @@ pub enum ComplexEnum {
 }
 
 /// Returns the size and alignment of ComplexEnum
-pub fn complex_enum_layout() -> (usize, usize) {
-    (mem::size_of::<ComplexEnum>(), mem::align_of::<ComplexEnum>())
+pub fn complex_enum_layout() -> (usize, usize)  {
+    todo!("Return the size and alignment of ComplexEnum")
 }
 
 /// Demonstrates fieldless enum (C-like enum)
@@ -92,8 +81,8 @@ pub enum FieldlessEnum {
 }
 
 /// Converts fieldless enum to u8
-pub fn fieldless_to_u8(e: FieldlessEnum) -> u8 {
-    e as u8
+pub fn fieldless_to_u8(e: FieldlessEnum) -> u8  {
+    todo!("Convert fieldless enum to u8")
 }
 
 #[cfg(test)]

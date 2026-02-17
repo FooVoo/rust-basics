@@ -19,18 +19,14 @@ impl<T, E> ResultMapBoth<T, E> for Result<T, E> {
     where
         T2: FnOnce(T) -> U,
         E2: FnOnce(E) -> F,
-    {
-        match self {
-            Ok(value) => Ok(ok_fn(value)),
-            Err(error) => Err(err_fn(error)),
-        }
+     {
+        todo!("Implement map_both")
     }
 }
 
 /// Use map_both to transform parse result.
-pub fn parse_and_transform(s: &str) -> Result<String, String> {
-    s.parse::<i32>()
-        .map_both(|x| format!("Success: {}", x * 2), |e| format!("Error: {}", e))
+pub fn parse_and_transform(s: &str) -> Result<String, String>  {
+    todo!("Use map_both to transform parse result.")
 }
 
 #[cfg(test)]

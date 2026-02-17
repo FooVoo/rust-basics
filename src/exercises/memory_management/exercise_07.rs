@@ -7,23 +7,23 @@
 //! - Work with vector elements safely
 
 /// Add an element to a vector.
-pub fn add_element(v: &mut Vec<i32>, element: i32) {
-    v.push(element);
+pub fn add_element(v: &mut Vec<i32>, element: i32)  {
+    todo!("Add an element to a vector.")
 }
 
 /// Remove and return the last element from a vector.
-pub fn remove_last(v: &mut Vec<i32>) -> Option<i32> {
-    v.pop()
+pub fn remove_last(v: &mut Vec<i32>) -> Option<i32>  {
+    todo!("Remove and return the last element from a vector.")
 }
 
 /// Create a new vector with doubled values.
-pub fn double_values(v: &[i32]) -> Vec<i32> {
-    v.iter().map(|&x| x * 2).collect()
+pub fn double_values(v: &[i32]) -> Vec<i32>  {
+    todo!("Create a new vector with doubled values.")
 }
 
 /// Sum all elements in a vector.
-pub fn sum_vector(v: &[i32]) -> i32 {
-    v.iter().sum()
+pub fn sum_vector(v: &[i32]) -> i32  {
+    todo!("Sum all elements in a vector.")
 }
 
 #[cfg(test)]

@@ -9,25 +9,13 @@
 use tokio::time::{sleep, Duration};
 
 /// Async factorial using recursion.
-pub fn async_factorial(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64> + Send>> {
-    Box::pin(async move {
-        if n <= 1 {
-            1
-        } else {
-            n * async_factorial(n - 1).await
-        }
-    })
+pub fn async_factorial(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64> + Send>>  {
+    todo!("Async factorial using recursion.")
 }
 
 /// Async fibonacci using recursion.
-pub fn async_fibonacci(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64> + Send>> {
-    Box::pin(async move {
-        match n {
-            0 => 0,
-            1 => 1,
-            _ => async_fibonacci(n - 1).await + async_fibonacci(n - 2).await,
-        }
-    })
+pub fn async_fibonacci(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64> + Send>>  {
+    todo!("Async fibonacci using recursion.")
 }
 
 /// Recursive tree traversal.
@@ -37,18 +25,8 @@ pub struct TreeNode {
     pub children: Vec<TreeNode>,
 }
 
-pub fn traverse_tree(node: TreeNode) -> std::pin::Pin<Box<dyn std::future::Future<Output = Vec<i32>> + Send>> {
-    Box::pin(async move {
-        let mut values = vec![node.value];
-        
-        for child in node.children {
-            sleep(Duration::from_millis(1)).await;
-            let mut child_values = traverse_tree(child).await;
-            values.append(&mut child_values);
-        }
-        
-        values
-    })
+pub fn traverse_tree(node: TreeNode) -> std::pin::Pin<Box<dyn std::future::Future<Output = Vec<i32>> + Send>>  {
+    todo!("Recursive tree traversal.")
 }
 
 #[cfg(test)]

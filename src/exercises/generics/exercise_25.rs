@@ -22,84 +22,51 @@ where
     T: Eq + Hash + Clone,
 {
     /// Creates a new empty graph.
-    pub fn new() -> Self {
-        Graph {
-            adjacency: HashMap::new(),
-        }
+    pub fn new() -> Self  {
+        todo!("Create a new empty graph.")
     }
 
     /// Adds a node to the graph.
-    pub fn add_node(&mut self, node: T) {
-        self.adjacency.entry(node).or_insert_with(Vec::new);
+    pub fn add_node(&mut self, node: T)  {
+        todo!("Add a node to the graph.")
     }
 
     /// Adds a directed edge from source to destination.
-    pub fn add_edge(&mut self, from: T, to: T) {
-        self.add_node(from.clone());
-        self.add_node(to.clone());
-        self.adjacency.get_mut(&from).unwrap().push(to);
+    pub fn add_edge(&mut self, from: T, to: T)  {
+        todo!("Add a directed edge from source to destination.")
     }
 
     /// Gets all neighbors of a node.
-    pub fn neighbors(&self, node: &T) -> Option<&Vec<T>> {
-        self.adjacency.get(node)
+    pub fn neighbors(&self, node: &T) -> Option<&Vec<T>>  {
+        todo!("Get all neighbors of a node.")
     }
 
     /// Checks if a node exists in the graph.
-    pub fn contains(&self, node: &T) -> bool {
-        self.adjacency.contains_key(node)
+    pub fn contains(&self, node: &T) -> bool  {
+        todo!("Check if a node exists in the graph.")
     }
 
     /// Returns the number of nodes in the graph.
-    pub fn node_count(&self) -> usize {
-        self.adjacency.len()
+    pub fn node_count(&self) -> usize  {
+        todo!("Return the number of nodes in the graph.")
     }
 
     /// Performs a depth-first search starting from a node.
-    pub fn dfs(&self, start: &T) -> Vec<T> {
-        let mut visited = HashSet::new();
-        let mut result = Vec::new();
-        self.dfs_helper(start, &mut visited, &mut result);
-        result
+    pub fn dfs(&self, start: &T) -> Vec<T>  {
+        todo!("Performs a depth-first search starting from a node.")
     }
 
-    fn dfs_helper(&self, node: &T, visited: &mut HashSet<T>, result: &mut Vec<T>) {
-        if visited.contains(node) {
-            return;
-        }
-        visited.insert(node.clone());
-        result.push(node.clone());
-
-        if let Some(neighbors) = self.neighbors(node) {
-            for neighbor in neighbors {
-                self.dfs_helper(neighbor, visited, result);
-            }
-        }
+    fn dfs_helper(&self, node: &T, visited: &mut HashSet<T>, result: &mut Vec<T>)  {
+        todo!("Performs a depth-first search starting from a node.")
     }
 
     /// Checks if there's a path from source to destination.
-    pub fn has_path(&self, from: &T, to: &T) -> bool {
-        let mut visited = HashSet::new();
-        self.has_path_helper(from, to, &mut visited)
+    pub fn has_path(&self, from: &T, to: &T) -> bool  {
+        todo!("Check if there's a path from source to destination.")
     }
 
-    fn has_path_helper(&self, current: &T, target: &T, visited: &mut HashSet<T>) -> bool {
-        if current == target {
-            return true;
-        }
-        if visited.contains(current) {
-            return false;
-        }
-        visited.insert(current.clone());
-
-        if let Some(neighbors) = self.neighbors(current) {
-            for neighbor in neighbors {
-                if self.has_path_helper(neighbor, target, visited) {
-                    return true;
-                }
-            }
-        }
-        false
+    fn has_path_helper(&self, current: &T, target: &T, visited: &mut HashSet<T>) -> bool  {
+        todo!("Check if there's a path from source to destination.")
     }
 }
 
@@ -107,8 +74,8 @@ impl<T> Default for Graph<T>
 where
     T: Eq + Hash + Clone,
 {
-    fn default() -> Self {
-        Self::new()
+    fn default() -> Self  {
+        todo!("Implement default")
     }
 }
 

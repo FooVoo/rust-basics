@@ -7,19 +7,13 @@
 //! - Bridge Option and Result types
 
 /// Find element and return as Result.
-pub fn find_element(numbers: &[i32], target: i32) -> Result<usize, String> {
-    numbers
-        .iter()
-        .position(|&x| x == target)
-        .ok_or_else(|| format!("Element {} not found", target))
+pub fn find_element(numbers: &[i32], target: i32) -> Result<usize, String>  {
+    todo!("Find element and return as Result.")
 }
 
 /// Get first element as Result.
-pub fn first_element<T: Clone>(slice: &[T]) -> Result<T, String> {
-    slice
-        .first()
-        .cloned()
-        .ok_or_else(|| "Empty slice".to_string())
+pub fn first_element<T: Clone>(slice: &[T]) -> Result<T, String>  {
+    todo!("Get first element as Result.")
 }
 
 #[cfg(test)]

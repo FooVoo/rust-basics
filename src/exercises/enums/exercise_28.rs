@@ -20,61 +20,34 @@ pub enum QueryBuilder {
 
 impl QueryBuilder {
     /// Creates a new empty query builder
-    pub fn new() -> Self {
-        QueryBuilder::Empty
+    pub fn new() -> Self  {
+        todo!("Create a new empty query builder")
     }
 
     /// Adds SELECT clause
-    pub fn select(fields: Vec<String>) -> Self {
-        QueryBuilder::Select { fields }
+    pub fn select(fields: Vec<String>) -> Self  {
+        todo!("Add SELECT clause")
     }
 
     /// Adds FROM clause
-    pub fn from(self, table: String) -> Result<Self, String> {
-        match self {
-            QueryBuilder::Select { fields } => Ok(QueryBuilder::SelectFrom { fields, table }),
-            _ => Err("Can only add FROM after SELECT".to_string()),
-        }
+    pub fn from(self, table: String) -> Result<Self, String>  {
+        todo!("Add FROM clause")
     }
 
     /// Adds WHERE clause
-    pub fn where_clause(self, condition: String) -> Result<Self, String> {
-        match self {
-            QueryBuilder::SelectFrom { fields, table } => Ok(QueryBuilder::SelectFromWhere {
-                fields,
-                table,
-                condition,
-            }),
-            _ => Err("Can only add WHERE after SELECT FROM".to_string()),
-        }
+    pub fn where_clause(self, condition: String) -> Result<Self, String>  {
+        todo!("Add WHERE clause")
     }
 
     /// Builds the final SQL query string
-    pub fn build(&self) -> Result<String, String> {
-        match self {
-            QueryBuilder::SelectFromWhere {
-                fields,
-                table,
-                condition,
-            } => {
-                let fields_str = fields.join(", ");
-                Ok(format!(
-                    "SELECT {} FROM {} WHERE {}",
-                    fields_str, table, condition
-                ))
-            }
-            QueryBuilder::SelectFrom { fields, table } => {
-                let fields_str = fields.join(", ");
-                Ok(format!("SELECT {} FROM {}", fields_str, table))
-            }
-            _ => Err("Query is incomplete".to_string()),
-        }
+    pub fn build(&self) -> Result<String, String>  {
+        todo!("Build the final SQL query string")
     }
 }
 
 impl Default for QueryBuilder {
-    fn default() -> Self {
-        Self::new()
+    fn default() -> Self  {
+        todo!("Build the final SQL query string")
     }
 }
 
