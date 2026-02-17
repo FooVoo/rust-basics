@@ -25,7 +25,7 @@ pub struct RangeIterator {
 }
 
 impl RangeIterator {
-    pub fn new(start: i32, end: i32) -> Self  {
+    pub fn new(start: i32, end: i32) -> Self {
         todo!("Implement new")
     }
 }
@@ -33,7 +33,7 @@ impl RangeIterator {
 impl Iterator for RangeIterator {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -54,7 +54,7 @@ pub struct SimpleGraph {
 }
 
 impl SimpleGraph {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
 }
@@ -63,19 +63,19 @@ impl Graph for SimpleGraph {
     type Node = String;
     type Edge = (usize, usize);
     
-    fn nodes(&self) -> Vec<Self::Node>  {
+    fn nodes(&self) -> Vec<Self::Node> {
         todo!("Implement nodes")
     }
     
-    fn edges(&self) -> Vec<Self::Edge>  {
+    fn edges(&self) -> Vec<Self::Edge> {
         todo!("Implement edges")
     }
     
-    fn add_node(&mut self, node: Self::Node)  {
+    fn add_node(&mut self, node: Self::Node) {
         todo!("Implement add_node")
     }
     
-    fn add_edge(&mut self, edge: Self::Edge)  {
+    fn add_edge(&mut self, edge: Self::Edge) {
         todo!("Implement add_edge")
     }
 }
@@ -91,15 +91,15 @@ pub trait Container {
 impl<T> Container for Vec<T> {
     type Item = T;
     
-    fn add(&mut self, item: Self::Item)  {
+    fn add(&mut self, item: Self::Item) {
         todo!("Implement add")
     }
     
-    fn get(&self, index: usize) -> Option<&Self::Item>  {
+    fn get(&self, index: usize) -> Option<&Self::Item> {
         todo!("Implement get")
     }
     
-    fn len(&self) -> usize  {
+    fn len(&self) -> usize {
         todo!("Implement len")
     }
 }

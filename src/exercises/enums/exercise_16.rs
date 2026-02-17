@@ -16,24 +16,24 @@ pub enum MathError {
 }
 
 impl fmt::Display for MathError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 /// Safe division operation
-pub fn divide(a: f64, b: f64) -> Result<f64, MathError>  {
-    todo!("Safe division operation")
+pub fn divide(a: f64, b: f64) -> Result<f64, MathError> {
+    todo!("Implement divide")
 }
 
 /// Safe square root operation
-pub fn sqrt(x: f64) -> Result<f64, MathError>  {
-    todo!("Safe square root operation")
+pub fn sqrt(x: f64) -> Result<f64, MathError> {
+    todo!("Implement sqrt")
 }
 
 /// Safe checked addition
-pub fn checked_add(a: i32, b: i32) -> Result<i32, MathError>  {
-    todo!("Safe checked addition")
+pub fn checked_add(a: i32, b: i32) -> Result<i32, MathError> {
+    todo!("Implement checked_add")
 }
 
 #[cfg(test)]

@@ -37,11 +37,11 @@ pub struct FailCounter {
 }
 
 impl FailCounter {
-    pub fn new(fail_until: u32) -> Self  {
-        todo!("Counter for testing retry logic.")
+    pub fn new(fail_until: u32) -> Self {
+        todo!("Implement new")
     }
 
-    pub async fn try_operation(&self) -> Result<String, String>  {
+    pub async fn try_operation(&self) -> Result<String, String> {
         todo!("Implement try_operation")
     }
 }

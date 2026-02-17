@@ -20,8 +20,8 @@ where
     I: Iterator<Item = T>,
 {
     /// Creates a new enumerated iterator.
-    pub fn new(iter: I) -> Self  {
-        todo!("Create a new enumerated iterator.")
+    pub fn new(iter: I) -> Self {
+        todo!("Implement new")
     }
 }
 
@@ -31,7 +31,7 @@ where
 {
     type Item = (usize, T);
 
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -53,8 +53,8 @@ where
     F: FnMut(&T) -> bool,
 {
     /// Creates a new TakeWhile iterator.
-    pub fn new(iter: I, predicate: F) -> Self  {
-        todo!("Create a new TakeWhile iterator.")
+    pub fn new(iter: I, predicate: F) -> Self {
+        todo!("Implement new")
     }
 }
 
@@ -65,7 +65,7 @@ where
 {
     type Item = T;
 
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }

@@ -9,8 +9,8 @@
 use std::ops::Add;
 
 /// Adds two values together.
-pub fn add<T: Add<Output = T>>(a: T, b: T) -> T  {
-    todo!("Add two values together.")
+pub fn add<T: Add<Output = T>>(a: T, b: T) -> T {
+    todo!("Implement add")
 }
 
 /// Sums all elements in a slice.
@@ -34,23 +34,23 @@ where
     T: Add<Output = T> + Copy,
 {
     /// Creates a new Accumulator with an initial value.
-    pub fn new(initial: T) -> Self  {
-        todo!("Create a new Accumulator with an initial value.")
+    pub fn new(initial: T) -> Self {
+        todo!("Implement new")
     }
 
     /// Adds a value to the accumulator.
-    pub fn add(&mut self, value: T)  {
-        todo!("Add a value to the accumulator.")
+    pub fn add(&mut self, value: T) {
+        todo!("Implement add")
     }
 
     /// Returns the current total.
-    pub fn total(&self) -> T  {
-        todo!("Return the current total.")
+    pub fn total(&self) -> T {
+        todo!("Implement total")
     }
 
     /// Resets to a new value.
-    pub fn reset(&mut self, value: T)  {
-        todo!("Resets to a new value.")
+    pub fn reset(&mut self, value: T) {
+        todo!("Implement reset")
     }
 }
 

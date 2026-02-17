@@ -7,18 +7,18 @@
 //! - Chain async Option operations
 
 /// Find a value in a vector asynchronously.
-pub async fn async_find(values: Vec<i32>, target: i32) -> Option<usize>  {
-    todo!("Find a value in a vector asynchronously.")
+pub async fn async_find(values: Vec<i32>, target: i32) -> Option<usize> {
+    todo!("Implement async_find")
 }
 
 /// Get first valid parse result from a list of strings.
-pub async fn first_valid_parse(strings: Vec<&str>) -> Option<i32>  {
-    todo!("Get first valid parse result from a list of strings.")
+pub async fn first_valid_parse(strings: Vec<&str>) -> Option<i32> {
+    todo!("Implement first_valid_parse")
 }
 
 /// Chain optional async operations.
-pub async fn chain_optional_ops(value: Option<i32>) -> Option<i32>  {
-    todo!("Chain optional async operations.")
+pub async fn chain_optional_ops(value: Option<i32>) -> Option<i32> {
+    todo!("Implement chain_optional_ops")
 }
 
 #[cfg(test)]

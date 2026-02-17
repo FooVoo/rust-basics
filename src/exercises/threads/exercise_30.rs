@@ -20,22 +20,22 @@ unsafe impl<T: Send> Send for SeqLock<T> {}
 unsafe impl<T: Send> Sync for SeqLock<T> {}
 
 impl<T: Copy> SeqLock<T> {
-    pub fn new(data: T) -> Self  {
+    pub fn new(data: T) -> Self {
         todo!("Implement new")
     }
 
-    pub fn read(&self) -> T  {
+    pub fn read(&self) -> T {
         todo!("Implement read")
     }
 
-    pub fn write(&self, data: T)  {
+    pub fn write(&self, data: T) {
         todo!("Implement write")
     }
 }
 
 /// Test seqlock with multiple readers and one writer.
-pub fn test_seqlock(n_readers: usize, n_writes: usize) -> Vec<i32>  {
-    todo!("Test seqlock with multiple readers and one writer.")
+pub fn test_seqlock(n_readers: usize, n_writes: usize) -> Vec<i32> {
+    todo!("Implement test_seqlock")
 }
 
 #[cfg(test)]

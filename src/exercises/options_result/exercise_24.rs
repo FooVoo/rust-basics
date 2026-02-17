@@ -15,25 +15,25 @@ pub struct ValidationError {
 }
 
 impl fmt::Display for ValidationError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 impl ValidationError {
-    pub fn new(field: &str, message: &str) -> Self  {
+    pub fn new(field: &str, message: &str) -> Self {
         todo!("Implement new")
     }
 }
 
 /// Validate a username (non-empty, alphanumeric).
-pub fn validate_username(username: &str) -> Result<String, ValidationError>  {
-    todo!("Validate a username (non-empty, alphanumeric).")
+pub fn validate_username(username: &str) -> Result<String, ValidationError> {
+    todo!("Implement validate_username")
 }
 
 /// Validate an age (positive, reasonable range).
-pub fn validate_age(age: i32) -> Result<i32, ValidationError>  {
-    todo!("Validate an age (positive, reasonable range).")
+pub fn validate_age(age: i32) -> Result<i32, ValidationError> {
+    todo!("Implement validate_age")
 }
 
 /// Combine multiple validations.

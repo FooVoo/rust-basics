@@ -15,42 +15,42 @@ pub struct TreeNode<T> {
 
 impl<T> TreeNode<T> {
     /// Creates a new leaf node.
-    pub fn leaf(value: T) -> Self  {
-        todo!("Create a new leaf node.")
+    pub fn leaf(value: T) -> Self {
+        todo!("Implement leaf")
     }
 
     /// Creates a new node with children.
-    pub fn with_children(value: T, left: Option<TreeNode<T>>, right: Option<TreeNode<T>>) -> Self  {
-        todo!("Create a new node with children.")
+    pub fn with_children(value: T, left: Option<TreeNode<T>>, right: Option<TreeNode<T>>) -> Self {
+        todo!("Implement with_children")
     }
 
     /// Checks if this is a leaf node.
-    pub fn is_leaf(&self) -> bool  {
-        todo!("Check if this is a leaf node.")
+    pub fn is_leaf(&self) -> bool {
+        todo!("Implement is_leaf")
     }
 
     /// Counts the total nodes in the tree.
-    pub fn count_nodes(&self) -> usize  {
-        todo!("Counts the total nodes in the tree.")
+    pub fn count_nodes(&self) -> usize {
+        todo!("Implement count_nodes")
     }
 
     /// Gets the height of the tree.
-    pub fn height(&self) -> usize  {
-        todo!("Get the height of the tree.")
+    pub fn height(&self) -> usize {
+        todo!("Implement height")
     }
 }
 
 impl<T: Clone> TreeNode<T> {
     /// Collects all values in pre-order.
-    pub fn preorder(&self) -> Vec<T>  {
-        todo!("Collects all values in pre-order.")
+    pub fn preorder(&self) -> Vec<T> {
+        todo!("Implement preorder")
     }
 }
 
 impl<T: PartialEq> TreeNode<T> {
     /// Searches for a value in the tree.
-    pub fn contains(&self, value: &T) -> bool  {
-        todo!("Searches for a value in the tree.")
+    pub fn contains(&self, value: &T) -> bool {
+        todo!("Implement contains")
     }
 }
 

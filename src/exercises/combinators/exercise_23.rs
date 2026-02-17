@@ -18,18 +18,18 @@ pub fn validate_pipeline<T: Clone>(
 }
 
 /// Validate number is positive.
-pub fn validate_positive(n: i32) -> Result<i32, String>  {
-    todo!("Validate number is positive.")
+pub fn validate_positive(n: i32) -> Result<i32, String> {
+    todo!("Implement validate_positive")
 }
 
 /// Validate number is even.
-pub fn validate_even(n: i32) -> Result<i32, String>  {
-    todo!("Validate number is even.")
+pub fn validate_even(n: i32) -> Result<i32, String> {
+    todo!("Implement validate_even")
 }
 
 /// Validate number is less than 100.
-pub fn validate_less_than_100(n: i32) -> Result<i32, String>  {
-    todo!("Validate number is less than 100.")
+pub fn validate_less_than_100(n: i32) -> Result<i32, String> {
+    todo!("Implement validate_less_than_100")
 }
 
 #[cfg(test)]

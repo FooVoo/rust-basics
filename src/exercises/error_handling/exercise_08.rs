@@ -8,8 +8,8 @@
 
 /// Check if a filename has a valid extension from the allowed list.
 /// Return Ok(extension) if valid, Err otherwise.
-pub fn validate_file_extension(filename: &str, allowed: &[&str]) -> Result<String, String>  {
-    todo!("Return Ok(extension) if valid, Err otherwise.")
+pub fn validate_file_extension(filename: &str, allowed: &[&str]) -> Result<String, String> {
+    todo!("Implement validate_file_extension")
 }
 
 #[cfg(test)]

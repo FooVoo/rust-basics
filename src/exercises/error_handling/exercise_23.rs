@@ -15,11 +15,11 @@ pub struct ContextError {
 }
 
 impl ContextError {
-    pub fn new(message: impl Into<String>) -> Self  {
+    pub fn new(message: impl Into<String>) -> Self {
         todo!("Implement new")
     }
     
-    pub fn context(mut self, ctx: impl Into<String>) -> Self  {
+    pub fn context(mut self, ctx: impl Into<String>) -> Self {
         todo!("Implement context")
     }
     
@@ -32,7 +32,7 @@ impl ContextError {
 }
 
 impl fmt::Display for ContextError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -40,23 +40,23 @@ impl fmt::Display for ContextError {
 impl std::error::Error for ContextError {}
 
 /// Layer 1: Low-level operation
-fn read_file(path: &str) -> Result<String, ContextError>  {
-    todo!("Layer 1: Low-level operation")
+fn read_file(path: &str) -> Result<String, ContextError> {
+    todo!("Implement read_file")
 }
 
 /// Layer 2: Mid-level processing
-pub fn parse_config(path: &str) -> Result<String, ContextError>  {
-    todo!("Layer 2: Mid-level processing")
+pub fn parse_config(path: &str) -> Result<String, ContextError> {
+    todo!("Implement parse_config")
 }
 
 /// Layer 3: High-level application
-pub fn initialize_app(config_path: &str) -> Result<String, ContextError>  {
-    todo!("Layer 3: High-level application")
+pub fn initialize_app(config_path: &str) -> Result<String, ContextError> {
+    todo!("Implement initialize_app")
 }
 
 /// Add context to multiple operations
-pub fn process_batch(paths: &[&str]) -> Result<Vec<String>, Vec<ContextError>>  {
-    todo!("Add context to multiple operations")
+pub fn process_batch(paths: &[&str]) -> Result<Vec<String>, Vec<ContextError>> {
+    todo!("Implement process_batch")
 }
 
 #[cfg(test)]

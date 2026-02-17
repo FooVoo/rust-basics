@@ -9,8 +9,8 @@
 use std::thread;
 
 /// Use scoped threads to increment each element of a slice in parallel.
-pub fn parallel_increment(data: &mut [i32], n_threads: usize)  {
-    todo!("Use scoped threads to increment each element of a slice in parallel.")
+pub fn parallel_increment(data: &mut [i32], n_threads: usize) {
+    todo!("Implement parallel_increment")
 }
 
 #[cfg(test)]

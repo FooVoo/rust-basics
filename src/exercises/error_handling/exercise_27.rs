@@ -35,7 +35,7 @@ impl ErrorLog {
 }
 
 impl fmt::Display for ErrorLog {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -50,27 +50,27 @@ pub struct ErrorLogger {
 }
 
 impl ErrorLogger {
-    pub fn new() -> Self  {
-        todo!("Logger that tracks all errors.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
     
-    pub fn log(&mut self, log: ErrorLog)  {
+    pub fn log(&mut self, log: ErrorLog) {
         todo!("Implement log")
     }
     
-    pub fn logs(&self) -> &[ErrorLog]  {
+    pub fn logs(&self) -> &[ErrorLog] {
         todo!("Implement logs")
     }
     
-    pub fn count_by_severity(&self, severity: ErrorSeverity) -> usize  {
+    pub fn count_by_severity(&self, severity: ErrorSeverity) -> usize {
         todo!("Implement count_by_severity")
     }
     
-    pub fn has_critical_errors(&self) -> bool  {
+    pub fn has_critical_errors(&self) -> bool {
         todo!("Implement has_critical_errors")
     }
     
-    pub fn clear(&mut self)  {
+    pub fn clear(&mut self) {
         todo!("Implement clear")
     }
 }
@@ -88,13 +88,13 @@ where
 }
 
 /// Parse a number with logging.
-pub fn parse_logged(s: &str, logger: &mut ErrorLogger) -> LoggedResult<i32>  {
-    todo!("Parse a number with logging.")
+pub fn parse_logged(s: &str, logger: &mut ErrorLogger) -> LoggedResult<i32> {
+    todo!("Implement parse_logged")
 }
 
 /// Divide numbers with logging.
-pub fn divide_logged(a: i32, b: i32, logger: &mut ErrorLogger) -> LoggedResult<i32>  {
-    todo!("Divide numbers with logging.")
+pub fn divide_logged(a: i32, b: i32, logger: &mut ErrorLogger) -> LoggedResult<i32> {
+    todo!("Implement divide_logged")
 }
 
 #[cfg(test)]

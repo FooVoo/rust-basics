@@ -10,18 +10,18 @@ use tokio::sync::oneshot;
 use tokio::time::{sleep, Duration};
 
 /// Send a computed value through oneshot channel.
-pub async fn compute_and_send(value: i32, delay_ms: u64) -> i32  {
-    todo!("Send a computed value through oneshot channel.")
+pub async fn compute_and_send(value: i32, delay_ms: u64) -> i32 {
+    todo!("Implement compute_and_send")
 }
 
 /// Request-response pattern with oneshot.
-pub async fn request_response(requests: Vec<i32>) -> Vec<i32>  {
-    todo!("Request-response pattern with oneshot.")
+pub async fn request_response(requests: Vec<i32>) -> Vec<i32> {
+    todo!("Implement request_response")
 }
 
 /// Handle oneshot cancellation.
-pub async fn with_cancellation(value: i32, should_cancel: bool) -> Result<i32, String>  {
-    todo!("Handle oneshot cancellation.")
+pub async fn with_cancellation(value: i32, should_cancel: bool) -> Result<i32, String> {
+    todo!("Implement with_cancellation")
 }
 
 #[cfg(test)]

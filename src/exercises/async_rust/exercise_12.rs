@@ -9,22 +9,22 @@
 use tokio::time::{sleep, Duration};
 
 /// Execute two fallible operations concurrently.
-pub async fn try_parse_both(s1: &str, s2: &str) -> Result<(i32, i32), String>  {
-    todo!("Execute two fallible operations concurrently.")
+pub async fn try_parse_both(s1: &str, s2: &str) -> Result<(i32, i32), String> {
+    todo!("Implement try_parse_both")
 }
 
 /// Concurrent division operations with error handling.
-pub async fn concurrent_divisions(operations: Vec<(i32, i32)>) -> Result<Vec<i32>, String>  {
-    todo!("Concurrent division operations with error handling.")
+pub async fn concurrent_divisions(operations: Vec<(i32, i32)>) -> Result<Vec<i32>, String> {
+    todo!("Implement concurrent_divisions")
 }
 
-async fn divide(a: i32, b: i32) -> Result<i32, String>  {
-    todo!("Concurrent division operations with error handling.")
+async fn divide(a: i32, b: i32) -> Result<i32, String> {
+    todo!("Implement divide")
 }
 
 /// Try to parse multiple strings concurrently, fail fast on error.
-pub async fn parse_all_or_none(strings: Vec<String>) -> Result<Vec<i32>, String>  {
-    todo!("Try to parse multiple strings concurrently, fail fast on error.")
+pub async fn parse_all_or_none(strings: Vec<String>) -> Result<Vec<i32>, String> {
+    todo!("Implement parse_all_or_none")
 }
 
 #[cfg(test)]

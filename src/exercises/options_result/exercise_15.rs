@@ -7,8 +7,8 @@
 //! - Implement fallback error handling
 
 /// Try parsing as i32, fallback to trying as f64.
-pub fn parse_number_flexible(s: &str) -> Result<i32, String>  {
-    todo!("Try parsing as i32, fallback to trying as f64.")
+pub fn parse_number_flexible(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_number_flexible")
 }
 
 /// Try first operation, fallback to second if it fails.
@@ -20,8 +20,8 @@ pub fn try_with_fallback(
 }
 
 /// Parse with multiple fallback attempts.
-pub fn parse_with_fallbacks(s: &str) -> Result<i32, String>  {
-    todo!("Parse with multiple fallback attempts.")
+pub fn parse_with_fallbacks(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_with_fallbacks")
 }
 
 #[cfg(test)]

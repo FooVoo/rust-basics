@@ -7,23 +7,23 @@
 //! - Chain option operations
 
 /// Doubles the value if present
-pub fn double_option(opt: Option<i32>) -> Option<i32>  {
-    todo!("Doubles the value if present")
+pub fn double_option(opt: Option<i32>) -> Option<i32> {
+    todo!("Implement double_option")
 }
 
 /// Returns Some(value + 10) if value > 0, None otherwise
-pub fn add_ten_if_positive(opt: Option<i32>) -> Option<i32>  {
-    todo!("Return Some(value + 10) if value > 0, None otherwise")
+pub fn add_ten_if_positive(opt: Option<i32>) -> Option<i32> {
+    todo!("Implement add_ten_if_positive")
 }
 
 /// Chains two operations: doubles the value, then adds 5
-pub fn double_and_add_five(opt: Option<i32>) -> Option<i32>  {
-    todo!("Chains two operations: doubles the value, then adds 5")
+pub fn double_and_add_five(opt: Option<i32>) -> Option<i32> {
+    todo!("Implement double_and_add_five")
 }
 
 /// Returns the first Some value, or None if both are None
-pub fn first_some(a: Option<i32>, b: Option<i32>) -> Option<i32>  {
-    todo!("Return the first Some value, or None if both are None")
+pub fn first_some(a: Option<i32>, b: Option<i32>) -> Option<i32> {
+    todo!("Implement first_some")
 }
 
 #[cfg(test)]

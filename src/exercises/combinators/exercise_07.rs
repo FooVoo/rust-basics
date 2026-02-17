@@ -7,13 +7,13 @@
 //! - Convert Option to concrete value
 
 /// Get value or return a default.
-pub fn get_or_default(value: Option<i32>, default: i32) -> i32  {
-    todo!("Get value or return a default.")
+pub fn get_or_default(value: Option<i32>, default: i32) -> i32 {
+    todo!("Implement get_or_default")
 }
 
 /// Sum all Some values, treating None as 0.
-pub fn sum_with_defaults(values: Vec<Option<i32>>) -> i32  {
-    todo!("Sum all Some values, treating None as 0.")
+pub fn sum_with_defaults(values: Vec<Option<i32>>) -> i32 {
+    todo!("Implement sum_with_defaults")
 }
 
 #[cfg(test)]

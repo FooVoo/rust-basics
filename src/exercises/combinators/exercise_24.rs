@@ -34,8 +34,8 @@ impl<T, E> ResultInspect<T, E> for Result<T, E> {
 }
 
 /// Process with inspection at each step.
-pub fn parse_with_inspection(s: &str) -> Result<i32, String>  {
-    todo!("Process with inspection at each step.")
+pub fn parse_with_inspection(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_with_inspection")
 }
 
 #[cfg(test)]

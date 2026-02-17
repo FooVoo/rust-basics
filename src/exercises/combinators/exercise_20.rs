@@ -7,13 +7,13 @@
 //! - Handle errors gracefully
 
 /// Parse with fallback based on error.
-pub fn parse_with_recovery(s: &str) -> i32  {
-    todo!("Parse with fallback based on error.")
+pub fn parse_with_recovery(s: &str) -> i32 {
+    todo!("Implement parse_with_recovery")
 }
 
 /// Divide with fallback to zero on error.
-pub fn divide_or_zero(a: i32, b: i32) -> i32  {
-    todo!("Divide with fallback to zero on error.")
+pub fn divide_or_zero(a: i32, b: i32) -> i32 {
+    todo!("Implement divide_or_zero")
 }
 
 #[cfg(test)]

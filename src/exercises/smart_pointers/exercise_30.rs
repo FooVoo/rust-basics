@@ -28,29 +28,29 @@ pub struct DoublyLinkedList<T> {
 }
 
 impl<T> ListNode<T> {
-    pub fn new(value: T) -> NodeRef<T>  {
+    pub fn new(value: T) -> NodeRef<T> {
         todo!("Implement new")
     }
 }
 
 impl<T> DoublyLinkedList<T> {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
 
-    pub fn push_back(&mut self, value: T)  {
+    pub fn push_back(&mut self, value: T) {
         todo!("Implement push_back")
     }
 
-    pub fn push_front(&mut self, value: T)  {
+    pub fn push_front(&mut self, value: T) {
         todo!("Implement push_front")
     }
 
-    pub fn len(&self) -> usize  {
+    pub fn len(&self) -> usize {
         todo!("Implement len")
     }
 
-    pub fn is_empty(&self) -> bool  {
+    pub fn is_empty(&self) -> bool {
         todo!("Implement is_empty")
     }
 }
@@ -63,23 +63,23 @@ pub struct LRUCache<K, V> {
 }
 
 impl<K: Clone + Eq + std::hash::Hash, V> LRUCache<K, V> {
-    pub fn new(capacity: usize) -> Self  {
-        todo!("A cache with smart pointer-based eviction policy.")
+    pub fn new(capacity: usize) -> Self {
+        todo!("Implement new")
     }
 
-    pub fn get(&mut self, key: &K) -> Option<&V>  {
+    pub fn get(&mut self, key: &K) -> Option<&V> {
         todo!("Implement get")
     }
 
-    pub fn put(&mut self, key: K, value: V)  {
+    pub fn put(&mut self, key: K, value: V) {
         todo!("Implement put")
     }
 
-    pub fn len(&self) -> usize  {
+    pub fn len(&self) -> usize {
         todo!("Implement len")
     }
 
-    pub fn capacity(&self) -> usize  {
+    pub fn capacity(&self) -> usize {
         todo!("Implement capacity")
     }
 }
@@ -98,15 +98,15 @@ impl<T> ObjectPool<T> {
         todo!("Implement new")
     }
 
-    pub fn acquire(&self) -> Rc<RefCell<T>>  {
+    pub fn acquire(&self) -> Rc<RefCell<T>> {
         todo!("Implement acquire")
     }
 
-    pub fn release(&self, obj: Rc<RefCell<T>>)  {
+    pub fn release(&self, obj: Rc<RefCell<T>>) {
         todo!("Implement release")
     }
 
-    pub fn available_count(&self) -> usize  {
+    pub fn available_count(&self) -> usize {
         todo!("Implement available_count")
     }
 }

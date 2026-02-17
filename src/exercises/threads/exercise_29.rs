@@ -20,25 +20,25 @@ pub struct LockFreeStack<T> {
 }
 
 impl<T> LockFreeStack<T> {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
 
-    pub fn push(&self, data: T)  {
+    pub fn push(&self, data: T) {
         todo!("Implement push")
     }
 
-    pub fn pop(&self) -> Option<T>  {
+    pub fn pop(&self) -> Option<T> {
         todo!("Implement pop")
     }
 
-    pub fn is_empty(&self) -> bool  {
+    pub fn is_empty(&self) -> bool {
         todo!("Implement is_empty")
     }
 }
 
 impl<T> Drop for LockFreeStack<T> {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
@@ -47,8 +47,8 @@ unsafe impl<T: Send> Send for LockFreeStack<T> {}
 unsafe impl<T: Send> Sync for LockFreeStack<T> {}
 
 /// Test concurrent push and pop operations on lock-free stack.
-pub fn test_lock_free_stack(n_threads: usize, operations_per_thread: usize) -> usize  {
-    todo!("Test concurrent push and pop operations on lock-free stack.")
+pub fn test_lock_free_stack(n_threads: usize, operations_per_thread: usize) -> usize {
+    todo!("Implement test_lock_free_stack")
 }
 
 #[cfg(test)]

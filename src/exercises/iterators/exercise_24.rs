@@ -14,33 +14,33 @@ pub struct StepRange {
 }
 
 impl StepRange {
-    pub fn new(start: i32, end: i32, step: i32) -> Self  {
-        todo!("A double-ended range iterator with custom step.")
+    pub fn new(start: i32, end: i32, step: i32) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl Iterator for StepRange {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
 
 impl DoubleEndedIterator for StepRange {
-    fn next_back(&mut self) -> Option<Self::Item>  {
+    fn next_back(&mut self) -> Option<Self::Item> {
         todo!("Implement next_back")
     }
 }
 
 /// Palindrome checker using double-ended iteration.
-pub fn is_palindrome<T: PartialEq>(items: &[T]) -> bool  {
-    todo!("Palindrome checker using double-ended iteration.")
+pub fn is_palindrome<T: PartialEq>(items: &[T]) -> bool {
+    todo!("Implement is_palindrome")
 }
 
 /// Reverse and merge two slices using double-ended iteration.
-pub fn reverse_merge(a: &[i32], b: &[i32]) -> Vec<i32>  {
-    todo!("Reverse and merge two slices using double-ended iteration.")
+pub fn reverse_merge(a: &[i32], b: &[i32]) -> Vec<i32> {
+    todo!("Implement reverse_merge")
 }
 
 #[cfg(test)]

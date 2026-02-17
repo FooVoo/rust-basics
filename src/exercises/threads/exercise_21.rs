@@ -11,8 +11,8 @@ use std::thread;
 
 /// Each thread increments a counter, waits at barrier, then increments again.
 /// Return the counter value after first phase and final value.
-pub fn barrier_phases(n_threads: usize) -> (usize, usize)  {
-    todo!("Return the counter value after first phase and final value.")
+pub fn barrier_phases(n_threads: usize) -> (usize, usize) {
+    todo!("Implement barrier_phases")
 }
 
 #[cfg(test)]

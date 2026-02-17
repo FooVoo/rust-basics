@@ -11,8 +11,8 @@ use std::sync::Arc;
 use std::thread;
 
 /// Increment an atomic counter from multiple threads.
-pub fn atomic_counter(n_threads: usize, increments_per_thread: usize) -> usize  {
-    todo!("Increment an atomic counter from multiple threads.")
+pub fn atomic_counter(n_threads: usize, increments_per_thread: usize) -> usize {
+    todo!("Implement atomic_counter")
 }
 
 #[cfg(test)]

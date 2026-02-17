@@ -7,18 +7,18 @@
 //! - Work with async closures
 
 /// Create and execute an async block.
-pub async fn execute_async_block(value: i32) -> i32  {
-    todo!("Create and execute an async block.")
+pub async fn execute_async_block(value: i32) -> i32 {
+    todo!("Implement execute_async_block")
 }
 
 /// Map values using an async operation.
-pub async fn async_map(values: Vec<i32>) -> Vec<i32>  {
-    todo!("Map values using an async operation.")
+pub async fn async_map(values: Vec<i32>) -> Vec<i32> {
+    todo!("Implement async_map")
 }
 
 /// Chain multiple async blocks.
-pub async fn chain_async_blocks(x: i32) -> i32  {
-    todo!("Chain multiple async blocks.")
+pub async fn chain_async_blocks(x: i32) -> i32 {
+    todo!("Implement chain_async_blocks")
 }
 
 #[cfg(test)]

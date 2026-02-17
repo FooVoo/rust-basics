@@ -7,23 +7,23 @@
 //! - Build custom aggregations
 
 /// Product of all numbers using fold.
-pub fn product(numbers: &[i32]) -> i32  {
-    todo!("Product of all numbers using fold.")
+pub fn product(numbers: &[i32]) -> i32 {
+    todo!("Implement product")
 }
 
 /// Concatenate strings with a separator.
-pub fn join_strings(strings: &[&str], separator: &str) -> String  {
-    todo!("Concatenate strings with a separator.")
+pub fn join_strings(strings: &[&str], separator: &str) -> String {
+    todo!("Implement join_strings")
 }
 
 /// Count occurrences of a character in strings.
-pub fn count_char_in_strings(strings: &[&str], target: char) -> usize  {
-    todo!("Count occurrences of a character in strings.")
+pub fn count_char_in_strings(strings: &[&str], target: char) -> usize {
+    todo!("Implement count_char_in_strings")
 }
 
 /// Build a string of repeated characters.
-pub fn build_repeated_string(chars: &[char], repeat: usize) -> String  {
-    todo!("Build a string of repeated characters.")
+pub fn build_repeated_string(chars: &[char], repeat: usize) -> String {
+    todo!("Implement build_repeated_string")
 }
 
 #[cfg(test)]

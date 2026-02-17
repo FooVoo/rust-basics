@@ -7,23 +7,23 @@
 //! - Work with nested collections
 
 /// Flatten a vector of vectors.
-pub fn flatten_vectors(nested: &[Vec<i32>]) -> Vec<i32>  {
-    todo!("Flatten a vector of vectors.")
+pub fn flatten_vectors(nested: &[Vec<i32>]) -> Vec<i32> {
+    todo!("Implement flatten_vectors")
 }
 
 /// Split strings and collect all words.
-pub fn split_and_collect(strings: &[&str]) -> Vec<String>  {
-    todo!("Split strings and collect all words.")
+pub fn split_and_collect(strings: &[&str]) -> Vec<String> {
+    todo!("Implement split_and_collect")
 }
 
 /// Get all characters from strings.
-pub fn all_chars(strings: &[&str]) -> Vec<char>  {
-    todo!("Get all characters from strings.")
+pub fn all_chars(strings: &[&str]) -> Vec<char> {
+    todo!("Implement all_chars")
 }
 
 /// Generate pairs for each number with a list of multipliers.
-pub fn generate_pairs(numbers: &[i32], multipliers: &[i32]) -> Vec<(i32, i32)>  {
-    todo!("Generate pairs for each number with a list of multipliers.")
+pub fn generate_pairs(numbers: &[i32], multipliers: &[i32]) -> Vec<(i32, i32)> {
+    todo!("Implement generate_pairs")
 }
 
 #[cfg(test)]

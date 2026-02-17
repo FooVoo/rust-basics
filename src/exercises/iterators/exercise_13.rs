@@ -7,23 +7,23 @@
 //! - Process elements in groups
 
 /// Sum of each pair of consecutive numbers.
-pub fn pairwise_sum(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Sum of each pair of consecutive numbers.")
+pub fn pairwise_sum(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement pairwise_sum")
 }
 
 /// Find local maxima (element greater than neighbors).
-pub fn local_maxima(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Find local maxima (element greater than neighbors).")
+pub fn local_maxima(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement local_maxima")
 }
 
 /// Group numbers into chunks and sum each chunk.
-pub fn chunk_sums(numbers: &[i32], chunk_size: usize) -> Vec<i32>  {
-    todo!("Group numbers into chunks and sum each chunk.")
+pub fn chunk_sums(numbers: &[i32], chunk_size: usize) -> Vec<i32> {
+    todo!("Implement chunk_sums")
 }
 
 /// Check if any consecutive triple sums to target.
-pub fn has_triple_sum(numbers: &[i32], target: i32) -> bool  {
-    todo!("Check if any consecutive triple sums to target.")
+pub fn has_triple_sum(numbers: &[i32], target: i32) -> bool {
+    todo!("Implement has_triple_sum")
 }
 
 #[cfg(test)]

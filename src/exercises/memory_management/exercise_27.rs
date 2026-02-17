@@ -16,7 +16,7 @@ pub struct StringProcessor;
 impl Processor for StringProcessor {
     type Output = String;
     
-    fn process(&self, input: &str) -> String  {
+    fn process(&self, input: &str) -> String {
         todo!("Implement process")
     }
 }
@@ -34,7 +34,7 @@ pub struct FilterMap<'a, T> {
 }
 
 impl<'a, T> FilterMap<'a, T> {
-    pub fn new(items: &'a [T]) -> Self  {
+    pub fn new(items: &'a [T]) -> Self {
         todo!("Implement new")
     }
     
@@ -59,15 +59,15 @@ pub struct Validator<'a, T: 'a> {
 }
 
 impl<'a, T: 'a + PartialEq> Validator<'a, T> {
-    pub fn new(valid_values: &'a [T]) -> Self  {
+    pub fn new(valid_values: &'a [T]) -> Self {
         todo!("Implement new")
     }
     
-    pub fn is_valid(&self, value: &T) -> bool  {
+    pub fn is_valid(&self, value: &T) -> bool {
         todo!("Implement is_valid")
     }
     
-    pub fn filter_valid(&self, values: &'a [T]) -> Vec<&'a T>  {
+    pub fn filter_valid(&self, values: &'a [T]) -> Vec<&'a T> {
         todo!("Implement filter_valid")
     }
 }

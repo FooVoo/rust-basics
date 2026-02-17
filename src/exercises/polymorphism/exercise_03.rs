@@ -25,26 +25,26 @@ pub struct Student {
 }
 
 impl Named for Student {
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 }
 
 impl Aged for Student {
-    fn age(&self) -> u32  {
+    fn age(&self) -> u32 {
         todo!("Implement age")
     }
 }
 
 impl Greetable for Student {
-    fn greet(&self) -> String  {
+    fn greet(&self) -> String {
         todo!("Implement greet")
     }
 }
 
 /// A function that works with anything that is both Named and Aged.
-pub fn introduce<T: Named + Aged>(entity: &T) -> String  {
-    todo!("A function that works with anything that is both Named and Aged.")
+pub fn introduce<T: Named + Aged>(entity: &T) -> String {
+    todo!("Implement introduce")
 }
 
 #[cfg(test)]

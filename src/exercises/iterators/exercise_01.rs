@@ -7,18 +7,18 @@
 //! - Work with iterator sum()
 
 /// Sum all numbers in a vector using iteration.
-pub fn sum_numbers(numbers: &[i32]) -> i32  {
-    todo!("Sum all numbers in a vector using iteration.")
+pub fn sum_numbers(numbers: &[i32]) -> i32 {
+    todo!("Implement sum_numbers")
 }
 
 /// Count how many numbers are positive.
-pub fn count_positive(numbers: &[i32]) -> usize  {
-    todo!("Count how many numbers are positive.")
+pub fn count_positive(numbers: &[i32]) -> usize {
+    todo!("Implement count_positive")
 }
 
 /// Find the maximum value in a slice, returning None if empty.
-pub fn find_max(numbers: &[i32]) -> Option<i32>  {
-    todo!("Find the maximum value in a slice, returning None if empty.")
+pub fn find_max(numbers: &[i32]) -> Option<i32> {
+    todo!("Implement find_max")
 }
 
 #[cfg(test)]

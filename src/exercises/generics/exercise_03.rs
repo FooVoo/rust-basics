@@ -14,28 +14,28 @@ pub struct Pair<T, U> {
 
 impl<T, U> Pair<T, U> {
     /// Creates a new Pair.
-    pub fn new(first: T, second: U) -> Self  {
-        todo!("Create a new Pair.")
+    pub fn new(first: T, second: U) -> Self {
+        todo!("Implement new")
     }
 
     /// Returns references to both values.
-    pub fn get_both(&self) -> (&T, &U)  {
-        todo!("Return references to both values.")
+    pub fn get_both(&self) -> (&T, &U) {
+        todo!("Implement get_both")
     }
 
     /// Returns a reference to the first value.
-    pub fn first(&self) -> &T  {
-        todo!("Return a reference to the first value.")
+    pub fn first(&self) -> &T {
+        todo!("Implement first")
     }
 
     /// Returns a reference to the second value.
-    pub fn second(&self) -> &U  {
-        todo!("Return a reference to the second value.")
+    pub fn second(&self) -> &U {
+        todo!("Implement second")
     }
 
     /// Swaps the pair.
-    pub fn swap(self) -> Pair<U, T>  {
-        todo!("Swaps the pair.")
+    pub fn swap(self) -> Pair<U, T> {
+        todo!("Implement swap")
     }
 }
 

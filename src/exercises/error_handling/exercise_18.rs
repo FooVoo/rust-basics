@@ -17,7 +17,7 @@ pub struct Config {
 }
 
 impl Default for Config {
-    fn default() -> Self  {
+    fn default() -> Self {
         todo!("Implement default")
     }
 }
@@ -31,7 +31,7 @@ pub enum ConfigError {
 }
 
 impl std::fmt::Display for ConfigError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -39,8 +39,8 @@ impl std::fmt::Display for ConfigError {
 impl std::error::Error for ConfigError {}
 
 /// Parse configuration from key-value map with defaults.
-pub fn parse_config(data: &HashMap<String, String>) -> Result<Config, ConfigError>  {
-    todo!("Parse configuration from key-value map with defaults.")
+pub fn parse_config(data: &HashMap<String, String>) -> Result<Config, ConfigError> {
+    todo!("Implement parse_config")
 }
 
 #[cfg(test)]

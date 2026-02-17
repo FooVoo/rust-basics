@@ -18,34 +18,34 @@ pub struct Guard {
 }
 
 impl Guard {
-    pub fn new(name: String) -> Self  {
-        todo!("A guard that logs when dropped.")
+    pub fn new(name: String) -> Self {
+        todo!("Implement new")
     }
 
-    pub fn name(&self) -> &str  {
+    pub fn name(&self) -> &str {
         todo!("Implement name")
     }
 }
 
 impl Drop for Guard {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
 
 /// Reset global counters for testing.
-pub fn reset_drop_tracking()  {
-    todo!("Reset global counters for testing.")
+pub fn reset_drop_tracking() {
+    todo!("Implement reset_drop_tracking")
 }
 
 /// Get total drop count.
-pub fn get_drop_count() -> usize  {
-    todo!("Get total drop count.")
+pub fn get_drop_count() -> usize {
+    todo!("Implement get_drop_count")
 }
 
 /// Get drop log.
-pub fn get_drop_log() -> Vec<String>  {
-    todo!("Get drop log.")
+pub fn get_drop_log() -> Vec<String> {
+    todo!("Implement get_drop_log")
 }
 
 /// A simple RAII file handle simulator.
@@ -55,21 +55,21 @@ pub struct FileHandle {
 }
 
 impl FileHandle {
-    pub fn open(filename: String) -> Self  {
-        todo!("A simple RAII file handle simulator.")
+    pub fn open(filename: String) -> Self {
+        todo!("Implement open")
     }
 
-    pub fn is_closed(&self) -> bool  {
+    pub fn is_closed(&self) -> bool {
         todo!("Implement is_closed")
     }
 
-    pub fn close(&self)  {
+    pub fn close(&self) {
         todo!("Implement close")
     }
 }
 
 impl Drop for FileHandle {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }

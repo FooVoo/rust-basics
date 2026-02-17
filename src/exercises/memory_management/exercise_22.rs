@@ -15,17 +15,17 @@ pub struct DropCounter {
 }
 
 impl DropCounter {
-    pub fn new(name: String, counter: Arc<AtomicUsize>) -> Self  {
+    pub fn new(name: String, counter: Arc<AtomicUsize>) -> Self {
         todo!("Implement new")
     }
     
-    pub fn name(&self) -> &str  {
+    pub fn name(&self) -> &str {
         todo!("Implement name")
     }
 }
 
 impl Drop for DropCounter {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
@@ -36,28 +36,28 @@ pub struct Resource {
 }
 
 impl Resource {
-    pub fn new(id: u32, size: usize) -> Self  {
+    pub fn new(id: u32, size: usize) -> Self {
         todo!("Implement new")
     }
     
-    pub fn id(&self) -> u32  {
+    pub fn id(&self) -> u32 {
         todo!("Implement id")
     }
     
-    pub fn size(&self) -> usize  {
+    pub fn size(&self) -> usize {
         todo!("Implement size")
     }
 }
 
 impl Drop for Resource {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
 
 /// Create and drop a resource, returning its ID.
-pub fn use_resource(id: u32) -> u32  {
-    todo!("Create and drop a resource, returning its ID.")
+pub fn use_resource(id: u32) -> u32 {
+    todo!("Implement use_resource")
 }
 
 #[cfg(test)]

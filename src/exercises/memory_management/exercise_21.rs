@@ -20,26 +20,26 @@ pub struct Context<'s, 't> {
 }
 
 impl<'s, 't> Context<'s, 't> {
-    pub fn new(source: &'s str, target: &'t str) -> Self  {
+    pub fn new(source: &'s str, target: &'t str) -> Self {
         todo!("Implement new")
     }
     
-    pub fn source(&self) -> &'s str  {
+    pub fn source(&self) -> &'s str {
         todo!("Implement source")
     }
     
-    pub fn target(&self) -> &'t str  {
+    pub fn target(&self) -> &'t str {
         todo!("Implement target")
     }
     
-    pub fn combine(&self) -> String  {
+    pub fn combine(&self) -> String {
         todo!("Implement combine")
     }
 }
 
 /// Create a context and get combined string.
-pub fn process_context<'a, 'b>(source: &'a str, target: &'b str) -> String  {
-    todo!("Create a context and get combined string.")
+pub fn process_context<'a, 'b>(source: &'a str, target: &'b str) -> String {
+    todo!("Implement process_context")
 }
 
 pub struct RefPair<'a, 'b, T> {
@@ -48,15 +48,15 @@ pub struct RefPair<'a, 'b, T> {
 }
 
 impl<'a, 'b, T> RefPair<'a, 'b, T> {
-    pub fn new(first: &'a T, second: &'b T) -> Self  {
+    pub fn new(first: &'a T, second: &'b T) -> Self {
         todo!("Implement new")
     }
     
-    pub fn first(&self) -> &'a T  {
+    pub fn first(&self) -> &'a T {
         todo!("Implement first")
     }
     
-    pub fn second(&self) -> &'b T  {
+    pub fn second(&self) -> &'b T {
         todo!("Implement second")
     }
 }

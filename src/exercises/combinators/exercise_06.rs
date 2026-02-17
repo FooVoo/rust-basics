@@ -7,8 +7,8 @@
 //! - Convert error types
 
 /// Parse a string and convert error to custom message.
-pub fn parse_with_custom_error(s: &str) -> Result<i32, String>  {
-    todo!("Parse a string and convert error to custom message.")
+pub fn parse_with_custom_error(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_with_custom_error")
 }
 
 #[cfg(test)]

@@ -10,18 +10,18 @@ use tokio::task::JoinSet;
 use tokio::time::{sleep, Duration};
 
 /// Spawn tasks dynamically and collect results.
-pub async fn dynamic_task_set(tasks: Vec<(i32, u64)>) -> Vec<i32>  {
-    todo!("Spawn tasks dynamically and collect results.")
+pub async fn dynamic_task_set(tasks: Vec<(i32, u64)>) -> Vec<i32> {
+    todo!("Implement dynamic_task_set")
 }
 
 /// Process results as they arrive.
-pub async fn process_as_completed(num_tasks: usize) -> Vec<usize>  {
-    todo!("Process results as they arrive.")
+pub async fn process_as_completed(num_tasks: usize) -> Vec<usize> {
+    todo!("Implement process_as_completed")
 }
 
 /// Spawn tasks conditionally based on results.
-pub async fn conditional_spawning(initial_values: Vec<i32>) -> Vec<i32>  {
-    todo!("Spawn tasks conditionally based on results.")
+pub async fn conditional_spawning(initial_values: Vec<i32>) -> Vec<i32> {
+    todo!("Implement conditional_spawning")
 }
 
 #[cfg(test)]

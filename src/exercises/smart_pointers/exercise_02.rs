@@ -14,23 +14,23 @@ pub enum List {
 
 impl List {
     /// Create an empty list.
-    pub fn new() -> Self  {
-        todo!("Create an empty list.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Prepend a value to the list.
-    pub fn prepend(self, value: i32) -> Self  {
-        todo!("Prepend a value to the list.")
+    pub fn prepend(self, value: i32) -> Self {
+        todo!("Implement prepend")
     }
 
     /// Get the length of the list.
-    pub fn len(&self) -> usize  {
-        todo!("Get the length of the list.")
+    pub fn len(&self) -> usize {
+        todo!("Implement len")
     }
 
     /// Check if the list is empty.
-    pub fn is_empty(&self) -> bool  {
-        todo!("Check if the list is empty.")
+    pub fn is_empty(&self) -> bool {
+        todo!("Implement is_empty")
     }
 }
 

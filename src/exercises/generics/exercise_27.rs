@@ -22,18 +22,18 @@ where
     F: FnOnce() -> T,
 {
     /// Creates a new lazy value.
-    pub fn new(func: F) -> Self  {
-        todo!("Create a new lazy value.")
+    pub fn new(func: F) -> Self {
+        todo!("Implement new")
     }
 
     /// Forces evaluation and returns a reference to the value.
-    pub fn force(&mut self) -> &T  {
-        todo!("Forces evaluation and returns a reference to the value.")
+    pub fn force(&mut self) -> &T {
+        todo!("Implement force")
     }
 
     /// Checks if the value has been computed.
-    pub fn is_evaluated(&self) -> bool  {
-        todo!("Check if the value has been computed.")
+    pub fn is_evaluated(&self) -> bool {
+        todo!("Implement is_evaluated")
     }
 }
 
@@ -50,33 +50,33 @@ enum DeferredState<T> {
 
 impl<T> Deferred<T> {
     /// Creates a new pending deferred.
-    pub fn pending() -> Self  {
-        todo!("Create a new pending deferred.")
+    pub fn pending() -> Self {
+        todo!("Implement pending")
     }
 
     /// Creates a deferred with a ready value.
-    pub fn ready(value: T) -> Self  {
-        todo!("Create a deferred with a ready value.")
+    pub fn ready(value: T) -> Self {
+        todo!("Implement ready")
     }
 
     /// Polls the deferred for a value.
-    pub fn poll(&mut self) -> Poll<&T>  {
-        todo!("Polls the deferred for a value.")
+    pub fn poll(&mut self) -> Poll<&T> {
+        todo!("Implement poll")
     }
 
     /// Sets the value, transitioning from Pending to Ready.
-    pub fn set(&mut self, value: T) -> Result<(), &'static str>  {
-        todo!("Set the value, transitioning from Pending to Ready.")
+    pub fn set(&mut self, value: T) -> Result<(), &'static str> {
+        todo!("Implement set")
     }
 
     /// Takes the value out, consuming it.
-    pub fn take(&mut self) -> Option<T>  {
-        todo!("Takes the value out, consuming it.")
+    pub fn take(&mut self) -> Option<T> {
+        todo!("Implement take")
     }
 
     /// Checks if the deferred is ready.
-    pub fn is_ready(&self) -> bool  {
-        todo!("Check if the deferred is ready.")
+    pub fn is_ready(&self) -> bool {
+        todo!("Implement is_ready")
     }
 }
 
@@ -95,13 +95,13 @@ where
     F: FnOnce(T) -> U,
 {
     /// Creates a new chain.
-    pub fn new(value: T, func: F) -> Self  {
-        todo!("Create a new chain.")
+    pub fn new(value: T, func: F) -> Self {
+        todo!("Implement new")
     }
 
     /// Executes the chain and returns the result.
-    pub fn run(mut self) -> U  {
-        todo!("Executes the chain and returns the result.")
+    pub fn run(mut self) -> U {
+        todo!("Implement run")
     }
 }
 

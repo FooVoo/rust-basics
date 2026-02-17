@@ -15,13 +15,13 @@ pub enum Shape {
 
 impl Shape {
     /// Calculate the area of the shape
-    pub fn area(&self) -> f64  {
-        todo!("Calculate the area of the shape")
+    pub fn area(&self) -> f64 {
+        todo!("Implement area")
     }
 
     /// Returns the shape type as a string
-    pub fn shape_type(&self) -> &'static str  {
-        todo!("Return the shape type as a string")
+    pub fn shape_type(&self) -> &'static str {
+        todo!("Implement shape_type")
     }
 }
 

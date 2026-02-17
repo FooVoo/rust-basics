@@ -7,13 +7,13 @@
 //! - Avoid nested Option<Option<T>>
 
 /// Divide two numbers safely, returning None if divisor is zero.
-pub fn safe_divide(numerator: i32, denominator: i32) -> Option<i32>  {
-    todo!("Divide two numbers safely, returning None if divisor is zero.")
+pub fn safe_divide(numerator: i32, denominator: i32) -> Option<i32> {
+    todo!("Implement safe_divide")
 }
 
 /// Chain two divisions using and_then.
-pub fn divide_twice(value: i32, div1: i32, div2: i32) -> Option<i32>  {
-    todo!("Chain two divisions using and_then.")
+pub fn divide_twice(value: i32, div1: i32, div2: i32) -> Option<i32> {
+    todo!("Implement divide_twice")
 }
 
 #[cfg(test)]

@@ -14,19 +14,19 @@ pub enum Temperature {
 
 impl Temperature {
     /// Returns a description of the temperature
-    pub fn describe(&self) -> &'static str  {
-        todo!("Return a description of the temperature")
+    pub fn describe(&self) -> &'static str {
+        todo!("Implement describe")
     }
 
     /// Converts to Celsius
-    pub fn to_celsius(&self) -> f64  {
-        todo!("Convert to Celsius")
+    pub fn to_celsius(&self) -> f64 {
+        todo!("Implement to_celsius")
     }
 }
 
 /// Returns true if the value is positive and even
-pub fn is_positive_even(opt: Option<i32>) -> bool  {
-    todo!("Return true if the value is positive and even")
+pub fn is_positive_even(opt: Option<i32>) -> bool {
+    todo!("Implement is_positive_even")
 }
 
 #[cfg(test)]

@@ -23,8 +23,8 @@ impl<T> OptionTryMap<T> for Option<T> {
 }
 
 /// Parse optional string value.
-pub fn try_parse_option(s: Option<&str>) -> Result<Option<i32>, String>  {
-    todo!("Parse optional string value.")
+pub fn try_parse_option(s: Option<&str>) -> Result<Option<i32>, String> {
+    todo!("Implement try_parse_option")
 }
 
 #[cfg(test)]

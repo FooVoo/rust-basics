@@ -7,13 +7,13 @@
 //! - Handle fallback scenarios
 
 /// Get a value from primary source or fallback to secondary.
-pub fn get_value_with_fallback(primary: Option<i32>, fallback: Option<i32>) -> Option<i32>  {
-    todo!("Get a value from primary source or fallback to secondary.")
+pub fn get_value_with_fallback(primary: Option<i32>, fallback: Option<i32>) -> Option<i32> {
+    todo!("Implement get_value_with_fallback")
 }
 
 /// Get first available value from multiple sources.
-pub fn first_available(sources: Vec<Option<i32>>) -> Option<i32>  {
-    todo!("Get first available value from multiple sources.")
+pub fn first_available(sources: Vec<Option<i32>>) -> Option<i32> {
+    todo!("Implement first_available")
 }
 
 #[cfg(test)]

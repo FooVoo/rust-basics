@@ -13,7 +13,7 @@ pub trait Processor {
 pub struct UpperCaseProcessor;
 
 impl Processor for UpperCaseProcessor {
-    fn process(&self, input: &str) -> String  {
+    fn process(&self, input: &str) -> String {
         todo!("Implement process")
     }
 }
@@ -21,7 +21,7 @@ impl Processor for UpperCaseProcessor {
 pub struct LowerCaseProcessor;
 
 impl Processor for LowerCaseProcessor {
-    fn process(&self, input: &str) -> String  {
+    fn process(&self, input: &str) -> String {
         todo!("Implement process")
     }
 }
@@ -29,34 +29,34 @@ impl Processor for LowerCaseProcessor {
 pub struct ReverseProcessor;
 
 impl Processor for ReverseProcessor {
-    fn process(&self, input: &str) -> String  {
+    fn process(&self, input: &str) -> String {
         todo!("Implement process")
     }
 }
 
 /// Static dispatch using generics - monomorphization
-pub fn process_static<T: Processor>(processor: &T, input: &str) -> String  {
-    todo!("Static dispatch using generics - monomorphization")
+pub fn process_static<T: Processor>(processor: &T, input: &str) -> String {
+    todo!("Implement process_static")
 }
 
 /// Dynamic dispatch using trait objects - vtable
-pub fn process_dynamic(processor: &dyn Processor, input: &str) -> String  {
-    todo!("Dynamic dispatch using trait objects - vtable")
+pub fn process_dynamic(processor: &dyn Processor, input: &str) -> String {
+    todo!("Implement process_dynamic")
 }
 
 /// Collection with static dispatch - all same type
-pub fn process_all_same<T: Processor>(processors: &[T], input: &str) -> Vec<String>  {
-    todo!("Collection with static dispatch - all same type")
+pub fn process_all_same<T: Processor>(processors: &[T], input: &str) -> Vec<String> {
+    todo!("Implement process_all_same")
 }
 
 /// Collection with dynamic dispatch - different types
-pub fn process_all_different(processors: &[&dyn Processor], input: &str) -> Vec<String>  {
-    todo!("Collection with dynamic dispatch - different types")
+pub fn process_all_different(processors: &[&dyn Processor], input: &str) -> Vec<String> {
+    todo!("Implement process_all_different")
 }
 
 /// Factory returning trait object - runtime polymorphism
-pub fn create_processor(kind: &str) -> Box<dyn Processor>  {
-    todo!("Factory returning trait object - runtime polymorphism")
+pub fn create_processor(kind: &str) -> Box<dyn Processor> {
+    todo!("Implement create_processor")
 }
 
 #[cfg(test)]

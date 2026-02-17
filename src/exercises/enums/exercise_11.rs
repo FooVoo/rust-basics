@@ -7,18 +7,18 @@
 //! - Chain Result operations
 
 /// Divides two numbers, returns Err if divisor is zero
-pub fn safe_divide(a: f64, b: f64) -> Result<f64, String>  {
-    todo!("Divides two numbers, returns Err if divisor is zero")
+pub fn safe_divide(a: f64, b: f64) -> Result<f64, String> {
+    todo!("Implement safe_divide")
 }
 
 /// Parses a string to i32 and doubles it
-pub fn parse_and_double(s: &str) -> Result<i32, String>  {
-    todo!("Parse a string to i32 and doubles it")
+pub fn parse_and_double(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_double")
 }
 
 /// Combines two Result values with addition
-pub fn add_results(a: Result<i32, String>, b: Result<i32, String>) -> Result<i32, String>  {
-    todo!("Combines two Result values with addition")
+pub fn add_results(a: Result<i32, String>, b: Result<i32, String>) -> Result<i32, String> {
+    todo!("Implement add_results")
 }
 
 #[cfg(test)]

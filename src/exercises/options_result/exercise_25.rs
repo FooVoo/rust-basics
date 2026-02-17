@@ -7,8 +7,8 @@
 //! - Build informative error messages
 
 /// Read a "file" (simulated) and parse its contents.
-pub fn read_and_parse(filename: &str, content: &str) -> Result<i32, String>  {
-    todo!("Read a \"file\" (simulated) and parse its contents.")
+pub fn read_and_parse(filename: &str, content: &str) -> Result<i32, String> {
+    todo!("Implement read_and_parse")
 }
 
 /// Process a value with context.

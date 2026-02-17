@@ -7,28 +7,28 @@
 //! - Learn automatic dereferencing
 
 /// Demonstrate deref coercion with Box.
-pub fn deref_example(boxed: Box<String>) -> usize  {
-    todo!("Demonstrate deref coercion with Box.")
+pub fn deref_example(boxed: Box<String>) -> usize {
+    todo!("Implement deref_example")
 }
 
 /// Use Box with method calls.
-pub fn box_method_call(boxed: Box<Vec<i32>>) -> Option<i32>  {
-    todo!("Use Box with method calls.")
+pub fn box_method_call(boxed: Box<Vec<i32>>) -> Option<i32> {
+    todo!("Implement box_method_call")
 }
 
 /// Compare boxed values.
-pub fn compare_boxes(a: Box<i32>, b: Box<i32>) -> bool  {
-    todo!("Compare boxed values.")
+pub fn compare_boxes(a: Box<i32>, b: Box<i32>) -> bool {
+    todo!("Implement compare_boxes")
 }
 
 /// Clone the inner value from a Box.
-pub fn clone_from_box(boxed: Box<String>) -> String  {
-    todo!("Clone the inner value from a Box.")
+pub fn clone_from_box(boxed: Box<String>) -> String {
+    todo!("Implement clone_from_box")
 }
 
 /// Modify through mutable box.
-pub fn modify_boxed(mut boxed: Box<Vec<i32>>, value: i32) -> Box<Vec<i32>>  {
-    todo!("Modify through mutable box.")
+pub fn modify_boxed(mut boxed: Box<Vec<i32>>, value: i32) -> Box<Vec<i32>> {
+    todo!("Implement modify_boxed")
 }
 
 #[cfg(test)]

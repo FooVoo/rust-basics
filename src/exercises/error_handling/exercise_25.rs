@@ -15,7 +15,7 @@ pub enum LookupError {
 }
 
 impl std::fmt::Display for LookupError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }

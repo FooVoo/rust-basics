@@ -11,8 +11,8 @@ use std::thread;
 
 /// Multiple threads push their thread indices to a shared vector.
 /// Return the sorted vector.
-pub fn concurrent_vec_push(n_threads: usize) -> Vec<usize>  {
-    todo!("Return the sorted vector.")
+pub fn concurrent_vec_push(n_threads: usize) -> Vec<usize> {
+    todo!("Implement concurrent_vec_push")
 }
 
 #[cfg(test)]

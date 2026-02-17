@@ -24,36 +24,36 @@ pub struct Event {
 }
 
 impl Identifiable for Event {
-    fn id(&self) -> u64  {
+    fn id(&self) -> u64 {
         todo!("Implement id")
     }
 }
 
 impl Timestamped for Event {
-    fn timestamp(&self) -> u64  {
+    fn timestamp(&self) -> u64 {
         todo!("Implement timestamp")
     }
 }
 
 impl Display for Event {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 /// Function requiring both Identifiable and Timestamped
-pub fn log_item<T: Identifiable + Timestamped>(item: &T) -> String  {
-    todo!("Function requiring both Identifiable and Timestamped")
+pub fn log_item<T: Identifiable + Timestamped>(item: &T) -> String {
+    todo!("Implement log_item")
 }
 
 /// Function requiring all three traits
-pub fn full_log<T: Identifiable + Timestamped + Display>(item: &T) -> String  {
-    todo!("Function requiring all three traits")
+pub fn full_log<T: Identifiable + Timestamped + Display>(item: &T) -> String {
+    todo!("Implement full_log")
 }
 
 /// Function with Clone bound
-pub fn duplicate_and_log<T: Identifiable + Clone>(item: &T) -> (T, String)  {
-    todo!("Function with Clone bound")
+pub fn duplicate_and_log<T: Identifiable + Clone>(item: &T) -> (T, String) {
+    todo!("Implement duplicate_and_log")
 }
 
 /// Using where clause for readability

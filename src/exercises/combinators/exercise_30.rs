@@ -21,8 +21,8 @@ impl<I, O> Parser<I, O> {
     }
 
     /// Run the parser on input.
-    pub fn parse(&self, input: I) -> Option<(O, I)>  {
-        todo!("Run the parser on input.")
+    pub fn parse(&self, input: I) -> Option<(O, I)> {
+        todo!("Implement parse")
     }
 
     /// Map the output of the parser.
@@ -56,28 +56,28 @@ impl<I, O> Parser<I, O> {
 }
 
 /// Parser for a single character.
-pub fn char_parser(expected: char) -> Parser<String, char>  {
-    todo!("Parser for a single character.")
+pub fn char_parser(expected: char) -> Parser<String, char> {
+    todo!("Implement char_parser")
 }
 
 /// Parser for any digit.
-pub fn digit_parser() -> Parser<String, char>  {
-    todo!("Parser for any digit.")
+pub fn digit_parser() -> Parser<String, char> {
+    todo!("Implement digit_parser")
 }
 
 /// Parse a digit and convert to number.
-pub fn digit_value_parser() -> Parser<String, i32>  {
-    todo!("Parse a digit and convert to number.")
+pub fn digit_value_parser() -> Parser<String, i32> {
+    todo!("Implement digit_value_parser")
 }
 
 /// Parse two digits and add them.
-pub fn two_digit_sum_parser() -> Parser<String, i32>  {
-    todo!("Parse two digits and add them.")
+pub fn two_digit_sum_parser() -> Parser<String, i32> {
+    todo!("Implement two_digit_sum_parser")
 }
 
 /// Parse a specific string literal.
-pub fn string_parser(expected: &'static str) -> Parser<String, String>  {
-    todo!("Parse a specific string literal.")
+pub fn string_parser(expected: &'static str) -> Parser<String, String> {
+    todo!("Implement string_parser")
 }
 
 #[cfg(test)]

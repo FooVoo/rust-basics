@@ -13,15 +13,15 @@ pub trait StringExtensions {
 }
 
 impl StringExtensions for str {
-    fn word_count(&self) -> usize  {
+    fn word_count(&self) -> usize {
         todo!("Implement word_count")
     }
     
-    fn is_palindrome(&self) -> bool  {
+    fn is_palindrome(&self) -> bool {
         todo!("Implement is_palindrome")
     }
     
-    fn reverse_words(&self) -> String  {
+    fn reverse_words(&self) -> String {
         todo!("Implement reverse_words")
     }
 }

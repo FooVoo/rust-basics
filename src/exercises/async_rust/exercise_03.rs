@@ -7,18 +7,18 @@
 //! - Handle errors with async/await
 
 /// Parse a string to integer asynchronously.
-pub async fn async_parse(s: &str) -> Result<i32, String>  {
-    todo!("Parse a string to integer asynchronously.")
+pub async fn async_parse(s: &str) -> Result<i32, String> {
+    todo!("Implement async_parse")
 }
 
 /// Divide two numbers asynchronously, returning an error for division by zero.
-pub async fn async_divide(a: i32, b: i32) -> Result<i32, String>  {
-    todo!("Divide two numbers asynchronously, returning an error for division by zero.")
+pub async fn async_divide(a: i32, b: i32) -> Result<i32, String> {
+    todo!("Implement async_divide")
 }
 
 /// Parse two strings and add their values.
-pub async fn parse_and_add(s1: &str, s2: &str) -> Result<i32, String>  {
-    todo!("Parse two strings and add their values.")
+pub async fn parse_and_add(s1: &str, s2: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_add")
 }
 
 #[cfg(test)]

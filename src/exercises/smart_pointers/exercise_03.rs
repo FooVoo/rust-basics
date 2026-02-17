@@ -15,28 +15,28 @@ pub struct TreeNode {
 
 impl TreeNode {
     /// Create a new leaf node.
-    pub fn new(value: i32) -> Self  {
-        todo!("Create a new leaf node.")
+    pub fn new(value: i32) -> Self {
+        todo!("Implement new")
     }
 
     /// Create a node with left and right children.
-    pub fn with_children(value: i32, left: Option<Box<TreeNode>>, right: Option<Box<TreeNode>>) -> Self  {
-        todo!("Create a node with left and right children.")
+    pub fn with_children(value: i32, left: Option<Box<TreeNode>>, right: Option<Box<TreeNode>>) -> Self {
+        todo!("Implement with_children")
     }
 
     /// Count the total number of nodes in the tree.
-    pub fn count_nodes(&self) -> usize  {
-        todo!("Count the total number of nodes in the tree.")
+    pub fn count_nodes(&self) -> usize {
+        todo!("Implement count_nodes")
     }
 
     /// Calculate the sum of all values in the tree.
-    pub fn sum(&self) -> i32  {
-        todo!("Calculate the sum of all values in the tree.")
+    pub fn sum(&self) -> i32 {
+        todo!("Implement sum")
     }
 
     /// Get the maximum depth of the tree.
-    pub fn max_depth(&self) -> usize  {
-        todo!("Get the maximum depth of the tree.")
+    pub fn max_depth(&self) -> usize {
+        todo!("Implement max_depth")
     }
 }
 

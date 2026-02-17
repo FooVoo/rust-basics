@@ -7,23 +7,23 @@
 //! - Build resilient error handling
 
 /// Try multiple parsing strategies with fallbacks.
-pub fn parse_resilient(s: &str) -> Result<i32, String>  {
-    todo!("Try multiple parsing strategies with fallbacks.")
+pub fn parse_resilient(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_resilient")
 }
 
 /// Retry operation with different parameters.
-pub fn divide_with_fallback(a: i32, b: i32, fallback_b: i32) -> Result<i32, String>  {
-    todo!("Retry operation with different parameters.")
+pub fn divide_with_fallback(a: i32, b: i32, fallback_b: i32) -> Result<i32, String> {
+    todo!("Implement divide_with_fallback")
 }
 
 /// Aggregate errors from multiple sources.
-pub fn parse_and_aggregate(strings: &[&str]) -> Result<Vec<i32>, Vec<String>>  {
-    todo!("Aggregate errors from multiple sources.")
+pub fn parse_and_aggregate(strings: &[&str]) -> Result<Vec<i32>, Vec<String>> {
+    todo!("Implement parse_and_aggregate")
 }
 
 /// Recover with default on specific errors.
-pub fn parse_with_default(s: &str, default: i32) -> i32  {
-    todo!("Recover with default on specific errors.")
+pub fn parse_with_default(s: &str, default: i32) -> i32 {
+    todo!("Implement parse_with_default")
 }
 
 #[cfg(test)]

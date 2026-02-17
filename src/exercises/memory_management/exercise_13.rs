@@ -7,18 +7,18 @@
 //! - Manage borrowed data through iterator chains
 
 /// Find all strings that start with a given prefix.
-pub fn find_with_prefix<'a>(strings: &'a [String], prefix: &str) -> Vec<&'a String>  {
-    todo!("Find all strings that start with a given prefix.")
+pub fn find_with_prefix<'a>(strings: &'a [String], prefix: &str) -> Vec<&'a String> {
+    todo!("Implement find_with_prefix")
 }
 
 /// Get references to strings longer than a specified length.
-pub fn longer_than<'a>(strings: &'a [String], min_len: usize) -> Vec<&'a String>  {
-    todo!("Get references to strings longer than a specified length.")
+pub fn longer_than<'a>(strings: &'a [String], min_len: usize) -> Vec<&'a String> {
+    todo!("Implement longer_than")
 }
 
 /// Map strings to their first characters.
-pub fn first_chars(strings: &[String]) -> Vec<Option<char>>  {
-    todo!("Map strings to their first characters.")
+pub fn first_chars(strings: &[String]) -> Vec<Option<char>> {
+    todo!("Implement first_chars")
 }
 
 /// Count strings matching a predicate.

@@ -23,7 +23,7 @@ pub enum StateError {
 }
 
 impl std::fmt::Display for StateError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -37,29 +37,29 @@ pub struct Order {
 }
 
 impl Order {
-    pub fn new(id: u32) -> Self  {
+    pub fn new(id: u32) -> Self {
         todo!("Implement new")
     }
     
     /// Transition to a new state if valid.
-    pub fn transition(&mut self, new_state: OrderState) -> Result<(), StateError>  {
-        todo!("Transition to a new state if valid.")
+    pub fn transition(&mut self, new_state: OrderState) -> Result<(), StateError> {
+        todo!("Implement transition")
     }
     
     /// Convenience methods for common transitions
-    pub fn process(&mut self) -> Result<(), StateError>  {
-        todo!("Convenience methods for common transitions")
+    pub fn process(&mut self) -> Result<(), StateError> {
+        todo!("Implement process")
     }
     
-    pub fn ship(&mut self) -> Result<(), StateError>  {
-        todo!("Convenience methods for common transitions")
+    pub fn ship(&mut self) -> Result<(), StateError> {
+        todo!("Implement ship")
     }
     
-    pub fn deliver(&mut self) -> Result<(), StateError>  {
+    pub fn deliver(&mut self) -> Result<(), StateError> {
         todo!("Implement deliver")
     }
     
-    pub fn cancel(&mut self) -> Result<(), StateError>  {
+    pub fn cancel(&mut self) -> Result<(), StateError> {
         todo!("Implement cancel")
     }
 }

@@ -22,51 +22,51 @@ where
     T: Eq + Hash + Clone,
 {
     /// Creates a new empty graph.
-    pub fn new() -> Self  {
-        todo!("Create a new empty graph.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Adds a node to the graph.
-    pub fn add_node(&mut self, node: T)  {
-        todo!("Add a node to the graph.")
+    pub fn add_node(&mut self, node: T) {
+        todo!("Implement add_node")
     }
 
     /// Adds a directed edge from source to destination.
-    pub fn add_edge(&mut self, from: T, to: T)  {
-        todo!("Add a directed edge from source to destination.")
+    pub fn add_edge(&mut self, from: T, to: T) {
+        todo!("Implement add_edge")
     }
 
     /// Gets all neighbors of a node.
-    pub fn neighbors(&self, node: &T) -> Option<&Vec<T>>  {
-        todo!("Get all neighbors of a node.")
+    pub fn neighbors(&self, node: &T) -> Option<&Vec<T>> {
+        todo!("Implement neighbors")
     }
 
     /// Checks if a node exists in the graph.
-    pub fn contains(&self, node: &T) -> bool  {
-        todo!("Check if a node exists in the graph.")
+    pub fn contains(&self, node: &T) -> bool {
+        todo!("Implement contains")
     }
 
     /// Returns the number of nodes in the graph.
-    pub fn node_count(&self) -> usize  {
-        todo!("Return the number of nodes in the graph.")
+    pub fn node_count(&self) -> usize {
+        todo!("Implement node_count")
     }
 
     /// Performs a depth-first search starting from a node.
-    pub fn dfs(&self, start: &T) -> Vec<T>  {
-        todo!("Performs a depth-first search starting from a node.")
+    pub fn dfs(&self, start: &T) -> Vec<T> {
+        todo!("Implement dfs")
     }
 
-    fn dfs_helper(&self, node: &T, visited: &mut HashSet<T>, result: &mut Vec<T>)  {
-        todo!("Performs a depth-first search starting from a node.")
+    fn dfs_helper(&self, node: &T, visited: &mut HashSet<T>, result: &mut Vec<T>) {
+        todo!("Implement dfs_helper")
     }
 
     /// Checks if there's a path from source to destination.
-    pub fn has_path(&self, from: &T, to: &T) -> bool  {
-        todo!("Check if there's a path from source to destination.")
+    pub fn has_path(&self, from: &T, to: &T) -> bool {
+        todo!("Implement has_path")
     }
 
-    fn has_path_helper(&self, current: &T, target: &T, visited: &mut HashSet<T>) -> bool  {
-        todo!("Check if there's a path from source to destination.")
+    fn has_path_helper(&self, current: &T, target: &T, visited: &mut HashSet<T>) -> bool {
+        todo!("Implement has_path_helper")
     }
 }
 
@@ -74,7 +74,7 @@ impl<T> Default for Graph<T>
 where
     T: Eq + Hash + Clone,
 {
-    fn default() -> Self  {
+    fn default() -> Self {
         todo!("Implement default")
     }
 }

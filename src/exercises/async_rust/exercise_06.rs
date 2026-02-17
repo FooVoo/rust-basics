@@ -9,18 +9,18 @@
 use tokio::time::{sleep, timeout, Duration};
 
 /// Execute an operation with a timeout.
-pub async fn with_timeout(delay_ms: u64, timeout_ms: u64) -> Result<String, String>  {
-    todo!("Execute an operation with a timeout.")
+pub async fn with_timeout(delay_ms: u64, timeout_ms: u64) -> Result<String, String> {
+    todo!("Implement with_timeout")
 }
 
 /// Try to parse with a timeout.
-pub async fn timed_parse(s: &str, timeout_ms: u64) -> Result<i32, String>  {
-    todo!("Try to parse with a timeout.")
+pub async fn timed_parse(s: &str, timeout_ms: u64) -> Result<i32, String> {
+    todo!("Implement timed_parse")
 }
 
 /// Execute multiple operations with individual timeouts.
-pub async fn multiple_timeouts(operations: Vec<u64>, timeout_ms: u64) -> Vec<Result<String, String>>  {
-    todo!("Execute multiple operations with individual timeouts.")
+pub async fn multiple_timeouts(operations: Vec<u64>, timeout_ms: u64) -> Vec<Result<String, String>> {
+    todo!("Implement multiple_timeouts")
 }
 
 #[cfg(test)]

@@ -7,13 +7,13 @@
 //! - Basic Result transformations
 
 /// Parse a string to i32 and double it.
-pub fn parse_and_double(s: &str) -> Result<i32, std::num::ParseIntError>  {
-    todo!("Parse a string to i32 and double it.")
+pub fn parse_and_double(s: &str) -> Result<i32, std::num::ParseIntError> {
+    todo!("Implement parse_and_double")
 }
 
 /// Parse and convert to absolute value.
-pub fn parse_and_abs(s: &str) -> Result<i32, std::num::ParseIntError>  {
-    todo!("Parse and convert to absolute value.")
+pub fn parse_and_abs(s: &str) -> Result<i32, std::num::ParseIntError> {
+    todo!("Implement parse_and_abs")
 }
 
 #[cfg(test)]

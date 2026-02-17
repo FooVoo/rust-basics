@@ -16,24 +16,24 @@ pub enum MathError {
 }
 
 impl fmt::Display for MathError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 /// Divide two numbers with custom error.
-pub fn divide(a: i32, b: i32) -> Result<i32, MathError>  {
-    todo!("Divide two numbers with custom error.")
+pub fn divide(a: i32, b: i32) -> Result<i32, MathError> {
+    todo!("Implement divide")
 }
 
 /// Check if square root is possible (non-negative).
-pub fn sqrt_check(n: i32) -> Result<i32, MathError>  {
-    todo!("Check if square root is possible (non-negative).")
+pub fn sqrt_check(n: i32) -> Result<i32, MathError> {
+    todo!("Implement sqrt_check")
 }
 
 /// Checked addition that returns custom error on overflow.
-pub fn checked_add(a: i32, b: i32) -> Result<i32, MathError>  {
-    todo!("Checked addition that returns custom error on overflow.")
+pub fn checked_add(a: i32, b: i32) -> Result<i32, MathError> {
+    todo!("Implement checked_add")
 }
 
 #[cfg(test)]

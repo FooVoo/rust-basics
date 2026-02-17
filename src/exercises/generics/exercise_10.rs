@@ -39,18 +39,18 @@ impl<T, E> Outcome<T, E> {
     }
 
     /// Returns the success value or a default.
-    pub fn unwrap_or(self, default: T) -> T  {
-        todo!("Return the success value or a default.")
+    pub fn unwrap_or(self, default: T) -> T {
+        todo!("Implement unwrap_or")
     }
 
     /// Returns true if the outcome is Success.
-    pub fn is_success(&self) -> bool  {
-        todo!("Return true if the outcome is Success.")
+    pub fn is_success(&self) -> bool {
+        todo!("Implement is_success")
     }
 
     /// Returns true if the outcome is Failure.
-    pub fn is_failure(&self) -> bool  {
-        todo!("Return true if the outcome is Failure.")
+    pub fn is_failure(&self) -> bool {
+        todo!("Implement is_failure")
     }
 }
 

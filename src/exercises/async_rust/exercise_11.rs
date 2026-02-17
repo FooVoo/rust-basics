@@ -10,18 +10,18 @@ use tokio::sync::Mutex;
 use std::sync::Arc;
 
 /// Increment a shared counter from multiple tasks.
-pub async fn concurrent_counter(num_tasks: usize, increments_per_task: usize) -> i32  {
-    todo!("Increment a shared counter from multiple tasks.")
+pub async fn concurrent_counter(num_tasks: usize, increments_per_task: usize) -> i32 {
+    todo!("Implement concurrent_counter")
 }
 
 /// Share a vector between tasks for concurrent modifications.
-pub async fn shared_vector(num_tasks: usize) -> Vec<i32>  {
-    todo!("Share a vector between tasks for concurrent modifications.")
+pub async fn shared_vector(num_tasks: usize) -> Vec<i32> {
+    todo!("Implement shared_vector")
 }
 
 /// Implement a simple async task queue.
-pub async fn task_queue(tasks: Vec<i32>) -> Vec<i32>  {
-    todo!("Implement a simple async task queue.")
+pub async fn task_queue(tasks: Vec<i32>) -> Vec<i32> {
+    todo!("Implement task_queue")
 }
 
 #[cfg(test)]

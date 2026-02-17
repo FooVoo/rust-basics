@@ -72,7 +72,7 @@ where
 {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -92,7 +92,7 @@ where
 {
     type Item = Vec<I::Item>;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -114,7 +114,7 @@ where
 {
     type Item = I::Item;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }

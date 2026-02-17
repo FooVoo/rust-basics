@@ -9,13 +9,13 @@
 use std::collections::HashMap;
 
 /// Use try_fold to find first error or compute result.
-pub fn try_accumulate(numbers: &[i32]) -> Result<i32, String>  {
-    todo!("Use try_fold to find first error or compute result.")
+pub fn try_accumulate(numbers: &[i32]) -> Result<i32, String> {
+    todo!("Implement try_accumulate")
 }
 
 /// Process with early termination on condition.
-pub fn process_until_threshold(numbers: &[i32], threshold: i32) -> Result<Vec<i32>, String>  {
-    todo!("Process with early termination on condition.")
+pub fn process_until_threshold(numbers: &[i32], threshold: i32) -> Result<Vec<i32>, String> {
+    todo!("Implement process_until_threshold")
 }
 
 /// Group elements by a key function.
@@ -29,13 +29,13 @@ where
 }
 
 /// Cartesian product of two slices.
-pub fn cartesian_product(a: &[i32], b: &[i32]) -> Vec<(i32, i32)>  {
-    todo!("Cartesian product of two slices.")
+pub fn cartesian_product(a: &[i32], b: &[i32]) -> Vec<(i32, i32)> {
+    todo!("Implement cartesian_product")
 }
 
 /// Transpose a matrix represented as Vec<Vec<T>>.
-pub fn transpose<T: Clone>(matrix: Vec<Vec<T>>) -> Vec<Vec<T>>  {
-    todo!("Transpose a matrix represented as Vec<Vec<T>>.")
+pub fn transpose<T: Clone>(matrix: Vec<Vec<T>>) -> Vec<Vec<T>> {
+    todo!("Implement transpose")
 }
 
 #[cfg(test)]

@@ -7,18 +7,18 @@
 //! - Handle collections of optional values
 
 /// Find the first even number in a slice.
-pub fn find_first_even(numbers: &[i32]) -> Option<i32>  {
-    todo!("Find the first even number in a slice.")
+pub fn find_first_even(numbers: &[i32]) -> Option<i32> {
+    todo!("Implement find_first_even")
 }
 
 /// Parse and sum all valid numbers.
-pub fn sum_valid_numbers(strings: &[&str]) -> i32  {
-    todo!("Parse and sum all valid numbers.")
+pub fn sum_valid_numbers(strings: &[&str]) -> i32 {
+    todo!("Implement sum_valid_numbers")
 }
 
 /// Find the maximum of parsed numbers.
-pub fn max_parsed(strings: &[&str]) -> Option<i32>  {
-    todo!("Find the maximum of parsed numbers.")
+pub fn max_parsed(strings: &[&str]) -> Option<i32> {
+    todo!("Implement max_parsed")
 }
 
 /// Chain multiple optional iterators.
@@ -30,8 +30,8 @@ pub fn chain_options(
 }
 
 /// Map and filter in one pass.
-pub fn process_strings(strings: &[&str]) -> Vec<i32>  {
-    todo!("Map and filter in one pass.")
+pub fn process_strings(strings: &[&str]) -> Vec<i32> {
+    todo!("Implement process_strings")
 }
 
 #[cfg(test)]

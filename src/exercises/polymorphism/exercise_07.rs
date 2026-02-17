@@ -15,7 +15,7 @@ pub struct Circle {
 }
 
 impl Drawable for Circle {
-    fn draw(&self) -> String  {
+    fn draw(&self) -> String {
         todo!("Implement draw")
     }
 }
@@ -26,24 +26,24 @@ pub struct Rectangle {
 }
 
 impl Drawable for Rectangle {
-    fn draw(&self) -> String  {
+    fn draw(&self) -> String {
         todo!("Implement draw")
     }
 }
 
 /// Returns a Circle that implements Drawable
-pub fn create_circle(radius: f64) -> impl Drawable  {
-    todo!("Return a Circle that implements Drawable")
+pub fn create_circle(radius: f64) -> impl Drawable {
+    todo!("Implement create_circle")
 }
 
 /// Returns a Rectangle that implements Drawable
-pub fn create_rectangle(width: f64, height: f64) -> impl Drawable  {
-    todo!("Return a Rectangle that implements Drawable")
+pub fn create_rectangle(width: f64, height: f64) -> impl Drawable {
+    todo!("Implement create_rectangle")
 }
 
 /// Function that uses the returned trait object
-pub fn draw_shape(shape: &impl Drawable) -> String  {
-    todo!("Function that uses the returned trait object")
+pub fn draw_shape(shape: &impl Drawable) -> String {
+    todo!("Implement draw_shape")
 }
 
 #[cfg(test)]

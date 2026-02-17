@@ -12,8 +12,8 @@ use std::thread;
 
 /// Multiple threads increment counters with different orderings.
 /// Demonstrate Relaxed ordering for independent operations.
-pub fn relaxed_counters(n_threads: usize) -> (usize, usize)  {
-    todo!("Demonstrate Relaxed ordering for independent operations.")
+pub fn relaxed_counters(n_threads: usize) -> (usize, usize) {
+    todo!("Implement relaxed_counters")
 }
 
 #[cfg(test)]

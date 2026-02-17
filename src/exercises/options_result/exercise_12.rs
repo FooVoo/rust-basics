@@ -7,18 +7,18 @@
 //! - Chain transformations on Result
 
 /// Double the value if parsing succeeds.
-pub fn parse_and_double(s: &str) -> Result<i32, std::num::ParseIntError>  {
-    todo!("Double the value if parsing succeeds.")
+pub fn parse_and_double(s: &str) -> Result<i32, std::num::ParseIntError> {
+    todo!("Implement parse_and_double")
 }
 
 /// Parse a number and convert error to a custom message.
-pub fn parse_with_custom_error(s: &str) -> Result<i32, String>  {
-    todo!("Parse a number and convert error to a custom message.")
+pub fn parse_with_custom_error(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_with_custom_error")
 }
 
 /// Divide and convert both result and error.
-pub fn divide_verbose(a: i32, b: i32) -> Result<String, String>  {
-    todo!("Divide and convert both result and error.")
+pub fn divide_verbose(a: i32, b: i32) -> Result<String, String> {
+    todo!("Implement divide_verbose")
 }
 
 #[cfg(test)]

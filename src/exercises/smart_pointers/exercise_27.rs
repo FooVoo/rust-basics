@@ -21,44 +21,44 @@ pub struct GraphNode {
 }
 
 impl GraphNode {
-    pub fn new(id: usize, value: i32) -> NodeRef  {
+    pub fn new(id: usize, value: i32) -> NodeRef {
         todo!("Implement new")
     }
 
-    pub fn add_edge(from: &NodeRef, to: &NodeRef)  {
+    pub fn add_edge(from: &NodeRef, to: &NodeRef) {
         todo!("Implement add_edge")
     }
 
-    pub fn add_bidirectional(a: &NodeRef, b: &NodeRef)  {
+    pub fn add_bidirectional(a: &NodeRef, b: &NodeRef) {
         todo!("Implement add_bidirectional")
     }
 
-    pub fn set_parent(child: &NodeRef, parent: &NodeRef)  {
+    pub fn set_parent(child: &NodeRef, parent: &NodeRef) {
         todo!("Implement set_parent")
     }
 
-    pub fn degree(node: &NodeRef) -> usize  {
+    pub fn degree(node: &NodeRef) -> usize {
         todo!("Implement degree")
     }
 
-    pub fn has_edge_to(from: &NodeRef, to_id: usize) -> bool  {
+    pub fn has_edge_to(from: &NodeRef, to_id: usize) -> bool {
         todo!("Implement has_edge_to")
     }
 }
 
 /// Build a simple graph: A <-> B <-> C
-pub fn create_simple_graph() -> (NodeRef, NodeRef, NodeRef)  {
-    todo!("Build a simple graph: A <-> B <-> C")
+pub fn create_simple_graph() -> (NodeRef, NodeRef, NodeRef) {
+    todo!("Implement create_simple_graph")
 }
 
 /// Calculate sum of all neighbor values.
-pub fn sum_neighbor_values(node: &NodeRef) -> i32  {
-    todo!("Calculate sum of all neighbor values.")
+pub fn sum_neighbor_values(node: &NodeRef) -> i32 {
+    todo!("Implement sum_neighbor_values")
 }
 
 /// Visit all reachable nodes (BFS).
-pub fn count_reachable(start: &NodeRef) -> usize  {
-    todo!("Visit all reachable nodes (BFS).")
+pub fn count_reachable(start: &NodeRef) -> usize {
+    todo!("Implement count_reachable")
 }
 
 #[cfg(test)]

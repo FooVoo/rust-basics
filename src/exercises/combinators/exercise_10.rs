@@ -7,13 +7,13 @@
 //! - Propagate errors elegantly
 
 /// Parse two strings and add them.
-pub fn parse_and_add(a: &str, b: &str) -> Result<i32, String>  {
-    todo!("Parse two strings and add them.")
+pub fn parse_and_add(a: &str, b: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_add")
 }
 
 /// Parse and divide with error handling.
-pub fn parse_and_divide(numerator: &str, denominator: &str) -> Result<i32, String>  {
-    todo!("Parse and divide with error handling.")
+pub fn parse_and_divide(numerator: &str, denominator: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_divide")
 }
 
 #[cfg(test)]

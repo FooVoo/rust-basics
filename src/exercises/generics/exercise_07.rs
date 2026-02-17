@@ -7,8 +7,8 @@
 //! - Initialize generic collections
 
 /// Creates a vector with n default values.
-pub fn create_defaults<T: Default>(n: usize) -> Vec<T>  {
-    todo!("Create a vector with n default values.")
+pub fn create_defaults<T: Default>(n: usize) -> Vec<T> {
+    todo!("Implement create_defaults")
 }
 
 /// A generic wrapper that can reset to default.
@@ -18,33 +18,33 @@ pub struct Resettable<T: Default> {
 
 impl<T: Default> Resettable<T> {
     /// Creates a new Resettable with the given value.
-    pub fn new(value: T) -> Self  {
-        todo!("Create a new Resettable with the given value.")
+    pub fn new(value: T) -> Self {
+        todo!("Implement new")
     }
 
     /// Creates a Resettable with the default value.
-    pub fn default() -> Self  {
-        todo!("Create a Resettable with the default value.")
+    pub fn default() -> Self {
+        todo!("Implement default")
     }
 
     /// Returns a reference to the value.
-    pub fn get(&self) -> &T  {
-        todo!("Return a reference to the value.")
+    pub fn get(&self) -> &T {
+        todo!("Implement get")
     }
 
     /// Sets a new value.
-    pub fn set(&mut self, value: T)  {
-        todo!("Set a new value.")
+    pub fn set(&mut self, value: T) {
+        todo!("Implement set")
     }
 
     /// Resets the value to default.
-    pub fn reset(&mut self)  {
-        todo!("Resets the value to default.")
+    pub fn reset(&mut self) {
+        todo!("Implement reset")
     }
 
     /// Consumes self and returns the value.
-    pub fn into_inner(self) -> T  {
-        todo!("Consumes self and returns the value.")
+    pub fn into_inner(self) -> T {
+        todo!("Implement into_inner")
     }
 }
 

@@ -7,18 +7,18 @@
 //! - Distinguish between Copy and Clone traits
 
 /// Clone a string and modify the clone.
-pub fn clone_and_modify(s: &String, suffix: &str) -> String  {
-    todo!("Clone a string and modify the clone.")
+pub fn clone_and_modify(s: &String, suffix: &str) -> String {
+    todo!("Implement clone_and_modify")
 }
 
 /// Create a vector of cloned strings from a slice.
-pub fn clone_all(strings: &[String]) -> Vec<String>  {
-    todo!("Create a vector of cloned strings from a slice.")
+pub fn clone_all(strings: &[String]) -> Vec<String> {
+    todo!("Implement clone_all")
 }
 
 /// Count occurrences of a character in a string (using clone for demonstration).
-pub fn count_char_in_clone(s: &String, ch: char) -> usize  {
-    todo!("Count occurrences of a character in a string (using clone for demonstration).")
+pub fn count_char_in_clone(s: &String, ch: char) -> usize {
+    todo!("Implement count_char_in_clone")
 }
 
 #[cfg(test)]

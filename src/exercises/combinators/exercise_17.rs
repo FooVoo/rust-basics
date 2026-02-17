@@ -7,13 +7,13 @@
 //! - Handle errors at each stage
 
 /// Parse, validate range, and compute.
-pub fn parse_validate_compute(s: &str) -> Result<i32, String>  {
-    todo!("Parse, validate range, and compute.")
+pub fn parse_validate_compute(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_validate_compute")
 }
 
 /// Parse two values, validate, and combine.
-pub fn parse_and_max(a: &str, b: &str) -> Result<i32, String>  {
-    todo!("Parse two values, validate, and combine.")
+pub fn parse_and_max(a: &str, b: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_max")
 }
 
 #[cfg(test)]

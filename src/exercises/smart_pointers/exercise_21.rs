@@ -9,28 +9,28 @@
 use std::borrow::Cow;
 
 /// Return a Cow that borrows if no modification needed.
-pub fn maybe_uppercase(s: &str) -> Cow<str>  {
-    todo!("Return a Cow that borrows if no modification needed.")
+pub fn maybe_uppercase(s: &str) -> Cow<str> {
+    todo!("Implement maybe_uppercase")
 }
 
 /// Process a slice, modifying only if needed.
-pub fn ensure_positive(nums: &[i32]) -> Cow<[i32]>  {
-    todo!("Process a slice, modifying only if needed.")
+pub fn ensure_positive(nums: &[i32]) -> Cow<[i32]> {
+    todo!("Implement ensure_positive")
 }
 
 /// Append to string only if it doesn't end with suffix.
-pub fn ensure_suffix<'a>(s: &'a str, suffix: &str) -> Cow<'a, str>  {
-    todo!("Append to string only if it doesn't end with suffix.")
+pub fn ensure_suffix<'a>(s: &'a str, suffix: &str) -> Cow<'a, str> {
+    todo!("Implement ensure_suffix")
 }
 
 /// Count how many Cow instances actually own their data.
-pub fn count_owned(cows: &[Cow<str>]) -> usize  {
-    todo!("Count how many Cow instances actually own their data.")
+pub fn count_owned(cows: &[Cow<str>]) -> usize {
+    todo!("Implement count_owned")
 }
 
 /// Convert Cow to owned String.
-pub fn cow_to_owned(cow: Cow<str>) -> String  {
-    todo!("Convert Cow to owned String.")
+pub fn cow_to_owned(cow: Cow<str>) -> String {
+    todo!("Implement cow_to_owned")
 }
 
 #[cfg(test)]

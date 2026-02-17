@@ -21,47 +21,47 @@ pub struct Document<State> {
 
 impl Document<Draft> {
     /// Creates a new draft document.
-    pub fn new(content: String) -> Self  {
-        todo!("Create a new draft document.")
+    pub fn new(content: String) -> Self {
+        todo!("Implement new")
     }
 
     /// Edits the content (only available in Draft state).
-    pub fn edit(&mut self, new_content: String)  {
-        todo!("Edits the content (only available in Draft state).")
+    pub fn edit(&mut self, new_content: String) {
+        todo!("Implement edit")
     }
 
     /// Submits the document for review.
-    pub fn submit_for_review(self) -> Document<Review>  {
-        todo!("Submits the document for review.")
+    pub fn submit_for_review(self) -> Document<Review> {
+        todo!("Implement submit_for_review")
     }
 }
 
 impl Document<Review> {
     /// Approves the document for publishing.
-    pub fn approve(self) -> Document<Published>  {
-        todo!("Approves the document for publishing.")
+    pub fn approve(self) -> Document<Published> {
+        todo!("Implement approve")
     }
 
     /// Rejects the document back to draft.
-    pub fn reject(self) -> Document<Draft>  {
-        todo!("Rejects the document back to draft.")
+    pub fn reject(self) -> Document<Draft> {
+        todo!("Implement reject")
     }
 
     /// Gets the content for review.
-    pub fn content(&self) -> &str  {
-        todo!("Get the content for review.")
+    pub fn content(&self) -> &str {
+        todo!("Implement content")
     }
 }
 
 impl Document<Published> {
     /// Gets the published content.
-    pub fn content(&self) -> &str  {
-        todo!("Get the published content.")
+    pub fn content(&self) -> &str {
+        todo!("Implement content")
     }
 
     /// Archives the document (ends its lifecycle).
-    pub fn archive(self) -> String  {
-        todo!("Archives the document (ends its lifecycle).")
+    pub fn archive(self) -> String {
+        todo!("Implement archive")
     }
 }
 
@@ -79,47 +79,47 @@ pub struct Connection<State> {
 
 impl Connection<Disconnected> {
     /// Creates a new disconnected connection.
-    pub fn new(host: String, port: u16) -> Self  {
-        todo!("Create a new disconnected connection.")
+    pub fn new(host: String, port: u16) -> Self {
+        todo!("Implement new")
     }
 
     /// Connects to the server.
-    pub fn connect(self) -> Result<Connection<Connected>, String>  {
-        todo!("Connects to the server.")
+    pub fn connect(self) -> Result<Connection<Connected>, String> {
+        todo!("Implement connect")
     }
 }
 
 impl Connection<Connected> {
     /// Authenticates the connection.
-    pub fn authenticate(self, _password: &str) -> Result<Connection<Authenticated>, String>  {
-        todo!("Authenticates the connection.")
+    pub fn authenticate(self, _password: &str) -> Result<Connection<Authenticated>, String> {
+        todo!("Implement authenticate")
     }
 
     /// Disconnects from the server.
-    pub fn disconnect(self) -> Connection<Disconnected>  {
-        todo!("Disconnects from the server.")
+    pub fn disconnect(self) -> Connection<Disconnected> {
+        todo!("Implement disconnect")
     }
 
     /// Gets the connection info.
-    pub fn info(&self) -> String  {
-        todo!("Get the connection info.")
+    pub fn info(&self) -> String {
+        todo!("Implement info")
     }
 }
 
 impl Connection<Authenticated> {
     /// Sends data (only available when authenticated).
-    pub fn send(&self, data: &str) -> Result<(), String>  {
-        todo!("Sends data (only available when authenticated).")
+    pub fn send(&self, data: &str) -> Result<(), String> {
+        todo!("Implement send")
     }
 
     /// Logs out and returns to connected state.
-    pub fn logout(self) -> Connection<Connected>  {
-        todo!("Logs out and returns to connected state.")
+    pub fn logout(self) -> Connection<Connected> {
+        todo!("Implement logout")
     }
 
     /// Disconnects and logs out.
-    pub fn disconnect(self) -> Connection<Disconnected>  {
-        todo!("Disconnects and logs out.")
+    pub fn disconnect(self) -> Connection<Disconnected> {
+        todo!("Implement disconnect")
     }
 }
 

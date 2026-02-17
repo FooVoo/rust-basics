@@ -14,46 +14,46 @@ pub enum List<T> {
 
 impl<T> List<T> {
     /// Creates an empty list
-    pub fn new() -> Self  {
-        todo!("Create an empty list")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Adds an element to the front of the list
-    pub fn cons(value: T, list: List<T>) -> Self  {
-        todo!("Add an element to the front of the list")
+    pub fn cons(value: T, list: List<T>) -> Self {
+        todo!("Implement cons")
     }
 
     /// Returns the length of the list
-    pub fn len(&self) -> usize  {
-        todo!("Return the length of the list")
+    pub fn len(&self) -> usize {
+        todo!("Implement len")
     }
 
     /// Returns true if the list is empty
-    pub fn is_empty(&self) -> bool  {
-        todo!("Return true if the list is empty")
+    pub fn is_empty(&self) -> bool {
+        todo!("Implement is_empty")
     }
 
     /// Gets the first element
-    pub fn head(&self) -> Option<&T>  {
-        todo!("Get the first element")
+    pub fn head(&self) -> Option<&T> {
+        todo!("Implement head")
     }
 
     /// Gets the tail of the list
-    pub fn tail(&self) -> Option<&List<T>>  {
-        todo!("Get the tail of the list")
+    pub fn tail(&self) -> Option<&List<T>> {
+        todo!("Implement tail")
     }
 }
 
 impl<T: Clone> List<T> {
     /// Converts the list to a vector
-    pub fn to_vec(&self) -> Vec<T>  {
-        todo!("Convert the list to a vector")
+    pub fn to_vec(&self) -> Vec<T> {
+        todo!("Implement to_vec")
     }
 }
 
 /// Creates a list from a vector
-pub fn from_vec<T>(vec: Vec<T>) -> List<T>  {
-    todo!("Create a list from a vector")
+pub fn from_vec<T>(vec: Vec<T>) -> List<T> {
+    todo!("Implement from_vec")
 }
 
 #[cfg(test)]

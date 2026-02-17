@@ -10,8 +10,8 @@ use std::thread;
 
 /// Spawn a thread that returns the given number multiplied by 2.
 /// Wait for the thread to finish and return the result.
-pub fn spawn_and_compute(n: i32) -> i32  {
-    todo!("Wait for the thread to finish and return the result.")
+pub fn spawn_and_compute(n: i32) -> i32 {
+    todo!("Implement spawn_and_compute")
 }
 
 #[cfg(test)]

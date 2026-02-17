@@ -41,23 +41,23 @@ where
     U: Default,
 {
     /// Creates a new Processor with default output.
-    pub fn new(input: T) -> Self  {
-        todo!("Create a new Processor with default output.")
+    pub fn new(input: T) -> Self {
+        todo!("Implement new")
     }
 
     /// Gets a clone of the input.
-    pub fn get_input(&self) -> T  {
-        todo!("Get a clone of the input.")
+    pub fn get_input(&self) -> T {
+        todo!("Implement get_input")
     }
 
     /// Gets a reference to the output.
-    pub fn get_output(&self) -> &U  {
-        todo!("Get a reference to the output.")
+    pub fn get_output(&self) -> &U {
+        todo!("Implement get_output")
     }
 
     /// Sets the output value.
-    pub fn set_output(&mut self, output: U)  {
-        todo!("Set the output value.")
+    pub fn set_output(&mut self, output: U) {
+        todo!("Implement set_output")
     }
 }
 
@@ -67,8 +67,8 @@ where
     U: Default + Display,
 {
     /// Displays both input and output.
-    pub fn display_both(&self) -> String  {
-        todo!("Displays both input and output.")
+    pub fn display_both(&self) -> String {
+        todo!("Implement display_both")
     }
 }
 

@@ -12,36 +12,36 @@ pub struct Node {
 }
 
 impl Node {
-    pub fn new(value: i32) -> Self  {
+    pub fn new(value: i32) -> Self {
         todo!("Implement new")
     }
     
-    pub fn add_child(&mut self, child: Node)  {
+    pub fn add_child(&mut self, child: Node) {
         todo!("Implement add_child")
     }
     
-    pub fn value(&self) -> i32  {
+    pub fn value(&self) -> i32 {
         todo!("Implement value")
     }
     
-    pub fn children(&self) -> &[Node]  {
+    pub fn children(&self) -> &[Node] {
         todo!("Implement children")
     }
 }
 
 /// Sum all values in a tree.
-pub fn sum_tree(node: &Node) -> i32  {
-    todo!("Sum all values in a tree.")
+pub fn sum_tree(node: &Node) -> i32 {
+    todo!("Implement sum_tree")
 }
 
 /// Count total nodes in tree.
-pub fn count_nodes(node: &Node) -> usize  {
-    todo!("Count total nodes in tree.")
+pub fn count_nodes(node: &Node) -> usize {
+    todo!("Implement count_nodes")
 }
 
 /// Find maximum value in tree.
-pub fn max_value(node: &Node) -> i32  {
-    todo!("Find maximum value in tree.")
+pub fn max_value(node: &Node) -> i32 {
+    todo!("Implement max_value")
 }
 
 #[cfg(test)]

@@ -7,23 +7,23 @@
 //! - Write fluent iterator code
 
 /// Filter even numbers and double them.
-pub fn filter_and_double_evens(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Filter even numbers and double them.")
+pub fn filter_and_double_evens(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement filter_and_double_evens")
 }
 
 /// Get lengths of strings longer than min_length, then sum them.
-pub fn sum_long_string_lengths(strings: &[&str], min_length: usize) -> usize  {
-    todo!("Get lengths of strings longer than min_length, then sum them.")
+pub fn sum_long_string_lengths(strings: &[&str], min_length: usize) -> usize {
+    todo!("Implement sum_long_string_lengths")
 }
 
 /// Square positive numbers and collect them.
-pub fn square_positive(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Square positive numbers and collect them.")
+pub fn square_positive(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement square_positive")
 }
 
 /// Convert strings to uppercase, filter those starting with 'A', and collect.
-pub fn uppercase_starting_with_a(strings: &[&str]) -> Vec<String>  {
-    todo!("Convert strings to uppercase, filter those starting with 'A', and collect.")
+pub fn uppercase_starting_with_a(strings: &[&str]) -> Vec<String> {
+    todo!("Implement uppercase_starting_with_a")
 }
 
 #[cfg(test)]

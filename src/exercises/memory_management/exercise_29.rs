@@ -30,8 +30,8 @@ pub struct RefMapper<F> {
 }
 
 impl<F> RefMapper<F> {
-    pub fn new(func: F) -> Self  {
-        todo!("A mapper that works with any reference.")
+    pub fn new(func: F) -> Self {
+        todo!("Implement new")
     }
 }
 
@@ -42,14 +42,14 @@ where
 {
     type Output = U;
     
-    fn map(&self, input: &T) -> U  {
+    fn map(&self, input: &T) -> U {
         todo!("Implement map")
     }
 }
 
 /// Create a mapper that converts strings to uppercase.
-pub fn create_uppercase_mapper() -> RefMapper<impl for<'a> Fn(&'a str) -> String>  {
-    todo!("Create a mapper that converts strings to uppercase.")
+pub fn create_uppercase_mapper() -> RefMapper<impl for<'a> Fn(&'a str) -> String> {
+    todo!("Implement create_uppercase_mapper")
 }
 
 pub struct Comparator<F> {
@@ -57,7 +57,7 @@ pub struct Comparator<F> {
 }
 
 impl<F> Comparator<F> {
-    pub fn new(compare: F) -> Self  {
+    pub fn new(compare: F) -> Self {
         todo!("Implement new")
     }
 }
@@ -79,12 +79,12 @@ impl<F> Comparator<F> {
 }
 
 /// Compare two strings ignoring case.
-pub fn case_insensitive_compare(a: &str, b: &str) -> bool  {
-    todo!("Compare two strings ignoring case.")
+pub fn case_insensitive_compare(a: &str, b: &str) -> bool {
+    todo!("Implement case_insensitive_compare")
 }
 
-pub fn create_string_comparator() -> Comparator<impl for<'a, 'b> Fn(&'a str, &'b str) -> bool>  {
-    todo!("Compare two strings ignoring case.")
+pub fn create_string_comparator() -> Comparator<impl for<'a, 'b> Fn(&'a str, &'b str) -> bool> {
+    todo!("Implement create_string_comparator")
 }
 
 /// Process data with a higher-rank function.

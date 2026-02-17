@@ -15,7 +15,7 @@ pub struct EmailNotifier {
 }
 
 impl Notifier for EmailNotifier {
-    fn send(&self, message: &str) -> String  {
+    fn send(&self, message: &str) -> String {
         todo!("Implement send")
     }
 }
@@ -25,7 +25,7 @@ pub struct SmsNotifier {
 }
 
 impl Notifier for SmsNotifier {
-    fn send(&self, message: &str) -> String  {
+    fn send(&self, message: &str) -> String {
         todo!("Implement send")
     }
 }
@@ -35,29 +35,29 @@ pub struct PushNotifier {
 }
 
 impl Notifier for PushNotifier {
-    fn send(&self, message: &str) -> String  {
+    fn send(&self, message: &str) -> String {
         todo!("Implement send")
     }
 }
 
 /// Create a notifier based on preference
-pub fn create_notifier(preference: &str, target: String) -> Box<dyn Notifier>  {
-    todo!("Create a notifier based on preference")
+pub fn create_notifier(preference: &str, target: String) -> Box<dyn Notifier> {
+    todo!("Implement create_notifier")
 }
 
 /// Get default notifier
-pub fn default_notifier() -> Box<dyn Notifier>  {
-    todo!("Get default notifier")
+pub fn default_notifier() -> Box<dyn Notifier> {
+    todo!("Implement default_notifier")
 }
 
 /// Create multiple notifiers
-pub fn create_all_notifiers(target: String) -> Vec<Box<dyn Notifier>>  {
-    todo!("Create multiple notifiers")
+pub fn create_all_notifiers(target: String) -> Vec<Box<dyn Notifier>> {
+    todo!("Implement create_all_notifiers")
 }
 
 /// Send via all notifiers
-pub fn broadcast(message: &str, notifiers: &[Box<dyn Notifier>]) -> Vec<String>  {
-    todo!("Send via all notifiers")
+pub fn broadcast(message: &str, notifiers: &[Box<dyn Notifier>]) -> Vec<String> {
+    todo!("Implement broadcast")
 }
 
 #[cfg(test)]

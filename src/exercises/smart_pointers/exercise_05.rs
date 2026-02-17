@@ -9,23 +9,23 @@
 pub type Operation = Box<dyn Fn(i32) -> i32>;
 
 /// Create a boxed closure that adds n to its input.
-pub fn make_adder(n: i32) -> Operation  {
-    todo!("Create a boxed closure that adds n to its input.")
+pub fn make_adder(n: i32) -> Operation {
+    todo!("Implement make_adder")
 }
 
 /// Create a boxed closure that multiplies its input by n.
-pub fn make_multiplier(n: i32) -> Operation  {
-    todo!("Create a boxed closure that multiplies its input by n.")
+pub fn make_multiplier(n: i32) -> Operation {
+    todo!("Implement make_multiplier")
 }
 
 /// Apply a sequence of operations to a value.
-pub fn apply_operations(value: i32, ops: &[Operation]) -> i32  {
-    todo!("Apply a sequence of operations to a value.")
+pub fn apply_operations(value: i32, ops: &[Operation]) -> i32 {
+    todo!("Implement apply_operations")
 }
 
 /// Compose two operations into one.
-pub fn compose(f: Operation, g: Operation) -> Operation  {
-    todo!("Compose two operations into one.")
+pub fn compose(f: Operation, g: Operation) -> Operation {
+    todo!("Implement compose")
 }
 
 #[cfg(test)]

@@ -13,13 +13,13 @@ pub struct ValidationError {
 }
 
 impl ValidationError {
-    pub fn new(field: impl Into<String>, message: impl Into<String>) -> Self  {
+    pub fn new(field: impl Into<String>, message: impl Into<String>) -> Self {
         todo!("Implement new")
     }
 }
 
 impl std::fmt::Display for ValidationError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -32,7 +32,7 @@ pub struct Validator<T> {
 }
 
 impl<T> Validator<T> {
-    pub fn new(value: T) -> Self  {
+    pub fn new(value: T) -> Self {
         todo!("Implement new")
     }
     
@@ -45,14 +45,14 @@ impl<T> Validator<T> {
     }
     
     /// Finalize validation.
-    pub fn build(self) -> Result<T, Vec<ValidationError>>  {
-        todo!("Finalize validation.")
+    pub fn build(self) -> Result<T, Vec<ValidationError>> {
+        todo!("Implement build")
     }
 }
 
 /// Validate a product name and price.
-pub fn validate_product(name: &str, price: f64) -> Result<(String, f64), Vec<ValidationError>>  {
-    todo!("Validate a product name and price.")
+pub fn validate_product(name: &str, price: f64) -> Result<(String, f64), Vec<ValidationError>> {
+    todo!("Implement validate_product")
 }
 
 #[cfg(test)]

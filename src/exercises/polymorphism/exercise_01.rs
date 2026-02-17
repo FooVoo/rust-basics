@@ -18,8 +18,8 @@ pub struct Book {
 }
 
 impl Describable for Book {
-    fn describe(&self) -> String  {
-        todo!("A simple struct representing a book.")
+    fn describe(&self) -> String {
+        todo!("Implement describe")
     }
 }
 
@@ -30,8 +30,8 @@ pub struct Person {
 }
 
 impl Describable for Person {
-    fn describe(&self) -> String  {
-        todo!("A simple struct representing a person.")
+    fn describe(&self) -> String {
+        todo!("Implement describe")
     }
 }
 

@@ -11,8 +11,8 @@ use std::time::Duration;
 
 /// Park the current thread until unparked by another thread.
 /// Return true if unparked within timeout.
-pub fn park_with_timeout(timeout_ms: u64) -> bool  {
-    todo!("Return true if unparked within timeout.")
+pub fn park_with_timeout(timeout_ms: u64) -> bool {
+    todo!("Implement park_with_timeout")
 }
 
 #[cfg(test)]

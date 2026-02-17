@@ -12,8 +12,8 @@ use std::thread;
 /// Multiple threads read and write to shared data.
 /// n_readers threads read, n_writers threads increment.
 /// Return final value.
-pub fn rwlock_multi_writer(n_readers: usize, n_writers: usize, increments_per_writer: usize) -> i32  {
-    todo!("Return final value.")
+pub fn rwlock_multi_writer(n_readers: usize, n_writers: usize, increments_per_writer: usize) -> i32 {
+    todo!("Implement rwlock_multi_writer")
 }
 
 #[cfg(test)]

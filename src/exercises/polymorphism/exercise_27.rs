@@ -23,7 +23,7 @@ impl Converter for StringToIntConverter {
     type Output = i32;
     type Error = String;
     
-    fn convert(&self, input: Self::Input) -> Result<Self::Output, Self::Error>  {
+    fn convert(&self, input: Self::Input) -> Result<Self::Output, Self::Error> {
         todo!("Implement convert")
     }
 }
@@ -35,7 +35,7 @@ impl Converter for IntToStringConverter {
     type Output = String;
     type Error = ();
     
-    fn convert(&self, input: Self::Input) -> Result<Self::Output, Self::Error>  {
+    fn convert(&self, input: Self::Input) -> Result<Self::Output, Self::Error> {
         todo!("Implement convert")
     }
 }
@@ -71,21 +71,21 @@ impl<T: Clone> Collection for SimpleVec<T> {
     type Item = T;
     type Iterator = std::vec::IntoIter<T>;
     
-    fn iter(&self) -> Self::Iterator  {
+    fn iter(&self) -> Self::Iterator {
         todo!("Implement iter")
     }
     
-    fn len(&self) -> usize  {
+    fn len(&self) -> usize {
         todo!("Implement len")
     }
 }
 
 impl<T> SimpleVec<T> {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
     
-    pub fn push(&mut self, item: T)  {
+    pub fn push(&mut self, item: T) {
         todo!("Implement push")
     }
 }
@@ -106,15 +106,15 @@ pub struct SimpleGraph {
 }
 
 impl SimpleGraph {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
     
-    pub fn add_node(&mut self, name: String)  {
+    pub fn add_node(&mut self, name: String) {
         todo!("Implement add_node")
     }
     
-    pub fn add_edge(&mut self, from: usize, to: usize)  {
+    pub fn add_edge(&mut self, from: usize, to: usize) {
         todo!("Implement add_edge")
     }
 }
@@ -125,11 +125,11 @@ impl Graph for SimpleGraph {
     type NodeIter = std::vec::IntoIter<String>;
     type EdgeIter = std::vec::IntoIter<(usize, usize)>;
     
-    fn nodes(&self) -> Self::NodeIter  {
+    fn nodes(&self) -> Self::NodeIter {
         todo!("Implement nodes")
     }
     
-    fn edges(&self) -> Self::EdgeIter  {
+    fn edges(&self) -> Self::EdgeIter {
         todo!("Implement edges")
     }
 }

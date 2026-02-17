@@ -16,7 +16,7 @@ pub enum JsonError {
 }
 
 impl std::fmt::Display for JsonError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -31,8 +31,8 @@ pub struct User {
 }
 
 /// Parse a user from a simple key-value map.
-pub fn parse_user(data: &HashMap<String, String>) -> Result<User, JsonError>  {
-    todo!("Parse a user from a simple key-value map.")
+pub fn parse_user(data: &HashMap<String, String>) -> Result<User, JsonError> {
+    todo!("Implement parse_user")
 }
 
 #[cfg(test)]

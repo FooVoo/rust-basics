@@ -7,18 +7,18 @@
 //! - Optimize combinator usage
 
 /// Parse, validate, and transform in one chain.
-pub fn parse_validate_transform(s: &str) -> Result<String, String>  {
-    todo!("Parse, validate, and transform in one chain.")
+pub fn parse_validate_transform(s: &str) -> Result<String, String> {
+    todo!("Implement parse_validate_transform")
 }
 
 /// Complex option chain with multiple transformations.
-pub fn complex_option_chain(s: &str) -> Option<usize>  {
-    todo!("Complex option chain with multiple transformations.")
+pub fn complex_option_chain(s: &str) -> Option<usize> {
+    todo!("Implement complex_option_chain")
 }
 
 /// Chain multiple Result operations with different transformations.
-pub fn result_pipeline(a: &str, b: &str) -> Result<f64, String>  {
-    todo!("Chain multiple Result operations with different transformations.")
+pub fn result_pipeline(a: &str, b: &str) -> Result<f64, String> {
+    todo!("Implement result_pipeline")
 }
 
 #[cfg(test)]

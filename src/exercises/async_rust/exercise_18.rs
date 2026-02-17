@@ -11,18 +11,18 @@ use tokio::time::{sleep, Duration};
 use std::sync::Arc;
 
 /// Wait for a notification before proceeding.
-pub async fn wait_for_signal(delay_ms: u64) -> String  {
-    todo!("Wait for a notification before proceeding.")
+pub async fn wait_for_signal(delay_ms: u64) -> String {
+    todo!("Implement wait_for_signal")
 }
 
 /// Producer-consumer pattern with Notify.
-pub async fn producer_consumer(items: Vec<i32>) -> Vec<i32>  {
-    todo!("Producer-consumer pattern with Notify.")
+pub async fn producer_consumer(items: Vec<i32>) -> Vec<i32> {
+    todo!("Implement producer_consumer")
 }
 
 /// Broadcast notification to multiple waiters.
-pub async fn broadcast_notification(num_waiters: usize) -> Vec<String>  {
-    todo!("Broadcast notification to multiple waiters.")
+pub async fn broadcast_notification(num_waiters: usize) -> Vec<String> {
+    todo!("Implement broadcast_notification")
 }
 
 #[cfg(test)]

@@ -10,17 +10,17 @@ pub trait Logger {
     fn log(&self, message: &str) -> String;
     
     // Default implementation
-    fn log_info(&self, message: &str) -> String  {
+    fn log_info(&self, message: &str) -> String {
         todo!("Implement log_info")
     }
     
     // Default implementation
-    fn log_error(&self, message: &str) -> String  {
+    fn log_error(&self, message: &str) -> String {
         todo!("Implement log_error")
     }
     
     // Default implementation that calls other methods
-    fn log_debug(&self, message: &str) -> String  {
+    fn log_debug(&self, message: &str) -> String {
         todo!("Implement log_debug")
     }
 }
@@ -28,7 +28,7 @@ pub trait Logger {
 pub struct ConsoleLogger;
 
 impl Logger for ConsoleLogger {
-    fn log(&self, message: &str) -> String  {
+    fn log(&self, message: &str) -> String {
         todo!("Implement log")
     }
 }
@@ -38,12 +38,12 @@ pub struct FileLogger {
 }
 
 impl Logger for FileLogger {
-    fn log(&self, message: &str) -> String  {
+    fn log(&self, message: &str) -> String {
         todo!("Implement log")
     }
     
     // Override default method
-    fn log_error(&self, message: &str) -> String  {
+    fn log_error(&self, message: &str) -> String {
         todo!("Implement log_error")
     }
 }
@@ -51,20 +51,20 @@ impl Logger for FileLogger {
 pub struct SilentLogger;
 
 impl Logger for SilentLogger {
-    fn log(&self, _message: &str) -> String  {
+    fn log(&self, _message: &str) -> String {
         todo!("Implement log")
     }
     
     // Override all methods to be silent
-    fn log_info(&self, _message: &str) -> String  {
+    fn log_info(&self, _message: &str) -> String {
         todo!("Implement log_info")
     }
     
-    fn log_error(&self, _message: &str) -> String  {
+    fn log_error(&self, _message: &str) -> String {
         todo!("Implement log_error")
     }
     
-    fn log_debug(&self, _message: &str) -> String  {
+    fn log_debug(&self, _message: &str) -> String {
         todo!("Implement log_debug")
     }
 }

@@ -15,13 +15,13 @@ pub enum Validation<T, E> {
 
 impl<T, E> Validation<T, E> {
     /// Create a success validation.
-    pub fn success(value: T) -> Self  {
-        todo!("Create a success validation.")
+    pub fn success(value: T) -> Self {
+        todo!("Implement success")
     }
 
     /// Create a failure validation with a single error.
-    pub fn failure(error: E) -> Self  {
-        todo!("Create a failure validation with a single error.")
+    pub fn failure(error: E) -> Self {
+        todo!("Implement failure")
     }
 
     /// Map the success value.
@@ -41,8 +41,8 @@ impl<T, E> Validation<T, E> {
     }
 
     /// Combine two validations, accumulating errors.
-    pub fn combine<U>(self, other: Validation<U, E>) -> Validation<(T, U), E>  {
-        todo!("Combine two validations, accumulating errors.")
+    pub fn combine<U>(self, other: Validation<U, E>) -> Validation<(T, U), E> {
+        todo!("Implement combine")
     }
 }
 
@@ -54,15 +54,15 @@ pub struct UserRegistration {
     pub age: i32,
 }
 
-pub fn validate_username(username: &str) -> Validation<String, String>  {
-    todo!("Validate a user registration with multiple checks.")
+pub fn validate_username(username: &str) -> Validation<String, String> {
+    todo!("Implement validate_username")
 }
 
-pub fn validate_email(email: &str) -> Validation<String, String>  {
+pub fn validate_email(email: &str) -> Validation<String, String> {
     todo!("Implement validate_email")
 }
 
-pub fn validate_age(age: i32) -> Validation<i32, String>  {
+pub fn validate_age(age: i32) -> Validation<i32, String> {
     todo!("Implement validate_age")
 }
 

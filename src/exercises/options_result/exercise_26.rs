@@ -7,13 +7,13 @@
 //! - Handle vectors of Results
 
 /// Parse all strings, failing if any parse fails.
-pub fn parse_all(strings: &[&str]) -> Result<Vec<i32>, String>  {
-    todo!("Parse all strings, failing if any parse fails.")
+pub fn parse_all(strings: &[&str]) -> Result<Vec<i32>, String> {
+    todo!("Implement parse_all")
 }
 
 /// Filter and parse, collecting valid results.
-pub fn parse_valid(strings: &[&str]) -> Vec<i32>  {
-    todo!("Filter and parse, collecting valid results.")
+pub fn parse_valid(strings: &[&str]) -> Vec<i32> {
+    todo!("Implement parse_valid")
 }
 
 /// Try to parse all, return first error if any.

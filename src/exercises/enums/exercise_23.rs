@@ -20,33 +20,33 @@ pub enum JsonValue {
 
 impl JsonValue {
     /// Returns true if the value is null
-    pub fn is_null(&self) -> bool  {
-        todo!("Return true if the value is null")
+    pub fn is_null(&self) -> bool {
+        todo!("Implement is_null")
     }
 
     /// Gets a value from an object by key
-    pub fn get(&self, key: &str) -> Option<&JsonValue>  {
-        todo!("Get a value from an object by key")
+    pub fn get(&self, key: &str) -> Option<&JsonValue> {
+        todo!("Implement get")
     }
 
     /// Gets a value from an array by index
-    pub fn get_index(&self, index: usize) -> Option<&JsonValue>  {
-        todo!("Get a value from an array by index")
+    pub fn get_index(&self, index: usize) -> Option<&JsonValue> {
+        todo!("Implement get_index")
     }
 
     /// Extracts a string value
-    pub fn as_string(&self) -> Option<&str>  {
-        todo!("Extract a string value")
+    pub fn as_string(&self) -> Option<&str> {
+        todo!("Implement as_string")
     }
 
     /// Extracts a number value
-    pub fn as_number(&self) -> Option<f64>  {
-        todo!("Extract a number value")
+    pub fn as_number(&self) -> Option<f64> {
+        todo!("Implement as_number")
     }
 
     /// Extracts a boolean value
-    pub fn as_bool(&self) -> Option<bool>  {
-        todo!("Extract a boolean value")
+    pub fn as_bool(&self) -> Option<bool> {
+        todo!("Implement as_bool")
     }
 }
 

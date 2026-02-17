@@ -29,52 +29,52 @@ pub struct Collection<T> {
 
 impl<T> Collection<T> {
     /// Creates a new empty collection.
-    pub fn new() -> Self  {
-        todo!("Create a new empty collection.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Creates a collection from a vector.
-    pub fn from_vec(items: Vec<T>) -> Self  {
-        todo!("Create a collection from a vector.")
+    pub fn from_vec(items: Vec<T>) -> Self {
+        todo!("Implement from_vec")
     }
 
     /// Adds an item to the collection.
-    pub fn add(&mut self, item: T)  {
-        todo!("Add an item to the collection.")
+    pub fn add(&mut self, item: T) {
+        todo!("Implement add")
     }
 
     /// Returns the number of items.
-    pub fn len(&self) -> usize  {
-        todo!("Return the number of items.")
+    pub fn len(&self) -> usize {
+        todo!("Implement len")
     }
 
     /// Returns true if the collection is empty.
-    pub fn is_empty(&self) -> bool  {
-        todo!("Return true if the collection is empty.")
+    pub fn is_empty(&self) -> bool {
+        todo!("Implement is_empty")
     }
 
     /// Converts the collection into a vector.
-    pub fn into_vec(self) -> Vec<T>  {
-        todo!("Convert the collection into a vector.")
+    pub fn into_vec(self) -> Vec<T> {
+        todo!("Implement into_vec")
     }
 }
 
 impl<T: Clone> Collection<T> {
     /// Gets a clone of the item at the given index.
-    pub fn get(&self, index: usize) -> Option<T>  {
-        todo!("Get a clone of the item at the given index.")
+    pub fn get(&self, index: usize) -> Option<T> {
+        todo!("Implement get")
     }
 }
 
 impl<T: PartialEq> Collection<T> {
     /// Checks if the collection contains an item.
-    pub fn contains(&self, item: &T) -> bool  {
-        todo!("Check if the collection contains an item.")
+    pub fn contains(&self, item: &T) -> bool {
+        todo!("Implement contains")
     }
 
     /// Removes all occurrences of an item.
-    pub fn remove_all(&mut self, item: &T)  {
-        todo!("Removes all occurrences of an item.")
+    pub fn remove_all(&mut self, item: &T) {
+        todo!("Implement remove_all")
     }
 }
 

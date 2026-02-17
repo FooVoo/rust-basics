@@ -14,8 +14,8 @@ pub fn transpose_option_result<T, E>(
 }
 
 /// Parse optional strings, transposing the result.
-pub fn parse_optional(opt: Option<&str>) -> Result<Option<i32>, std::num::ParseIntError>  {
-    todo!("Parse optional strings, transposing the result.")
+pub fn parse_optional(opt: Option<&str>) -> Result<Option<i32>, std::num::ParseIntError> {
+    todo!("Implement parse_optional")
 }
 
 /// Process a vector of optional parse results.

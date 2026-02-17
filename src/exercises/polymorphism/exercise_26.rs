@@ -18,7 +18,7 @@ pub struct Container {
 impl<'a> Borrowable<'a> for Container {
     type Borrowed = &'a str;
     
-    fn borrow(&'a self) -> Self::Borrowed  {
+    fn borrow(&'a self) -> Self::Borrowed {
         todo!("Implement borrow")
     }
 }
@@ -30,7 +30,7 @@ pub trait Processor<'a> {
 pub struct UpperProcessor;
 
 impl<'a> Processor<'a> for UpperProcessor {
-    fn process(&self, input: &'a str) -> String  {
+    fn process(&self, input: &'a str) -> String {
         todo!("Implement process")
     }
 }
@@ -38,7 +38,7 @@ impl<'a> Processor<'a> for UpperProcessor {
 pub struct LowerProcessor;
 
 impl<'a> Processor<'a> for LowerProcessor {
-    fn process(&self, input: &'a str) -> String  {
+    fn process(&self, input: &'a str) -> String {
         todo!("Implement process")
     }
 }
@@ -66,7 +66,7 @@ pub struct SimpleCache<'a, T: 'a> {
 }
 
 impl<'a, T: 'a> SimpleCache<'a, T> {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
 }
@@ -74,11 +74,11 @@ impl<'a, T: 'a> SimpleCache<'a, T> {
 impl<'a, T: 'a> Cache<'a> for SimpleCache<'a, T> {
     type Item = T;
     
-    fn get(&self, key: &str) -> Option<&'a Self::Item>  {
+    fn get(&self, key: &str) -> Option<&'a Self::Item> {
         todo!("Implement get")
     }
     
-    fn set(&mut self, key: String, value: &'a T)  {
+    fn set(&mut self, key: String, value: &'a T) {
         todo!("Implement set")
     }
 }
@@ -105,7 +105,7 @@ pub struct CountVisitor {
 impl<'a> Visitor<'a> for CountVisitor {
     type Output = usize;
     
-    fn visit(&mut self, _item: &'a str) -> Self::Output  {
+    fn visit(&mut self, _item: &'a str) -> Self::Output {
         todo!("Implement visit")
     }
 }

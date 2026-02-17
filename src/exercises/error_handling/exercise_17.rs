@@ -13,7 +13,7 @@ pub struct Account {
 }
 
 impl Account {
-    pub fn new(id: u32, balance: i64) -> Self  {
+    pub fn new(id: u32, balance: i64) -> Self {
         todo!("Implement new")
     }
 }
@@ -27,7 +27,7 @@ pub enum TransactionError {
 }
 
 impl std::fmt::Display for TransactionError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -45,13 +45,13 @@ pub fn transfer(
 }
 
 /// Withdraw money from an account.
-pub fn withdraw(account: &mut Account, amount: i64) -> Result<(), TransactionError>  {
-    todo!("Withdraw money from an account.")
+pub fn withdraw(account: &mut Account, amount: i64) -> Result<(), TransactionError> {
+    todo!("Implement withdraw")
 }
 
 /// Deposit money to an account.
-pub fn deposit(account: &mut Account, amount: i64) -> Result<(), TransactionError>  {
-    todo!("Deposit money to an account.")
+pub fn deposit(account: &mut Account, amount: i64) -> Result<(), TransactionError> {
+    todo!("Implement deposit")
 }
 
 #[cfg(test)]

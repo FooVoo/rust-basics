@@ -11,27 +11,27 @@ pub struct DataStore {
 }
 
 impl DataStore {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
     
-    pub fn add(&mut self, item: String)  {
+    pub fn add(&mut self, item: String) {
         todo!("Implement add")
     }
     
-    pub fn get(&self, index: usize) -> Option<&String>  {
+    pub fn get(&self, index: usize) -> Option<&String> {
         todo!("Implement get")
     }
     
-    pub fn find(&self, query: &str) -> Option<&String>  {
+    pub fn find(&self, query: &str) -> Option<&String> {
         todo!("Implement find")
     }
     
-    pub fn len(&self) -> usize  {
+    pub fn len(&self) -> usize {
         todo!("Implement len")
     }
     
-    pub fn iter(&self) -> impl Iterator<Item = &String>  {
+    pub fn iter(&self) -> impl Iterator<Item = &String> {
         todo!("Implement iter")
     }
 }
@@ -45,8 +45,8 @@ where
 }
 
 /// Find longest string in store.
-pub fn longest_in_store(store: &DataStore) -> Option<&String>  {
-    todo!("Find longest string in store.")
+pub fn longest_in_store(store: &DataStore) -> Option<&String> {
+    todo!("Implement longest_in_store")
 }
 
 #[cfg(test)]

@@ -7,13 +7,13 @@
 //! - Convert between error types
 
 /// Parse a string to a number and double it.
-pub fn parse_and_double(s: &str) -> Result<i32, String>  {
-    todo!("Parse a string to a number and double it.")
+pub fn parse_and_double(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_double")
 }
 
 /// Parse a string to a number, double it, and convert to string.
-pub fn parse_double_stringify(s: &str) -> Result<String, String>  {
-    todo!("Parse a string to a number, double it, and convert to string.")
+pub fn parse_double_stringify(s: &str) -> Result<String, String> {
+    todo!("Implement parse_double_stringify")
 }
 
 /// Parse and transform with a custom function.

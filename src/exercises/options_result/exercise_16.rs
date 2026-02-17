@@ -7,18 +7,18 @@
 //! - Understand when to convert between types
 
 /// Convert an Option to Result with a static error message.
-pub fn option_to_result(opt: Option<i32>) -> Result<i32, String>  {
-    todo!("Convert an Option to Result with a static error message.")
+pub fn option_to_result(opt: Option<i32>) -> Result<i32, String> {
+    todo!("Implement option_to_result")
 }
 
 /// Convert Option to Result with computed error.
-pub fn option_to_result_lazy(opt: Option<String>) -> Result<String, String>  {
-    todo!("Convert Option to Result with computed error.")
+pub fn option_to_result_lazy(opt: Option<String>) -> Result<String, String> {
+    todo!("Implement option_to_result_lazy")
 }
 
 /// Find an element and convert to Result.
-pub fn find_or_error(numbers: &[i32], target: i32) -> Result<usize, String>  {
-    todo!("Find an element and convert to Result.")
+pub fn find_or_error(numbers: &[i32], target: i32) -> Result<usize, String> {
+    todo!("Implement find_or_error")
 }
 
 #[cfg(test)]

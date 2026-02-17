@@ -23,13 +23,13 @@ pub trait Movable {
 }
 
 impl Movable for Point {
-    fn move_by(&mut self, dx: i32, dy: i32)  {
+    fn move_by(&mut self, dx: i32, dy: i32) {
         todo!("Implement move_by")
     }
 }
 
 impl Movable for Line {
-    fn move_by(&mut self, dx: i32, dy: i32)  {
+    fn move_by(&mut self, dx: i32, dy: i32) {
         todo!("Implement move_by")
     }
 }
@@ -39,13 +39,13 @@ pub trait Distance {
 }
 
 impl Distance for Point {
-    fn distance(&self) -> f64  {
+    fn distance(&self) -> f64 {
         todo!("Implement distance")
     }
 }
 
 impl Distance for Line {
-    fn distance(&self) -> f64  {
+    fn distance(&self) -> f64 {
         todo!("Implement distance")
     }
 }

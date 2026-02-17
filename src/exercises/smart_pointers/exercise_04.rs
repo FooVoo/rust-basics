@@ -16,11 +16,11 @@ pub struct Circle {
 }
 
 impl Shape for Circle {
-    fn area(&self) -> f64  {
+    fn area(&self) -> f64 {
         todo!("Implement area")
     }
 
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 }
@@ -31,23 +31,23 @@ pub struct Rectangle {
 }
 
 impl Shape for Rectangle {
-    fn area(&self) -> f64  {
+    fn area(&self) -> f64 {
         todo!("Implement area")
     }
 
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 }
 
 /// Create a vector of boxed shapes.
-pub fn create_shapes() -> Vec<Box<dyn Shape>>  {
-    todo!("Create a vector of boxed shapes.")
+pub fn create_shapes() -> Vec<Box<dyn Shape>> {
+    todo!("Implement create_shapes")
 }
 
 /// Calculate total area of all shapes.
-pub fn total_area(shapes: &[Box<dyn Shape>]) -> f64  {
-    todo!("Calculate total area of all shapes.")
+pub fn total_area(shapes: &[Box<dyn Shape>]) -> f64 {
+    todo!("Implement total_area")
 }
 
 #[cfg(test)]

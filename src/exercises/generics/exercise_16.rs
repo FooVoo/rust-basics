@@ -15,34 +15,34 @@ pub struct Builder<T, U> {
 
 impl<T, U> Builder<T, U> {
     /// Creates a new empty builder.
-    pub fn new() -> Self  {
-        todo!("Create a new empty builder.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Sets the name.
-    pub fn name(mut self, name: String) -> Self  {
-        todo!("Set the name.")
+    pub fn name(mut self, name: String) -> Self {
+        todo!("Implement name")
     }
 
     /// Sets the value.
-    pub fn value(mut self, value: T) -> Self  {
-        todo!("Set the value.")
+    pub fn value(mut self, value: T) -> Self {
+        todo!("Implement value")
     }
 
     /// Sets the metadata.
-    pub fn metadata(mut self, metadata: U) -> Self  {
-        todo!("Set the metadata.")
+    pub fn metadata(mut self, metadata: U) -> Self {
+        todo!("Implement metadata")
     }
 
     /// Builds the final object.
-    pub fn build(self) -> Result<Built<T, U>, String>  {
-        todo!("Build the final object.")
+    pub fn build(self) -> Result<Built<T, U>, String> {
+        todo!("Implement build")
     }
 }
 
 impl<T, U> Default for Builder<T, U> {
-    fn default() -> Self  {
-        todo!("Build the final object.")
+    fn default() -> Self {
+        todo!("Implement default")
     }
 }
 
@@ -55,23 +55,23 @@ pub struct Built<T, U> {
 
 impl<T, U> Built<T, U> {
     /// Gets the name.
-    pub fn name(&self) -> &str  {
-        todo!("Get the name.")
+    pub fn name(&self) -> &str {
+        todo!("Implement name")
     }
 
     /// Gets a reference to the value.
-    pub fn value(&self) -> &T  {
-        todo!("Get a reference to the value.")
+    pub fn value(&self) -> &T {
+        todo!("Implement value")
     }
 
     /// Gets a reference to the metadata if present.
-    pub fn metadata(&self) -> Option<&U>  {
-        todo!("Get a reference to the metadata if present.")
+    pub fn metadata(&self) -> Option<&U> {
+        todo!("Implement metadata")
     }
 
     /// Checks if metadata is present.
-    pub fn has_metadata(&self) -> bool  {
-        todo!("Check if metadata is present.")
+    pub fn has_metadata(&self) -> bool {
+        todo!("Implement has_metadata")
     }
 }
 

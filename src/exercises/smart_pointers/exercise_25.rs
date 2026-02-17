@@ -17,15 +17,15 @@ pub struct SelfReferential {
 }
 
 impl SelfReferential {
-    pub fn new(data: String) -> Pin<Box<Self>>  {
-        todo!("A self-referential struct (needs Pin to be safe).")
+    pub fn new(data: String) -> Pin<Box<Self>> {
+        todo!("Implement new")
     }
 
-    pub fn get_data(&self) -> &str  {
+    pub fn get_data(&self) -> &str {
         todo!("Implement get_data")
     }
 
-    pub fn pointer_is_valid(&self) -> bool  {
+    pub fn pointer_is_valid(&self) -> bool {
         todo!("Implement pointer_is_valid")
     }
 }
@@ -37,15 +37,15 @@ pub struct PinnedCounter {
 }
 
 impl PinnedCounter {
-    pub fn new(initial: i32) -> Pin<Box<Self>>  {
-        todo!("A simple pinned counter.")
+    pub fn new(initial: i32) -> Pin<Box<Self>> {
+        todo!("Implement new")
     }
 
-    pub fn get(&self) -> i32  {
+    pub fn get(&self) -> i32 {
         todo!("Implement get")
     }
 
-    pub fn increment(self: Pin<&mut Self>)  {
+    pub fn increment(self: Pin<&mut Self>) {
         todo!("Implement increment")
     }
 }
@@ -56,19 +56,19 @@ pub struct UnpinBox<T> {
 }
 
 impl<T> UnpinBox<T> {
-    pub fn new(value: T) -> Self  {
-        todo!("A normal (Unpin) smart pointer wrapper.")
+    pub fn new(value: T) -> Self {
+        todo!("Implement new")
     }
 
-    pub fn get(&self) -> &T  {
+    pub fn get(&self) -> &T {
         todo!("Implement get")
     }
 
-    pub fn get_mut(&mut self) -> &mut T  {
+    pub fn get_mut(&mut self) -> &mut T {
         todo!("Implement get_mut")
     }
 
-    pub fn into_inner(self) -> T  {
+    pub fn into_inner(self) -> T {
         todo!("Implement into_inner")
     }
 }

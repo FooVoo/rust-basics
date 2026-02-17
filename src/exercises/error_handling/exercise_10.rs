@@ -15,13 +15,13 @@ pub struct ParseError {
 }
 
 impl ParseError {
-    pub fn new(input: impl Into<String>, reason: impl Into<String>) -> Self  {
+    pub fn new(input: impl Into<String>, reason: impl Into<String>) -> Self {
         todo!("Implement new")
     }
 }
 
 impl fmt::Display for ParseError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -29,13 +29,13 @@ impl fmt::Display for ParseError {
 impl std::error::Error for ParseError {}
 
 /// Parse a string to i32 with detailed error context.
-pub fn parse_with_context(s: &str) -> Result<i32, ParseError>  {
-    todo!("Parse a string to i32 with detailed error context.")
+pub fn parse_with_context(s: &str) -> Result<i32, ParseError> {
+    todo!("Implement parse_with_context")
 }
 
 /// Parse multiple strings and collect all errors.
-pub fn parse_multiple(strings: &[&str]) -> Result<Vec<i32>, Vec<ParseError>>  {
-    todo!("Parse multiple strings and collect all errors.")
+pub fn parse_multiple(strings: &[&str]) -> Result<Vec<i32>, Vec<ParseError>> {
+    todo!("Implement parse_multiple")
 }
 
 #[cfg(test)]

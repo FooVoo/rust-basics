@@ -14,21 +14,21 @@ pub struct Lock<'a, T> {
 }
 
 impl<'a, T> Lock<'a, T> {
-    pub fn new(data: &'a mut T) -> Self  {
+    pub fn new(data: &'a mut T) -> Self {
         todo!("Implement new")
     }
     
-    pub fn access(&self) -> &T  {
+    pub fn access(&self) -> &T {
         todo!("Implement access")
     }
     
-    pub fn access_mut(&mut self) -> &mut T  {
+    pub fn access_mut(&mut self) -> &mut T {
         todo!("Implement access_mut")
     }
 }
 
 impl<'a, T> Drop for Lock<'a, T> {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
@@ -39,17 +39,17 @@ pub struct Transaction<'a> {
 }
 
 impl<'a> Transaction<'a> {
-    pub fn new(rollback_fn: impl FnMut() + 'a) -> Self  {
+    pub fn new(rollback_fn: impl FnMut() + 'a) -> Self {
         todo!("Implement new")
     }
     
-    pub fn commit(&mut self)  {
+    pub fn commit(&mut self) {
         todo!("Implement commit")
     }
 }
 
 impl<'a> Drop for Transaction<'a> {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
@@ -59,24 +59,24 @@ pub struct ScopeGuard<F: FnOnce()> {
 }
 
 impl<F: FnOnce()> ScopeGuard<F> {
-    pub fn new(cleanup: F) -> Self  {
+    pub fn new(cleanup: F) -> Self {
         todo!("Implement new")
     }
     
-    pub fn disarm(mut self)  {
+    pub fn disarm(mut self) {
         todo!("Implement disarm")
     }
 }
 
 impl<F: FnOnce()> Drop for ScopeGuard<F> {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
 
 /// Create a scope guard that increments a counter on drop.
-pub fn create_counter_guard(counter: &mut i32) -> ScopeGuard<impl FnOnce() + '_>  {
-    todo!("Create a scope guard that increments a counter on drop.")
+pub fn create_counter_guard(counter: &mut i32) -> ScopeGuard<impl FnOnce() + '_> {
+    todo!("Implement create_counter_guard")
 }
 
 #[cfg(test)]

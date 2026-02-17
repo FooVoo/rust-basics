@@ -9,8 +9,8 @@
 use std::thread;
 
 /// Sum a vector of numbers in parallel using n_threads.
-pub fn parallel_sum(numbers: Vec<i64>, n_threads: usize) -> i64  {
-    todo!("Sum a vector of numbers in parallel using n_threads.")
+pub fn parallel_sum(numbers: Vec<i64>, n_threads: usize) -> i64 {
+    todo!("Implement parallel_sum")
 }
 
 #[cfg(test)]

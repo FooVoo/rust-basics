@@ -7,8 +7,8 @@
 //! - Use map, and_then patterns
 
 /// A generic function that safely gets the first element of a slice.
-pub fn first_element<T: Clone>(slice: &[T]) -> Option<T>  {
-    todo!("A generic function that safely gets the first element of a slice.")
+pub fn first_element<T: Clone>(slice: &[T]) -> Option<T> {
+    todo!("Implement first_element")
 }
 
 /// A generic function that finds an element matching a predicate.
@@ -35,18 +35,18 @@ impl<T> Maybe<T> {
     }
 
     /// Returns the contained value or a default.
-    pub fn unwrap_or(self, default: T) -> T  {
-        todo!("Return the contained value or a default.")
+    pub fn unwrap_or(self, default: T) -> T {
+        todo!("Implement unwrap_or")
     }
 
     /// Returns true if the Maybe is Just.
-    pub fn is_just(&self) -> bool  {
-        todo!("Return true if the Maybe is Just.")
+    pub fn is_just(&self) -> bool {
+        todo!("Implement is_just")
     }
 
     /// Returns true if the Maybe is Nothing.
-    pub fn is_nothing(&self) -> bool  {
-        todo!("Return true if the Maybe is Nothing.")
+    pub fn is_nothing(&self) -> bool {
+        todo!("Implement is_nothing")
     }
 }
 

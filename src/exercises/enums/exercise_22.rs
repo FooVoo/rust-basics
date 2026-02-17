@@ -17,33 +17,33 @@ pub enum Expr {
 
 impl Expr {
     /// Creates a number expression
-    pub fn num(n: f64) -> Self  {
-        todo!("Create a number expression")
+    pub fn num(n: f64) -> Self {
+        todo!("Implement num")
     }
 
     /// Creates an addition expression
-    pub fn add(left: Expr, right: Expr) -> Self  {
-        todo!("Create an addition expression")
+    pub fn add(left: Expr, right: Expr) -> Self {
+        todo!("Implement add")
     }
 
     /// Creates a subtraction expression
-    pub fn sub(left: Expr, right: Expr) -> Self  {
-        todo!("Create a subtraction expression")
+    pub fn sub(left: Expr, right: Expr) -> Self {
+        todo!("Implement sub")
     }
 
     /// Creates a multiplication expression
-    pub fn mul(left: Expr, right: Expr) -> Self  {
-        todo!("Create a multiplication expression")
+    pub fn mul(left: Expr, right: Expr) -> Self {
+        todo!("Implement mul")
     }
 
     /// Creates a division expression
-    pub fn div(left: Expr, right: Expr) -> Self  {
-        todo!("Create a division expression")
+    pub fn div(left: Expr, right: Expr) -> Self {
+        todo!("Implement div")
     }
 
     /// Evaluates the expression
-    pub fn eval(&self) -> Result<f64, String>  {
-        todo!("Evaluates the expression")
+    pub fn eval(&self) -> Result<f64, String> {
+        todo!("Implement eval")
     }
 }
 

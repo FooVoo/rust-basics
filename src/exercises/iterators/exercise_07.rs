@@ -7,28 +7,28 @@
 //! - Work with any() and all()
 
 /// Find the first even number.
-pub fn find_first_even(numbers: &[i32]) -> Option<i32>  {
-    todo!("Find the first even number.")
+pub fn find_first_even(numbers: &[i32]) -> Option<i32> {
+    todo!("Implement find_first_even")
 }
 
 /// Find the position of the first negative number.
-pub fn find_negative_position(numbers: &[i32]) -> Option<usize>  {
-    todo!("Find the position of the first negative number.")
+pub fn find_negative_position(numbers: &[i32]) -> Option<usize> {
+    todo!("Implement find_negative_position")
 }
 
 /// Check if all numbers are positive.
-pub fn all_positive(numbers: &[i32]) -> bool  {
-    todo!("Check if all numbers are positive.")
+pub fn all_positive(numbers: &[i32]) -> bool {
+    todo!("Implement all_positive")
 }
 
 /// Check if any string contains a target character.
-pub fn any_contains_char(strings: &[&str], target: char) -> bool  {
-    todo!("Check if any string contains a target character.")
+pub fn any_contains_char(strings: &[&str], target: char) -> bool {
+    todo!("Implement any_contains_char")
 }
 
 /// Find the first string longer than the given length.
-pub fn find_long_string(strings: &[&str], min_length: usize) -> Option<String>  {
-    todo!("Find the first string longer than the given length.")
+pub fn find_long_string(strings: &[&str], min_length: usize) -> Option<String> {
+    todo!("Implement find_long_string")
 }
 
 #[cfg(test)]

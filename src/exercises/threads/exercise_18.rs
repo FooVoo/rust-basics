@@ -12,8 +12,8 @@ use std::thread;
 /// Create a bounded channel and test that it blocks when full.
 /// Producer sends n_items, consumer receives with delay.
 /// Return all received items.
-pub fn bounded_channel_test(capacity: usize, n_items: usize) -> Vec<i32>  {
-    todo!("Return all received items.")
+pub fn bounded_channel_test(capacity: usize, n_items: usize) -> Vec<i32> {
+    todo!("Implement bounded_channel_test")
 }
 
 #[cfg(test)]

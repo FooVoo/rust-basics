@@ -11,18 +11,18 @@ pub struct Container<'a, T> {
 }
 
 impl<'a, T> Container<'a, T> {
-    pub fn new(data: &'a T) -> Self  {
+    pub fn new(data: &'a T) -> Self {
         todo!("Implement new")
     }
     
-    pub fn get(&self) -> &T  {
+    pub fn get(&self) -> &T {
         todo!("Implement get")
     }
 }
 
 /// Create a container with the given data.
-pub fn make_container<'a, T>(data: &'a T) -> Container<'a, T>  {
-    todo!("Create a container with the given data.")
+pub fn make_container<'a, T>(data: &'a T) -> Container<'a, T> {
+    todo!("Implement make_container")
 }
 
 /// Compare two containers.
@@ -39,15 +39,15 @@ pub struct Pair<'a, T, U> {
 }
 
 impl<'a, T, U> Pair<'a, T, U> {
-    pub fn new(first: &'a T, second: &'a U) -> Self  {
+    pub fn new(first: &'a T, second: &'a U) -> Self {
         todo!("Implement new")
     }
     
-    pub fn first(&self) -> &T  {
+    pub fn first(&self) -> &T {
         todo!("Implement first")
     }
     
-    pub fn second(&self) -> &U  {
+    pub fn second(&self) -> &U {
         todo!("Implement second")
     }
 }

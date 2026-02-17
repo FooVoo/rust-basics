@@ -23,43 +23,43 @@ where
     K: Eq + Hash,
 {
     /// Creates a new cache with a maximum size.
-    pub fn new(max_size: usize) -> Self  {
-        todo!("Create a new cache with a maximum size.")
+    pub fn new(max_size: usize) -> Self {
+        todo!("Implement new")
     }
 
     /// Inserts a key-value pair into the cache.
-    pub fn insert(&mut self, key: K, value: V) -> Option<V>  {
-        todo!("Inserts a key-value pair into the cache.")
+    pub fn insert(&mut self, key: K, value: V) -> Option<V> {
+        todo!("Implement insert")
     }
 
     /// Gets a reference to a value by key.
-    pub fn get(&self, key: &K) -> Option<&V>  {
-        todo!("Get a reference to a value by key.")
+    pub fn get(&self, key: &K) -> Option<&V> {
+        todo!("Implement get")
     }
 
     /// Checks if the cache contains a key.
-    pub fn contains(&self, key: &K) -> bool  {
-        todo!("Check if the cache contains a key.")
+    pub fn contains(&self, key: &K) -> bool {
+        todo!("Implement contains")
     }
 
     /// Returns the number of items in the cache.
-    pub fn len(&self) -> usize  {
-        todo!("Return the number of items in the cache.")
+    pub fn len(&self) -> usize {
+        todo!("Implement len")
     }
 
     /// Checks if the cache is empty.
-    pub fn is_empty(&self) -> bool  {
-        todo!("Check if the cache is empty.")
+    pub fn is_empty(&self) -> bool {
+        todo!("Implement is_empty")
     }
 
     /// Clears all items from the cache.
-    pub fn clear(&mut self)  {
-        todo!("Clears all items from the cache.")
+    pub fn clear(&mut self) {
+        todo!("Implement clear")
     }
 
     /// Removes a key from the cache.
-    pub fn remove(&mut self, key: &K) -> Option<V>  {
-        todo!("Removes a key from the cache.")
+    pub fn remove(&mut self, key: &K) -> Option<V> {
+        todo!("Implement remove")
     }
 }
 
@@ -69,13 +69,13 @@ where
     V: Clone,
 {
     /// Gets a clone of a value by key.
-    pub fn get_cloned(&self, key: &K) -> Option<V>  {
-        todo!("Get a clone of a value by key.")
+    pub fn get_cloned(&self, key: &K) -> Option<V> {
+        todo!("Implement get_cloned")
     }
 
     /// Gets all keys as a vector.
-    pub fn keys(&self) -> Vec<K>  {
-        todo!("Get all keys as a vector.")
+    pub fn keys(&self) -> Vec<K> {
+        todo!("Implement keys")
     }
 }
 

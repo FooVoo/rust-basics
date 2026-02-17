@@ -13,7 +13,7 @@ pub enum RetryError<E> {
 }
 
 impl<E: std::fmt::Display> std::fmt::Display for RetryError<E> {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }

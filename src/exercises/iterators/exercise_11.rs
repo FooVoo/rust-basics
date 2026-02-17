@@ -7,23 +7,23 @@
 //! - Maintain state across iterations
 
 /// Running sum of numbers.
-pub fn running_sum(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Running sum of numbers.")
+pub fn running_sum(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement running_sum")
 }
 
 /// Running product of numbers.
-pub fn running_product(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Running product of numbers.")
+pub fn running_product(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement running_product")
 }
 
 /// Running maximum.
-pub fn running_max(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Running maximum.")
+pub fn running_max(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement running_max")
 }
 
 /// Count occurrences up to each position.
-pub fn running_count(items: &[char], target: char) -> Vec<usize>  {
-    todo!("Count occurrences up to each position.")
+pub fn running_count(items: &[char], target: char) -> Vec<usize> {
+    todo!("Implement running_count")
 }
 
 #[cfg(test)]

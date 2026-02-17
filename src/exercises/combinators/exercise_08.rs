@@ -15,8 +15,8 @@ where
 }
 
 /// Get first even number or compute sum of all.
-pub fn first_even_or_sum(numbers: &[i32]) -> i32  {
-    todo!("Get first even number or compute sum of all.")
+pub fn first_even_or_sum(numbers: &[i32]) -> i32 {
+    todo!("Implement first_even_or_sum")
 }
 
 #[cfg(test)]

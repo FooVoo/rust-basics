@@ -9,18 +9,18 @@
 use std::collections::HashMap;
 
 /// Demonstrate lazy evaluation: only process what's needed.
-pub fn lazy_filter_take(numbers: &[i32], predicate: impl Fn(&i32) -> bool, count: usize) -> Vec<i32>  {
-    todo!("Demonstrate lazy evaluation: only process what's needed.")
+pub fn lazy_filter_take(numbers: &[i32], predicate: impl Fn(&i32) -> bool, count: usize) -> Vec<i32> {
+    todo!("Implement lazy_filter_take")
 }
 
 /// Count without collecting: pure lazy evaluation.
-pub fn count_matching(numbers: &[i32], predicate: impl Fn(&i32) -> bool) -> usize  {
-    todo!("Count without collecting: pure lazy evaluation.")
+pub fn count_matching(numbers: &[i32], predicate: impl Fn(&i32) -> bool) -> usize {
+    todo!("Implement count_matching")
 }
 
 /// Check existence without processing all elements.
-pub fn exists_matching(numbers: &[i32], predicate: impl Fn(&i32) -> bool) -> bool  {
-    todo!("Check existence without processing all elements.")
+pub fn exists_matching(numbers: &[i32], predicate: impl Fn(&i32) -> bool) -> bool {
+    todo!("Implement exists_matching")
 }
 
 /// Process in streaming fashion: no intermediate allocations.
@@ -34,7 +34,7 @@ where
     I: Iterator<Item = T>,
     F: FnMut(T) -> T,
 {
-    pub fn new(iter: I, processor: F) -> Self  {
+    pub fn new(iter: I, processor: F) -> Self {
         todo!("Implement new")
     }
 }
@@ -46,14 +46,14 @@ where
 {
     type Item = T;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
 
 /// Create a lazy chain of operations.
-pub fn lazy_pipeline(numbers: &[i32]) -> impl Iterator<Item = i32> + '_  {
-    todo!("Create a lazy chain of operations.")
+pub fn lazy_pipeline(numbers: &[i32]) -> impl Iterator<Item = i32> + '_ {
+    todo!("Implement lazy_pipeline")
 }
 
 /// Build frequency map lazily.

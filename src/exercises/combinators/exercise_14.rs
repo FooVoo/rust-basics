@@ -7,13 +7,13 @@
 //! - Handle paired operations
 
 /// Add two optional values.
-pub fn add_options(a: Option<i32>, b: Option<i32>) -> Option<i32>  {
-    todo!("Add two optional values.")
+pub fn add_options(a: Option<i32>, b: Option<i32>) -> Option<i32> {
+    todo!("Implement add_options")
 }
 
 /// Multiply three optional values.
-pub fn multiply_three(a: Option<i32>, b: Option<i32>, c: Option<i32>) -> Option<i32>  {
-    todo!("Multiply three optional values.")
+pub fn multiply_three(a: Option<i32>, b: Option<i32>, c: Option<i32>) -> Option<i32> {
+    todo!("Implement multiply_three")
 }
 
 #[cfg(test)]

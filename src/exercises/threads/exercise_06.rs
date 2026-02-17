@@ -10,8 +10,8 @@ use std::thread;
 
 /// Spawn a thread that panics if value is negative, otherwise returns value * 2.
 /// Return Ok with the result, or Err if the thread panicked.
-pub fn safe_compute(value: i32) -> Result<i32, String>  {
-    todo!("Return Ok with the result, or Err if the thread panicked.")
+pub fn safe_compute(value: i32) -> Result<i32, String> {
+    todo!("Implement safe_compute")
 }
 
 #[cfg(test)]

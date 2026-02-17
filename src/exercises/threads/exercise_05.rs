@@ -11,8 +11,8 @@ use std::thread;
 
 /// Spawn n_threads threads, each sending its thread index to a channel.
 /// Return the sum of all received values.
-pub fn sum_from_threads(n_threads: usize) -> usize  {
-    todo!("Return the sum of all received values.")
+pub fn sum_from_threads(n_threads: usize) -> usize {
+    todo!("Implement sum_from_threads")
 }
 
 #[cfg(test)]

@@ -7,23 +7,23 @@
 //! - Short-circuit on errors
 
 /// Parse all strings, returning error on first failure.
-pub fn parse_all(strings: &[&str]) -> Result<Vec<i32>, String>  {
-    todo!("Parse all strings, returning error on first failure.")
+pub fn parse_all(strings: &[&str]) -> Result<Vec<i32>, String> {
+    todo!("Implement parse_all")
 }
 
 /// Divide all pairs, failing on division by zero.
-pub fn safe_divide_all(pairs: &[(i32, i32)]) -> Result<Vec<i32>, String>  {
-    todo!("Divide all pairs, failing on division by zero.")
+pub fn safe_divide_all(pairs: &[(i32, i32)]) -> Result<Vec<i32>, String> {
+    todo!("Implement safe_divide_all")
 }
 
 /// Convert strings to lengths, failing if any string is empty.
-pub fn lengths_no_empty(strings: &[&str]) -> Result<Vec<usize>, String>  {
-    todo!("Convert strings to lengths, failing if any string is empty.")
+pub fn lengths_no_empty(strings: &[&str]) -> Result<Vec<usize>, String> {
+    todo!("Implement lengths_no_empty")
 }
 
 /// Parse and validate that all numbers are positive.
-pub fn parse_positive(strings: &[&str]) -> Result<Vec<i32>, String>  {
-    todo!("Parse and validate that all numbers are positive.")
+pub fn parse_positive(strings: &[&str]) -> Result<Vec<i32>, String> {
+    todo!("Implement parse_positive")
 }
 
 #[cfg(test)]

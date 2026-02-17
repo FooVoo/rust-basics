@@ -11,35 +11,35 @@ pub struct TextAnalyzer<'a> {
 }
 
 impl<'a> TextAnalyzer<'a> {
-    pub fn new(text: &'a str) -> Self  {
+    pub fn new(text: &'a str) -> Self {
         todo!("Implement new")
     }
     
-    pub fn get_text(&self) -> &str  {
+    pub fn get_text(&self) -> &str {
         todo!("Implement get_text")
     }
     
-    pub fn find_word(&self, word: &str) -> Option<usize>  {
+    pub fn find_word(&self, word: &str) -> Option<usize> {
         todo!("Implement find_word")
     }
     
-    pub fn get_line(&self, n: usize) -> Option<&str>  {
+    pub fn get_line(&self, n: usize) -> Option<&str> {
         todo!("Implement get_line")
     }
     
-    pub fn first_sentence(&self) -> &str  {
+    pub fn first_sentence(&self) -> &str {
         todo!("Implement first_sentence")
     }
 }
 
 /// Count lines in text.
-pub fn count_lines(analyzer: &TextAnalyzer) -> usize  {
-    todo!("Count lines in text.")
+pub fn count_lines(analyzer: &TextAnalyzer) -> usize {
+    todo!("Implement count_lines")
 }
 
 /// Get all words from text.
-pub fn extract_words(text: &str) -> Vec<&str>  {
-    todo!("Get all words from text.")
+pub fn extract_words(text: &str) -> Vec<&str> {
+    todo!("Implement extract_words")
 }
 
 #[cfg(test)]

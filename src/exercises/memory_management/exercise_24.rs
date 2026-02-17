@@ -12,7 +12,7 @@ pub struct Parser<'a> {
 }
 
 impl<'a> Parser<'a> {
-    pub fn new(content: &'a str) -> Self  {
+    pub fn new(content: &'a str) -> Self {
         todo!("Implement new")
     }
     
@@ -23,18 +23,18 @@ impl<'a> Parser<'a> {
         todo!("Implement take_while")
     }
     
-    pub fn skip_whitespace(&mut self)  {
+    pub fn skip_whitespace(&mut self) {
         todo!("Implement skip_whitespace")
     }
     
-    pub fn remaining(&self) -> &'a str  {
+    pub fn remaining(&self) -> &'a str {
         todo!("Implement remaining")
     }
 }
 
 /// Parse words from text.
-pub fn parse_words<'a>(parser: &mut Parser<'a>) -> Vec<&'a str>  {
-    todo!("Parse words from text.")
+pub fn parse_words<'a>(parser: &mut Parser<'a>) -> Vec<&'a str> {
+    todo!("Implement parse_words")
 }
 
 pub struct Splitter<'text> {
@@ -43,11 +43,11 @@ pub struct Splitter<'text> {
 }
 
 impl<'text> Splitter<'text> {
-    pub fn new(text: &'text str, delimiter: char) -> Self  {
+    pub fn new(text: &'text str, delimiter: char) -> Self {
         todo!("Implement new")
     }
     
-    pub fn split(&self) -> Vec<&'text str>  {
+    pub fn split(&self) -> Vec<&'text str> {
         todo!("Implement split")
     }
 }

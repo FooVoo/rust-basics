@@ -16,11 +16,11 @@ pub struct HtmlRenderer {
 }
 
 impl Renderer for HtmlRenderer {
-    fn render(&self) -> String  {
+    fn render(&self) -> String {
         todo!("Implement render")
     }
     
-    fn get_type(&self) -> &'static str  {
+    fn get_type(&self) -> &'static str {
         todo!("Implement get_type")
     }
 }
@@ -30,11 +30,11 @@ pub struct JsonRenderer {
 }
 
 impl Renderer for JsonRenderer {
-    fn render(&self) -> String  {
+    fn render(&self) -> String {
         todo!("Implement render")
     }
     
-    fn get_type(&self) -> &'static str  {
+    fn get_type(&self) -> &'static str {
         todo!("Implement get_type")
     }
 }
@@ -44,28 +44,28 @@ pub struct XmlRenderer {
 }
 
 impl Renderer for XmlRenderer {
-    fn render(&self) -> String  {
+    fn render(&self) -> String {
         todo!("Implement render")
     }
     
-    fn get_type(&self) -> &'static str  {
+    fn get_type(&self) -> &'static str {
         todo!("Implement get_type")
     }
 }
 
 /// Dynamic dispatch using trait object reference
-pub fn render_dynamic(renderer: &dyn Renderer) -> String  {
-    todo!("Dynamic dispatch using trait object reference")
+pub fn render_dynamic(renderer: &dyn Renderer) -> String {
+    todo!("Implement render_dynamic")
 }
 
 /// Static dispatch using generic
-pub fn render_static<T: Renderer>(renderer: &T) -> String  {
-    todo!("Static dispatch using generic")
+pub fn render_static<T: Renderer>(renderer: &T) -> String {
+    todo!("Implement render_static")
 }
 
 /// Process multiple renderers dynamically
-pub fn render_all(renderers: &[&dyn Renderer]) -> Vec<String>  {
-    todo!("Process multiple renderers dynamically")
+pub fn render_all(renderers: &[&dyn Renderer]) -> Vec<String> {
+    todo!("Implement render_all")
 }
 
 #[cfg(test)]

@@ -15,18 +15,18 @@ pub enum Priority {
 }
 
 /// Returns true if the priority requires immediate attention (High or Critical)
-pub fn needs_immediate_attention(priority: Priority) -> bool  {
-    todo!("Return true if the priority requires immediate attention (High or Critical)")
+pub fn needs_immediate_attention(priority: Priority) -> bool {
+    todo!("Implement needs_immediate_attention")
 }
 
 /// Returns a numeric value for the priority
-pub fn priority_value(priority: Priority) -> u8  {
-    todo!("Return a numeric value for the priority")
+pub fn priority_value(priority: Priority) -> u8 {
+    todo!("Implement priority_value")
 }
 
 /// Returns true if priority is not Low
-pub fn is_important(priority: Priority) -> bool  {
-    todo!("Return true if priority is not Low")
+pub fn is_important(priority: Priority) -> bool {
+    todo!("Implement is_important")
 }
 
 #[cfg(test)]

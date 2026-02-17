@@ -10,18 +10,18 @@ use tokio::sync::watch;
 use tokio::time::{sleep, Duration};
 
 /// Broadcast value updates to multiple subscribers.
-pub async fn broadcast_updates(updates: Vec<i32>) -> Vec<Vec<i32>>  {
-    todo!("Broadcast value updates to multiple subscribers.")
+pub async fn broadcast_updates(updates: Vec<i32>) -> Vec<Vec<i32>> {
+    todo!("Implement broadcast_updates")
 }
 
 /// Monitor state changes and react to them.
-pub async fn state_monitor(states: Vec<String>) -> Vec<String>  {
-    todo!("Monitor state changes and react to them.")
+pub async fn state_monitor(states: Vec<String>) -> Vec<String> {
+    todo!("Implement state_monitor")
 }
 
 /// Track latest value with watch channel.
-pub async fn latest_value_tracker(values: Vec<i32>, delay_ms: u64) -> i32  {
-    todo!("Track latest value with watch channel.")
+pub async fn latest_value_tracker(values: Vec<i32>, delay_ms: u64) -> i32 {
+    todo!("Implement latest_value_tracker")
 }
 
 #[cfg(test)]

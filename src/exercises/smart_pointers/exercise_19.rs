@@ -20,15 +20,15 @@ struct Node {
 }
 
 impl UniqueList {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
 
-    pub fn push_front(&mut self, value: i32)  {
+    pub fn push_front(&mut self, value: i32) {
         todo!("Implement push_front")
     }
 
-    pub fn len(&self) -> usize  {
+    pub fn len(&self) -> usize {
         todo!("Implement len")
     }
 }
@@ -45,15 +45,15 @@ struct SharedNode {
 }
 
 impl SharedList {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
 
-    pub fn prepend(&self, value: i32) -> Self  {
+    pub fn prepend(&self, value: i32) -> Self {
         todo!("Implement prepend")
     }
 
-    pub fn len(&self) -> usize  {
+    pub fn len(&self) -> usize {
         todo!("Implement len")
     }
 }
@@ -69,19 +69,19 @@ struct MutableNode {
 }
 
 impl MutableSharedList {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
 
-    pub fn push_front(&mut self, value: i32)  {
+    pub fn push_front(&mut self, value: i32) {
         todo!("Implement push_front")
     }
 
-    pub fn modify_first(&self, new_value: i32) -> bool  {
+    pub fn modify_first(&self, new_value: i32) -> bool {
         todo!("Implement modify_first")
     }
 
-    pub fn first_value(&self) -> Option<i32>  {
+    pub fn first_value(&self) -> Option<i32> {
         todo!("Implement first_value")
     }
 }

@@ -20,34 +20,34 @@ pub enum QueryBuilder {
 
 impl QueryBuilder {
     /// Creates a new empty query builder
-    pub fn new() -> Self  {
-        todo!("Create a new empty query builder")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Adds SELECT clause
-    pub fn select(fields: Vec<String>) -> Self  {
-        todo!("Add SELECT clause")
+    pub fn select(fields: Vec<String>) -> Self {
+        todo!("Implement select")
     }
 
     /// Adds FROM clause
-    pub fn from(self, table: String) -> Result<Self, String>  {
-        todo!("Add FROM clause")
+    pub fn from(self, table: String) -> Result<Self, String> {
+        todo!("Implement from")
     }
 
     /// Adds WHERE clause
-    pub fn where_clause(self, condition: String) -> Result<Self, String>  {
-        todo!("Add WHERE clause")
+    pub fn where_clause(self, condition: String) -> Result<Self, String> {
+        todo!("Implement where_clause")
     }
 
     /// Builds the final SQL query string
-    pub fn build(&self) -> Result<String, String>  {
-        todo!("Build the final SQL query string")
+    pub fn build(&self) -> Result<String, String> {
+        todo!("Implement build")
     }
 }
 
 impl Default for QueryBuilder {
-    fn default() -> Self  {
-        todo!("Build the final SQL query string")
+    fn default() -> Self {
+        todo!("Implement default")
     }
 }
 

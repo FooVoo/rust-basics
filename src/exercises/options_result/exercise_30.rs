@@ -18,8 +18,8 @@ pub enum Validation<T, E> {
 
 impl<T, E> Validation<T, E> {
     /// Map over the success value.
-    pub fn map<U>(self, f: impl FnOnce(T) -> U) -> Validation<U, E>  {
-        todo!("Map over the success value.")
+    pub fn map<U>(self, f: impl FnOnce(T) -> U) -> Validation<U, E> {
+        todo!("Implement map")
     }
 
     /// Apply a fallible function.
@@ -41,23 +41,23 @@ impl<T, E> Validation<T, E> {
 }
 
 /// Validate that a number is positive.
-pub fn validate_positive(n: i32) -> Validation<i32, String>  {
-    todo!("Validate that a number is positive.")
+pub fn validate_positive(n: i32) -> Validation<i32, String> {
+    todo!("Implement validate_positive")
 }
 
 /// Validate that a number is even.
-pub fn validate_even(n: i32) -> Validation<i32, String>  {
-    todo!("Validate that a number is even.")
+pub fn validate_even(n: i32) -> Validation<i32, String> {
+    todo!("Implement validate_even")
 }
 
 /// Combine multiple validations, accumulating all errors.
-pub fn validate_all(numbers: Vec<i32>) -> Validation<Vec<i32>, String>  {
-    todo!("Combine multiple validations, accumulating all errors.")
+pub fn validate_all(numbers: Vec<i32>) -> Validation<Vec<i32>, String> {
+    todo!("Implement validate_all")
 }
 
 /// Implement a monadic pipeline with custom error handling.
-pub fn complex_pipeline(a: i32, b: i32) -> Validation<String, String>  {
-    todo!("Implement a monadic pipeline with custom error handling.")
+pub fn complex_pipeline(a: i32, b: i32) -> Validation<String, String> {
+    todo!("Implement complex_pipeline")
 }
 
 #[cfg(test)]

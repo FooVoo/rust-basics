@@ -7,28 +7,28 @@
 //! - Work with tuples in iterations
 
 /// Get indices of elements that match a predicate.
-pub fn indices_of_evens(numbers: &[i32]) -> Vec<usize>  {
-    todo!("Get indices of elements that match a predicate.")
+pub fn indices_of_evens(numbers: &[i32]) -> Vec<usize> {
+    todo!("Implement indices_of_evens")
 }
 
 /// Create pairs of elements from two slices.
-pub fn zip_slices(a: &[i32], b: &[i32]) -> Vec<(i32, i32)>  {
-    todo!("Create pairs of elements from two slices.")
+pub fn zip_slices(a: &[i32], b: &[i32]) -> Vec<(i32, i32)> {
+    todo!("Implement zip_slices")
 }
 
 /// Sum corresponding elements from two slices.
-pub fn sum_corresponding(a: &[i32], b: &[i32]) -> Vec<i32>  {
-    todo!("Sum corresponding elements from two slices.")
+pub fn sum_corresponding(a: &[i32], b: &[i32]) -> Vec<i32> {
+    todo!("Implement sum_corresponding")
 }
 
 /// Find indices where two slices differ.
-pub fn diff_indices(a: &[i32], b: &[i32]) -> Vec<usize>  {
-    todo!("Find indices where two slices differ.")
+pub fn diff_indices(a: &[i32], b: &[i32]) -> Vec<usize> {
+    todo!("Implement diff_indices")
 }
 
 /// Create indexed strings.
-pub fn indexed_strings(strings: &[&str]) -> Vec<String>  {
-    todo!("Create indexed strings.")
+pub fn indexed_strings(strings: &[&str]) -> Vec<String> {
+    todo!("Implement indexed_strings")
 }
 
 #[cfg(test)]

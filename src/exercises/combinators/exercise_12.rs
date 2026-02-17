@@ -7,13 +7,13 @@
 //! - Bridge Option and Result types
 
 /// Find element and return as Result.
-pub fn find_element(numbers: &[i32], target: i32) -> Result<usize, String>  {
-    todo!("Find element and return as Result.")
+pub fn find_element(numbers: &[i32], target: i32) -> Result<usize, String> {
+    todo!("Implement find_element")
 }
 
 /// Get first element as Result.
-pub fn first_element<T: Clone>(slice: &[T]) -> Result<T, String>  {
-    todo!("Get first element as Result.")
+pub fn first_element<T: Clone>(slice: &[T]) -> Result<T, String> {
+    todo!("Implement first_element")
 }
 
 #[cfg(test)]

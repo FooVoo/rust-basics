@@ -22,25 +22,25 @@ pub struct Door<State> {
 
 impl Door<Locked> {
     /// Creates a new locked door
-    pub fn new(code: String) -> Self  {
-        todo!("Create a new locked door")
+    pub fn new(code: String) -> Self {
+        todo!("Implement new")
     }
 
     /// Unlocks the door with the correct code
-    pub fn unlock(self, code: &str) -> Result<Door<Unlocked>, String>  {
-        todo!("Unlocks the door with the correct code")
+    pub fn unlock(self, code: &str) -> Result<Door<Unlocked>, String> {
+        todo!("Implement unlock")
     }
 }
 
 impl Door<Unlocked> {
     /// Locks the door
-    pub fn lock(self) -> Door<Locked>  {
-        todo!("Locks the door")
+    pub fn lock(self) -> Door<Locked> {
+        todo!("Implement lock")
     }
 
     /// Opens the door (only possible when unlocked)
-    pub fn open(&self) -> String  {
-        todo!("Opens the door (only possible when unlocked)")
+    pub fn open(&self) -> String {
+        todo!("Implement open")
     }
 }
 
@@ -53,23 +53,23 @@ pub enum DoorState {
 
 impl DoorState {
     /// Creates a new locked door
-    pub fn new(code: String) -> Self  {
-        todo!("Create a new locked door")
+    pub fn new(code: String) -> Self {
+        todo!("Implement new")
     }
 
     /// Attempts to unlock the door
-    pub fn unlock(&mut self, input_code: &str) -> Result<(), String>  {
-        todo!("Attempts to unlock the door")
+    pub fn unlock(&mut self, input_code: &str) -> Result<(), String> {
+        todo!("Implement unlock")
     }
 
     /// Locks the door
-    pub fn lock(&mut self) -> Result<(), String>  {
-        todo!("Locks the door")
+    pub fn lock(&mut self) -> Result<(), String> {
+        todo!("Implement lock")
     }
 
     /// Checks if door is locked
-    pub fn is_locked(&self) -> bool  {
-        todo!("Check if door is locked")
+    pub fn is_locked(&self) -> bool {
+        todo!("Implement is_locked")
     }
 }
 

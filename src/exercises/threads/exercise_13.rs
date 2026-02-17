@@ -12,8 +12,8 @@ use std::thread;
 /// Simulate a simple thread pool: spawn n_workers threads.
 /// Send n_tasks work items through a channel, each worker processes tasks.
 /// Return sum of all task results (each task returns its index * 2).
-pub fn simple_thread_pool(n_workers: usize, n_tasks: usize) -> usize  {
-    todo!("Return sum of all task results (each task returns its index * 2).")
+pub fn simple_thread_pool(n_workers: usize, n_tasks: usize) -> usize {
+    todo!("Implement simple_thread_pool")
 }
 
 #[cfg(test)]

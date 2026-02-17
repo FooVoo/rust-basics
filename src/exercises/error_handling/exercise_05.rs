@@ -8,8 +8,8 @@
 
 /// Safely get an element from a slice at the given index.
 /// Return Ok(element) if index is valid, Err with message otherwise.
-pub fn safe_get<T: Clone>(slice: &[T], index: usize) -> Result<T, String>  {
-    todo!("Return Ok(element) if index is valid, Err with message otherwise.")
+pub fn safe_get<T: Clone>(slice: &[T], index: usize) -> Result<T, String> {
+    todo!("Implement safe_get")
 }
 
 #[cfg(test)]

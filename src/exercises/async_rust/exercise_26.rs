@@ -9,13 +9,13 @@
 use tokio::time::{sleep, Duration};
 
 /// Async factorial using recursion.
-pub fn async_factorial(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64> + Send>>  {
-    todo!("Async factorial using recursion.")
+pub fn async_factorial(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64> + Send>> {
+    todo!("Implement async_factorial")
 }
 
 /// Async fibonacci using recursion.
-pub fn async_fibonacci(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64> + Send>>  {
-    todo!("Async fibonacci using recursion.")
+pub fn async_fibonacci(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64> + Send>> {
+    todo!("Implement async_fibonacci")
 }
 
 /// Recursive tree traversal.
@@ -25,8 +25,8 @@ pub struct TreeNode {
     pub children: Vec<TreeNode>,
 }
 
-pub fn traverse_tree(node: TreeNode) -> std::pin::Pin<Box<dyn std::future::Future<Output = Vec<i32>> + Send>>  {
-    todo!("Recursive tree traversal.")
+pub fn traverse_tree(node: TreeNode) -> std::pin::Pin<Box<dyn std::future::Future<Output = Vec<i32>> + Send>> {
+    todo!("Implement traverse_tree")
 }
 
 #[cfg(test)]

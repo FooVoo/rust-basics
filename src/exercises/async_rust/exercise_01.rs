@@ -8,18 +8,18 @@
 
 /// Multiply two numbers asynchronously.
 /// This is a simple introduction to async functions.
-pub async fn async_multiply(a: i32, b: i32) -> i32  {
-    todo!("This is a simple introduction to async functions.")
+pub async fn async_multiply(a: i32, b: i32) -> i32 {
+    todo!("Implement async_multiply")
 }
 
 /// Add two numbers asynchronously.
-pub async fn async_add(a: i32, b: i32) -> i32  {
-    todo!("Add two numbers asynchronously.")
+pub async fn async_add(a: i32, b: i32) -> i32 {
+    todo!("Implement async_add")
 }
 
 /// Chain async operations: multiply then add.
-pub async fn multiply_then_add(a: i32, b: i32, c: i32) -> i32  {
-    todo!("Chain async operations: multiply then add.")
+pub async fn multiply_then_add(a: i32, b: i32, c: i32) -> i32 {
+    todo!("Implement multiply_then_add")
 }
 
 #[cfg(test)]

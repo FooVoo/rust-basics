@@ -23,8 +23,8 @@ where
 pub struct Identity;
 
 impl Processor for Identity {
-    fn process<'a>(&self, input: &'a str) -> &'a str  {
-        todo!("An identity processor that returns the input unchanged.")
+    fn process<'a>(&self, input: &'a str) -> &'a str {
+        todo!("Implement process")
     }
 }
 
@@ -48,8 +48,8 @@ pub struct FilterMapper<F> {
 }
 
 impl<F> FilterMapper<F> {
-    pub fn new(predicate: F) -> Self  {
-        todo!("A filter mapper that filters items based on a predicate.")
+    pub fn new(predicate: F) -> Self {
+        todo!("Implement new")
     }
 }
 
@@ -57,7 +57,7 @@ impl<T, F> Mapper<T> for FilterMapper<F>
 where
     F: for<'a> Fn(&'a T) -> bool,
 {
-    fn map<'a>(&self, items: &'a [T]) -> Vec<&'a T>  {
+    fn map<'a>(&self, items: &'a [T]) -> Vec<&'a T> {
         todo!("Implement map")
     }
 }
@@ -68,8 +68,8 @@ pub struct Transformer<F> {
 }
 
 impl<F> Transformer<F> {
-    pub fn new(func: F) -> Self  {
-        todo!("A generic transformer that works with any reference lifetime.")
+    pub fn new(func: F) -> Self {
+        todo!("Implement new")
     }
 }
 
@@ -77,11 +77,11 @@ impl<F> Transformer<F>
 where
     F: for<'a> Fn(&'a str) -> String,
 {
-    pub fn transform<'a>(&self, input: &'a str) -> String  {
+    pub fn transform<'a>(&self, input: &'a str) -> String {
         todo!("Implement transform")
     }
 
-    pub fn transform_many<'a>(&self, inputs: &'a [&'a str]) -> Vec<String>  {
+    pub fn transform_many<'a>(&self, inputs: &'a [&'a str]) -> Vec<String> {
         todo!("Implement transform_many")
     }
 }
@@ -115,13 +115,13 @@ pub struct LengthValidator {
 }
 
 impl LengthValidator {
-    pub fn new(min: usize, max: usize) -> Self  {
-        todo!("A length validator using HRTB.")
+    pub fn new(min: usize, max: usize) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl Validator for LengthValidator {
-    fn validate<'a>(&self, input: &'a str) -> Result<&'a str, String>  {
+    fn validate<'a>(&self, input: &'a str) -> Result<&'a str, String> {
         todo!("Implement validate")
     }
 }

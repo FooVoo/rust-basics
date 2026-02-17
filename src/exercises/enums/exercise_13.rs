@@ -20,18 +20,18 @@ pub enum CardType {
 }
 
 /// Returns the payment method name
-pub fn payment_name(payment: &PaymentMethod) -> String  {
-    todo!("Return the payment method name")
+pub fn payment_name(payment: &PaymentMethod) -> String {
+    todo!("Implement payment_name")
 }
 
 /// Returns true if the payment is electronic (card or digital wallet)
-pub fn is_electronic(payment: &PaymentMethod) -> bool  {
-    todo!("Return true if the payment is electronic (card or digital wallet)")
+pub fn is_electronic(payment: &PaymentMethod) -> bool {
+    todo!("Implement is_electronic")
 }
 
 /// Returns processing fee percentage
-pub fn processing_fee(payment: &PaymentMethod) -> f64  {
-    todo!("Return processing fee percentage")
+pub fn processing_fee(payment: &PaymentMethod) -> f64 {
+    todo!("Implement processing_fee")
 }
 
 #[cfg(test)]

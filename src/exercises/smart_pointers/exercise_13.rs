@@ -19,34 +19,34 @@ pub struct GraphNode {
 
 impl GraphNode {
     /// Create a new shared node.
-    pub fn new(value: i32) -> SharedNode  {
-        todo!("Create a new shared node.")
+    pub fn new(value: i32) -> SharedNode {
+        todo!("Implement new")
     }
 
     /// Add a neighbor to this node.
-    pub fn add_neighbor(node: &SharedNode, neighbor: SharedNode)  {
-        todo!("Add a neighbor to this node.")
+    pub fn add_neighbor(node: &SharedNode, neighbor: SharedNode) {
+        todo!("Implement add_neighbor")
     }
 
     /// Get the value from a shared node.
-    pub fn get_value(node: &SharedNode) -> i32  {
-        todo!("Get the value from a shared node.")
+    pub fn get_value(node: &SharedNode) -> i32 {
+        todo!("Implement get_value")
     }
 
     /// Set the value of a shared node.
-    pub fn set_value(node: &SharedNode, value: i32)  {
-        todo!("Set the value of a shared node.")
+    pub fn set_value(node: &SharedNode, value: i32) {
+        todo!("Implement set_value")
     }
 
     /// Count neighbors.
-    pub fn neighbor_count(node: &SharedNode) -> usize  {
-        todo!("Count neighbors.")
+    pub fn neighbor_count(node: &SharedNode) -> usize {
+        todo!("Implement neighbor_count")
     }
 }
 
 /// Create a bidirectional link between two nodes.
-pub fn create_bidirectional_link(a: &SharedNode, b: &SharedNode)  {
-    todo!("Create a bidirectional link between two nodes.")
+pub fn create_bidirectional_link(a: &SharedNode, b: &SharedNode) {
+    todo!("Implement create_bidirectional_link")
 }
 
 #[cfg(test)]

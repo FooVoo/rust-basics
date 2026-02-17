@@ -13,7 +13,7 @@ pub trait Shape {
 pub trait ColoredShape: Shape {
     fn color(&self) -> &str;
     
-    fn describe(&self) -> String  {
+    fn describe(&self) -> String {
         todo!("Implement describe")
     }
 }
@@ -21,7 +21,7 @@ pub trait ColoredShape: Shape {
 pub trait NamedColoredShape: ColoredShape {
     fn name(&self) -> &str;
     
-    fn full_description(&self) -> String  {
+    fn full_description(&self) -> String {
         todo!("Implement full_description")
     }
 }
@@ -33,19 +33,19 @@ pub struct ColoredCircle {
 }
 
 impl Shape for ColoredCircle {
-    fn area(&self) -> f64  {
+    fn area(&self) -> f64 {
         todo!("Implement area")
     }
 }
 
 impl ColoredShape for ColoredCircle {
-    fn color(&self) -> &str  {
+    fn color(&self) -> &str {
         todo!("Implement color")
     }
 }
 
 impl NamedColoredShape for ColoredCircle {
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 }
@@ -57,20 +57,20 @@ pub struct ColoredRectangle {
 }
 
 impl Shape for ColoredRectangle {
-    fn area(&self) -> f64  {
+    fn area(&self) -> f64 {
         todo!("Implement area")
     }
 }
 
 impl ColoredShape for ColoredRectangle {
-    fn color(&self) -> &str  {
+    fn color(&self) -> &str {
         todo!("Implement color")
     }
 }
 
 /// Function requiring ColoredShape (which requires Shape)
-pub fn print_colored_shape<T: ColoredShape>(shape: &T) -> String  {
-    todo!("Function requiring ColoredShape (which requires Shape)")
+pub fn print_colored_shape<T: ColoredShape>(shape: &T) -> String {
+    todo!("Implement print_colored_shape")
 }
 
 #[cfg(test)]

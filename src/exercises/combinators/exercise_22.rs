@@ -25,8 +25,8 @@ impl<T, E> ResultMapBoth<T, E> for Result<T, E> {
 }
 
 /// Use map_both to transform parse result.
-pub fn parse_and_transform(s: &str) -> Result<String, String>  {
-    todo!("Use map_both to transform parse result.")
+pub fn parse_and_transform(s: &str) -> Result<String, String> {
+    todo!("Implement parse_and_transform")
 }
 
 #[cfg(test)]

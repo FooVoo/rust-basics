@@ -9,18 +9,18 @@
 use tokio::time::{sleep, Duration};
 
 /// Execute two async functions concurrently and return both results.
-pub async fn concurrent_multiply(a: i32, b: i32) -> (i32, i32)  {
-    todo!("Execute two async functions concurrently and return both results.")
+pub async fn concurrent_multiply(a: i32, b: i32) -> (i32, i32) {
+    todo!("Implement concurrent_multiply")
 }
 
 /// Execute three delayed operations concurrently.
-pub async fn concurrent_delays(delay_ms: u64) -> (String, String, String)  {
-    todo!("Execute three delayed operations concurrently.")
+pub async fn concurrent_delays(delay_ms: u64) -> (String, String, String) {
+    todo!("Implement concurrent_delays")
 }
 
 /// Compute sum of values concurrently.
-pub async fn concurrent_sum(values: Vec<i32>) -> i32  {
-    todo!("Compute sum of values concurrently.")
+pub async fn concurrent_sum(values: Vec<i32>) -> i32 {
+    todo!("Implement concurrent_sum")
 }
 
 #[cfg(test)]

@@ -16,40 +16,40 @@ pub struct Tracked {
 }
 
 impl Tracked {
-    pub fn new(id: usize) -> Self  {
+    pub fn new(id: usize) -> Self {
         todo!("Implement new")
     }
 }
 
 impl Drop for Tracked {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
 
 /// Get current allocation count.
-pub fn allocations() -> usize  {
-    todo!("Get current allocation count.")
+pub fn allocations() -> usize {
+    todo!("Implement allocations")
 }
 
 /// Get current deallocation count.
-pub fn deallocations() -> usize  {
-    todo!("Get current deallocation count.")
+pub fn deallocations() -> usize {
+    todo!("Implement deallocations")
 }
 
 /// Reset counters.
-pub fn reset_counters()  {
-    todo!("Reset counters.")
+pub fn reset_counters() {
+    todo!("Implement reset_counters")
 }
 
 /// Create and immediately drop a boxed value.
-pub fn create_and_drop()  {
-    todo!("Create and immediately drop a boxed value.")
+pub fn create_and_drop() {
+    todo!("Implement create_and_drop")
 }
 
 /// Create multiple boxed values in a vector.
-pub fn create_multiple(count: usize) -> Vec<Box<Tracked>>  {
-    todo!("Create multiple boxed values in a vector.")
+pub fn create_multiple(count: usize) -> Vec<Box<Tracked>> {
+    todo!("Implement create_multiple")
 }
 
 #[cfg(test)]

@@ -7,23 +7,23 @@
 //! - Chain iterator operations
 
 /// Double all numbers in a vector.
-pub fn double_numbers(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Double all numbers in a vector.")
+pub fn double_numbers(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement double_numbers")
 }
 
 /// Convert strings to their lengths.
-pub fn string_lengths(strings: &[&str]) -> Vec<usize>  {
-    todo!("Convert strings to their lengths.")
+pub fn string_lengths(strings: &[&str]) -> Vec<usize> {
+    todo!("Implement string_lengths")
 }
 
 /// Square all numbers.
-pub fn square_numbers(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Square all numbers.")
+pub fn square_numbers(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement square_numbers")
 }
 
 /// Convert numbers to strings.
-pub fn numbers_to_strings(numbers: &[i32]) -> Vec<String>  {
-    todo!("Convert numbers to strings.")
+pub fn numbers_to_strings(numbers: &[i32]) -> Vec<String> {
+    todo!("Implement numbers_to_strings")
 }
 
 #[cfg(test)]

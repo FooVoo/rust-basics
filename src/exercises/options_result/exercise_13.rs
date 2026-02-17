@@ -7,8 +7,8 @@
 //! - Chain multiple ? operations
 
 /// Parse two strings and add them using ?.
-pub fn parse_and_add(a: &str, b: &str) -> Result<i32, std::num::ParseIntError>  {
-    todo!("Parse two strings and add them using ?.")
+pub fn parse_and_add(a: &str, b: &str) -> Result<i32, std::num::ParseIntError> {
+    todo!("Implement parse_and_add")
 }
 
 /// Parse three strings and multiply them.
@@ -21,8 +21,8 @@ pub fn parse_and_multiply(
 }
 
 /// Divide two parsed numbers.
-pub fn parse_and_divide(a: &str, b: &str) -> Result<i32, String>  {
-    todo!("Divide two parsed numbers.")
+pub fn parse_and_divide(a: &str, b: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_divide")
 }
 
 #[cfg(test)]

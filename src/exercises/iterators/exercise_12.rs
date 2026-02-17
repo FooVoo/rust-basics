@@ -7,23 +7,23 @@
 //! - Work with multiple iterator sources
 
 /// Concatenate multiple slices.
-pub fn concat_slices(a: &[i32], b: &[i32], c: &[i32]) -> Vec<i32>  {
-    todo!("Concatenate multiple slices.")
+pub fn concat_slices(a: &[i32], b: &[i32], c: &[i32]) -> Vec<i32> {
+    todo!("Implement concat_slices")
 }
 
 /// Alternate elements from two slices.
-pub fn interleave(a: &[i32], b: &[i32]) -> Vec<i32>  {
-    todo!("Alternate elements from two slices.")
+pub fn interleave(a: &[i32], b: &[i32]) -> Vec<i32> {
+    todo!("Implement interleave")
 }
 
 /// Repeat a pattern n times.
-pub fn repeat_pattern(pattern: &[i32], times: usize) -> Vec<i32>  {
-    todo!("Repeat a pattern n times.")
+pub fn repeat_pattern(pattern: &[i32], times: usize) -> Vec<i32> {
+    todo!("Implement repeat_pattern")
 }
 
 /// Chain filtered results from multiple sources.
-pub fn chain_filtered(a: &[i32], b: &[i32]) -> Vec<i32>  {
-    todo!("Chain filtered results from multiple sources.")
+pub fn chain_filtered(a: &[i32], b: &[i32]) -> Vec<i32> {
+    todo!("Implement chain_filtered")
 }
 
 #[cfg(test)]

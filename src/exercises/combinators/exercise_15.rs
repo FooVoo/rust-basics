@@ -7,18 +7,18 @@
 //! - Simplify complex Option chains
 
 /// Parse a string that might contain "None" keyword.
-pub fn parse_or_none_keyword(s: &str) -> Option<Option<i32>>  {
-    todo!("Parse a string that might contain \"None\" keyword.")
+pub fn parse_or_none_keyword(s: &str) -> Option<Option<i32>> {
+    todo!("Implement parse_or_none_keyword")
 }
 
 /// Get nested optional value flattened.
-pub fn get_flattened(s: &str) -> Option<i32>  {
-    todo!("Get nested optional value flattened.")
+pub fn get_flattened(s: &str) -> Option<i32> {
+    todo!("Implement get_flattened")
 }
 
 /// Find and parse in one operation.
-pub fn find_and_parse(strings: &[&str], target: &str) -> Option<i32>  {
-    todo!("Find and parse in one operation.")
+pub fn find_and_parse(strings: &[&str], target: &str) -> Option<i32> {
+    todo!("Implement find_and_parse")
 }
 
 #[cfg(test)]

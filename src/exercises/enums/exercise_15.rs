@@ -7,18 +7,18 @@
 //! - Understand while let vs match
 
 /// Processes a stack of options, returning sum of all Some values
-pub fn sum_stack(mut stack: Vec<Option<i32>>) -> i32  {
-    todo!("Process a stack of options, returning sum of all Some values")
+pub fn sum_stack(mut stack: Vec<Option<i32>>) -> i32 {
+    todo!("Implement sum_stack")
 }
 
 /// Counts consecutive Some values from the start of the vector
-pub fn count_consecutive_some(values: &[Option<i32>]) -> usize  {
-    todo!("Counts consecutive Some values from the start of the vector")
+pub fn count_consecutive_some(values: &[Option<i32>]) -> usize {
+    todo!("Implement count_consecutive_some")
 }
 
 /// Extracts all Some values from a vector
-pub fn extract_some_values(values: Vec<Option<i32>>) -> Vec<i32>  {
-    todo!("Extract all Some values from a vector")
+pub fn extract_some_values(values: Vec<Option<i32>>) -> Vec<i32> {
+    todo!("Implement extract_some_values")
 }
 
 #[cfg(test)]

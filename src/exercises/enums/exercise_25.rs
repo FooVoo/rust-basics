@@ -17,33 +17,33 @@ pub enum OrderState {
 
 impl OrderState {
     /// Creates a new pending order
-    pub fn new(items: Vec<String>, total: f64) -> Self  {
-        todo!("Create a new pending order")
+    pub fn new(items: Vec<String>, total: f64) -> Self {
+        todo!("Implement new")
     }
 
     /// Processes the order
-    pub fn process(self, order_id: u64) -> Result<Self, String>  {
-        todo!("Process the order")
+    pub fn process(self, order_id: u64) -> Result<Self, String> {
+        todo!("Implement process")
     }
 
     /// Ships the order
-    pub fn ship(self, tracking_number: String) -> Result<Self, String>  {
-        todo!("Ships the order")
+    pub fn ship(self, tracking_number: String) -> Result<Self, String> {
+        todo!("Implement ship")
     }
 
     /// Marks the order as delivered
-    pub fn deliver(self, delivery_date: String) -> Result<Self, String>  {
-        todo!("Marks the order as delivered")
+    pub fn deliver(self, delivery_date: String) -> Result<Self, String> {
+        todo!("Implement deliver")
     }
 
     /// Cancels the order
-    pub fn cancel(self, reason: String) -> Result<Self, String>  {
-        todo!("Cancels the order")
+    pub fn cancel(self, reason: String) -> Result<Self, String> {
+        todo!("Implement cancel")
     }
 
     /// Returns the order status as a string
-    pub fn status(&self) -> &'static str  {
-        todo!("Return the order status as a string")
+    pub fn status(&self) -> &'static str {
+        todo!("Implement status")
     }
 }
 

@@ -19,7 +19,7 @@ pub enum NestedItem {
 }
 
 impl FlattenDepth {
-    pub fn new(items: Vec<NestedItem>, max_depth: usize) -> Self  {
+    pub fn new(items: Vec<NestedItem>, max_depth: usize) -> Self {
         todo!("Implement new")
     }
 }
@@ -27,7 +27,7 @@ impl FlattenDepth {
 impl Iterator for FlattenDepth {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -44,7 +44,7 @@ impl<I> MergeSorted<I>
 where
     I: Iterator<Item = i32>,
 {
-    pub fn new(iterators: Vec<I>) -> Self  {
+    pub fn new(iterators: Vec<I>) -> Self {
         todo!("Implement new")
     }
 }
@@ -55,7 +55,7 @@ where
 {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -68,15 +68,15 @@ pub struct Permutations<T> {
 }
 
 impl<T: Clone> Permutations<T> {
-    pub fn new(items: Vec<T>) -> Self  {
-        todo!("Iterator that generates permutations.")
+    pub fn new(items: Vec<T>) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl<T: Clone> Iterator for Permutations<T> {
     type Item = Vec<T>;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }

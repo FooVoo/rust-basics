@@ -7,13 +7,13 @@
 //! - Write efficient iterator code
 
 /// Sum using fold vs manual loop comparison function.
-pub fn optimized_sum(numbers: &[i32]) -> i32  {
-    todo!("Sum using fold vs manual loop comparison function.")
+pub fn optimized_sum(numbers: &[i32]) -> i32 {
+    todo!("Implement optimized_sum")
 }
 
 /// Find using short-circuiting.
-pub fn find_optimized(numbers: &[i32], target: i32) -> Option<usize>  {
-    todo!("Find using short-circuiting.")
+pub fn find_optimized(numbers: &[i32], target: i32) -> Option<usize> {
+    todo!("Implement find_optimized")
 }
 
 /// Custom iterator with accurate size_hint.
@@ -24,19 +24,19 @@ pub struct RangeMultiples {
 }
 
 impl RangeMultiples {
-    pub fn new(start: i32, end: i32, step: i32) -> Self  {
-        todo!("Custom iterator with accurate size_hint.")
+    pub fn new(start: i32, end: i32, step: i32) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl Iterator for RangeMultiples {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
     
-    fn size_hint(&self) -> (usize, Option<usize>)  {
+    fn size_hint(&self) -> (usize, Option<usize>) {
         todo!("Implement size_hint")
     }
 }
@@ -44,13 +44,13 @@ impl Iterator for RangeMultiples {
 impl ExactSizeIterator for RangeMultiples {}
 
 /// Efficiently process in chunks without allocating intermediate vectors.
-pub fn process_chunks_efficiently(numbers: &[i32], chunk_size: usize) -> Vec<i32>  {
-    todo!("Efficiently process in chunks without allocating intermediate vectors.")
+pub fn process_chunks_efficiently(numbers: &[i32], chunk_size: usize) -> Vec<i32> {
+    todo!("Implement process_chunks_efficiently")
 }
 
 /// Reuse allocation with extend instead of multiple collects.
-pub fn merge_filtered_efficiently(a: &[i32], b: &[i32], c: &[i32]) -> Vec<i32>  {
-    todo!("Reuse allocation with extend instead of multiple collects.")
+pub fn merge_filtered_efficiently(a: &[i32], b: &[i32], c: &[i32]) -> Vec<i32> {
+    todo!("Implement merge_filtered_efficiently")
 }
 
 #[cfg(test)]

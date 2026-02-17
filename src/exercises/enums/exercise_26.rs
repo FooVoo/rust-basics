@@ -18,24 +18,24 @@ pub enum Token {
 }
 
 impl fmt::Display for Token {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 /// Converts a vector of tokens to a string
-pub fn tokens_to_string(tokens: &[Token]) -> String  {
-    todo!("Convert a vector of tokens to a string")
+pub fn tokens_to_string(tokens: &[Token]) -> String {
+    todo!("Implement tokens_to_string")
 }
 
 /// Filters only number tokens
-pub fn filter_numbers(tokens: Vec<Token>) -> Vec<i32>  {
-    todo!("Filters only number tokens")
+pub fn filter_numbers(tokens: Vec<Token>) -> Vec<i32> {
+    todo!("Implement filter_numbers")
 }
 
 /// Counts the number of operator tokens
-pub fn count_operators(tokens: &[Token]) -> usize  {
-    todo!("Counts the number of operator tokens")
+pub fn count_operators(tokens: &[Token]) -> usize {
+    todo!("Implement count_operators")
 }
 
 #[cfg(test)]

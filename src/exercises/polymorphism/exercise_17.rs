@@ -42,23 +42,23 @@ impl Serializable for SecretKey {}
 // Not Cacheable or NetworkSafe
 
 /// Only works with Serializable types
-pub fn serialize<T: Serializable>(_item: &T) -> String  {
-    todo!("Only works with Serializable types")
+pub fn serialize<T: Serializable>(_item: &T) -> String {
+    todo!("Implement serialize")
 }
 
 /// Only works with Cacheable types
-pub fn cache<T: Cacheable + Clone>(item: &T) -> T  {
-    todo!("Only works with Cacheable types")
+pub fn cache<T: Cacheable + Clone>(item: &T) -> T {
+    todo!("Implement cache")
 }
 
 /// Only works with NetworkSafe types
-pub fn send_over_network<T: NetworkSafe>(_item: &T) -> String  {
-    todo!("Only works with NetworkSafe types")
+pub fn send_over_network<T: NetworkSafe>(_item: &T) -> String {
+    todo!("Implement send_over_network")
 }
 
 /// Works with all three markers
-pub fn full_process<T: Serializable + Cacheable + NetworkSafe + Clone>(item: &T) -> (String, T, String)  {
-    todo!("Works with all three markers")
+pub fn full_process<T: Serializable + Cacheable + NetworkSafe + Clone>(item: &T) -> (String, T, String) {
+    todo!("Implement full_process")
 }
 
 #[cfg(test)]

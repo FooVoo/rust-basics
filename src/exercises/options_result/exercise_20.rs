@@ -7,18 +7,18 @@
 //! - Build complex operations with early returns
 
 /// Parse two numbers and compute their average.
-pub fn average_from_strings(a: &str, b: &str) -> Result<f64, String>  {
-    todo!("Parse two numbers and compute their average.")
+pub fn average_from_strings(a: &str, b: &str) -> Result<f64, String> {
+    todo!("Implement average_from_strings")
 }
 
 /// Parse and perform a calculation (a + b) * c.
-pub fn calculate(a: &str, b: &str, c: &str) -> Result<i32, String>  {
-    todo!("Parse and perform a calculation (a + b) * c.")
+pub fn calculate(a: &str, b: &str, c: &str) -> Result<i32, String> {
+    todo!("Implement calculate")
 }
 
 /// Get element from slice by index and parse it.
-pub fn get_and_parse(strings: &[&str], index: usize) -> Result<i32, String>  {
-    todo!("Get element from slice by index and parse it.")
+pub fn get_and_parse(strings: &[&str], index: usize) -> Result<i32, String> {
+    todo!("Implement get_and_parse")
 }
 
 #[cfg(test)]

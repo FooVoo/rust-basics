@@ -7,18 +7,18 @@
 //! - Handle success and error cases
 
 /// Divide two numbers, returning an error message if dividing by zero.
-pub fn divide(a: i32, b: i32) -> Result<i32, String>  {
-    todo!("Divide two numbers, returning an error message if dividing by zero.")
+pub fn divide(a: i32, b: i32) -> Result<i32, String> {
+    todo!("Implement divide")
 }
 
 /// Parse a string to i32, converting parse error to custom message.
-pub fn parse_number(s: &str) -> Result<i32, String>  {
-    todo!("Parse a string to i32, converting parse error to custom message.")
+pub fn parse_number(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_number")
 }
 
 /// Check if a number is positive, return error otherwise.
-pub fn validate_positive(n: i32) -> Result<i32, String>  {
-    todo!("Check if a number is positive, return error otherwise.")
+pub fn validate_positive(n: i32) -> Result<i32, String> {
+    todo!("Implement validate_positive")
 }
 
 #[cfg(test)]

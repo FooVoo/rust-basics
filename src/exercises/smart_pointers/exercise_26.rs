@@ -20,38 +20,38 @@ pub struct TrackedAlloc<T> {
 }
 
 impl<T> TrackedAlloc<T> {
-    pub fn new(value: T) -> Self  {
-        todo!("A wrapper around raw allocation that tracks memory usage.")
+    pub fn new(value: T) -> Self {
+        todo!("Implement new")
     }
 
-    pub fn get(&self) -> &T  {
+    pub fn get(&self) -> &T {
         todo!("Implement get")
     }
 
-    pub fn get_mut(&mut self) -> &mut T  {
+    pub fn get_mut(&mut self) -> &mut T {
         todo!("Implement get_mut")
     }
 }
 
 impl<T> Drop for TrackedAlloc<T> {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
 
 /// Get total allocated bytes.
-pub fn get_allocated_bytes() -> usize  {
-    todo!("Get total allocated bytes.")
+pub fn get_allocated_bytes() -> usize {
+    todo!("Implement get_allocated_bytes")
 }
 
 /// Get total allocation count.
-pub fn get_allocation_count() -> usize  {
-    todo!("Get total allocation count.")
+pub fn get_allocation_count() -> usize {
+    todo!("Implement get_allocation_count")
 }
 
 /// Reset allocation tracking.
-pub fn reset_allocation_tracking()  {
-    todo!("Reset allocation tracking.")
+pub fn reset_allocation_tracking() {
+    todo!("Implement reset_allocation_tracking")
 }
 
 /// A pool allocator concept (simplified).
@@ -61,27 +61,27 @@ pub struct MemoryPool {
 }
 
 impl MemoryPool {
-    pub fn new(capacity: usize) -> Self  {
-        todo!("A pool allocator concept (simplified).")
+    pub fn new(capacity: usize) -> Self {
+        todo!("Implement new")
     }
 
-    pub fn allocate(&mut self, size: usize) -> Result<usize, &'static str>  {
+    pub fn allocate(&mut self, size: usize) -> Result<usize, &'static str> {
         todo!("Implement allocate")
     }
 
-    pub fn free(&mut self, size: usize)  {
+    pub fn free(&mut self, size: usize) {
         todo!("Implement free")
     }
 
-    pub fn available(&self) -> usize  {
+    pub fn available(&self) -> usize {
         todo!("Implement available")
     }
 
-    pub fn used(&self) -> usize  {
+    pub fn used(&self) -> usize {
         todo!("Implement used")
     }
 
-    pub fn reset(&mut self)  {
+    pub fn reset(&mut self) {
         todo!("Implement reset")
     }
 }

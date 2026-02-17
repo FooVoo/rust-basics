@@ -8,8 +8,8 @@
 
 /// Parse two numbers from strings and return their sum.
 /// Use the ? operator to propagate errors.
-pub fn parse_and_add(a: &str, b: &str) -> Result<i32, String>  {
-    todo!("Use the ? operator to propagate errors.")
+pub fn parse_and_add(a: &str, b: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_add")
 }
 
 #[cfg(test)]

@@ -21,8 +21,8 @@ pub fn safe_transfer(
 }
 
 /// Run multiple transfers in parallel and return final balances.
-pub fn parallel_transfers(initial_balance: i32, n_transfers: usize) -> (i32, i32)  {
-    todo!("Run multiple transfers in parallel and return final balances.")
+pub fn parallel_transfers(initial_balance: i32, n_transfers: usize) -> (i32, i32) {
+    todo!("Implement parallel_transfers")
 }
 
 #[cfg(test)]

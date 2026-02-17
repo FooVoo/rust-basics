@@ -14,11 +14,11 @@ pub trait Plugin {
 pub struct UppercasePlugin;
 
 impl Plugin for UppercasePlugin {
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 
-    fn execute(&self, input: &str) -> String  {
+    fn execute(&self, input: &str) -> String {
         todo!("Implement execute")
     }
 }
@@ -26,11 +26,11 @@ impl Plugin for UppercasePlugin {
 pub struct ReversePlugin;
 
 impl Plugin for ReversePlugin {
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 
-    fn execute(&self, input: &str) -> String  {
+    fn execute(&self, input: &str) -> String {
         todo!("Implement execute")
     }
 }
@@ -40,17 +40,17 @@ pub struct RepeatPlugin {
 }
 
 impl RepeatPlugin {
-    pub fn new(times: usize) -> Self  {
+    pub fn new(times: usize) -> Self {
         todo!("Implement new")
     }
 }
 
 impl Plugin for RepeatPlugin {
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 
-    fn execute(&self, input: &str) -> String  {
+    fn execute(&self, input: &str) -> String {
         todo!("Implement execute")
     }
 }
@@ -61,27 +61,27 @@ pub struct PluginManager {
 }
 
 impl PluginManager {
-    pub fn new() -> Self  {
-        todo!("A plugin manager that holds boxed plugins.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
-    pub fn register(&mut self, plugin: Box<dyn Plugin>)  {
+    pub fn register(&mut self, plugin: Box<dyn Plugin>) {
         todo!("Implement register")
     }
 
-    pub fn execute(&self, plugin_name: &str, input: &str) -> Option<String>  {
+    pub fn execute(&self, plugin_name: &str, input: &str) -> Option<String> {
         todo!("Implement execute")
     }
 
-    pub fn execute_all(&self, input: &str) -> Vec<(String, String)>  {
+    pub fn execute_all(&self, input: &str) -> Vec<(String, String)> {
         todo!("Implement execute_all")
     }
 
-    pub fn plugin_count(&self) -> usize  {
+    pub fn plugin_count(&self) -> usize {
         todo!("Implement plugin_count")
     }
 
-    pub fn list_plugins(&self) -> Vec<String>  {
+    pub fn list_plugins(&self) -> Vec<String> {
         todo!("Implement list_plugins")
     }
 }
@@ -99,7 +99,7 @@ impl BoxedFunction {
         todo!("Implement new")
     }
 
-    pub fn call(&self, input: i32) -> i32  {
+    pub fn call(&self, input: i32) -> i32 {
         todo!("Implement call")
     }
 }

@@ -7,18 +7,18 @@
 //! - Practice safe Option handling
 
 /// Get a value from Option or return a default.
-pub fn get_or_default(opt: Option<i32>, default: i32) -> i32  {
-    todo!("Get a value from Option or return a default.")
+pub fn get_or_default(opt: Option<i32>, default: i32) -> i32 {
+    todo!("Implement get_or_default")
 }
 
 /// Get the first element of a slice, or 0 if empty.
-pub fn first_or_zero(numbers: &[i32]) -> i32  {
-    todo!("Get the first element of a slice, or 0 if empty.")
+pub fn first_or_zero(numbers: &[i32]) -> i32 {
+    todo!("Implement first_or_zero")
 }
 
 /// Parse a string to i32, returning 0 on failure.
-pub fn parse_or_zero(s: &str) -> i32  {
-    todo!("Parse a string to i32, returning 0 on failure.")
+pub fn parse_or_zero(s: &str) -> i32 {
+    todo!("Implement parse_or_zero")
 }
 
 #[cfg(test)]

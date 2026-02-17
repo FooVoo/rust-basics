@@ -20,13 +20,13 @@ pub struct Pure<T> {
 }
 
 impl<T: Clone> Pure<T> {
-    pub fn new(value: T) -> Self  {
-        todo!("A parser that always succeeds with a value.")
+    pub fn new(value: T) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl<'a, T: Clone> Parser<'a, T> for Pure<T> {
-    fn parse(&self, input: &'a str) -> ParseResult<'a, T>  {
+    fn parse(&self, input: &'a str) -> ParseResult<'a, T> {
         todo!("Implement parse")
     }
 }
@@ -37,13 +37,13 @@ pub struct CharParser {
 }
 
 impl CharParser {
-    pub fn new(expected: char) -> Self  {
-        todo!("A parser that matches a specific character.")
+    pub fn new(expected: char) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl<'a> Parser<'a, char> for CharParser {
-    fn parse(&self, input: &'a str) -> ParseResult<'a, char>  {
+    fn parse(&self, input: &'a str) -> ParseResult<'a, char> {
         todo!("Implement parse")
     }
 }
@@ -64,7 +64,7 @@ where
     P: for<'a> Parser<'a, A>,
     F: Fn(A) -> B,
 {
-    pub fn new(parser: P, func: F) -> Self  {
+    pub fn new(parser: P, func: F) -> Self {
         todo!("Implement new")
     }
 }
@@ -74,7 +74,7 @@ where
     P: for<'b> Parser<'b, A>,
     F: Fn(A) -> B,
 {
-    fn parse(&self, input: &'a str) -> ParseResult<'a, B>  {
+    fn parse(&self, input: &'a str) -> ParseResult<'a, B> {
         todo!("Implement parse")
     }
 }
@@ -83,8 +83,8 @@ where
 pub struct DigitParser;
 
 impl<'a> Parser<'a, u32> for DigitParser {
-    fn parse(&self, input: &'a str) -> ParseResult<'a, u32>  {
-        todo!("Parse a digit character.")
+    fn parse(&self, input: &'a str) -> ParseResult<'a, u32> {
+        todo!("Implement parse")
     }
 }
 

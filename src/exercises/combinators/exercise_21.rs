@@ -23,8 +23,8 @@ impl<T> OptionTap<T> for Option<T> {
 }
 
 /// Use tap to log values in a chain.
-pub fn process_with_logging(value: Option<i32>) -> Option<i32>  {
-    todo!("Use tap to log values in a chain.")
+pub fn process_with_logging(value: Option<i32>) -> Option<i32> {
+    todo!("Implement process_with_logging")
 }
 
 #[cfg(test)]

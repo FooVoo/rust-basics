@@ -16,24 +16,24 @@ pub struct Arena {
 }
 
 impl Arena {
-    pub fn new(capacity: usize) -> Self  {
-        todo!("A simple arena allocator using raw pointers.")
+    pub fn new(capacity: usize) -> Self {
+        todo!("Implement new")
     }
 
     /// Allocate space for a value of type T.
-    pub fn alloc<T>(&mut self, value: T) -> Option<&mut T>  {
-        todo!("Allocate space for a value of type T.")
+    pub fn alloc<T>(&mut self, value: T) -> Option<&mut T> {
+        todo!("Implement alloc")
     }
 
-    pub fn used(&self) -> usize  {
-        todo!("Allocate space for a value of type T.")
+    pub fn used(&self) -> usize {
+        todo!("Implement used")
     }
 
-    pub fn capacity(&self) -> usize  {
+    pub fn capacity(&self) -> usize {
         todo!("Implement capacity")
     }
 
-    pub fn reset(&mut self)  {
+    pub fn reset(&mut self) {
         todo!("Implement reset")
     }
 }
@@ -50,33 +50,33 @@ struct Node<T> {
 }
 
 impl<T> RawLinkedList<T> {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
 
-    pub fn push(&mut self, value: T)  {
+    pub fn push(&mut self, value: T) {
         todo!("Implement push")
     }
 
-    pub fn pop(&mut self) -> Option<T>  {
+    pub fn pop(&mut self) -> Option<T> {
         todo!("Implement pop")
     }
 
-    pub fn len(&self) -> usize  {
+    pub fn len(&self) -> usize {
         todo!("Implement len")
     }
 
-    pub fn is_empty(&self) -> bool  {
+    pub fn is_empty(&self) -> bool {
         todo!("Implement is_empty")
     }
 
-    pub fn peek(&self) -> Option<&T>  {
+    pub fn peek(&self) -> Option<&T> {
         todo!("Implement peek")
     }
 }
 
 impl<T> Drop for RawLinkedList<T> {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }

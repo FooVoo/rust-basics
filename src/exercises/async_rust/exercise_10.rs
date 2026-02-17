@@ -9,18 +9,18 @@
 use tokio::sync::mpsc;
 
 /// Send multiple values through a channel.
-pub async fn send_values(values: Vec<i32>) -> Vec<i32>  {
-    todo!("Send multiple values through a channel.")
+pub async fn send_values(values: Vec<i32>) -> Vec<i32> {
+    todo!("Implement send_values")
 }
 
 /// Process values through a channel with transformation.
-pub async fn channel_transform(values: Vec<i32>) -> Vec<i32>  {
-    todo!("Process values through a channel with transformation.")
+pub async fn channel_transform(values: Vec<i32>) -> Vec<i32> {
+    todo!("Implement channel_transform")
 }
 
 /// Use a channel to communicate between multiple producers and one consumer.
-pub async fn multiple_producers(count: usize) -> Vec<i32>  {
-    todo!("Use a channel to communicate between multiple producers and one consumer.")
+pub async fn multiple_producers(count: usize) -> Vec<i32> {
+    todo!("Implement multiple_producers")
 }
 
 #[cfg(test)]

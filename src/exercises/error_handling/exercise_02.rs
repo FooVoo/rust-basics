@@ -8,8 +8,8 @@
 
 /// Validate an age (must be between 0 and 150).
 /// Return Ok(age) if valid, Err with message otherwise.
-pub fn validate_age(age: i32) -> Result<i32, String>  {
-    todo!("Return Ok(age) if valid, Err with message otherwise.")
+pub fn validate_age(age: i32) -> Result<i32, String> {
+    todo!("Implement validate_age")
 }
 
 #[cfg(test)]

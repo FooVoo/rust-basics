@@ -11,18 +11,18 @@ use tokio::time::{sleep, Duration};
 use std::sync::Arc;
 
 /// Execute tasks with a concurrency limit.
-pub async fn limited_concurrency(tasks: Vec<i32>, max_concurrent: usize) -> Vec<i32>  {
-    todo!("Execute tasks with a concurrency limit.")
+pub async fn limited_concurrency(tasks: Vec<i32>, max_concurrent: usize) -> Vec<i32> {
+    todo!("Implement limited_concurrency")
 }
 
 /// Rate-limited API calls simulation.
-pub async fn rate_limited_calls(num_calls: usize, rate_limit: usize) -> Vec<usize>  {
-    todo!("Rate-limited API calls simulation.")
+pub async fn rate_limited_calls(num_calls: usize, rate_limit: usize) -> Vec<usize> {
+    todo!("Implement rate_limited_calls")
 }
 
 /// Shared resource pool with semaphore.
-pub async fn resource_pool(requests: usize, pool_size: usize) -> Vec<String>  {
-    todo!("Shared resource pool with semaphore.")
+pub async fn resource_pool(requests: usize, pool_size: usize) -> Vec<String> {
+    todo!("Implement resource_pool")
 }
 
 #[cfg(test)]

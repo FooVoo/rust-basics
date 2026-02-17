@@ -14,33 +14,33 @@ pub struct LargeStruct {
 }
 
 impl LargeStruct {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
 
-    pub fn sum(&self) -> u64  {
+    pub fn sum(&self) -> u64 {
         todo!("Implement sum")
     }
 }
 
 /// Create a boxed large struct to avoid stack overflow.
-pub fn create_on_heap() -> Box<LargeStruct>  {
-    todo!("Create a boxed large struct to avoid stack overflow.")
+pub fn create_on_heap() -> Box<LargeStruct> {
+    todo!("Implement create_on_heap")
 }
 
 /// Create multiple large structs on heap.
-pub fn create_multiple_on_heap(count: usize) -> Vec<Box<LargeStruct>>  {
-    todo!("Create multiple large structs on heap.")
+pub fn create_multiple_on_heap(count: usize) -> Vec<Box<LargeStruct>> {
+    todo!("Implement create_multiple_on_heap")
 }
 
 /// Set values in a boxed large struct.
-pub fn set_values(mut boxed: Box<LargeStruct>, value: u8) -> Box<LargeStruct>  {
-    todo!("Set values in a boxed large struct.")
+pub fn set_values(mut boxed: Box<LargeStruct>, value: u8) -> Box<LargeStruct> {
+    todo!("Implement set_values")
 }
 
 /// Compare sizes.
-pub fn size_of_box_vs_value() -> (usize, usize)  {
-    todo!("Compare sizes.")
+pub fn size_of_box_vs_value() -> (usize, usize) {
+    todo!("Implement size_of_box_vs_value")
 }
 
 #[cfg(test)]

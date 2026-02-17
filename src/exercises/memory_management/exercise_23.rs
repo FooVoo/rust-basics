@@ -16,21 +16,21 @@ pub struct TempFile {
 }
 
 impl TempFile {
-    pub fn new(path: String) -> io::Result<Self>  {
+    pub fn new(path: String) -> io::Result<Self> {
         todo!("Implement new")
     }
     
-    pub fn write(&mut self, data: &[u8]) -> io::Result<()>  {
+    pub fn write(&mut self, data: &[u8]) -> io::Result<()> {
         todo!("Implement write")
     }
     
-    pub fn path(&self) -> &str  {
+    pub fn path(&self) -> &str {
         todo!("Implement path")
     }
 }
 
 impl Drop for TempFile {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
@@ -41,28 +41,28 @@ pub struct Guard<'a, T> {
 }
 
 impl<'a, T> Guard<'a, T> {
-    pub fn new(data: &'a mut T, cleanup_fn: impl FnOnce(&mut T) + 'a) -> Self  {
+    pub fn new(data: &'a mut T, cleanup_fn: impl FnOnce(&mut T) + 'a) -> Self {
         todo!("Implement new")
     }
     
-    pub fn get(&self) -> &T  {
+    pub fn get(&self) -> &T {
         todo!("Implement get")
     }
     
-    pub fn get_mut(&mut self) -> &mut T  {
+    pub fn get_mut(&mut self) -> &mut T {
         todo!("Implement get_mut")
     }
 }
 
 impl<'a, T> Drop for Guard<'a, T> {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
 
 /// Create a guard that resets a value to zero on drop.
-pub fn create_reset_guard(value: &mut i32) -> Guard<'_, i32>  {
-    todo!("Create a guard that resets a value to zero on drop.")
+pub fn create_reset_guard(value: &mut i32) -> Guard<'_, i32> {
+    todo!("Implement create_reset_guard")
 }
 
 #[cfg(test)]

@@ -20,7 +20,7 @@ pub enum FetchError {
 }
 
 impl std::fmt::Display for FetchError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }

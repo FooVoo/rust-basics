@@ -9,23 +9,23 @@
 use std::collections::HashMap;
 
 /// Process text: split words, filter long ones, count frequencies.
-pub fn word_frequency(text: &str, min_length: usize) -> HashMap<String, usize>  {
-    todo!("Process text: split words, filter long ones, count frequencies.")
+pub fn word_frequency(text: &str, min_length: usize) -> HashMap<String, usize> {
+    todo!("Implement word_frequency")
 }
 
 /// Get squares of even numbers, sum them, but cap at limit.
-pub fn capped_even_squares_sum(numbers: &[i32], limit: i32) -> i32  {
-    todo!("Get squares of even numbers, sum them, but cap at limit.")
+pub fn capped_even_squares_sum(numbers: &[i32], limit: i32) -> i32 {
+    todo!("Implement capped_even_squares_sum")
 }
 
 /// Process scores: filter passing, normalize to 0-1, take top n.
-pub fn top_normalized_scores(scores: &[f64], passing: f64, n: usize) -> Vec<f64>  {
-    todo!("Process scores: filter passing, normalize to 0-1, take top n.")
+pub fn top_normalized_scores(scores: &[f64], passing: f64, n: usize) -> Vec<f64> {
+    todo!("Implement top_normalized_scores")
 }
 
 /// Extract unique digits from numbers, sort them.
-pub fn unique_sorted_digits(numbers: &[i32]) -> Vec<u32>  {
-    todo!("Extract unique digits from numbers, sort them.")
+pub fn unique_sorted_digits(numbers: &[i32]) -> Vec<u32> {
+    todo!("Implement unique_sorted_digits")
 }
 
 #[cfg(test)]

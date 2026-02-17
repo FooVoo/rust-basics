@@ -7,13 +7,13 @@
 //! - Convert Some to None based on conditions
 
 /// Keep only even numbers, return None for odd numbers.
-pub fn keep_even(value: Option<i32>) -> Option<i32>  {
-    todo!("Keep only even numbers, return None for odd numbers.")
+pub fn keep_even(value: Option<i32>) -> Option<i32> {
+    todo!("Implement keep_even")
 }
 
 /// Keep only positive numbers.
-pub fn keep_positive(value: Option<i32>) -> Option<i32>  {
-    todo!("Keep only positive numbers.")
+pub fn keep_positive(value: Option<i32>) -> Option<i32> {
+    todo!("Implement keep_positive")
 }
 
 #[cfg(test)]

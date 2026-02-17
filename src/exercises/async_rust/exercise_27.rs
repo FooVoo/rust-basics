@@ -15,18 +15,18 @@ pub struct AsyncResource {
 }
 
 impl AsyncResource {
-    pub fn new(id: String, cleanup_log: Arc<Mutex<Vec<String>>>) -> Self  {
+    pub fn new(id: String, cleanup_log: Arc<Mutex<Vec<String>>>) -> Self {
         todo!("Implement new")
     }
     
-    pub async fn cleanup(&self)  {
+    pub async fn cleanup(&self) {
         todo!("Implement cleanup")
     }
 }
 
 /// Manage multiple resources with proper cleanup.
-pub async fn managed_resources(num_resources: usize) -> Vec<String>  {
-    todo!("Manage multiple resources with proper cleanup.")
+pub async fn managed_resources(num_resources: usize) -> Vec<String> {
+    todo!("Implement managed_resources")
 }
 
 pub struct Connection {
@@ -35,18 +35,18 @@ pub struct Connection {
 }
 
 impl Connection {
-    pub fn new(id: usize, closed: Arc<Mutex<Vec<usize>>>) -> Self  {
+    pub fn new(id: usize, closed: Arc<Mutex<Vec<usize>>>) -> Self {
         todo!("Implement new")
     }
     
-    pub async fn close(self)  {
+    pub async fn close(self) {
         todo!("Implement close")
     }
 }
 
 /// Connection pool with graceful shutdown.
-pub async fn connection_pool_shutdown(num_connections: usize) -> Vec<usize>  {
-    todo!("Connection pool with graceful shutdown.")
+pub async fn connection_pool_shutdown(num_connections: usize) -> Vec<usize> {
+    todo!("Implement connection_pool_shutdown")
 }
 
 /// Guard pattern for async cleanup.
@@ -56,16 +56,16 @@ pub struct AsyncGuard {
 }
 
 impl AsyncGuard {
-    pub fn new(name: String, log: Arc<Mutex<Vec<String>>>) -> Self  {
-        todo!("Guard pattern for async cleanup.")
+    pub fn new(name: String, log: Arc<Mutex<Vec<String>>>) -> Self {
+        todo!("Implement new")
     }
     
-    pub async fn release(self)  {
+    pub async fn release(self) {
         todo!("Implement release")
     }
 }
 
-pub async fn guarded_operation() -> Vec<String>  {
+pub async fn guarded_operation() -> Vec<String> {
     todo!("Implement guarded_operation")
 }
 

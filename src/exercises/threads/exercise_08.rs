@@ -12,8 +12,8 @@ use std::time::Duration;
 
 /// Try to receive a value from a channel with timeout.
 /// Returns Some(value) if received, None if timeout.
-pub fn receive_with_timeout(timeout_ms: u64) -> Option<i32>  {
-    todo!("Return Some(value) if received, None if timeout.")
+pub fn receive_with_timeout(timeout_ms: u64) -> Option<i32> {
+    todo!("Implement receive_with_timeout")
 }
 
 #[cfg(test)]

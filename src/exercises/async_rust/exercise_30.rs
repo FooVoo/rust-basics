@@ -26,19 +26,19 @@ pub struct WorkItem {
 }
 
 impl PriorityWorkQueue {
-    pub fn new(max_concurrent: usize) -> Self  {
+    pub fn new(max_concurrent: usize) -> Self {
         todo!("Implement new")
     }
     
-    pub async fn add_work(&self, item: WorkItem, high_priority: bool)  {
+    pub async fn add_work(&self, item: WorkItem, high_priority: bool) {
         todo!("Implement add_work")
     }
     
-    pub async fn process_all(&self)  {
+    pub async fn process_all(&self) {
         todo!("Implement process_all")
     }
     
-    pub async fn get_results(&self) -> Vec<i32>  {
+    pub async fn get_results(&self) -> Vec<i32> {
         todo!("Implement get_results")
     }
 }
@@ -55,19 +55,19 @@ struct CacheEntry {
 }
 
 impl AsyncCache {
-    pub fn new(max_size: usize) -> Self  {
+    pub fn new(max_size: usize) -> Self {
         todo!("Implement new")
     }
     
-    pub async fn get(&self, key: &str) -> Option<i32>  {
+    pub async fn get(&self, key: &str) -> Option<i32> {
         todo!("Implement get")
     }
     
-    pub async fn set(&self, key: String, value: i32, ttl_ms: u64) -> Result<(), String>  {
+    pub async fn set(&self, key: String, value: i32, ttl_ms: u64) -> Result<(), String> {
         todo!("Implement set")
     }
     
-    pub async fn evict_expired(&self)  {
+    pub async fn evict_expired(&self) {
         todo!("Implement evict_expired")
     }
 }
@@ -84,19 +84,19 @@ pub struct Task {
 }
 
 impl TaskCoordinator {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
     
-    pub async fn execute(&self, task: Task) -> Result<i32, String>  {
+    pub async fn execute(&self, task: Task) -> Result<i32, String> {
         todo!("Implement execute")
     }
     
-    pub async fn execute_all(&self, tasks: Vec<Task>) -> HashMap<String, i32>  {
+    pub async fn execute_all(&self, tasks: Vec<Task>) -> HashMap<String, i32> {
         todo!("Implement execute_all")
     }
     
-    fn clone_arc(&self) -> Self  {
+    fn clone_arc(&self) -> Self {
         todo!("Implement clone_arc")
     }
 }

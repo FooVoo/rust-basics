@@ -9,23 +9,23 @@
 use std::sync::Arc;
 
 /// Create a shared Arc value.
-pub fn create_arc(value: i32) -> Arc<i32>  {
-    todo!("Create a shared Arc value.")
+pub fn create_arc(value: i32) -> Arc<i32> {
+    todo!("Implement create_arc")
 }
 
 /// Clone an Arc reference.
-pub fn clone_arc(arc: &Arc<i32>) -> Arc<i32>  {
-    todo!("Clone an Arc reference.")
+pub fn clone_arc(arc: &Arc<i32>) -> Arc<i32> {
+    todo!("Implement clone_arc")
 }
 
 /// Get strong count of an Arc.
-pub fn arc_count(arc: &Arc<i32>) -> usize  {
-    todo!("Get strong count of an Arc.")
+pub fn arc_count(arc: &Arc<i32>) -> usize {
+    todo!("Implement arc_count")
 }
 
 /// Share data across multiple "threads" (simulated with Vec).
-pub fn share_across_contexts(value: String, count: usize) -> Vec<Arc<String>>  {
-    todo!("Share data across multiple \"threads\" (simulated with Vec).")
+pub fn share_across_contexts(value: String, count: usize) -> Vec<Arc<String>> {
+    todo!("Implement share_across_contexts")
 }
 
 /// Demonstrate Arc with large data.
@@ -34,11 +34,11 @@ pub struct LargeData {
 }
 
 impl LargeData {
-    pub fn new(size: usize) -> Arc<Self>  {
-        todo!("Demonstrate Arc with large data.")
+    pub fn new(size: usize) -> Arc<Self> {
+        todo!("Implement new")
     }
 
-    pub fn sum(&self) -> i64  {
+    pub fn sum(&self) -> i64 {
         todo!("Implement sum")
     }
 }

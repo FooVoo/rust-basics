@@ -15,19 +15,19 @@ pub struct ImmutableCache {
 }
 
 impl ImmutableCache {
-    pub fn new() -> Self  {
-        todo!("A simple cache using Rc for shared immutable data.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
-    pub fn add(&mut self, value: String) -> Rc<String>  {
+    pub fn add(&mut self, value: String) -> Rc<String> {
         todo!("Implement add")
     }
 
-    pub fn get(&self, index: usize) -> Option<Rc<String>>  {
+    pub fn get(&self, index: usize) -> Option<Rc<String>> {
         todo!("Implement get")
     }
 
-    pub fn len(&self) -> usize  {
+    pub fn len(&self) -> usize {
         todo!("Implement len")
     }
 }
@@ -38,23 +38,23 @@ pub struct MutableCache {
 }
 
 impl MutableCache {
-    pub fn new() -> Self  {
-        todo!("A mutable cache using Rc+RefCell.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
-    pub fn add(&self, value: String)  {
+    pub fn add(&self, value: String) {
         todo!("Implement add")
     }
 
-    pub fn get(&self, index: usize) -> Option<String>  {
+    pub fn get(&self, index: usize) -> Option<String> {
         todo!("Implement get")
     }
 
-    pub fn len(&self) -> usize  {
+    pub fn len(&self) -> usize {
         todo!("Implement len")
     }
 
-    pub fn clone_handle(&self) -> Self  {
+    pub fn clone_handle(&self) -> Self {
         todo!("Implement clone_handle")
     }
 }
@@ -65,19 +65,19 @@ pub struct Observable<T> {
 }
 
 impl<T: Clone> Observable<T> {
-    pub fn new(value: T) -> Self  {
-        todo!("Observable value pattern.")
+    pub fn new(value: T) -> Self {
+        todo!("Implement new")
     }
 
-    pub fn get(&self) -> T  {
+    pub fn get(&self) -> T {
         todo!("Implement get")
     }
 
-    pub fn set(&self, value: T)  {
+    pub fn set(&self, value: T) {
         todo!("Implement set")
     }
 
-    pub fn subscribe(&self) -> Self  {
+    pub fn subscribe(&self) -> Self {
         todo!("Implement subscribe")
     }
 }

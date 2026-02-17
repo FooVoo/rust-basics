@@ -10,19 +10,19 @@ pub trait Measurable {
     fn width(&self) -> f64;
     fn height(&self) -> f64;
     
-    fn area(&self) -> f64  {
+    fn area(&self) -> f64 {
         todo!("Implement area")
     }
     
-    fn perimeter(&self) -> f64  {
+    fn perimeter(&self) -> f64 {
         todo!("Implement perimeter")
     }
     
-    fn is_square(&self) -> bool  {
+    fn is_square(&self) -> bool {
         todo!("Implement is_square")
     }
     
-    fn is_larger_than(&self, other: &impl Measurable) -> bool  {
+    fn is_larger_than(&self, other: &impl Measurable) -> bool {
         todo!("Implement is_larger_than")
     }
 }
@@ -33,11 +33,11 @@ pub struct Rectangle {
 }
 
 impl Measurable for Rectangle {
-    fn width(&self) -> f64  {
+    fn width(&self) -> f64 {
         todo!("Implement width")
     }
     
-    fn height(&self) -> f64  {
+    fn height(&self) -> f64 {
         todo!("Implement height")
     }
 }
@@ -48,21 +48,21 @@ pub struct Monitor {
 }
 
 impl Measurable for Monitor {
-    fn width(&self) -> f64  {
+    fn width(&self) -> f64 {
         todo!("Implement width")
     }
     
-    fn height(&self) -> f64  {
+    fn height(&self) -> f64 {
         todo!("Implement height")
     }
     
     // Override area to compute diagonal
-    fn area(&self) -> f64  {
+    fn area(&self) -> f64 {
         todo!("Implement area")
     }
 }
 
-pub fn compare_sizes<T: Measurable, U: Measurable>(a: &T, b: &U) -> String  {
+pub fn compare_sizes<T: Measurable, U: Measurable>(a: &T, b: &U) -> String {
     todo!("Implement compare_sizes")
 }
 

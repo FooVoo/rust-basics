@@ -9,18 +9,18 @@
 use std::collections::HashMap;
 
 /// Find a value in a HashMap.
-pub fn find_in_map<'a>(map: &'a HashMap<String, i32>, key: &str) -> Option<&'a i32>  {
-    todo!("Find a value in a HashMap.")
+pub fn find_in_map<'a>(map: &'a HashMap<String, i32>, key: &str) -> Option<&'a i32> {
+    todo!("Implement find_in_map")
 }
 
 /// Get all values greater than threshold.
-pub fn values_greater_than<'a>(map: &'a HashMap<String, i32>, threshold: i32) -> Vec<&'a i32>  {
-    todo!("Get all values greater than threshold.")
+pub fn values_greater_than<'a>(map: &'a HashMap<String, i32>, threshold: i32) -> Vec<&'a i32> {
+    todo!("Implement values_greater_than")
 }
 
 /// Find key with maximum value.
-pub fn key_with_max_value<'a>(map: &'a HashMap<String, i32>) -> Option<&'a String>  {
-    todo!("Find key with maximum value.")
+pub fn key_with_max_value<'a>(map: &'a HashMap<String, i32>) -> Option<&'a String> {
+    todo!("Implement key_with_max_value")
 }
 
 /// Get references to keys matching a predicate.

@@ -16,28 +16,28 @@ pub enum ConnectionState {
 
 impl ConnectionState {
     /// Attempts to transition to the Connecting state
-    pub fn connect(&mut self) -> Result<(), String>  {
-        todo!("Attempts to transition to the Connecting state")
+    pub fn connect(&mut self) -> Result<(), String> {
+        todo!("Implement connect")
     }
 
     /// Completes the connection
-    pub fn complete_connection(&mut self) -> Result<(), String>  {
-        todo!("Completes the connection")
+    pub fn complete_connection(&mut self) -> Result<(), String> {
+        todo!("Implement complete_connection")
     }
 
     /// Disconnects
-    pub fn disconnect(&mut self)  {
-        todo!("Disconnects")
+    pub fn disconnect(&mut self) {
+        todo!("Implement disconnect")
     }
 
     /// Sets error state
-    pub fn set_error(&mut self, msg: String)  {
-        todo!("Set error state")
+    pub fn set_error(&mut self, msg: String) {
+        todo!("Implement set_error")
     }
 
     /// Returns true if connected
-    pub fn is_connected(&self) -> bool  {
-        todo!("Return true if connected")
+    pub fn is_connected(&self) -> bool {
+        todo!("Implement is_connected")
     }
 }
 

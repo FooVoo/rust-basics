@@ -8,8 +8,8 @@
 
 /// Validate a username.
 /// Must be 3-20 characters, alphanumeric, and not empty.
-pub fn validate_username(username: &str) -> Result<String, String>  {
-    todo!("Must be 3-20 characters, alphanumeric, and not empty.")
+pub fn validate_username(username: &str) -> Result<String, String> {
+    todo!("Implement validate_username")
 }
 
 #[cfg(test)]

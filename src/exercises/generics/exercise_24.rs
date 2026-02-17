@@ -28,8 +28,8 @@ where
     F: Fn(I) -> O,
 {
     /// Creates a new function converter.
-    pub fn new(func: F) -> Self  {
-        todo!("Create a new function converter.")
+    pub fn new(func: F) -> Self {
+        todo!("Implement new")
     }
 }
 
@@ -40,7 +40,7 @@ where
     type Input = I;
     type Output = O;
 
-    fn convert(&self, input: Self::Input) -> Self::Output  {
+    fn convert(&self, input: Self::Input) -> Self::Output {
         todo!("Implement convert")
     }
 }
@@ -52,8 +52,8 @@ pub trait Container {
     
     fn iter(&self) -> Self::Iter;
     fn len(&self) -> usize;
-    fn is_empty(&self) -> bool  {
-        todo!("A trait for containers that can be iterated.")
+    fn is_empty(&self) -> bool {
+        todo!("Implement is_empty")
     }
 }
 
@@ -64,8 +64,8 @@ pub struct Wrapper<T> {
 
 impl<T> Wrapper<T> {
     /// Creates a new wrapper.
-    pub fn new(items: Vec<T>) -> Self  {
-        todo!("Create a new wrapper.")
+    pub fn new(items: Vec<T>) -> Self {
+        todo!("Implement new")
     }
 }
 
@@ -73,11 +73,11 @@ impl<T: Clone> Container for Wrapper<T> {
     type Item = T;
     type Iter = std::vec::IntoIter<T>;
 
-    fn iter(&self) -> Self::Iter  {
+    fn iter(&self) -> Self::Iter {
         todo!("Implement iter")
     }
 
-    fn len(&self) -> usize  {
+    fn len(&self) -> usize {
         todo!("Implement len")
     }
 }
@@ -98,18 +98,18 @@ pub struct MappedResult<T> {
 
 impl<T> MappedResult<T> {
     /// Creates a new MappedResult.
-    pub fn new(value: Option<T>) -> Self  {
-        todo!("Create a new MappedResult.")
+    pub fn new(value: Option<T>) -> Self {
+        todo!("Implement new")
     }
 
     /// Unwraps the value.
-    pub fn unwrap(self) -> T  {
-        todo!("Unwraps the value.")
+    pub fn unwrap(self) -> T {
+        todo!("Implement unwrap")
     }
 
     /// Gets the value or a default.
-    pub fn unwrap_or(self, default: T) -> T  {
-        todo!("Get the value or a default.")
+    pub fn unwrap_or(self, default: T) -> T {
+        todo!("Implement unwrap_or")
     }
 }
 

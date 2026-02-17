@@ -17,32 +17,32 @@ pub struct RequestContext {
 }
 
 impl RequestContext {
-    pub fn new(request_id: String) -> Self  {
+    pub fn new(request_id: String) -> Self {
         todo!("Implement new")
     }
     
-    pub fn with_user(mut self, user_id: String) -> Self  {
+    pub fn with_user(mut self, user_id: String) -> Self {
         todo!("Implement with_user")
     }
     
-    pub fn add_trace(&mut self, entry: String)  {
+    pub fn add_trace(&mut self, entry: String) {
         todo!("Implement add_trace")
     }
 }
 
 /// Chain operations with context.
-pub async fn process_with_context(mut ctx: RequestContext, value: i32) -> (RequestContext, i32)  {
-    todo!("Chain operations with context.")
+pub async fn process_with_context(mut ctx: RequestContext, value: i32) -> (RequestContext, i32) {
+    todo!("Implement process_with_context")
 }
 
 /// Multi-step pipeline with context propagation.
-pub async fn pipeline_with_context(ctx: RequestContext, values: Vec<i32>) -> RequestContext  {
-    todo!("Multi-step pipeline with context propagation.")
+pub async fn pipeline_with_context(ctx: RequestContext, values: Vec<i32>) -> RequestContext {
+    todo!("Implement pipeline_with_context")
 }
 
 /// Parallel operations with shared context.
-pub async fn parallel_with_context(ctx: RequestContext, values: Vec<i32>) -> Vec<RequestContext>  {
-    todo!("Parallel operations with shared context.")
+pub async fn parallel_with_context(ctx: RequestContext, values: Vec<i32>) -> Vec<RequestContext> {
+    todo!("Implement parallel_with_context")
 }
 
 /// Context with Arc for shared immutable data.
@@ -59,12 +59,12 @@ pub struct Config {
 }
 
 impl SharedContext {
-    pub fn new(config: Arc<Config>, request_id: String) -> Self  {
+    pub fn new(config: Arc<Config>, request_id: String) -> Self {
         todo!("Implement new")
     }
 }
 
-pub async fn operation_with_shared_context(ctx: SharedContext) -> u64  {
+pub async fn operation_with_shared_context(ctx: SharedContext) -> u64 {
     todo!("Implement operation_with_shared_context")
 }
 

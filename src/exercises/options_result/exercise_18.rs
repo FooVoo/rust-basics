@@ -15,13 +15,13 @@ pub fn find_parse_validate(
 }
 
 /// Get a character from a string and convert to uppercase.
-pub fn get_char_uppercase(s: &str, index: usize) -> Option<char>  {
-    todo!("Get a character from a string and convert to uppercase.")
+pub fn get_char_uppercase(s: &str, index: usize) -> Option<char> {
+    todo!("Implement get_char_uppercase")
 }
 
 /// Parse first element of slice or use default.
-pub fn parse_first_or_default(strings: &[&str], default: i32) -> i32  {
-    todo!("Parse first element of slice or use default.")
+pub fn parse_first_or_default(strings: &[&str], default: i32) -> i32 {
+    todo!("Implement parse_first_or_default")
 }
 
 #[cfg(test)]

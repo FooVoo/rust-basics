@@ -15,18 +15,18 @@ pub enum Status {
 }
 
 /// Counts how many items have the Completed status
-pub fn count_completed(statuses: &[Status]) -> usize  {
-    todo!("Counts how many items have the Completed status")
+pub fn count_completed(statuses: &[Status]) -> usize {
+    todo!("Implement count_completed")
 }
 
 /// Returns true if all statuses are Completed
-pub fn all_completed(statuses: &[Status]) -> bool  {
-    todo!("Return true if all statuses are Completed")
+pub fn all_completed(statuses: &[Status]) -> bool {
+    todo!("Implement all_completed")
 }
 
 /// Returns true if any status is Failed
-pub fn has_failure(statuses: &[Status]) -> bool  {
-    todo!("Return true if any status is Failed")
+pub fn has_failure(statuses: &[Status]) -> bool {
+    todo!("Implement has_failure")
 }
 
 #[cfg(test)]

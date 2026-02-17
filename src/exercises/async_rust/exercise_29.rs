@@ -18,15 +18,15 @@ pub struct DelayFuture {
 }
 
 impl DelayFuture {
-    pub fn new(duration: Duration) -> Self  {
-        todo!("A future that completes after a delay.")
+    pub fn new(duration: Duration) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl Future for DelayFuture {
     type Output = ();
     
-    fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output>  {
+    fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output> {
         todo!("Implement poll")
     }
 }
@@ -37,15 +37,15 @@ pub struct ReadyFuture<T> {
 }
 
 impl<T> ReadyFuture<T> {
-    pub fn new(value: T) -> Self  {
-        todo!("A future that resolves with a value.")
+    pub fn new(value: T) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl<T> Future for ReadyFuture<T> {
     type Output = T;
     
-    fn poll(self: Pin<&mut Self>, _cx: &mut Context<'_>) -> Poll<Self::Output>  {
+    fn poll(self: Pin<&mut Self>, _cx: &mut Context<'_>) -> Poll<Self::Output> {
         todo!("Implement poll")
     }
 }
@@ -62,7 +62,7 @@ struct SharedState<T> {
 }
 
 impl<T> CompletableFuture<T> {
-    pub fn new() -> (Self, Completer<T>)  {
+    pub fn new() -> (Self, Completer<T>) {
         todo!("Implement new")
     }
 }
@@ -70,7 +70,7 @@ impl<T> CompletableFuture<T> {
 impl<T> Future for CompletableFuture<T> {
     type Output = T;
     
-    fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output>  {
+    fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output> {
         todo!("Implement poll")
     }
 }
@@ -80,7 +80,7 @@ pub struct Completer<T> {
 }
 
 impl<T> Completer<T> {
-    pub fn complete(self, value: T)  {
+    pub fn complete(self, value: T) {
         todo!("Implement complete")
     }
 }

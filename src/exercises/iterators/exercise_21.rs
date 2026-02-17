@@ -13,15 +13,15 @@ pub struct SquareIterator {
 }
 
 impl SquareIterator {
-    pub fn new(start: i32, end: i32) -> Self  {
-        todo!("An iterator that yields squares of numbers from start to end.")
+    pub fn new(start: i32, end: i32) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl Iterator for SquareIterator {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -34,15 +34,15 @@ pub struct Alternating<T> {
 }
 
 impl<T: Clone> Alternating<T> {
-    pub fn new(first: T, second: T) -> Self  {
-        todo!("An iterator that alternates between two values.")
+    pub fn new(first: T, second: T) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl<T: Clone> Iterator for Alternating<T> {
     type Item = T;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -53,15 +53,15 @@ pub struct Countdown {
 }
 
 impl Countdown {
-    pub fn new(start: i32) -> Self  {
-        todo!("An iterator that counts down from n to 0.")
+    pub fn new(start: i32) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl Iterator for Countdown {
     type Item = i32;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }

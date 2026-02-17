@@ -10,18 +10,18 @@ use tokio::sync::RwLock;
 use std::sync::Arc;
 
 /// Concurrent reads with RwLock.
-pub async fn concurrent_reads(value: i32, num_readers: usize) -> Vec<i32>  {
-    todo!("Concurrent reads with RwLock.")
+pub async fn concurrent_reads(value: i32, num_readers: usize) -> Vec<i32> {
+    todo!("Implement concurrent_reads")
 }
 
 /// Mix reads and writes with RwLock.
-pub async fn mixed_read_write(initial: i32, operations: Vec<(&str, i32)>) -> i32  {
-    todo!("Mix reads and writes with RwLock.")
+pub async fn mixed_read_write(initial: i32, operations: Vec<(&str, i32)>) -> i32 {
+    todo!("Implement mixed_read_write")
 }
 
 /// Shared cache with concurrent access.
-pub async fn shared_cache(operations: Vec<(String, Option<i32>)>) -> Vec<Option<i32>>  {
-    todo!("Shared cache with concurrent access.")
+pub async fn shared_cache(operations: Vec<(String, Option<i32>)>) -> Vec<Option<i32>> {
+    todo!("Implement shared_cache")
 }
 
 #[cfg(test)]

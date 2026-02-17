@@ -12,8 +12,8 @@ use std::thread;
 
 /// Writer thread stores data then sets flag with Release.
 /// Reader thread waits for flag with Acquire, then reads data.
-pub fn acquire_release_pattern(value: usize) -> usize  {
-    todo!("Reader thread waits for flag with Acquire, then reads data.")
+pub fn acquire_release_pattern(value: usize) -> usize {
+    todo!("Implement acquire_release_pattern")
 }
 
 #[cfg(test)]

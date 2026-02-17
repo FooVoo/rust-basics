@@ -7,18 +7,18 @@
 //! - Compose fallible operations
 
 /// Parse a string and validate it's positive.
-pub fn parse_positive(s: &str) -> Result<i32, String>  {
-    todo!("Parse a string and validate it's positive.")
+pub fn parse_positive(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_positive")
 }
 
 /// Parse and divide in one chain.
-pub fn parse_and_safe_divide(a: &str, b: &str) -> Result<i32, String>  {
-    todo!("Parse and divide in one chain.")
+pub fn parse_and_safe_divide(a: &str, b: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_safe_divide")
 }
 
 /// Parse a number and check if it's even.
-pub fn parse_even(s: &str) -> Result<i32, String>  {
-    todo!("Parse a number and check if it's even.")
+pub fn parse_even(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_even")
 }
 
 #[cfg(test)]

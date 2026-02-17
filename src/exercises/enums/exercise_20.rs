@@ -16,24 +16,24 @@ pub enum LogLevel {
 
 impl LogLevel {
     /// Converts log level to string
-    pub fn as_str(&self) -> &'static str  {
-        todo!("Convert log level to string")
+    pub fn as_str(&self) -> &'static str {
+        todo!("Implement as_str")
     }
 
     /// Parses a string into a LogLevel
-    pub fn from_str(s: &str) -> Result<Self, String>  {
-        todo!("Parse a string into a LogLevel")
+    pub fn from_str(s: &str) -> Result<Self, String> {
+        todo!("Implement from_str")
     }
 
     /// Returns numeric value for the log level
-    pub fn to_number(&self) -> u8  {
-        todo!("Return numeric value for the log level")
+    pub fn to_number(&self) -> u8 {
+        todo!("Implement to_number")
     }
 }
 
 /// Filters log messages by minimum level
-pub fn filter_logs(logs: Vec<(LogLevel, String)>, min_level: LogLevel) -> Vec<String>  {
-    todo!("Filters log messages by minimum level")
+pub fn filter_logs(logs: Vec<(LogLevel, String)>, min_level: LogLevel) -> Vec<String> {
+    todo!("Implement filter_logs")
 }
 
 #[cfg(test)]

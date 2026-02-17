@@ -7,8 +7,8 @@
 //! - Handle dependent operations
 
 /// Parse three numbers and return their product.
-pub fn parse_and_multiply(a: &str, b: &str, c: &str) -> Result<i32, String>  {
-    todo!("Parse three numbers and return their product.")
+pub fn parse_and_multiply(a: &str, b: &str, c: &str) -> Result<i32, String> {
+    todo!("Implement parse_and_multiply")
 }
 
 /// Combine two Results using a combining function.

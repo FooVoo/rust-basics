@@ -15,22 +15,22 @@ struct SpinLock {
 }
 
 impl SpinLock {
-    fn new() -> Self  {
+    fn new() -> Self {
         todo!("Implement new")
     }
 
-    fn lock(&self)  {
+    fn lock(&self) {
         todo!("Implement lock")
     }
 
-    fn unlock(&self)  {
+    fn unlock(&self) {
         todo!("Implement unlock")
     }
 }
 
 /// Use a spinlock to protect a counter.
-pub fn spinlock_counter(n_threads: usize, increments_per_thread: usize) -> usize  {
-    todo!("Use a spinlock to protect a counter.")
+pub fn spinlock_counter(n_threads: usize, increments_per_thread: usize) -> usize {
+    todo!("Implement spinlock_counter")
 }
 
 #[cfg(test)]

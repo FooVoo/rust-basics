@@ -12,8 +12,8 @@ use std::thread;
 
 /// Increment a counter only if current value is less than max.
 /// Use compare-and-swap to handle races.
-pub fn atomic_bounded_increment(n_threads: usize, max_value: usize) -> usize  {
-    todo!("Use compare-and-swap to handle races.")
+pub fn atomic_bounded_increment(n_threads: usize, max_value: usize) -> usize {
+    todo!("Implement atomic_bounded_increment")
 }
 
 #[cfg(test)]

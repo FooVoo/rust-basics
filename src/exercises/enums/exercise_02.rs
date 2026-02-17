@@ -14,13 +14,13 @@ pub enum TrafficLight {
 }
 
 /// Returns the action to take for a given traffic light
-pub fn get_action(light: TrafficLight) -> &'static str  {
-    todo!("Return the action to take for a given traffic light")
+pub fn get_action(light: TrafficLight) -> &'static str {
+    todo!("Implement get_action")
 }
 
 /// Returns the next traffic light state
-pub fn next_light(light: TrafficLight) -> TrafficLight  {
-    todo!("Return the next traffic light state")
+pub fn next_light(light: TrafficLight) -> TrafficLight {
+    todo!("Implement next_light")
 }
 
 #[cfg(test)]

@@ -15,25 +15,25 @@ pub enum Priority {
 }
 
 impl PartialOrd for Priority {
-    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering>  {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
         todo!("Implement partial_cmp")
     }
 }
 
 impl Ord for Priority {
-    fn cmp(&self, other: &Self) -> std::cmp::Ordering  {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
         todo!("Implement cmp")
     }
 }
 
 /// Returns the higher priority
-pub fn max_priority(a: Priority, b: Priority) -> Priority  {
-    todo!("Return the higher priority")
+pub fn max_priority(a: Priority, b: Priority) -> Priority {
+    todo!("Implement max_priority")
 }
 
 /// Sorts priorities in descending order (highest first)
-pub fn sort_by_priority(mut priorities: Vec<Priority>) -> Vec<Priority>  {
-    todo!("Sorts priorities in descending order (highest first)")
+pub fn sort_by_priority(mut priorities: Vec<Priority>) -> Vec<Priority> {
+    todo!("Implement sort_by_priority")
 }
 
 #[cfg(test)]

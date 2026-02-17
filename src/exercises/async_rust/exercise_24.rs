@@ -10,18 +10,18 @@ use tokio_util::sync::CancellationToken;
 use tokio::time::{sleep, Duration};
 
 /// Run a task until cancelled.
-pub async fn cancellable_task(token: CancellationToken) -> i32  {
-    todo!("Run a task until cancelled.")
+pub async fn cancellable_task(token: CancellationToken) -> i32 {
+    todo!("Implement cancellable_task")
 }
 
 /// Multiple tasks with shared cancellation.
-pub async fn coordinated_cancellation(num_tasks: usize, run_duration_ms: u64) -> Vec<i32>  {
-    todo!("Multiple tasks with shared cancellation.")
+pub async fn coordinated_cancellation(num_tasks: usize, run_duration_ms: u64) -> Vec<i32> {
+    todo!("Implement coordinated_cancellation")
 }
 
 /// Hierarchical cancellation with child tokens.
-pub async fn hierarchical_cancellation() -> (bool, bool)  {
-    todo!("Hierarchical cancellation with child tokens.")
+pub async fn hierarchical_cancellation() -> (bool, bool) {
+    todo!("Implement hierarchical_cancellation")
 }
 
 #[cfg(test)]

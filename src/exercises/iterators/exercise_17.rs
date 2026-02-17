@@ -7,28 +7,28 @@
 //! - Create numeric sequences
 
 /// Generate fibonacci sequence up to n terms.
-pub fn fibonacci(n: usize) -> Vec<u64>  {
-    todo!("Generate fibonacci sequence up to n terms.")
+pub fn fibonacci(n: usize) -> Vec<u64> {
+    todo!("Implement fibonacci")
 }
 
 /// Generate multiplication table for n.
-pub fn multiplication_table(n: i32, up_to: i32) -> Vec<(i32, i32)>  {
-    todo!("Generate multiplication table for n.")
+pub fn multiplication_table(n: i32, up_to: i32) -> Vec<(i32, i32)> {
+    todo!("Implement multiplication_table")
 }
 
 /// Sum of squares from 1 to n.
-pub fn sum_of_squares(n: i32) -> i32  {
-    todo!("Sum of squares from 1 to n.")
+pub fn sum_of_squares(n: i32) -> i32 {
+    todo!("Implement sum_of_squares")
 }
 
 /// Generate even numbers in range.
-pub fn even_numbers_in_range(start: i32, end: i32) -> Vec<i32>  {
-    todo!("Generate even numbers in range.")
+pub fn even_numbers_in_range(start: i32, end: i32) -> Vec<i32> {
+    todo!("Implement even_numbers_in_range")
 }
 
 /// Generate powers of 2 up to n.
-pub fn powers_of_two(n: usize) -> Vec<u64>  {
-    todo!("Generate powers of 2 up to n.")
+pub fn powers_of_two(n: usize) -> Vec<u64> {
+    todo!("Implement powers_of_two")
 }
 
 #[cfg(test)]

@@ -15,23 +15,23 @@ pub enum State<T, U, V> {
 
 impl<T, U, V> State<T, U, V> {
     /// Creates a new state machine in the Initial state.
-    pub fn new(value: T) -> Self  {
-        todo!("Create a new state machine in the Initial state.")
+    pub fn new(value: T) -> Self {
+        todo!("Implement new")
     }
 
     /// Checks if the state is Initial.
-    pub fn is_initial(&self) -> bool  {
-        todo!("Check if the state is Initial.")
+    pub fn is_initial(&self) -> bool {
+        todo!("Implement is_initial")
     }
 
     /// Checks if the state is Processing.
-    pub fn is_processing(&self) -> bool  {
-        todo!("Check if the state is Processing.")
+    pub fn is_processing(&self) -> bool {
+        todo!("Implement is_processing")
     }
 
     /// Checks if the state is Complete.
-    pub fn is_complete(&self) -> bool  {
-        todo!("Check if the state is Complete.")
+    pub fn is_complete(&self) -> bool {
+        todo!("Implement is_complete")
     }
 
     /// Transitions from Initial to Processing.
@@ -53,8 +53,8 @@ impl<T, U, V> State<T, U, V> {
 
 impl<T: Clone, U: Clone, V: Clone> State<T, U, V> {
     /// Gets a clone of the current state value.
-    pub fn get_value(&self) -> StateValue<T, U, V>  {
-        todo!("Get a clone of the current state value.")
+    pub fn get_value(&self) -> StateValue<T, U, V> {
+        todo!("Implement get_value")
     }
 }
 

@@ -14,13 +14,13 @@ pub enum Message {
 }
 
 /// Returns the message type as a string
-pub fn message_type(msg: &Message) -> &'static str  {
-    todo!("Return the message type as a string")
+pub fn message_type(msg: &Message) -> &'static str {
+    todo!("Implement message_type")
 }
 
 /// Extracts the echo message if present, otherwise returns None
-pub fn get_echo_text(msg: &Message) -> Option<&str>  {
-    todo!("Extract the echo message if present, otherwise returns None")
+pub fn get_echo_text(msg: &Message) -> Option<&str> {
+    todo!("Implement get_echo_text")
 }
 
 #[cfg(test)]

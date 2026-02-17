@@ -10,23 +10,23 @@ use futures::stream::{self, StreamExt};
 use tokio::time::{sleep, Duration};
 
 /// Process stream items concurrently with buffer_unordered.
-pub async fn concurrent_stream_processing(values: Vec<i32>) -> Vec<i32>  {
-    todo!("Process stream items concurrently with buffer_unordered.")
+pub async fn concurrent_stream_processing(values: Vec<i32>) -> Vec<i32> {
+    todo!("Implement concurrent_stream_processing")
 }
 
 /// Process stream with buffered map.
-pub async fn buffered_map(values: Vec<i32>, buffer_size: usize) -> Vec<i32>  {
-    todo!("Process stream with buffered map.")
+pub async fn buffered_map(values: Vec<i32>, buffer_size: usize) -> Vec<i32> {
+    todo!("Implement buffered_map")
 }
 
 /// Fold over a stream asynchronously.
-pub async fn stream_fold(values: Vec<i32>) -> i32  {
-    todo!("Fold over a stream asynchronously.")
+pub async fn stream_fold(values: Vec<i32>) -> i32 {
+    todo!("Implement stream_fold")
 }
 
 /// Chunks stream items.
-pub async fn stream_chunks(values: Vec<i32>, chunk_size: usize) -> Vec<Vec<i32>>  {
-    todo!("Chunks stream items.")
+pub async fn stream_chunks(values: Vec<i32>, chunk_size: usize) -> Vec<Vec<i32>> {
+    todo!("Implement stream_chunks")
 }
 
 #[cfg(test)]

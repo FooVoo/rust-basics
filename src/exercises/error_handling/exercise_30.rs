@@ -15,31 +15,31 @@ pub struct ErrorAccumulator<E> {
 }
 
 impl<E> ErrorAccumulator<E> {
-    pub fn new() -> Self  {
-        todo!("An error accumulator that collects multiple errors.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
     
-    pub fn add(&mut self, error: E)  {
+    pub fn add(&mut self, error: E) {
         todo!("Implement add")
     }
     
-    pub fn extend(&mut self, errors: Vec<E>)  {
+    pub fn extend(&mut self, errors: Vec<E>) {
         todo!("Implement extend")
     }
     
-    pub fn has_errors(&self) -> bool  {
+    pub fn has_errors(&self) -> bool {
         todo!("Implement has_errors")
     }
     
-    pub fn count(&self) -> usize  {
+    pub fn count(&self) -> usize {
         todo!("Implement count")
     }
     
-    pub fn into_result<T>(self, value: T) -> Result<T, Vec<E>>  {
+    pub fn into_result<T>(self, value: T) -> Result<T, Vec<E>> {
         todo!("Implement into_result")
     }
     
-    pub fn errors(&self) -> &[E]  {
+    pub fn errors(&self) -> &[E] {
         todo!("Implement errors")
     }
 }
@@ -51,37 +51,37 @@ pub struct CategorizedErrors<K, E> {
 }
 
 impl<K: Eq + std::hash::Hash, E> CategorizedErrors<K, E> {
-    pub fn new() -> Self  {
-        todo!("Categorized error accumulator that groups errors by type.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
     
-    pub fn add(&mut self, category: K, error: E)  {
+    pub fn add(&mut self, category: K, error: E) {
         todo!("Implement add")
     }
     
-    pub fn get_category(&self, category: &K) -> Option<&Vec<E>>  {
+    pub fn get_category(&self, category: &K) -> Option<&Vec<E>> {
         todo!("Implement get_category")
     }
     
-    pub fn categories(&self) -> Vec<&K>  {
+    pub fn categories(&self) -> Vec<&K> {
         todo!("Implement categories")
     }
     
-    pub fn has_errors(&self) -> bool  {
+    pub fn has_errors(&self) -> bool {
         todo!("Implement has_errors")
     }
     
-    pub fn total_count(&self) -> usize  {
+    pub fn total_count(&self) -> usize {
         todo!("Implement total_count")
     }
     
-    pub fn into_result<T>(self, value: T) -> Result<T, HashMap<K, Vec<E>>>  {
+    pub fn into_result<T>(self, value: T) -> Result<T, HashMap<K, Vec<E>>> {
         todo!("Implement into_result")
     }
 }
 
 impl<K: Eq + std::hash::Hash, E> Default for CategorizedErrors<K, E> {
-    fn default() -> Self  {
+    fn default() -> Self {
         todo!("Implement default")
     }
 }
@@ -94,23 +94,23 @@ pub struct ValidationResult<T> {
 }
 
 impl<T> ValidationResult<T> {
-    pub fn valid(value: T) -> Self  {
-        todo!("Validation result that accumulates all validation errors.")
+    pub fn valid(value: T) -> Self {
+        todo!("Implement valid")
     }
     
-    pub fn invalid(errors: Vec<String>) -> Self  {
+    pub fn invalid(errors: Vec<String>) -> Self {
         todo!("Implement invalid")
     }
     
-    pub fn is_valid(&self) -> bool  {
+    pub fn is_valid(&self) -> bool {
         todo!("Implement is_valid")
     }
     
-    pub fn errors(&self) -> &[String]  {
+    pub fn errors(&self) -> &[String] {
         todo!("Implement errors")
     }
     
-    pub fn into_result(self) -> Result<T, Vec<String>>  {
+    pub fn into_result(self) -> Result<T, Vec<String>> {
         todo!("Implement into_result")
     }
 }

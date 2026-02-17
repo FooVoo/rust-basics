@@ -17,24 +17,24 @@ pub struct Config {
 }
 
 impl Config {
-    pub fn new(max_connections: usize, timeout_seconds: u64) -> Self  {
+    pub fn new(max_connections: usize, timeout_seconds: u64) -> Self {
         todo!("Implement new")
     }
 }
 
 /// Initialize global config (can only be called once).
-pub fn init_config(config: Config) -> Result<(), Config>  {
-    todo!("Initialize global config (can only be called once).")
+pub fn init_config(config: Config) -> Result<(), Config> {
+    todo!("Implement init_config")
 }
 
 /// Get global config reference.
-pub fn get_config() -> Option<&'static Config>  {
-    todo!("Get global config reference.")
+pub fn get_config() -> Option<&'static Config> {
+    todo!("Implement get_config")
 }
 
 /// Get or initialize config with default.
-pub fn get_or_init_config() -> &'static Config  {
-    todo!("Get or initialize config with default.")
+pub fn get_or_init_config() -> &'static Config {
+    todo!("Implement get_or_init_config")
 }
 
 /// A cache that initializes on first use.
@@ -43,15 +43,15 @@ pub struct LazyCache {
 }
 
 impl LazyCache {
-    pub fn new() -> Self  {
-        todo!("A cache that initializes on first use.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
-    pub fn get_or_compute(&self) -> &Vec<i32>  {
+    pub fn get_or_compute(&self) -> &Vec<i32> {
         todo!("Implement get_or_compute")
     }
 
-    pub fn is_initialized(&self) -> bool  {
+    pub fn is_initialized(&self) -> bool {
         todo!("Implement is_initialized")
     }
 }

@@ -7,18 +7,18 @@
 //! - Return generic values
 
 /// A generic function that returns the first element of a pair.
-pub fn first<T>(pair: (T, T)) -> T  {
-    todo!("A generic function that returns the first element of a pair.")
+pub fn first<T>(pair: (T, T)) -> T {
+    todo!("Implement first")
 }
 
 /// A generic function that returns the second element of a pair.
-pub fn second<T>(pair: (T, T)) -> T  {
-    todo!("A generic function that returns the second element of a pair.")
+pub fn second<T>(pair: (T, T)) -> T {
+    todo!("Implement second")
 }
 
 /// A generic function that swaps elements in a tuple.
-pub fn swap<T, U>(pair: (T, U)) -> (U, T)  {
-    todo!("A generic function that swaps elements in a tuple.")
+pub fn swap<T, U>(pair: (T, U)) -> (U, T) {
+    todo!("Implement swap")
 }
 
 #[cfg(test)]

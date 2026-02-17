@@ -7,28 +7,28 @@
 //! - Find extremes based on transformations
 
 /// Find the longest string.
-pub fn longest_string(strings: &[&str]) -> Option<String>  {
-    todo!("Find the longest string.")
+pub fn longest_string(strings: &[&str]) -> Option<String> {
+    todo!("Implement longest_string")
 }
 
 /// Find the string with most vowels.
-pub fn most_vowels(strings: &[&str]) -> Option<String>  {
-    todo!("Find the string with most vowels.")
+pub fn most_vowels(strings: &[&str]) -> Option<String> {
+    todo!("Implement most_vowels")
 }
 
 /// Find number closest to target.
-pub fn closest_to_target(numbers: &[i32], target: i32) -> Option<i32>  {
-    todo!("Find number closest to target.")
+pub fn closest_to_target(numbers: &[i32], target: i32) -> Option<i32> {
+    todo!("Implement closest_to_target")
 }
 
 /// Find minimum by absolute value.
-pub fn min_absolute(numbers: &[i32]) -> Option<i32>  {
-    todo!("Find minimum by absolute value.")
+pub fn min_absolute(numbers: &[i32]) -> Option<i32> {
+    todo!("Implement min_absolute")
 }
 
 /// Get the top n largest numbers.
-pub fn top_n(numbers: &[i32], n: usize) -> Vec<i32>  {
-    todo!("Get the top n largest numbers.")
+pub fn top_n(numbers: &[i32], n: usize) -> Vec<i32> {
+    todo!("Implement top_n")
 }
 
 #[cfg(test)]

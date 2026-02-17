@@ -17,15 +17,15 @@ pub enum PasswordError {
 }
 
 impl std::fmt::Display for PasswordError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 /// Validate a password against security requirements.
 /// Must be 8-128 chars, contain upper, lower, digit, and special char.
-pub fn validate_password(password: &str) -> Result<(), Vec<PasswordError>>  {
-    todo!("Must be 8-128 chars, contain upper, lower, digit, and special char.")
+pub fn validate_password(password: &str) -> Result<(), Vec<PasswordError>> {
+    todo!("Implement validate_password")
 }
 
 #[cfg(test)]

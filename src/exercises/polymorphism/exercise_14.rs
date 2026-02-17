@@ -18,11 +18,11 @@ pub struct EmailTask {
 }
 
 impl Task for EmailTask {
-    fn execute(&self) -> String  {
+    fn execute(&self) -> String {
         todo!("Implement execute")
     }
     
-    fn priority(&self) -> u32  {
+    fn priority(&self) -> u32 {
         todo!("Implement priority")
     }
 }
@@ -34,11 +34,11 @@ pub struct FileTask {
 }
 
 impl Task for FileTask {
-    fn execute(&self) -> String  {
+    fn execute(&self) -> String {
         todo!("Implement execute")
     }
     
-    fn priority(&self) -> u32  {
+    fn priority(&self) -> u32 {
         todo!("Implement priority")
     }
 }
@@ -49,11 +49,11 @@ pub struct DatabaseTask {
 }
 
 impl Task for DatabaseTask {
-    fn execute(&self) -> String  {
+    fn execute(&self) -> String {
         todo!("Implement execute")
     }
     
-    fn priority(&self) -> u32  {
+    fn priority(&self) -> u32 {
         todo!("Implement priority")
     }
 }
@@ -64,23 +64,23 @@ pub struct TaskQueue {
 }
 
 impl TaskQueue {
-    pub fn new() -> Self  {
-        todo!("Task queue holding different task types")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
     
-    pub fn add_task(&mut self, task: Box<dyn Task>)  {
+    pub fn add_task(&mut self, task: Box<dyn Task>) {
         todo!("Implement add_task")
     }
     
-    pub fn execute_all(&self) -> Vec<String>  {
+    pub fn execute_all(&self) -> Vec<String> {
         todo!("Implement execute_all")
     }
     
-    pub fn execute_by_priority(&self) -> Vec<String>  {
+    pub fn execute_by_priority(&self) -> Vec<String> {
         todo!("Implement execute_by_priority")
     }
     
-    pub fn count(&self) -> usize  {
+    pub fn count(&self) -> usize {
         todo!("Implement count")
     }
 }

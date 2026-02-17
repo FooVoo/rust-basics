@@ -16,8 +16,8 @@ thread_local! {
 
 /// Each thread increments its thread-local counter n times.
 /// Return sum of all thread-local final values.
-pub fn thread_local_sum(n_threads: usize, increments_per_thread: usize) -> usize  {
-    todo!("Return sum of all thread-local final values.")
+pub fn thread_local_sum(n_threads: usize, increments_per_thread: usize) -> usize {
+    todo!("Implement thread_local_sum")
 }
 
 #[cfg(test)]

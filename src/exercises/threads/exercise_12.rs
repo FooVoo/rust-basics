@@ -11,8 +11,8 @@ use std::thread;
 
 /// Multiple threads read a value, one thread writes.
 /// Return the final value after all operations.
-pub fn rwlock_operations(n_readers: usize, value: i32) -> i32  {
-    todo!("Return the final value after all operations.")
+pub fn rwlock_operations(n_readers: usize, value: i32) -> i32 {
+    todo!("Implement rwlock_operations")
 }
 
 #[cfg(test)]

@@ -13,8 +13,8 @@ pub struct Publisher<T> {
 
 impl<T> Publisher<T> {
     /// Creates a new publisher.
-    pub fn new() -> Self  {
-        todo!("Create a new publisher.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Subscribes a callback to events.
@@ -26,19 +26,19 @@ impl<T> Publisher<T> {
     }
 
     /// Publishes an event to all subscribers.
-    pub fn publish(&mut self, event: &T)  {
-        todo!("Publishes an event to all subscribers.")
+    pub fn publish(&mut self, event: &T) {
+        todo!("Implement publish")
     }
 
     /// Returns the number of subscribers.
-    pub fn subscriber_count(&self) -> usize  {
-        todo!("Return the number of subscribers.")
+    pub fn subscriber_count(&self) -> usize {
+        todo!("Implement subscriber_count")
     }
 }
 
 impl<T> Default for Publisher<T> {
-    fn default() -> Self  {
-        todo!("Return the number of subscribers.")
+    fn default() -> Self {
+        todo!("Implement default")
     }
 }
 
@@ -49,8 +49,8 @@ pub struct EventBus<T> {
 
 impl<T> EventBus<T> {
     /// Creates a new event bus.
-    pub fn new() -> Self  {
-        todo!("Create a new event bus.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Registers an event handler.
@@ -70,14 +70,14 @@ impl<T> EventBus<T> {
     }
 
     /// Returns the number of handlers.
-    pub fn handler_count(&self) -> usize  {
-        todo!("Return the number of handlers.")
+    pub fn handler_count(&self) -> usize {
+        todo!("Implement handler_count")
     }
 }
 
 impl<T> Default for EventBus<T> {
-    fn default() -> Self  {
-        todo!("Return the number of handlers.")
+    fn default() -> Self {
+        todo!("Implement default")
     }
 }
 

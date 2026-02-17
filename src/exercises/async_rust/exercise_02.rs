@@ -9,18 +9,18 @@
 use tokio::time::{sleep, Duration};
 
 /// Wait for the specified milliseconds, then return a message.
-pub async fn delayed_greeting(name: &str, delay_ms: u64) -> String  {
-    todo!("Wait for the specified milliseconds, then return a message.")
+pub async fn delayed_greeting(name: &str, delay_ms: u64) -> String {
+    todo!("Implement delayed_greeting")
 }
 
 /// Perform a computation after a delay.
-pub async fn delayed_computation(value: i32, delay_ms: u64) -> i32  {
-    todo!("Perform a computation after a delay.")
+pub async fn delayed_computation(value: i32, delay_ms: u64) -> i32 {
+    todo!("Implement delayed_computation")
 }
 
 /// Return the first value after its delay, then the second.
-pub async fn sequential_delays(delay1_ms: u64, delay2_ms: u64) -> (String, String)  {
-    todo!("Return the first value after its delay, then the second.")
+pub async fn sequential_delays(delay1_ms: u64, delay2_ms: u64) -> (String, String) {
+    todo!("Implement sequential_delays")
 }
 
 #[cfg(test)]

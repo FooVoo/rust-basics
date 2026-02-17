@@ -7,18 +7,18 @@
 //! - See how ownership moves between variables
 
 /// Takes ownership of a String and returns its length.
-pub fn take_ownership(s: String) -> usize  {
-    todo!("Takes ownership of a String and returns its length.")
+pub fn take_ownership(s: String) -> usize {
+    todo!("Implement take_ownership")
 }
 
 /// Creates a new String and transfers ownership to the caller.
-pub fn give_ownership() -> String  {
-    todo!("Create a new String and transfers ownership to the caller.")
+pub fn give_ownership() -> String {
+    todo!("Implement give_ownership")
 }
 
 /// Takes ownership and gives it back to the caller.
-pub fn take_and_give_back(s: String) -> String  {
-    todo!("Takes ownership and gives it back to the caller.")
+pub fn take_and_give_back(s: String) -> String {
+    todo!("Implement take_and_give_back")
 }
 
 #[cfg(test)]

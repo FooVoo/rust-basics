@@ -7,13 +7,13 @@
 //! - Debug iterator pipelines
 
 /// Process numbers and count how many pass each stage.
-pub fn count_stages(numbers: &[i32]) -> (usize, usize, usize)  {
-    todo!("Process numbers and count how many pass each stage.")
+pub fn count_stages(numbers: &[i32]) -> (usize, usize, usize) {
+    todo!("Implement count_stages")
 }
 
 /// Group consecutive equal elements.
-pub fn group_consecutive_equal(numbers: Vec<i32>) -> Vec<Vec<i32>>  {
-    todo!("Group consecutive equal elements.")
+pub fn group_consecutive_equal(numbers: Vec<i32>) -> Vec<Vec<i32>> {
+    todo!("Implement group_consecutive_equal")
 }
 
 /// Take elements until a condition is met, including the matching element.

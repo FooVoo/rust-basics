@@ -11,23 +11,23 @@ pub struct Arena<T> {
 }
 
 impl<T> Arena<T> {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
     
-    pub fn add(&mut self, item: T) -> usize  {
+    pub fn add(&mut self, item: T) -> usize {
         todo!("Implement add")
     }
     
-    pub fn get(&self, id: usize) -> Option<&T>  {
+    pub fn get(&self, id: usize) -> Option<&T> {
         todo!("Implement get")
     }
     
-    pub fn get_mut(&mut self, id: usize) -> Option<&mut T>  {
+    pub fn get_mut(&mut self, id: usize) -> Option<&mut T> {
         todo!("Implement get_mut")
     }
     
-    pub fn len(&self) -> usize  {
+    pub fn len(&self) -> usize {
         todo!("Implement len")
     }
 }
@@ -40,7 +40,7 @@ pub struct TreeNode {
 }
 
 impl TreeNode {
-    pub fn new(value: i32, parent: Option<usize>) -> Self  {
+    pub fn new(value: i32, parent: Option<usize>) -> Self {
         todo!("Implement new")
     }
 }
@@ -50,26 +50,26 @@ pub struct Tree {
 }
 
 impl Tree {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
     
-    pub fn add_node(&mut self, value: i32, parent: Option<usize>) -> usize  {
+    pub fn add_node(&mut self, value: i32, parent: Option<usize>) -> usize {
         todo!("Implement add_node")
     }
     
-    pub fn get_node(&self, id: usize) -> Option<&TreeNode>  {
+    pub fn get_node(&self, id: usize) -> Option<&TreeNode> {
         todo!("Implement get_node")
     }
     
-    pub fn node_count(&self) -> usize  {
+    pub fn node_count(&self) -> usize {
         todo!("Implement node_count")
     }
 }
 
 /// Build a simple tree and return its depth.
-pub fn build_and_measure_tree() -> usize  {
-    todo!("Build a simple tree and return its depth.")
+pub fn build_and_measure_tree() -> usize {
+    todo!("Implement build_and_measure_tree")
 }
 
 #[cfg(test)]

@@ -9,18 +9,18 @@
 use tokio::task;
 
 /// Spawn a task that computes a value.
-pub async fn spawn_computation(value: i32) -> i32  {
-    todo!("Spawn a task that computes a value.")
+pub async fn spawn_computation(value: i32) -> i32 {
+    todo!("Implement spawn_computation")
 }
 
 /// Spawn two tasks and return their sum.
-pub async fn spawn_and_sum(a: i32, b: i32) -> i32  {
-    todo!("Spawn two tasks and return their sum.")
+pub async fn spawn_and_sum(a: i32, b: i32) -> i32 {
+    todo!("Implement spawn_and_sum")
 }
 
 /// Spawn multiple tasks and collect results.
-pub async fn spawn_multiple(values: Vec<i32>) -> Vec<i32>  {
-    todo!("Spawn multiple tasks and collect results.")
+pub async fn spawn_multiple(values: Vec<i32>) -> Vec<i32> {
+    todo!("Implement spawn_multiple")
 }
 
 #[cfg(test)]

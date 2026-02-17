@@ -7,23 +7,23 @@
 //! - Combine filter with other operations
 
 /// Filter even numbers from a slice.
-pub fn filter_even(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Filter even numbers from a slice.")
+pub fn filter_even(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement filter_even")
 }
 
 /// Filter strings longer than a given length.
-pub fn filter_long_strings(strings: &[&str], min_length: usize) -> Vec<String>  {
-    todo!("Filter strings longer than a given length.")
+pub fn filter_long_strings(strings: &[&str], min_length: usize) -> Vec<String> {
+    todo!("Implement filter_long_strings")
 }
 
 /// Filter numbers in a specific range [min, max].
-pub fn filter_in_range(numbers: &[i32], min: i32, max: i32) -> Vec<i32>  {
-    todo!("Filter numbers in a specific range [min, max].")
+pub fn filter_in_range(numbers: &[i32], min: i32, max: i32) -> Vec<i32> {
+    todo!("Implement filter_in_range")
 }
 
 /// Filter out empty strings.
-pub fn filter_non_empty(strings: &[&str]) -> Vec<String>  {
-    todo!("Filter out empty strings.")
+pub fn filter_non_empty(strings: &[&str]) -> Vec<String> {
+    todo!("Implement filter_non_empty")
 }
 
 #[cfg(test)]

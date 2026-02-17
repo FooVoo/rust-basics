@@ -27,54 +27,54 @@ pub struct Document<State> {
 // Methods available in Draft state
 impl Document<Draft> {
     /// Creates a new draft document
-    pub fn new() -> Self  {
-        todo!("Create a new draft document")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Creates a draft from existing content
-    pub fn from_content(content: String) -> Self  {
-        todo!("Create a draft from existing content")
+    pub fn from_content(content: String) -> Self {
+        todo!("Implement from_content")
     }
 
     /// Adds content to the draft
-    pub fn add_content(&mut self, text: &str)  {
-        todo!("Add content to the draft")
+    pub fn add_content(&mut self, text: &str) {
+        todo!("Implement add_content")
     }
 
     /// Submits the document for review
-    pub fn submit_for_review(self) -> Document<PendingReview>  {
-        todo!("Submits the document for review")
+    pub fn submit_for_review(self) -> Document<PendingReview> {
+        todo!("Implement submit_for_review")
     }
 }
 
 // Methods available in PendingReview state
 impl Document<PendingReview> {
     /// Approves the document and publishes it
-    pub fn approve(self) -> Document<Published>  {
-        todo!("Approves the document and publishes it")
+    pub fn approve(self) -> Document<Published> {
+        todo!("Implement approve")
     }
 
     /// Rejects the document and returns it to draft
-    pub fn reject(self) -> Document<Draft>  {
-        todo!("Rejects the document and returns it to draft")
+    pub fn reject(self) -> Document<Draft> {
+        todo!("Implement reject")
     }
 
     /// Gets content for review (read-only)
-    pub fn preview(&self) -> &str  {
-        todo!("Get content for review (read-only)")
+    pub fn preview(&self) -> &str {
+        todo!("Implement preview")
     }
 }
 
 // Methods available in Published state
 impl Document<Published> {
     /// Gets the published content
-    pub fn content(&self) -> &str  {
-        todo!("Get the published content")
+    pub fn content(&self) -> &str {
+        todo!("Implement content")
     }
 
     /// Archives the published document (returns to draft for revision)
-    pub fn archive(self) -> Document<Draft>  {
-        todo!("Archives the published document (returns to draft for revision)")
+    pub fn archive(self) -> Document<Draft> {
+        todo!("Implement archive")
     }
 }
 
@@ -99,29 +99,29 @@ pub struct ConnectionBuilder<Host, Auth> {
 
 impl ConnectionBuilder<NoHost, NoAuth> {
     /// Creates a new connection builder
-    pub fn new() -> Self  {
-        todo!("Create a new connection builder")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 }
 
 impl<Auth> ConnectionBuilder<NoHost, Auth> {
     /// Sets the host
-    pub fn host(self, host: String) -> ConnectionBuilder<HasHost, Auth>  {
-        todo!("Set the host")
+    pub fn host(self, host: String) -> ConnectionBuilder<HasHost, Auth> {
+        todo!("Implement host")
     }
 }
 
 impl<Host> ConnectionBuilder<Host, NoAuth> {
     /// Sets authentication credentials
-    pub fn auth(self, username: String, password: String) -> ConnectionBuilder<Host, HasAuth>  {
-        todo!("Set authentication credentials")
+    pub fn auth(self, username: String, password: String) -> ConnectionBuilder<Host, HasAuth> {
+        todo!("Implement auth")
     }
 }
 
 impl ConnectionBuilder<HasHost, HasAuth> {
     /// Builds the connection (only available when host and auth are set)
-    pub fn build(self) -> Connection  {
-        todo!("Build the connection (only available when host and auth are set)")
+    pub fn build(self) -> Connection {
+        todo!("Implement build")
     }
 }
 
@@ -133,11 +133,11 @@ pub struct Connection {
 }
 
 impl Connection {
-    pub fn host(&self) -> &str  {
+    pub fn host(&self) -> &str {
         todo!("Implement host")
     }
 
-    pub fn username(&self) -> &str  {
+    pub fn username(&self) -> &str {
         todo!("Implement username")
     }
 }

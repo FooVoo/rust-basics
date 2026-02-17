@@ -22,39 +22,39 @@ impl<T, const N: usize> Stack<T, N> {
     }
 
     /// Pushes a value onto the stack.
-    pub fn push(&mut self, value: T) -> Result<(), &'static str>  {
-        todo!("Pushes a value onto the stack.")
+    pub fn push(&mut self, value: T) -> Result<(), &'static str> {
+        todo!("Implement push")
     }
 
     /// Pops a value from the stack.
-    pub fn pop(&mut self) -> Option<T>  {
-        todo!("Pops a value from the stack.")
+    pub fn pop(&mut self) -> Option<T> {
+        todo!("Implement pop")
     }
 
     /// Returns the current length of the stack.
-    pub fn len(&self) -> usize  {
-        todo!("Return the current length of the stack.")
+    pub fn len(&self) -> usize {
+        todo!("Implement len")
     }
 
     /// Checks if the stack is empty.
-    pub fn is_empty(&self) -> bool  {
-        todo!("Check if the stack is empty.")
+    pub fn is_empty(&self) -> bool {
+        todo!("Implement is_empty")
     }
 
     /// Checks if the stack is full.
-    pub fn is_full(&self) -> bool  {
-        todo!("Check if the stack is full.")
+    pub fn is_full(&self) -> bool {
+        todo!("Implement is_full")
     }
 
     /// Returns the capacity of the stack.
-    pub fn capacity(&self) -> usize  {
-        todo!("Return the capacity of the stack.")
+    pub fn capacity(&self) -> usize {
+        todo!("Implement capacity")
     }
 }
 
 impl<T: Copy, const N: usize> Default for Stack<T, N> {
-    fn default() -> Self  {
-        todo!("Return the capacity of the stack.")
+    fn default() -> Self {
+        todo!("Implement default")
     }
 }
 
@@ -71,39 +71,39 @@ where
     T: Copy,
 {
     /// Creates a new empty ring buffer.
-    pub fn new() -> Self  {
-        todo!("Create a new empty ring buffer.")
+    pub fn new() -> Self {
+        todo!("Implement new")
     }
 
     /// Writes a value to the buffer.
-    pub fn write(&mut self, value: T) -> Result<(), &'static str>  {
-        todo!("Writes a value to the buffer.")
+    pub fn write(&mut self, value: T) -> Result<(), &'static str> {
+        todo!("Implement write")
     }
 
     /// Reads a value from the buffer.
-    pub fn read(&mut self) -> Option<T>  {
-        todo!("Reads a value from the buffer.")
+    pub fn read(&mut self) -> Option<T> {
+        todo!("Implement read")
     }
 
     /// Returns the number of elements in the buffer.
-    pub fn len(&self) -> usize  {
-        todo!("Return the number of elements in the buffer.")
+    pub fn len(&self) -> usize {
+        todo!("Implement len")
     }
 
     /// Checks if the buffer is empty.
-    pub fn is_empty(&self) -> bool  {
-        todo!("Check if the buffer is empty.")
+    pub fn is_empty(&self) -> bool {
+        todo!("Implement is_empty")
     }
 
     /// Checks if the buffer is full.
-    pub fn is_full(&self) -> bool  {
-        todo!("Check if the buffer is full.")
+    pub fn is_full(&self) -> bool {
+        todo!("Implement is_full")
     }
 }
 
 impl<T: Copy, const N: usize> Default for RingBuffer<T, N> {
-    fn default() -> Self  {
-        todo!("Check if the buffer is full.")
+    fn default() -> Self {
+        todo!("Implement default")
     }
 }
 

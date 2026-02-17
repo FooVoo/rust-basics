@@ -19,7 +19,7 @@ impl<I> Batch<I>
 where
     I: Iterator,
 {
-    pub fn new(iter: I, size: usize) -> Self  {
+    pub fn new(iter: I, size: usize) -> Self {
         todo!("Implement new")
     }
 }
@@ -30,7 +30,7 @@ where
 {
     type Item = Vec<I::Item>;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -48,7 +48,7 @@ impl<I> Unique<I>
 where
     I: Iterator,
 {
-    pub fn new(iter: I) -> Self  {
+    pub fn new(iter: I) -> Self {
         todo!("Implement new")
     }
 }
@@ -60,7 +60,7 @@ where
 {
     type Item = I::Item;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }

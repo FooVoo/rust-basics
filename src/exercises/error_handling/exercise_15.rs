@@ -15,13 +15,13 @@ pub enum ConversionError {
 }
 
 impl From<ParseIntError> for ConversionError {
-    fn from(err: ParseIntError) -> Self  {
+    fn from(err: ParseIntError) -> Self {
         todo!("Implement from")
     }
 }
 
 impl std::fmt::Display for ConversionError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -29,13 +29,13 @@ impl std::fmt::Display for ConversionError {
 impl std::error::Error for ConversionError {}
 
 /// Parse a string to u8, checking it's in valid range.
-pub fn parse_to_u8(s: &str) -> Result<u8, ConversionError>  {
-    todo!("Parse a string to u8, checking it's in valid range.")
+pub fn parse_to_u8(s: &str) -> Result<u8, ConversionError> {
+    todo!("Implement parse_to_u8")
 }
 
 /// Parse multiple strings to u8 values.
-pub fn parse_many_u8(strings: &[&str]) -> Result<Vec<u8>, ConversionError>  {
-    todo!("Parse multiple strings to u8 values.")
+pub fn parse_many_u8(strings: &[&str]) -> Result<Vec<u8>, ConversionError> {
+    todo!("Implement parse_many_u8")
 }
 
 #[cfg(test)]

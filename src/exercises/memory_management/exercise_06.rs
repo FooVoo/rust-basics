@@ -7,18 +7,18 @@
 //! - Work with borrowed values in match expressions
 
 /// Match on a reference and return a description.
-pub fn describe_number(n: &i32) -> String  {
-    todo!("Match on a reference and return a description.")
+pub fn describe_number(n: &i32) -> String {
+    todo!("Implement describe_number")
 }
 
 /// Find the first even number in a slice.
-pub fn first_even(numbers: &[i32]) -> Option<i32>  {
-    todo!("Find the first even number in a slice.")
+pub fn first_even(numbers: &[i32]) -> Option<i32> {
+    todo!("Implement first_even")
 }
 
 /// Classify a string by length.
-pub fn classify_by_length(s: &str) -> &'static str  {
-    todo!("Classify a string by length.")
+pub fn classify_by_length(s: &str) -> &'static str {
+    todo!("Implement classify_by_length")
 }
 
 #[cfg(test)]

@@ -9,18 +9,18 @@
 use std::cell::Cell;
 
 /// Create a Cell containing a value.
-pub fn create_cell(value: i32) -> Cell<i32>  {
-    todo!("Create a Cell containing a value.")
+pub fn create_cell(value: i32) -> Cell<i32> {
+    todo!("Implement create_cell")
 }
 
 /// Update a value in a Cell.
-pub fn update_cell(cell: &Cell<i32>, value: i32)  {
-    todo!("Update a value in a Cell.")
+pub fn update_cell(cell: &Cell<i32>, value: i32) {
+    todo!("Implement update_cell")
 }
 
 /// Increment a value in a Cell.
-pub fn increment_cell(cell: &Cell<i32>)  {
-    todo!("Increment a value in a Cell.")
+pub fn increment_cell(cell: &Cell<i32>) {
+    todo!("Implement increment_cell")
 }
 
 /// A point with interior mutability using Cell.
@@ -30,31 +30,31 @@ pub struct Point {
 }
 
 impl Point {
-    pub fn new(x: i32, y: i32) -> Self  {
-        todo!("A point with interior mutability using Cell.")
+    pub fn new(x: i32, y: i32) -> Self {
+        todo!("Implement new")
     }
 
-    pub fn get_x(&self) -> i32  {
+    pub fn get_x(&self) -> i32 {
         todo!("Implement get_x")
     }
 
-    pub fn get_y(&self) -> i32  {
+    pub fn get_y(&self) -> i32 {
         todo!("Implement get_y")
     }
 
-    pub fn set_x(&self, x: i32)  {
+    pub fn set_x(&self, x: i32) {
         todo!("Implement set_x")
     }
 
-    pub fn set_y(&self, y: i32)  {
+    pub fn set_y(&self, y: i32) {
         todo!("Implement set_y")
     }
 
-    pub fn translate(&self, dx: i32, dy: i32)  {
+    pub fn translate(&self, dx: i32, dy: i32) {
         todo!("Implement translate")
     }
 
-    pub fn distance_from_origin(&self) -> f64  {
+    pub fn distance_from_origin(&self) -> f64 {
         todo!("Implement distance_from_origin")
     }
 }

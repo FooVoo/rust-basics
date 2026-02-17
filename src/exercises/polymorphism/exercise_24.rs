@@ -14,7 +14,7 @@ pub trait Stringify {
 
 // Blanket implementation for all types implementing Display
 impl<T: Display> Stringify for T {
-    fn stringify(&self) -> String  {
+    fn stringify(&self) -> String {
         todo!("Implement stringify")
     }
 }
@@ -28,7 +28,7 @@ impl<T> Double for T
 where
     T: std::ops::Add<Output = T> + Copy,
 {
-    fn double(&self) -> Self  {
+    fn double(&self) -> Self {
         todo!("Implement double")
     }
 }
@@ -39,7 +39,7 @@ pub trait Collector<T> {
 
 // Blanket implementation for any slice
 impl<T: Clone> Collector<T> for [T] {
-    fn collect_items(&self) -> Vec<T>  {
+    fn collect_items(&self) -> Vec<T> {
         todo!("Implement collect_items")
     }
 }
@@ -57,7 +57,7 @@ where
 {
     type Item = T;
     
-    fn as_vec(&self) -> Vec<Self::Item>  {
+    fn as_vec(&self) -> Vec<Self::Item> {
         todo!("Implement as_vec")
     }
 }

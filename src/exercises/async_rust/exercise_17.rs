@@ -11,18 +11,18 @@ use tokio::time::{sleep, Duration};
 use std::sync::Arc;
 
 /// Wait for all tasks to reach the barrier before proceeding.
-pub async fn synchronized_tasks(num_tasks: usize, delays_ms: Vec<u64>) -> Vec<String>  {
-    todo!("Wait for all tasks to reach the barrier before proceeding.")
+pub async fn synchronized_tasks(num_tasks: usize, delays_ms: Vec<u64>) -> Vec<String> {
+    todo!("Implement synchronized_tasks")
 }
 
 /// Multi-phase computation with barriers.
-pub async fn multi_phase_computation(num_workers: usize) -> Vec<i32>  {
-    todo!("Multi-phase computation with barriers.")
+pub async fn multi_phase_computation(num_workers: usize) -> Vec<i32> {
+    todo!("Implement multi_phase_computation")
 }
 
 /// Barrier for batch processing.
-pub async fn batch_processing(batches: Vec<Vec<i32>>) -> Vec<i32>  {
-    todo!("Barrier for batch processing.")
+pub async fn batch_processing(batches: Vec<Vec<i32>>) -> Vec<i32> {
+    todo!("Implement batch_processing")
 }
 
 #[cfg(test)]

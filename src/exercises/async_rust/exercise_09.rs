@@ -9,22 +9,22 @@
 use tokio::time::{sleep, Duration};
 
 /// Return the result of whichever future completes first.
-pub async fn race_two(delay1_ms: u64, delay2_ms: u64) -> String  {
-    todo!("Return the result of whichever future completes first.")
+pub async fn race_two(delay1_ms: u64, delay2_ms: u64) -> String {
+    todo!("Implement race_two")
 }
 
 /// Race multiple computations and return the first result.
-pub async fn first_to_complete(values: Vec<(i32, u64)>) -> i32  {
-    todo!("Race multiple computations and return the first result.")
+pub async fn first_to_complete(values: Vec<(i32, u64)>) -> i32 {
+    todo!("Implement first_to_complete")
 }
 
-async fn compute_with_delay(value: i32, delay_ms: u64) -> i32  {
-    todo!("Race multiple computations and return the first result.")
+async fn compute_with_delay(value: i32, delay_ms: u64) -> i32 {
+    todo!("Implement compute_with_delay")
 }
 
 /// Select between a computation and a timeout.
-pub async fn with_fallback(value: i32, delay_ms: u64, timeout_ms: u64) -> Result<i32, String>  {
-    todo!("Select between a computation and a timeout.")
+pub async fn with_fallback(value: i32, delay_ms: u64, timeout_ms: u64) -> Result<i32, String> {
+    todo!("Implement with_fallback")
 }
 
 #[cfg(test)]

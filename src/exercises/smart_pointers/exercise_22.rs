@@ -15,11 +15,11 @@ pub struct CountedBox<T> {
 }
 
 impl<T> CountedBox<T> {
-    pub fn new(value: T) -> Self  {
-        todo!("A simple wrapper that counts dereferences.")
+    pub fn new(value: T) -> Self {
+        todo!("Implement new")
     }
 
-    pub fn deref_count(&self) -> usize  {
+    pub fn deref_count(&self) -> usize {
         todo!("Implement deref_count")
     }
 }
@@ -27,7 +27,7 @@ impl<T> CountedBox<T> {
 impl<T> Deref for CountedBox<T> {
     type Target = T;
 
-    fn deref(&self) -> &Self::Target  {
+    fn deref(&self) -> &Self::Target {
         todo!("Implement deref")
     }
 }
@@ -40,11 +40,11 @@ pub struct Selector<T> {
 }
 
 impl<T> Selector<T> {
-    pub fn new(flag: bool, left: T, right: T) -> Self  {
-        todo!("A selector that returns one of two values based on a flag.")
+    pub fn new(flag: bool, left: T, right: T) -> Self {
+        todo!("Implement new")
     }
 
-    pub fn flip(&mut self)  {
+    pub fn flip(&mut self) {
         todo!("Implement flip")
     }
 }
@@ -52,7 +52,7 @@ impl<T> Selector<T> {
 impl<T> Deref for Selector<T> {
     type Target = T;
 
-    fn deref(&self) -> &Self::Target  {
+    fn deref(&self) -> &Self::Target {
         todo!("Implement deref")
     }
 }

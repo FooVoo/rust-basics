@@ -7,13 +7,13 @@
 //! - Simplify when errors don't matter
 
 /// Parse multiple strings, keep only successful ones.
-pub fn parse_all_valid(strings: &[&str]) -> Vec<i32>  {
-    todo!("Parse multiple strings, keep only successful ones.")
+pub fn parse_all_valid(strings: &[&str]) -> Vec<i32> {
+    todo!("Implement parse_all_valid")
 }
 
 /// Try operations and collect successes.
-pub fn safe_divisions(numerators: &[i32], denominator: i32) -> Vec<i32>  {
-    todo!("Try operations and collect successes.")
+pub fn safe_divisions(numerators: &[i32], denominator: i32) -> Vec<i32> {
+    todo!("Implement safe_divisions")
 }
 
 #[cfg(test)]

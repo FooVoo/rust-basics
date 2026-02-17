@@ -7,28 +7,28 @@
 //! - Handle Option results in iterations
 
 /// Parse strings to numbers, ignoring invalid ones.
-pub fn parse_numbers(strings: &[&str]) -> Vec<i32>  {
-    todo!("Parse strings to numbers, ignoring invalid ones.")
+pub fn parse_numbers(strings: &[&str]) -> Vec<i32> {
+    todo!("Implement parse_numbers")
 }
 
 /// Get lengths of non-empty strings.
-pub fn non_empty_lengths(strings: &[&str]) -> Vec<usize>  {
-    todo!("Get lengths of non-empty strings.")
+pub fn non_empty_lengths(strings: &[&str]) -> Vec<usize> {
+    todo!("Implement non_empty_lengths")
 }
 
 /// Square positive numbers only.
-pub fn square_positives(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Square positive numbers only.")
+pub fn square_positives(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement square_positives")
 }
 
 /// Extract first character of non-empty strings.
-pub fn first_chars(strings: &[&str]) -> Vec<char>  {
-    todo!("Extract first character of non-empty strings.")
+pub fn first_chars(strings: &[&str]) -> Vec<char> {
+    todo!("Implement first_chars")
 }
 
 /// Divide numbers, skipping zeros in divisor.
-pub fn safe_divisions(dividends: &[i32], divisors: &[i32]) -> Vec<i32>  {
-    todo!("Divide numbers, skipping zeros in divisor.")
+pub fn safe_divisions(dividends: &[i32], divisors: &[i32]) -> Vec<i32> {
+    todo!("Implement safe_divisions")
 }
 
 #[cfg(test)]

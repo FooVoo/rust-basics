@@ -16,7 +16,7 @@ pub enum DatabaseError {
 }
 
 impl fmt::Display for DatabaseError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -31,36 +31,36 @@ pub enum ServiceError {
 }
 
 impl fmt::Display for ServiceError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 impl Error for ServiceError {
-    fn source(&self) -> Option<&(dyn Error + 'static)>  {
+    fn source(&self) -> Option<&(dyn Error + 'static)> {
         todo!("Implement source")
     }
 }
 
 impl From<DatabaseError> for ServiceError {
-    fn from(err: DatabaseError) -> Self  {
+    fn from(err: DatabaseError) -> Self {
         todo!("Implement from")
     }
 }
 
 /// Simulate a database operation that can fail.
-pub fn database_query(success: bool) -> Result<String, DatabaseError>  {
-    todo!("Simulate a database operation that can fail.")
+pub fn database_query(success: bool) -> Result<String, DatabaseError> {
+    todo!("Implement database_query")
 }
 
 /// Service layer that wraps database operations.
-pub fn fetch_user(id: u32, db_success: bool) -> Result<String, ServiceError>  {
-    todo!("Service layer that wraps database operations.")
+pub fn fetch_user(id: u32, db_success: bool) -> Result<String, ServiceError> {
+    todo!("Implement fetch_user")
 }
 
 /// Count the depth of error chain.
-pub fn error_chain_depth(err: &dyn Error) -> usize  {
-    todo!("Count the depth of error chain.")
+pub fn error_chain_depth(err: &dyn Error) -> usize {
+    todo!("Implement error_chain_depth")
 }
 
 #[cfg(test)]

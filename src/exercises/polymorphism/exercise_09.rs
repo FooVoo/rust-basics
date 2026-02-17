@@ -16,11 +16,11 @@ pub struct Dog {
 }
 
 impl Animal for Dog {
-    fn speak(&self) -> String  {
+    fn speak(&self) -> String {
         todo!("Implement speak")
     }
     
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 }
@@ -30,11 +30,11 @@ pub struct Cat {
 }
 
 impl Animal for Cat {
-    fn speak(&self) -> String  {
+    fn speak(&self) -> String {
         todo!("Implement speak")
     }
     
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 }
@@ -44,23 +44,23 @@ pub struct Bird {
 }
 
 impl Animal for Bird {
-    fn speak(&self) -> String  {
+    fn speak(&self) -> String {
         todo!("Implement speak")
     }
     
-    fn name(&self) -> &str  {
+    fn name(&self) -> &str {
         todo!("Implement name")
     }
 }
 
 /// Create a vector of different animals using trait objects
-pub fn create_zoo() -> Vec<Box<dyn Animal>>  {
-    todo!("Create a vector of different animals using trait objects")
+pub fn create_zoo() -> Vec<Box<dyn Animal>> {
+    todo!("Implement create_zoo")
 }
 
 /// Make all animals in the zoo speak
-pub fn zoo_chorus(animals: &[Box<dyn Animal>]) -> Vec<String>  {
-    todo!("Make all animals in the zoo speak")
+pub fn zoo_chorus(animals: &[Box<dyn Animal>]) -> Vec<String> {
+    todo!("Implement zoo_chorus")
 }
 
 #[cfg(test)]

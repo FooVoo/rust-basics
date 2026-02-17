@@ -18,28 +18,28 @@ pub struct TreeNode {
 
 impl TreeNode {
     /// Create a new tree node.
-    pub fn new(value: i32) -> Rc<Self>  {
-        todo!("Create a new tree node.")
+    pub fn new(value: i32) -> Rc<Self> {
+        todo!("Implement new")
     }
 
     /// Add a child to this node.
-    pub fn add_child(parent: &Rc<TreeNode>, child: Rc<TreeNode>)  {
-        todo!("Add a child to this node.")
+    pub fn add_child(parent: &Rc<TreeNode>, child: Rc<TreeNode>) {
+        todo!("Implement add_child")
     }
 
     /// Get parent value if it exists.
-    pub fn parent_value(node: &Rc<TreeNode>) -> Option<i32>  {
-        todo!("Get parent value if it exists.")
+    pub fn parent_value(node: &Rc<TreeNode>) -> Option<i32> {
+        todo!("Implement parent_value")
     }
 
     /// Count children.
-    pub fn child_count(node: &Rc<TreeNode>) -> usize  {
-        todo!("Count children.")
+    pub fn child_count(node: &Rc<TreeNode>) -> usize {
+        todo!("Implement child_count")
     }
 
     /// Get strong and weak counts.
-    pub fn counts(node: &Rc<TreeNode>) -> (usize, usize)  {
-        todo!("Get strong and weak counts.")
+    pub fn counts(node: &Rc<TreeNode>) -> (usize, usize) {
+        todo!("Implement counts")
     }
 }
 

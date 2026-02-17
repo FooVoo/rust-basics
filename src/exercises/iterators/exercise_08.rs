@@ -7,28 +7,28 @@
 //! - Combine take/skip with other operations
 
 /// Get the first n elements.
-pub fn take_first(numbers: &[i32], n: usize) -> Vec<i32>  {
-    todo!("Get the first n elements.")
+pub fn take_first(numbers: &[i32], n: usize) -> Vec<i32> {
+    todo!("Implement take_first")
 }
 
 /// Skip the first n elements and collect the rest.
-pub fn skip_first(numbers: &[i32], n: usize) -> Vec<i32>  {
-    todo!("Skip the first n elements and collect the rest.")
+pub fn skip_first(numbers: &[i32], n: usize) -> Vec<i32> {
+    todo!("Implement skip_first")
 }
 
 /// Take while condition is true.
-pub fn take_while_positive(numbers: &[i32]) -> Vec<i32>  {
-    todo!("Take while condition is true.")
+pub fn take_while_positive(numbers: &[i32]) -> Vec<i32> {
+    todo!("Implement take_while_positive")
 }
 
 /// Skip first n, then take next m elements.
-pub fn skip_and_take(numbers: &[i32], skip_count: usize, take_count: usize) -> Vec<i32>  {
-    todo!("Skip first n, then take next m elements.")
+pub fn skip_and_take(numbers: &[i32], skip_count: usize, take_count: usize) -> Vec<i32> {
+    todo!("Implement skip_and_take")
 }
 
 /// Take every nth element.
-pub fn take_every_nth(numbers: &[i32], n: usize) -> Vec<i32>  {
-    todo!("Take every nth element.")
+pub fn take_every_nth(numbers: &[i32], n: usize) -> Vec<i32> {
+    todo!("Implement take_every_nth")
 }
 
 #[cfg(test)]

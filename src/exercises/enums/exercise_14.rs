@@ -15,23 +15,23 @@ pub enum DataSet {
 
 impl DataSet {
     /// Returns the count of elements in the dataset
-    pub fn len(&self) -> usize  {
-        todo!("Return the count of elements in the dataset")
+    pub fn len(&self) -> usize {
+        todo!("Implement len")
     }
 
     /// Returns the sum of all elements
-    pub fn sum(&self) -> i32  {
-        todo!("Return the sum of all elements")
+    pub fn sum(&self) -> i32 {
+        todo!("Implement sum")
     }
 
     /// Returns the maximum value if present
-    pub fn max(&self) -> Option<i32>  {
-        todo!("Return the maximum value if present")
+    pub fn max(&self) -> Option<i32> {
+        todo!("Implement max")
     }
 
     /// Returns true if the dataset is empty
-    pub fn is_empty(&self) -> bool  {
-        todo!("Return true if the dataset is empty")
+    pub fn is_empty(&self) -> bool {
+        todo!("Implement is_empty")
     }
 }
 

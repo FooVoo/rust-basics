@@ -17,15 +17,15 @@ pub enum EmailError {
 }
 
 impl std::fmt::Display for EmailError {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 /// Validate an email address.
 /// Must have format: username@domain.tld
-pub fn validate_email(email: &str) -> Result<String, EmailError>  {
-    todo!("Must have format: username@domain.tld")
+pub fn validate_email(email: &str) -> Result<String, EmailError> {
+    todo!("Implement validate_email")
 }
 
 #[cfg(test)]

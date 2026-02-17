@@ -13,8 +13,8 @@ use std::thread;
 /// Spawn n_producers that each send values 0..items_per_producer.
 /// Spawn n_consumers that receive and sum all values.
 /// Return the total sum.
-pub fn producer_consumer(n_producers: usize, n_consumers: usize, items_per_producer: usize) -> usize  {
-    todo!("Return the total sum.")
+pub fn producer_consumer(n_producers: usize, n_consumers: usize, items_per_producer: usize) -> usize {
+    todo!("Implement producer_consumer")
 }
 
 #[cfg(test)]

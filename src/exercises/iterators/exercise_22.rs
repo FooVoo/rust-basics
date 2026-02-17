@@ -13,15 +13,15 @@ pub struct RunningAverage {
 }
 
 impl RunningAverage {
-    pub fn new(values: Vec<f64>) -> Self  {
-        todo!("Iterator that yields running averages.")
+    pub fn new(values: Vec<f64>) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl Iterator for RunningAverage {
     type Item = f64;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -39,7 +39,7 @@ impl<I> Pairwise<I>
 where
     I: Iterator,
 {
-    pub fn new(mut iter: I) -> Self  {
+    pub fn new(mut iter: I) -> Self {
         todo!("Implement new")
     }
 }
@@ -51,7 +51,7 @@ where
 {
     type Item = (I::Item, I::Item);
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }
@@ -64,15 +64,15 @@ pub struct SkipEveryNth<I> {
 }
 
 impl<I: Iterator> SkipEveryNth<I> {
-    pub fn new(iter: I, n: usize) -> Self  {
-        todo!("Iterator that skips every nth element.")
+    pub fn new(iter: I, n: usize) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl<I: Iterator> Iterator for SkipEveryNth<I> {
     type Item = I::Item;
     
-    fn next(&mut self) -> Option<Self::Item>  {
+    fn next(&mut self) -> Option<Self::Item> {
         todo!("Implement next")
     }
 }

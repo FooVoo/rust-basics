@@ -7,13 +7,13 @@
 //! - Use collect with Result
 
 /// Parse all strings, fail if any fails.
-pub fn parse_all_or_fail(strings: &[&str]) -> Result<Vec<i32>, String>  {
-    todo!("Parse all strings, fail if any fails.")
+pub fn parse_all_or_fail(strings: &[&str]) -> Result<Vec<i32>, String> {
+    todo!("Implement parse_all_or_fail")
 }
 
 /// Process all items, collect successes and failures.
-pub fn partition_results<T, E>(results: Vec<Result<T, E>>) -> (Vec<T>, Vec<E>)  {
-    todo!("Process all items, collect successes and failures.")
+pub fn partition_results<T, E>(results: Vec<Result<T, E>>) -> (Vec<T>, Vec<E>) {
+    todo!("Implement partition_results")
 }
 
 #[cfg(test)]

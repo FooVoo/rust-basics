@@ -8,14 +8,14 @@
 
 /// Parse, validate, and transform in one chain.
 /// Parse string to i32, keep only positive, then double.
-pub fn parse_positive_and_double(s: &str) -> Option<i32>  {
-    todo!("Parse string to i32, keep only positive, then double.")
+pub fn parse_positive_and_double(s: &str) -> Option<i32> {
+    todo!("Implement parse_positive_and_double")
 }
 
 /// Extract, validate, and compute.
 /// Get first element, ensure it's even, then square it.
-pub fn first_even_squared(numbers: &[i32]) -> Option<i32>  {
-    todo!("Get first element, ensure it's even, then square it.")
+pub fn first_even_squared(numbers: &[i32]) -> Option<i32> {
+    todo!("Implement first_even_squared")
 }
 
 #[cfg(test)]

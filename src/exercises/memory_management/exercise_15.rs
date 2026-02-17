@@ -7,18 +7,18 @@
 //! - Recognize patterns that don't need explicit lifetimes
 
 /// Return a string slice from input (lifetime elision applies).
-pub fn trim_spaces(s: &str) -> &str  {
-    todo!("Return a string slice from input (lifetime elision applies).")
+pub fn trim_spaces(s: &str) -> &str {
+    todo!("Implement trim_spaces")
 }
 
 /// Get first n characters of a string.
-pub fn take_prefix(s: &str, n: usize) -> &str  {
-    todo!("Get first n characters of a string.")
+pub fn take_prefix(s: &str, n: usize) -> &str {
+    todo!("Implement take_prefix")
 }
 
 /// Extract substring between delimiters.
-pub fn extract_between<'a>(s: &'a str, start: &str, end: &str) -> Option<&'a str>  {
-    todo!("Extract substring between delimiters.")
+pub fn extract_between<'a>(s: &'a str, start: &str, end: &str) -> Option<&'a str> {
+    todo!("Implement extract_between")
 }
 
 pub struct Parser<'a> {
@@ -27,15 +27,15 @@ pub struct Parser<'a> {
 }
 
 impl<'a> Parser<'a> {
-    pub fn new(input: &'a str) -> Self  {
+    pub fn new(input: &'a str) -> Self {
         todo!("Implement new")
     }
     
-    pub fn peek(&self) -> Option<char>  {
+    pub fn peek(&self) -> Option<char> {
         todo!("Implement peek")
     }
     
-    pub fn remaining(&self) -> &str  {
+    pub fn remaining(&self) -> &str {
         todo!("Implement remaining")
     }
 }

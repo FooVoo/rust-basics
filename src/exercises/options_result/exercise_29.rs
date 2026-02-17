@@ -8,8 +8,8 @@
 //! - Implement custom monadic operations
 
 /// Functor: Apply a function inside a context (map).
-pub fn functor_map<T, U>(opt: Option<T>, f: impl FnOnce(T) -> U) -> Option<U>  {
-    todo!("Functor: Apply a function inside a context (map).")
+pub fn functor_map<T, U>(opt: Option<T>, f: impl FnOnce(T) -> U) -> Option<U> {
+    todo!("Implement functor_map")
 }
 
 /// Monad: Chain computations that return contexts (and_then).
@@ -38,8 +38,8 @@ pub fn lift_a2<A, B, C>(
 }
 
 /// Implement sequence - convert Vec<Option<T>> to Option<Vec<T>>.
-pub fn sequence<T>(vec: Vec<Option<T>>) -> Option<Vec<T>>  {
-    todo!("Implement sequence - convert Vec<Option<T>> to Option<Vec<T>>.")
+pub fn sequence<T>(vec: Vec<Option<T>>) -> Option<Vec<T>> {
+    todo!("Implement sequence")
 }
 
 /// Implement traverse - map and sequence in one operation.

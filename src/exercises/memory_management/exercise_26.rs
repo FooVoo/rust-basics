@@ -14,17 +14,17 @@ pub struct Logger {
 }
 
 impl Logger {
-    pub fn new(logs: Rc<RefCell<Vec<String>>>) -> Self  {
+    pub fn new(logs: Rc<RefCell<Vec<String>>>) -> Self {
         todo!("Implement new")
     }
     
-    pub fn log(&self, message: &str)  {
+    pub fn log(&self, message: &str) {
         todo!("Implement log")
     }
 }
 
 impl Drop for Logger {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
@@ -35,25 +35,25 @@ pub struct Connection {
 }
 
 impl Connection {
-    pub fn new(id: u32) -> Self  {
+    pub fn new(id: u32) -> Self {
         todo!("Implement new")
     }
     
-    pub fn disconnect(&mut self)  {
+    pub fn disconnect(&mut self) {
         todo!("Implement disconnect")
     }
     
-    pub fn is_connected(&self) -> bool  {
+    pub fn is_connected(&self) -> bool {
         todo!("Implement is_connected")
     }
     
-    pub fn id(&self) -> u32  {
+    pub fn id(&self) -> u32 {
         todo!("Implement id")
     }
 }
 
 impl Drop for Connection {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }
@@ -63,21 +63,21 @@ pub struct ConnectionPool {
 }
 
 impl ConnectionPool {
-    pub fn new(size: usize) -> Self  {
+    pub fn new(size: usize) -> Self {
         todo!("Implement new")
     }
     
-    pub fn get(&mut self, index: usize) -> Option<&mut Connection>  {
+    pub fn get(&mut self, index: usize) -> Option<&mut Connection> {
         todo!("Implement get")
     }
     
-    pub fn size(&self) -> usize  {
+    pub fn size(&self) -> usize {
         todo!("Implement size")
     }
 }
 
 impl Drop for ConnectionPool {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }

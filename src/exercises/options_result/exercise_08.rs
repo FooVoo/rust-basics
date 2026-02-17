@@ -7,13 +7,13 @@
 //! - Chain fallback options
 
 /// Return the first option if it has a value, otherwise the second.
-pub fn first_or_second(first: Option<i32>, second: Option<i32>) -> Option<i32>  {
-    todo!("Return the first option if it has a value, otherwise the second.")
+pub fn first_or_second(first: Option<i32>, second: Option<i32>) -> Option<i32> {
+    todo!("Implement first_or_second")
 }
 
 /// Try parsing as i32, fallback to parsing as f64 and converting.
-pub fn parse_flexible(s: &str) -> Option<i32>  {
-    todo!("Try parsing as i32, fallback to parsing as f64 and converting.")
+pub fn parse_flexible(s: &str) -> Option<i32> {
+    todo!("Implement parse_flexible")
 }
 
 /// Get value from primary source, fallback to secondary, then to default.

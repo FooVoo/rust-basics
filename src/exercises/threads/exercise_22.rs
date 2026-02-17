@@ -10,8 +10,8 @@ use std::sync::{Arc, Condvar, Mutex};
 use std::thread;
 
 /// Producer sets value when ready, consumer waits via condvar.
-pub fn condvar_pattern(value: i32) -> i32  {
-    todo!("Producer sets value when ready, consumer waits via condvar.")
+pub fn condvar_pattern(value: i32) -> i32 {
+    todo!("Implement condvar_pattern")
 }
 
 #[cfg(test)]

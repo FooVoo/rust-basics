@@ -16,7 +16,7 @@ pub enum MathError {
 }
 
 impl fmt::Display for MathError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -25,14 +25,14 @@ impl std::error::Error for MathError {}
 
 /// Calculate the square root of a number.
 /// Return MathError::NegativeSquareRoot if input is negative.
-pub fn sqrt(x: f64) -> Result<f64, MathError>  {
-    todo!("Return MathError::NegativeSquareRoot if input is negative.")
+pub fn sqrt(x: f64) -> Result<f64, MathError> {
+    todo!("Implement sqrt")
 }
 
 /// Divide two numbers, checking for overflow.
 /// Return appropriate MathError on failure.
-pub fn checked_divide(a: i32, b: i32) -> Result<i32, MathError>  {
-    todo!("Return appropriate MathError on failure.")
+pub fn checked_divide(a: i32, b: i32) -> Result<i32, MathError> {
+    todo!("Implement checked_divide")
 }
 
 #[cfg(test)]

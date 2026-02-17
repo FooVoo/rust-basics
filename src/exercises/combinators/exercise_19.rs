@@ -7,13 +7,13 @@
 //! - Handle expensive fallbacks
 
 /// Get value squared or compute from slice.
-pub fn square_or_sum(value: Option<i32>, fallback: &[i32]) -> i32  {
-    todo!("Get value squared or compute from slice.")
+pub fn square_or_sum(value: Option<i32>, fallback: &[i32]) -> i32 {
+    todo!("Implement square_or_sum")
 }
 
 /// Parse or get default from function.
-pub fn parse_or_generate(s: &str, generator: fn() -> i32) -> i32  {
-    todo!("Parse or get default from function.")
+pub fn parse_or_generate(s: &str, generator: fn() -> i32) -> i32 {
+    todo!("Implement parse_or_generate")
 }
 
 #[cfg(test)]

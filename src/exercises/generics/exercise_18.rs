@@ -19,8 +19,8 @@ pub struct RangeValidator<T> {
 }
 
 impl<T> RangeValidator<T> {
-    pub fn new(min: T, max: T) -> Self  {
-        todo!("A range validator for comparable types.")
+    pub fn new(min: T, max: T) -> Self {
+        todo!("Implement new")
     }
 }
 
@@ -30,7 +30,7 @@ where
 {
     type Error = String;
 
-    fn validate(&self, value: &T) -> Result<(), Self::Error>  {
+    fn validate(&self, value: &T) -> Result<(), Self::Error> {
         todo!("Implement validate")
     }
 }
@@ -42,15 +42,15 @@ pub struct LengthValidator {
 }
 
 impl LengthValidator {
-    pub fn new(min_len: usize, max_len: usize) -> Self  {
-        todo!("A length validator for types with length.")
+    pub fn new(min_len: usize, max_len: usize) -> Self {
+        todo!("Implement new")
     }
 }
 
 impl<T> Validator<Vec<T>> for LengthValidator {
     type Error = String;
 
-    fn validate(&self, value: &Vec<T>) -> Result<(), Self::Error>  {
+    fn validate(&self, value: &Vec<T>) -> Result<(), Self::Error> {
         todo!("Implement validate")
     }
 }
@@ -58,7 +58,7 @@ impl<T> Validator<Vec<T>> for LengthValidator {
 impl Validator<String> for LengthValidator {
     type Error = String;
 
-    fn validate(&self, value: &String) -> Result<(), Self::Error>  {
+    fn validate(&self, value: &String) -> Result<(), Self::Error> {
         todo!("Implement validate")
     }
 }

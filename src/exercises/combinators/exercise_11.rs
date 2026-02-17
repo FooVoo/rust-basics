@@ -7,13 +7,13 @@
 //! - Handle multiple strategies
 
 /// Try primary parser, fallback to default value.
-pub fn parse_or_default(s: &str, default: i32) -> Result<i32, String>  {
-    todo!("Try primary parser, fallback to default value.")
+pub fn parse_or_default(s: &str, default: i32) -> Result<i32, String> {
+    todo!("Implement parse_or_default")
 }
 
 /// Try parsing as i32, fallback to parsing length.
-pub fn parse_or_length(s: &str) -> Result<i32, String>  {
-    todo!("Try parsing as i32, fallback to parsing length.")
+pub fn parse_or_length(s: &str) -> Result<i32, String> {
+    todo!("Implement parse_or_length")
 }
 
 #[cfg(test)]

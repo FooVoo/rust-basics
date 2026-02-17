@@ -13,7 +13,7 @@ pub trait Entity: Debug + Clone {
 }
 
 pub trait Persistent: Entity {
-    fn save(&self) -> String  {
+    fn save(&self) -> String {
         todo!("Implement save")
     }
     
@@ -23,7 +23,7 @@ pub trait Persistent: Entity {
 }
 
 pub trait Auditable: Persistent + Display {
-    fn audit_log(&self) -> String  {
+    fn audit_log(&self) -> String {
         todo!("Implement audit_log")
     }
     
@@ -38,25 +38,25 @@ pub struct User {
 }
 
 impl Entity for User {
-    fn id(&self) -> u64  {
+    fn id(&self) -> u64 {
         todo!("Implement id")
     }
 }
 
 impl Persistent for User {
-    fn load(id: u64) -> Self  {
+    fn load(id: u64) -> Self {
         todo!("Implement load")
     }
 }
 
 impl Display for User {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 impl Auditable for User {
-    fn last_modified(&self) -> u64  {
+    fn last_modified(&self) -> u64 {
         todo!("Implement last_modified")
     }
 }
@@ -69,36 +69,36 @@ pub struct Product {
 }
 
 impl Entity for Product {
-    fn id(&self) -> u64  {
+    fn id(&self) -> u64 {
         todo!("Implement id")
     }
 }
 
 impl Persistent for Product {
-    fn load(id: u64) -> Self  {
+    fn load(id: u64) -> Self {
         todo!("Implement load")
     }
     
-    fn save(&self) -> String  {
+    fn save(&self) -> String {
         todo!("Implement save")
     }
 }
 
 impl Display for Product {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result  {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         todo!("Implement fmt")
     }
 }
 
 impl Auditable for Product {
-    fn last_modified(&self) -> u64  {
+    fn last_modified(&self) -> u64 {
         todo!("Implement last_modified")
     }
 }
 
 /// Function requiring Auditable (which requires Persistent and Display, which requires Entity)
-pub fn full_audit<T: Auditable>(entity: &T) -> String  {
-    todo!("Function requiring Auditable (which requires Persistent and Display, which requires Entity)")
+pub fn full_audit<T: Auditable>(entity: &T) -> String {
+    todo!("Implement full_audit")
 }
 
 #[cfg(test)]

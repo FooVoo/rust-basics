@@ -16,24 +16,24 @@ pub enum Suit {
 
 impl Suit {
     /// Returns all suits in order
-    pub fn all() -> [Suit; 4]  {
-        todo!("Return all suits in order")
+    pub fn all() -> [Suit; 4] {
+        todo!("Implement all")
     }
 
     /// Returns the next suit in circular order
-    pub fn next(&self) -> Suit  {
-        todo!("Return the next suit in circular order")
+    pub fn next(&self) -> Suit {
+        todo!("Implement next")
     }
 
     /// Returns true if the suit is red (Hearts or Diamonds)
-    pub fn is_red(&self) -> bool  {
-        todo!("Return true if the suit is red (Hearts or Diamonds)")
+    pub fn is_red(&self) -> bool {
+        todo!("Implement is_red")
     }
 }
 
 /// Generates a vector of n suits starting from the given suit
-pub fn generate_suit_sequence(start: Suit, n: usize) -> Vec<Suit>  {
-    todo!("Generates a vector of n suits starting from the given suit")
+pub fn generate_suit_sequence(start: Suit, n: usize) -> Vec<Suit> {
+    todo!("Implement generate_suit_sequence")
 }
 
 #[cfg(test)]

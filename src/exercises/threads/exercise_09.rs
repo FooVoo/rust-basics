@@ -11,8 +11,8 @@ use std::thread;
 
 /// Increment a counter from multiple threads using Mutex.
 /// Spawn n_threads threads, each incrementing the counter n_times.
-pub fn concurrent_counter(n_threads: usize, n_times: usize) -> usize  {
-    todo!("Spawn n_threads threads, each incrementing the counter n_times.")
+pub fn concurrent_counter(n_threads: usize, n_times: usize) -> usize {
+    todo!("Implement concurrent_counter")
 }
 
 #[cfg(test)]

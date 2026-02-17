@@ -74,19 +74,19 @@ impl<T> Processor<T>
 where
     T: Clone + Display + PartialOrd,
 {
-    pub fn new() -> Self  {
+    pub fn new() -> Self {
         todo!("Implement new")
     }
     
-    pub fn add(&mut self, item: T)  {
+    pub fn add(&mut self, item: T) {
         todo!("Implement add")
     }
     
-    pub fn get_max(&self) -> Option<T>  {
+    pub fn get_max(&self) -> Option<T> {
         todo!("Implement get_max")
     }
     
-    pub fn display_all(&self) -> String  {
+    pub fn display_all(&self) -> String {
         todo!("Implement display_all")
     }
 }

@@ -17,25 +17,25 @@ pub struct ContextResult<T, E> {
 }
 
 impl<T, E> ContextResult<T, E> {
-    pub fn new(result: Result<T, E>) -> Self  {
-        todo!("A generic result wrapper with context.")
+    pub fn new(result: Result<T, E>) -> Self {
+        todo!("Implement new")
     }
     
-    pub fn with_context(mut self, context: impl Into<String>) -> Self  {
+    pub fn with_context(mut self, context: impl Into<String>) -> Self {
         todo!("Implement with_context")
     }
     
-    pub fn unwrap_result(self) -> Result<T, E>  {
+    pub fn unwrap_result(self) -> Result<T, E> {
         todo!("Implement unwrap_result")
     }
     
-    pub fn context(&self) -> &[String]  {
+    pub fn context(&self) -> &[String] {
         todo!("Implement context")
     }
 }
 
 impl<T, E: fmt::Display> fmt::Display for ContextResult<T, E> {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -48,15 +48,15 @@ pub trait ErrorHandler<E> {
 pub struct DefaultErrorHandler;
 
 impl<E: fmt::Display> ErrorHandler<E> for DefaultErrorHandler {
-    fn handle(&self, error: E) -> String  {
-        todo!("Generic error handler that can work with any error type.")
+    fn handle(&self, error: E) -> String {
+        todo!("Implement handle")
     }
 }
 
 pub struct VerboseErrorHandler;
 
 impl<E: StdError> ErrorHandler<E> for VerboseErrorHandler {
-    fn handle(&self, error: E) -> String  {
+    fn handle(&self, error: E) -> String {
         todo!("Implement handle")
     }
 }

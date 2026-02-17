@@ -16,7 +16,7 @@ pub enum ResourceError {
 }
 
 impl fmt::Display for ResourceError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result  {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         todo!("Implement fmt")
     }
 }
@@ -31,19 +31,19 @@ pub struct TrackedResource {
 }
 
 impl TrackedResource {
-    pub fn new(name: impl Into<String>) -> Self  {
-        todo!("A resource that tracks acquisition and release.")
+    pub fn new(name: impl Into<String>) -> Self {
+        todo!("Implement new")
     }
     
-    pub fn acquire(&mut self) -> Result<(), ResourceError>  {
+    pub fn acquire(&mut self) -> Result<(), ResourceError> {
         todo!("Implement acquire")
     }
     
-    pub fn release(&mut self) -> Result<(), ResourceError>  {
+    pub fn release(&mut self) -> Result<(), ResourceError> {
         todo!("Implement release")
     }
     
-    pub fn is_acquired(&self) -> bool  {
+    pub fn is_acquired(&self) -> bool {
         todo!("Implement is_acquired")
     }
 }
@@ -54,17 +54,17 @@ pub struct ResourceGuard<'a> {
 }
 
 impl<'a> ResourceGuard<'a> {
-    pub fn acquire(resource: &'a mut TrackedResource) -> Result<Self, ResourceError>  {
-        todo!("RAII guard that ensures resource is released.")
+    pub fn acquire(resource: &'a mut TrackedResource) -> Result<Self, ResourceError> {
+        todo!("Implement acquire")
     }
     
-    pub fn perform_operation(&mut self, should_fail: bool) -> Result<(), ResourceError>  {
+    pub fn perform_operation(&mut self, should_fail: bool) -> Result<(), ResourceError> {
         todo!("Implement perform_operation")
     }
 }
 
 impl<'a> Drop for ResourceGuard<'a> {
-    fn drop(&mut self)  {
+    fn drop(&mut self) {
         todo!("Implement drop")
     }
 }

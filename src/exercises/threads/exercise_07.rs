@@ -9,8 +9,8 @@
 use std::thread;
 
 /// Create a named thread using Builder that returns its name.
-pub fn create_named_thread(name: &str) -> String  {
-    todo!("Create a named thread using Builder that returns its name.")
+pub fn create_named_thread(name: &str) -> String {
+    todo!("Implement create_named_thread")
 }
 
 #[cfg(test)]
