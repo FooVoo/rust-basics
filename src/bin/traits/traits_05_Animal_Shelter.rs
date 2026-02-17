@@ -81,8 +81,8 @@ pub mod problem {
     // struct Shelter {
     //     animals: Vec<???>, // What type should this be?
     // }
-    struct Shelter<'a> {
-        animals: Vec<&'a mut dyn Animal>,
+    struct Shelter {
+        animals: Vec<Box<dyn Animal>>,
     }
 
     // TODO: Implement these methods for Shelter:
@@ -94,29 +94,20 @@ pub mod problem {
     //     fn count_hungry(&self) -> usize { ... }
     // }
 
-    impl<'a> Shelter<'a> {
-        fn new(animals: Option<Vec<&'a mut dyn Animal>>) -> Self {
-            if let Some(animalsAlready) = animals {
-               return Shelter {
-                     animals: animalsAlready,
-               }
-            }
+    impl Shelter {
+        fn new() -> Self {
             Shelter {
                 animals: Vec::new(),
             }
         }
 
-        fn add_animal<'b>(&'a mut self, animal: &'b mut dyn Animal)
-        where
-            'b: 'a,
-        {
+        fn add_animal(&mut self, animal: Box<dyn Animal>) {
             self.animals.push(animal);
         }
 
         fn feed_all(&mut self) {
             for animal in &mut self.animals {
                 animal.feed();
-                animal.make_sound();
             }
         }
 
@@ -132,30 +123,22 @@ pub mod problem {
     }
 
     pub(crate) fn main() {
-        let mut shelter = Shelter::new(vec![
-            Dog {
-                name: "Buddy".to_string(),
-                is_hungry: true,
-            },
-            Cat {
-                name: "Whiskers".to_string(),
-                is_hungry: true,
-            },
-            Bird {
-                name: "Tweety".to_string(),
-                is_hungry: true,
-            },
-        ]);
+        let mut shelter = Shelter::new();
 
-        shelter.add_animal(mut Cat {
+        shelter.add_animal(Box::new(Dog {
+            name: "Buddy".to_string(),
+            is_hungry: true,
+        }));
+
+        shelter.add_animal(Box::new(Cat {
             name: "Whiskers".to_string(),
             is_hungry: true,
-        });
+        }));
 
-        shelter.add_animal(&mut Bird {
+        shelter.add_animal(Box::new(Bird {
             name: "Tweety".to_string(),
             is_hungry: true,
-        });
+        }));
 
         shelter.make_all_sounds();
         let hungry_count = shelter.count_hungry();

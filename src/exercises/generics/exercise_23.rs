@@ -1,0 +1,224 @@
+//! Exercise 23: Const Generics - Use const generic parameters
+//! Difficulty: Hard
+//!
+//! # Learning Objectives
+//! - Use const generics for array sizes
+//! - Implement fixed-size generic containers
+//! - Work with const generic parameters
+
+/// A fixed-size stack using const generics.
+pub struct Stack<T, const N: usize> {
+    data: [Option<T>; N],
+    len: usize,
+}
+
+impl<T, const N: usize> Stack<T, N> {
+    /// Creates a new empty stack.
+    pub fn new() -> Self
+    where
+        T: Copy,
+    {
+        Stack {
+            data: [None; N],
+            len: 0,
+        }
+    }
+
+    /// Pushes a value onto the stack.
+    pub fn push(&mut self, value: T) -> Result<(), &'static str> {
+        if self.len >= N {
+            return Err("Stack overflow");
+        }
+        self.data[self.len] = Some(value);
+        self.len += 1;
+        Ok(())
+    }
+
+    /// Pops a value from the stack.
+    pub fn pop(&mut self) -> Option<T> {
+        if self.len == 0 {
+            return None;
+        }
+        self.len -= 1;
+        self.data[self.len].take()
+    }
+
+    /// Returns the current length of the stack.
+    pub fn len(&self) -> usize {
+        self.len
+    }
+
+    /// Checks if the stack is empty.
+    pub fn is_empty(&self) -> bool {
+        self.len == 0
+    }
+
+    /// Checks if the stack is full.
+    pub fn is_full(&self) -> bool {
+        self.len == N
+    }
+
+    /// Returns the capacity of the stack.
+    pub fn capacity(&self) -> usize {
+        N
+    }
+}
+
+impl<T: Copy, const N: usize> Default for Stack<T, N> {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
+/// A fixed-size ring buffer using const generics.
+pub struct RingBuffer<T, const N: usize> {
+    data: [Option<T>; N],
+    read_pos: usize,
+    write_pos: usize,
+    count: usize,
+}
+
+impl<T, const N: usize> RingBuffer<T, N>
+where
+    T: Copy,
+{
+    /// Creates a new empty ring buffer.
+    pub fn new() -> Self {
+        RingBuffer {
+            data: [None; N],
+            read_pos: 0,
+            write_pos: 0,
+            count: 0,
+        }
+    }
+
+    /// Writes a value to the buffer.
+    pub fn write(&mut self, value: T) -> Result<(), &'static str> {
+        if self.count >= N {
+            return Err("Buffer full");
+        }
+        self.data[self.write_pos] = Some(value);
+        self.write_pos = (self.write_pos + 1) % N;
+        self.count += 1;
+        Ok(())
+    }
+
+    /// Reads a value from the buffer.
+    pub fn read(&mut self) -> Option<T> {
+        if self.count == 0 {
+            return None;
+        }
+        let value = self.data[self.read_pos].take();
+        self.read_pos = (self.read_pos + 1) % N;
+        self.count -= 1;
+        value
+    }
+
+    /// Returns the number of elements in the buffer.
+    pub fn len(&self) -> usize {
+        self.count
+    }
+
+    /// Checks if the buffer is empty.
+    pub fn is_empty(&self) -> bool {
+        self.count == 0
+    }
+
+    /// Checks if the buffer is full.
+    pub fn is_full(&self) -> bool {
+        self.count == N
+    }
+}
+
+impl<T: Copy, const N: usize> Default for RingBuffer<T, N> {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_stack_new() {
+        let stack: Stack<i32, 5> = Stack::new();
+        assert_eq!(stack.len(), 0);
+        assert_eq!(stack.capacity(), 5);
+    }
+
+    #[test]
+    fn test_stack_push() {
+        let mut stack: Stack<i32, 5> = Stack::new();
+        assert!(stack.push(1).is_ok());
+        assert!(stack.push(2).is_ok());
+        assert_eq!(stack.len(), 2);
+    }
+
+    #[test]
+    fn test_stack_pop() {
+        let mut stack: Stack<i32, 5> = Stack::new();
+        stack.push(1).unwrap();
+        stack.push(2).unwrap();
+        assert_eq!(stack.pop(), Some(2));
+        assert_eq!(stack.pop(), Some(1));
+        assert_eq!(stack.pop(), None);
+    }
+
+    #[test]
+    fn test_stack_overflow() {
+        let mut stack: Stack<i32, 3> = Stack::new();
+        stack.push(1).unwrap();
+        stack.push(2).unwrap();
+        stack.push(3).unwrap();
+        assert!(stack.push(4).is_err());
+    }
+
+    #[test]
+    fn test_stack_is_full() {
+        let mut stack: Stack<i32, 2> = Stack::new();
+        assert!(!stack.is_full());
+        stack.push(1).unwrap();
+        assert!(!stack.is_full());
+        stack.push(2).unwrap();
+        assert!(stack.is_full());
+    }
+
+    #[test]
+    fn test_ring_buffer_new() {
+        let buffer: RingBuffer<i32, 5> = RingBuffer::new();
+        assert!(buffer.is_empty());
+    }
+
+    #[test]
+    fn test_ring_buffer_write_read() {
+        let mut buffer: RingBuffer<i32, 5> = RingBuffer::new();
+        buffer.write(1).unwrap();
+        buffer.write(2).unwrap();
+        assert_eq!(buffer.read(), Some(1));
+        assert_eq!(buffer.read(), Some(2));
+        assert_eq!(buffer.read(), None);
+    }
+
+    #[test]
+    fn test_ring_buffer_full() {
+        let mut buffer: RingBuffer<i32, 3> = RingBuffer::new();
+        buffer.write(1).unwrap();
+        buffer.write(2).unwrap();
+        buffer.write(3).unwrap();
+        assert!(buffer.is_full());
+        assert!(buffer.write(4).is_err());
+    }
+
+    #[test]
+    fn test_ring_buffer_wraparound() {
+        let mut buffer: RingBuffer<i32, 3> = RingBuffer::new();
+        buffer.write(1).unwrap();
+        buffer.write(2).unwrap();
+        assert_eq!(buffer.read(), Some(1));
+        buffer.write(3).unwrap();
+        buffer.write(4).unwrap();
+        assert_eq!(buffer.read(), Some(2));
+        assert_eq!(buffer.read(), Some(3));
+    }
+}
