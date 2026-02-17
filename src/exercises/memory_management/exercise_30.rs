@@ -20,31 +20,21 @@ pub struct Builder<State> {
 
 impl Builder<Uninitialized> {
     pub fn new() -> Self {
-        Builder {
-            data: None,
-            _state: PhantomData,
-        }
+        todo!("Implement new")
     }
     
     pub fn initialize(self, size: usize) -> Builder<Initialized> {
-        Builder {
-            data: Some(vec![0; size]),
-            _state: PhantomData,
-        }
+        todo!("Implement initialize")
     }
 }
 
 impl Builder<Initialized> {
     pub fn set(&mut self, index: usize, value: u8) {
-        if let Some(ref mut data) = self.data {
-            if index < data.len() {
-                data[index] = value;
-            }
-        }
+        todo!("Implement set")
     }
     
     pub fn build(self) -> Vec<u8> {
-        self.data.unwrap()
+        todo!("Implement build")
     }
 }
 
@@ -64,10 +54,7 @@ where
     type Item = C;
     
     fn next(&mut self) -> Option<C> {
-        match (self.iter1.next(), self.iter2.next()) {
-            (Some(a), Some(b)) => Some((self.func)(a, b)),
-            _ => None,
-        }
+        todo!("Implement next")
     }
 }
 
@@ -76,8 +63,8 @@ where
     I: Iterator<Item = A>,
     J: Iterator<Item = B>,
     F: FnMut(A, B) -> C,
-{
-    ZipMap { iter1, iter2, func }
+ {
+    todo!("Implement zip_map")
 }
 
 /// Compile-time bounds checking with const generics.
@@ -95,28 +82,19 @@ impl<const N: usize> FixedBuffer<N> {
     }
     
     pub fn push(&mut self, value: u8) -> Result<(), &'static str> {
-        if self.len >= N {
-            return Err("Buffer full");
-        }
-        self.data[self.len] = value;
-        self.len += 1;
-        Ok(())
+        todo!("Implement push")
     }
     
     pub fn get(&self, index: usize) -> Option<u8> {
-        if index < self.len {
-            Some(self.data[index])
-        } else {
-            None
-        }
+        todo!("Implement get")
     }
     
     pub fn len(&self) -> usize {
-        self.len
+        todo!("Implement len")
     }
     
     pub fn capacity(&self) -> usize {
-        N
+        todo!("Implement capacity")
     }
 }
 
@@ -131,32 +109,29 @@ pub struct Distance<Unit> {
 
 impl<Unit> Distance<Unit> {
     pub fn new(value: f64) -> Self {
-        Distance {
-            value,
-            _unit: PhantomData,
-        }
+        todo!("Implement new")
     }
     
     pub fn value(&self) -> f64 {
-        self.value
+        todo!("Implement value")
     }
 }
 
 impl Distance<Meters> {
     pub fn to_feet(self) -> Distance<Feet> {
-        Distance::new(self.value * 3.28084)
+        todo!("Implement to_feet")
     }
 }
 
 impl Distance<Feet> {
     pub fn to_meters(self) -> Distance<Meters> {
-        Distance::new(self.value / 3.28084)
+        todo!("Implement to_meters")
     }
 }
 
 /// Add distances of the same unit (compile-time checked).
 pub fn add_distances<Unit>(a: Distance<Unit>, b: Distance<Unit>) -> Distance<Unit> {
-    Distance::new(a.value() + b.value())
+    todo!("Implement add_distances")
 }
 
 #[cfg(test)]

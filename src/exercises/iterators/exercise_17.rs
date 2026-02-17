@@ -8,33 +8,27 @@
 
 /// Generate fibonacci sequence up to n terms.
 pub fn fibonacci(n: usize) -> Vec<u64> {
-    (0..n)
-        .scan((0u64, 1u64), |state, _| {
-            let current = state.0;
-            *state = (state.1, state.0 + state.1);
-            Some(current)
-        })
-        .collect()
+    todo!("Implement fibonacci")
 }
 
 /// Generate multiplication table for n.
 pub fn multiplication_table(n: i32, up_to: i32) -> Vec<(i32, i32)> {
-    (1..=up_to).map(|i| (i, n * i)).collect()
+    todo!("Implement multiplication_table")
 }
 
 /// Sum of squares from 1 to n.
 pub fn sum_of_squares(n: i32) -> i32 {
-    (1..=n).map(|i| i * i).sum()
+    todo!("Implement sum_of_squares")
 }
 
 /// Generate even numbers in range.
 pub fn even_numbers_in_range(start: i32, end: i32) -> Vec<i32> {
-    (start..=end).filter(|n| n % 2 == 0).collect()
+    todo!("Implement even_numbers_in_range")
 }
 
 /// Generate powers of 2 up to n.
 pub fn powers_of_two(n: usize) -> Vec<u64> {
-    (0..n).map(|i| 2u64.pow(i as u32)).collect()
+    todo!("Implement powers_of_two")
 }
 
 #[cfg(test)]

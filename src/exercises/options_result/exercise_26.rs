@@ -8,40 +8,26 @@
 
 /// Parse all strings, failing if any parse fails.
 pub fn parse_all(strings: &[&str]) -> Result<Vec<i32>, String> {
-    strings
-        .iter()
-        .map(|s| s.parse::<i32>().map_err(|e| e.to_string()))
-        .collect()
+    todo!("Implement parse_all")
 }
 
 /// Filter and parse, collecting valid results.
 pub fn parse_valid(strings: &[&str]) -> Vec<i32> {
-    strings
-        .iter()
-        .filter_map(|s| s.parse::<i32>().ok())
-        .collect()
+    todo!("Implement parse_valid")
 }
 
 /// Try to parse all, return first error if any.
 pub fn try_parse_all(
     strings: Vec<&str>,
-) -> Result<Vec<i32>, std::num::ParseIntError> {
-    strings.iter().map(|s| s.parse::<i32>()).collect()
+) -> Result<Vec<i32>, std::num::ParseIntError>  {
+    todo!("Try to parse all, return first error if any.")
 }
 
 /// Partition into successes and failures.
 pub fn partition_results(
     strings: &[&str],
-) -> (Vec<i32>, Vec<String>) {
-    let (oks, errs): (Vec<_>, Vec<_>) = strings
-        .iter()
-        .map(|s| s.parse::<i32>().map_err(|e| e.to_string()))
-        .partition(Result::is_ok);
-
-    let successes = oks.into_iter().map(Result::unwrap).collect();
-    let failures = errs.into_iter().map(Result::unwrap_err).collect();
-
-    (successes, failures)
+) -> (Vec<i32>, Vec<String>)  {
+    todo!("Partition into successes and failures.")
 }
 
 #[cfg(test)]

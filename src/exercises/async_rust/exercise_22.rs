@@ -11,41 +11,22 @@ use tokio::time::{sleep, Duration};
 
 /// Process stream items concurrently with buffer_unordered.
 pub async fn concurrent_stream_processing(values: Vec<i32>) -> Vec<i32> {
-    stream::iter(values)
-        .map(|x| async move {
-            sleep(Duration::from_millis(10)).await;
-            x * 2
-        })
-        .buffer_unordered(5)
-        .collect::<Vec<_>>()
-        .await
+    todo!("Implement concurrent_stream_processing")
 }
 
 /// Process stream with buffered map.
 pub async fn buffered_map(values: Vec<i32>, buffer_size: usize) -> Vec<i32> {
-    stream::iter(values)
-        .map(|x| async move {
-            sleep(Duration::from_millis(5)).await;
-            x + 10
-        })
-        .buffered(buffer_size)
-        .collect()
-        .await
+    todo!("Implement buffered_map")
 }
 
 /// Fold over a stream asynchronously.
 pub async fn stream_fold(values: Vec<i32>) -> i32 {
-    stream::iter(values)
-        .fold(0, |acc, x| async move { acc + x })
-        .await
+    todo!("Implement stream_fold")
 }
 
 /// Chunks stream items.
 pub async fn stream_chunks(values: Vec<i32>, chunk_size: usize) -> Vec<Vec<i32>> {
-    stream::iter(values)
-        .chunks(chunk_size)
-        .collect()
-        .await
+    todo!("Implement stream_chunks")
 }
 
 #[cfg(test)]

@@ -17,20 +17,14 @@ impl<T> OptionTap<T> for Option<T> {
     fn tap<F>(self, f: F) -> Self
     where
         F: FnOnce(&T),
-    {
-        if let Some(ref value) = self {
-            f(value);
-        }
-        self
+     {
+        todo!("Implement tap")
     }
 }
 
 /// Use tap to log values in a chain.
 pub fn process_with_logging(value: Option<i32>) -> Option<i32> {
-    value
-        .tap(|x| println!("Before: {}", x))
-        .map(|x| x * 2)
-        .tap(|x| println!("After: {}", x))
+    todo!("Implement process_with_logging")
 }
 
 #[cfg(test)]

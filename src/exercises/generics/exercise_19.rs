@@ -14,35 +14,31 @@ pub struct Publisher<T> {
 impl<T> Publisher<T> {
     /// Creates a new publisher.
     pub fn new() -> Self {
-        Publisher {
-            subscribers: Vec::new(),
-        }
+        todo!("Implement new")
     }
 
     /// Subscribes a callback to events.
     pub fn subscribe<F>(&mut self, callback: F)
     where
         F: FnMut(&T) + 'static,
-    {
-        self.subscribers.push(Box::new(callback));
+     {
+        todo!("Subscribes a callback to events.")
     }
 
     /// Publishes an event to all subscribers.
     pub fn publish(&mut self, event: &T) {
-        for callback in &mut self.subscribers {
-            callback(event);
-        }
+        todo!("Implement publish")
     }
 
     /// Returns the number of subscribers.
     pub fn subscriber_count(&self) -> usize {
-        self.subscribers.len()
+        todo!("Implement subscriber_count")
     }
 }
 
 impl<T> Default for Publisher<T> {
     fn default() -> Self {
-        Self::new()
+        todo!("Implement default")
     }
 }
 
@@ -54,38 +50,34 @@ pub struct EventBus<T> {
 impl<T> EventBus<T> {
     /// Creates a new event bus.
     pub fn new() -> Self {
-        EventBus {
-            handlers: Vec::new(),
-        }
+        todo!("Implement new")
     }
 
     /// Registers an event handler.
     pub fn on<F>(&mut self, handler: F)
     where
         F: FnMut(T) + 'static,
-    {
-        self.handlers.push(Box::new(handler));
+     {
+        todo!("Registers an event handler.")
     }
 
     /// Emits an event to all handlers.
     pub fn emit(&mut self, event: T)
     where
         T: Clone,
-    {
-        for handler in &mut self.handlers {
-            handler(event.clone());
-        }
+     {
+        todo!("Emits an event to all handlers.")
     }
 
     /// Returns the number of handlers.
     pub fn handler_count(&self) -> usize {
-        self.handlers.len()
+        todo!("Implement handler_count")
     }
 }
 
 impl<T> Default for EventBus<T> {
     fn default() -> Self {
-        Self::new()
+        todo!("Implement default")
     }
 }
 

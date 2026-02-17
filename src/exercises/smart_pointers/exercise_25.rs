@@ -18,24 +18,15 @@ pub struct SelfReferential {
 
 impl SelfReferential {
     pub fn new(data: String) -> Pin<Box<Self>> {
-        let mut boxed = Box::new(SelfReferential {
-            data,
-            pointer: std::ptr::null(),
-            _pin: PhantomPinned,
-        });
-
-        let ptr: *const String = &boxed.data;
-        boxed.pointer = ptr;
-
-        Box::into_pin(boxed)
+        todo!("Implement new")
     }
 
     pub fn get_data(&self) -> &str {
-        &self.data
+        todo!("Implement get_data")
     }
 
     pub fn pointer_is_valid(&self) -> bool {
-        !self.pointer.is_null() && self.pointer == &self.data as *const String
+        todo!("Implement pointer_is_valid")
     }
 }
 
@@ -47,21 +38,15 @@ pub struct PinnedCounter {
 
 impl PinnedCounter {
     pub fn new(initial: i32) -> Pin<Box<Self>> {
-        Box::pin(PinnedCounter {
-            count: initial,
-            _pin: PhantomPinned,
-        })
+        todo!("Implement new")
     }
 
     pub fn get(&self) -> i32 {
-        self.count
+        todo!("Implement get")
     }
 
     pub fn increment(self: Pin<&mut Self>) {
-        unsafe {
-            let this = self.get_unchecked_mut();
-            this.count += 1;
-        }
+        todo!("Implement increment")
     }
 }
 
@@ -72,21 +57,19 @@ pub struct UnpinBox<T> {
 
 impl<T> UnpinBox<T> {
     pub fn new(value: T) -> Self {
-        UnpinBox {
-            value: Box::new(value),
-        }
+        todo!("Implement new")
     }
 
     pub fn get(&self) -> &T {
-        &self.value
+        todo!("Implement get")
     }
 
     pub fn get_mut(&mut self) -> &mut T {
-        &mut self.value
+        todo!("Implement get_mut")
     }
 
     pub fn into_inner(self) -> T {
-        *self.value
+        todo!("Implement into_inner")
     }
 }
 

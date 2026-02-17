@@ -15,30 +15,18 @@ pub enum Temperature {
 impl Temperature {
     /// Returns a description of the temperature
     pub fn describe(&self) -> &'static str {
-        match self {
-            Temperature::Celsius(c) if *c < 0.0 => "freezing",
-            Temperature::Celsius(c) if *c < 20.0 => "cold",
-            Temperature::Celsius(c) if *c < 30.0 => "comfortable",
-            Temperature::Celsius(_) => "hot",
-            Temperature::Fahrenheit(f) if *f < 32.0 => "freezing",
-            Temperature::Fahrenheit(f) if *f < 68.0 => "cold",
-            Temperature::Fahrenheit(f) if *f < 86.0 => "comfortable",
-            Temperature::Fahrenheit(_) => "hot",
-        }
+        todo!("Implement describe")
     }
 
     /// Converts to Celsius
     pub fn to_celsius(&self) -> f64 {
-        match self {
-            Temperature::Celsius(c) => *c,
-            Temperature::Fahrenheit(f) => (f - 32.0) * 5.0 / 9.0,
-        }
+        todo!("Implement to_celsius")
     }
 }
 
 /// Returns true if the value is positive and even
 pub fn is_positive_even(opt: Option<i32>) -> bool {
-    matches!(opt, Some(n) if n > 0 && n % 2 == 0)
+    todo!("Implement is_positive_even")
 }
 
 #[cfg(test)]

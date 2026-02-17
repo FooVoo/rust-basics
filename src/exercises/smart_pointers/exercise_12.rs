@@ -10,17 +10,17 @@ use std::cell::Cell;
 
 /// Create a Cell containing a value.
 pub fn create_cell(value: i32) -> Cell<i32> {
-    Cell::new(value)
+    todo!("Implement create_cell")
 }
 
 /// Update a value in a Cell.
 pub fn update_cell(cell: &Cell<i32>, value: i32) {
-    cell.set(value);
+    todo!("Implement update_cell")
 }
 
 /// Increment a value in a Cell.
 pub fn increment_cell(cell: &Cell<i32>) {
-    cell.set(cell.get() + 1);
+    todo!("Implement increment_cell")
 }
 
 /// A point with interior mutability using Cell.
@@ -31,37 +31,31 @@ pub struct Point {
 
 impl Point {
     pub fn new(x: i32, y: i32) -> Self {
-        Point {
-            x: Cell::new(x),
-            y: Cell::new(y),
-        }
+        todo!("Implement new")
     }
 
     pub fn get_x(&self) -> i32 {
-        self.x.get()
+        todo!("Implement get_x")
     }
 
     pub fn get_y(&self) -> i32 {
-        self.y.get()
+        todo!("Implement get_y")
     }
 
     pub fn set_x(&self, x: i32) {
-        self.x.set(x);
+        todo!("Implement set_x")
     }
 
     pub fn set_y(&self, y: i32) {
-        self.y.set(y);
+        todo!("Implement set_y")
     }
 
     pub fn translate(&self, dx: i32, dy: i32) {
-        self.x.set(self.x.get() + dx);
-        self.y.set(self.y.get() + dy);
+        todo!("Implement translate")
     }
 
     pub fn distance_from_origin(&self) -> f64 {
-        let x = self.x.get() as f64;
-        let y = self.y.get() as f64;
-        (x * x + y * y).sqrt()
+        todo!("Implement distance_from_origin")
     }
 }
 

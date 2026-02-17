@@ -17,34 +17,28 @@ pub struct Node {
 impl Node {
     /// Create a new node without neighbors.
     pub fn new(value: i32) -> Rc<Self> {
-        Rc::new(Node {
-            value,
-            neighbors: Vec::new(),
-        })
+        todo!("Implement new")
     }
 
     /// Create a node with neighbors.
     pub fn with_neighbors(value: i32, neighbors: Vec<Rc<Node>>) -> Rc<Self> {
-        Rc::new(Node { value, neighbors })
+        todo!("Implement with_neighbors")
     }
 
     /// Count total references to this node.
     pub fn ref_count(node: &Rc<Node>) -> usize {
-        Rc::strong_count(node)
+        todo!("Implement ref_count")
     }
 }
 
 /// Create a simple graph: A -> B, A -> C, B -> C
 pub fn create_simple_graph() -> (Rc<Node>, Rc<Node>, Rc<Node>) {
-    let c = Node::new(3);
-    let b = Node::with_neighbors(2, vec![Rc::clone(&c)]);
-    let a = Node::with_neighbors(1, vec![Rc::clone(&b), Rc::clone(&c)]);
-    (a, b, c)
+    todo!("Implement create_simple_graph")
 }
 
 /// Sum all neighbor values.
 pub fn sum_neighbor_values(node: &Rc<Node>) -> i32 {
-    node.neighbors.iter().map(|n| n.value).sum()
+    todo!("Implement sum_neighbor_values")
 }
 
 #[cfg(test)]

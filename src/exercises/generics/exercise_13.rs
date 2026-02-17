@@ -16,65 +16,41 @@ pub struct TreeNode<T> {
 impl<T> TreeNode<T> {
     /// Creates a new leaf node.
     pub fn leaf(value: T) -> Self {
-        TreeNode {
-            value,
-            left: None,
-            right: None,
-        }
+        todo!("Implement leaf")
     }
 
     /// Creates a new node with children.
     pub fn with_children(value: T, left: Option<TreeNode<T>>, right: Option<TreeNode<T>>) -> Self {
-        TreeNode {
-            value,
-            left: left.map(Box::new),
-            right: right.map(Box::new),
-        }
+        todo!("Implement with_children")
     }
 
     /// Checks if this is a leaf node.
     pub fn is_leaf(&self) -> bool {
-        self.left.is_none() && self.right.is_none()
+        todo!("Implement is_leaf")
     }
 
     /// Counts the total nodes in the tree.
     pub fn count_nodes(&self) -> usize {
-        let left_count = self.left.as_ref().map_or(0, |node| node.count_nodes());
-        let right_count = self.right.as_ref().map_or(0, |node| node.count_nodes());
-        1 + left_count + right_count
+        todo!("Implement count_nodes")
     }
 
     /// Gets the height of the tree.
     pub fn height(&self) -> usize {
-        let left_height = self.left.as_ref().map_or(0, |node| node.height());
-        let right_height = self.right.as_ref().map_or(0, |node| node.height());
-        1 + left_height.max(right_height)
+        todo!("Implement height")
     }
 }
 
 impl<T: Clone> TreeNode<T> {
     /// Collects all values in pre-order.
     pub fn preorder(&self) -> Vec<T> {
-        let mut result = vec![self.value.clone()];
-        if let Some(ref left) = self.left {
-            result.extend(left.preorder());
-        }
-        if let Some(ref right) = self.right {
-            result.extend(right.preorder());
-        }
-        result
+        todo!("Implement preorder")
     }
 }
 
 impl<T: PartialEq> TreeNode<T> {
     /// Searches for a value in the tree.
     pub fn contains(&self, value: &T) -> bool {
-        if self.value == *value {
-            return true;
-        }
-        let in_left = self.left.as_ref().map_or(false, |node| node.contains(value));
-        let in_right = self.right.as_ref().map_or(false, |node| node.contains(value));
-        in_left || in_right
+        todo!("Implement contains")
     }
 }
 

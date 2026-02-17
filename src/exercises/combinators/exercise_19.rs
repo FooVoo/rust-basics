@@ -8,12 +8,12 @@
 
 /// Get value squared or compute from slice.
 pub fn square_or_sum(value: Option<i32>, fallback: &[i32]) -> i32 {
-    value.map_or_else(|| fallback.iter().sum(), |x| x * x)
+    todo!("Implement square_or_sum")
 }
 
 /// Parse or get default from function.
 pub fn parse_or_generate(s: &str, generator: fn() -> i32) -> i32 {
-    s.parse::<i32>().ok().map_or_else(generator, |x| x)
+    todo!("Implement parse_or_generate")
 }
 
 #[cfg(test)]

@@ -16,7 +16,7 @@ pub struct EmailNotifier {
 
 impl Notifier for EmailNotifier {
     fn send(&self, message: &str) -> String {
-        format!("Email to {}: {}", self.email, message)
+        todo!("Implement send")
     }
 }
 
@@ -26,7 +26,7 @@ pub struct SmsNotifier {
 
 impl Notifier for SmsNotifier {
     fn send(&self, message: &str) -> String {
-        format!("SMS to {}: {}", self.phone, message)
+        todo!("Implement send")
     }
 }
 
@@ -36,39 +36,28 @@ pub struct PushNotifier {
 
 impl Notifier for PushNotifier {
     fn send(&self, message: &str) -> String {
-        format!("Push to device {}: {}", self.device_id, message)
+        todo!("Implement send")
     }
 }
 
 /// Create a notifier based on preference
 pub fn create_notifier(preference: &str, target: String) -> Box<dyn Notifier> {
-    match preference {
-        "email" => Box::new(EmailNotifier { email: target }),
-        "sms" => Box::new(SmsNotifier { phone: target }),
-        "push" => Box::new(PushNotifier { device_id: target }),
-        _ => Box::new(EmailNotifier { email: target }),
-    }
+    todo!("Implement create_notifier")
 }
 
 /// Get default notifier
 pub fn default_notifier() -> Box<dyn Notifier> {
-    Box::new(EmailNotifier {
-        email: "default@example.com".to_string(),
-    })
+    todo!("Implement default_notifier")
 }
 
 /// Create multiple notifiers
 pub fn create_all_notifiers(target: String) -> Vec<Box<dyn Notifier>> {
-    vec![
-        Box::new(EmailNotifier { email: target.clone() }),
-        Box::new(SmsNotifier { phone: target.clone() }),
-        Box::new(PushNotifier { device_id: target }),
-    ]
+    todo!("Implement create_all_notifiers")
 }
 
 /// Send via all notifiers
 pub fn broadcast(message: &str, notifiers: &[Box<dyn Notifier>]) -> Vec<String> {
-    notifiers.iter().map(|n| n.send(message)).collect()
+    todo!("Implement broadcast")
 }
 
 #[cfg(test)]

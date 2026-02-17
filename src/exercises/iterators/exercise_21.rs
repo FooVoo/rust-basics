@@ -14,10 +14,7 @@ pub struct SquareIterator {
 
 impl SquareIterator {
     pub fn new(start: i32, end: i32) -> Self {
-        SquareIterator {
-            current: start,
-            end,
-        }
+        todo!("Implement new")
     }
 }
 
@@ -25,13 +22,7 @@ impl Iterator for SquareIterator {
     type Item = i32;
     
     fn next(&mut self) -> Option<Self::Item> {
-        if self.current <= self.end {
-            let square = self.current * self.current;
-            self.current += 1;
-            Some(square)
-        } else {
-            None
-        }
+        todo!("Implement next")
     }
 }
 
@@ -44,11 +35,7 @@ pub struct Alternating<T> {
 
 impl<T: Clone> Alternating<T> {
     pub fn new(first: T, second: T) -> Self {
-        Alternating {
-            first,
-            second,
-            use_first: true,
-        }
+        todo!("Implement new")
     }
 }
 
@@ -56,13 +43,7 @@ impl<T: Clone> Iterator for Alternating<T> {
     type Item = T;
     
     fn next(&mut self) -> Option<Self::Item> {
-        let item = if self.use_first {
-            self.first.clone()
-        } else {
-            self.second.clone()
-        };
-        self.use_first = !self.use_first;
-        Some(item)
+        todo!("Implement next")
     }
 }
 
@@ -73,7 +54,7 @@ pub struct Countdown {
 
 impl Countdown {
     pub fn new(start: i32) -> Self {
-        Countdown { current: start }
+        todo!("Implement new")
     }
 }
 
@@ -81,13 +62,7 @@ impl Iterator for Countdown {
     type Item = i32;
     
     fn next(&mut self) -> Option<Self::Item> {
-        if self.current >= 0 {
-            let value = self.current;
-            self.current -= 1;
-            Some(value)
-        } else {
-            None
-        }
+        todo!("Implement next")
     }
 }
 

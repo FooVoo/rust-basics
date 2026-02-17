@@ -8,22 +8,22 @@
 
 /// Double all numbers in a vector.
 pub fn double_numbers(numbers: &[i32]) -> Vec<i32> {
-    numbers.iter().map(|&n| n * 2).collect()
+    todo!("Implement double_numbers")
 }
 
 /// Convert strings to their lengths.
 pub fn string_lengths(strings: &[&str]) -> Vec<usize> {
-    strings.iter().map(|s| s.len()).collect()
+    todo!("Implement string_lengths")
 }
 
 /// Square all numbers.
 pub fn square_numbers(numbers: &[i32]) -> Vec<i32> {
-    numbers.iter().map(|&n| n * n).collect()
+    todo!("Implement square_numbers")
 }
 
 /// Convert numbers to strings.
 pub fn numbers_to_strings(numbers: &[i32]) -> Vec<String> {
-    numbers.iter().map(|n| n.to_string()).collect()
+    todo!("Implement numbers_to_strings")
 }
 
 #[cfg(test)]

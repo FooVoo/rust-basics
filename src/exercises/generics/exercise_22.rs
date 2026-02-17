@@ -21,43 +21,34 @@ pub struct SecureContainer<T, State> {
 impl<T> SecureContainer<T, Locked> {
     /// Creates a new locked container.
     pub fn new(data: T) -> Self {
-        SecureContainer {
-            data,
-            _state: PhantomData,
-        }
+        todo!("Implement new")
     }
 
     /// Unlocks the container.
     pub fn unlock(self, _key: &str) -> SecureContainer<T, Unlocked> {
-        SecureContainer {
-            data: self.data,
-            _state: PhantomData,
-        }
+        todo!("Implement unlock")
     }
 }
 
 impl<T> SecureContainer<T, Unlocked> {
     /// Gets a reference to the data (only available when unlocked).
     pub fn get(&self) -> &T {
-        &self.data
+        todo!("Implement get")
     }
 
     /// Gets a mutable reference to the data (only available when unlocked).
     pub fn get_mut(&mut self) -> &mut T {
-        &mut self.data
+        todo!("Implement get_mut")
     }
 
     /// Locks the container.
     pub fn lock(self) -> SecureContainer<T, Locked> {
-        SecureContainer {
-            data: self.data,
-            _state: PhantomData,
-        }
+        todo!("Implement lock")
     }
 
     /// Consumes the container and returns the data.
     pub fn into_inner(self) -> T {
-        self.data
+        todo!("Implement into_inner")
     }
 }
 
@@ -74,47 +65,35 @@ pub struct Measurement<T, Unit> {
 impl<T> Measurement<T, Meters> {
     /// Creates a measurement in meters.
     pub fn meters(value: T) -> Self {
-        Measurement {
-            value,
-            _unit: PhantomData,
-        }
+        todo!("Implement meters")
     }
 }
 
 impl<T> Measurement<T, Feet> {
     /// Creates a measurement in feet.
     pub fn feet(value: T) -> Self {
-        Measurement {
-            value,
-            _unit: PhantomData,
-        }
+        todo!("Implement feet")
     }
 }
 
 impl<T, Unit> Measurement<T, Unit> {
     /// Gets the raw value.
     pub fn value(&self) -> &T {
-        &self.value
+        todo!("Implement value")
     }
 }
 
 impl Measurement<f64, Meters> {
     /// Converts meters to feet.
     pub fn to_feet(self) -> Measurement<f64, Feet> {
-        Measurement {
-            value: self.value * 3.28084,
-            _unit: PhantomData,
-        }
+        todo!("Implement to_feet")
     }
 }
 
 impl Measurement<f64, Feet> {
     /// Converts feet to meters.
     pub fn to_meters(self) -> Measurement<f64, Meters> {
-        Measurement {
-            value: self.value / 3.28084,
-            _unit: PhantomData,
-        }
+        todo!("Implement to_meters")
     }
 }
 

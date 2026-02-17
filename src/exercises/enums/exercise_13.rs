@@ -21,27 +21,17 @@ pub enum CardType {
 
 /// Returns the payment method name
 pub fn payment_name(payment: &PaymentMethod) -> String {
-    match payment {
-        PaymentMethod::Cash => "Cash".to_string(),
-        PaymentMethod::Card(CardType::Credit) => "Credit Card".to_string(),
-        PaymentMethod::Card(CardType::Debit) => "Debit Card".to_string(),
-        PaymentMethod::DigitalWallet(name) => format!("Digital Wallet ({})", name),
-    }
+    todo!("Implement payment_name")
 }
 
 /// Returns true if the payment is electronic (card or digital wallet)
 pub fn is_electronic(payment: &PaymentMethod) -> bool {
-    !matches!(payment, PaymentMethod::Cash)
+    todo!("Implement is_electronic")
 }
 
 /// Returns processing fee percentage
 pub fn processing_fee(payment: &PaymentMethod) -> f64 {
-    match payment {
-        PaymentMethod::Cash => 0.0,
-        PaymentMethod::Card(CardType::Credit) => 2.5,
-        PaymentMethod::Card(CardType::Debit) => 1.5,
-        PaymentMethod::DigitalWallet(_) => 1.0,
-    }
+    todo!("Implement processing_fee")
 }
 
 #[cfg(test)]

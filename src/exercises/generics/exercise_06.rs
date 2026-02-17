@@ -10,16 +10,12 @@ use std::fmt::Display;
 
 /// Converts a value to a formatted string with a prefix.
 pub fn with_prefix<T: Display>(prefix: &str, value: T) -> String {
-    format!("{}: {}", prefix, value)
+    todo!("Implement with_prefix")
 }
 
 /// Creates a comma-separated list from a slice.
 pub fn join_display<T: Display>(items: &[T]) -> String {
-    items
-        .iter()
-        .map(|item| format!("{}", item))
-        .collect::<Vec<_>>()
-        .join(", ")
+    todo!("Implement join_display")
 }
 
 /// A generic formatter that wraps values with decorations.
@@ -32,16 +28,12 @@ pub struct Formatter<T: Display> {
 impl<T: Display> Formatter<T> {
     /// Creates a new Formatter with left and right decorations.
     pub fn new(left: String, right: String) -> Self {
-        Formatter {
-            left,
-            right,
-            _marker: std::marker::PhantomData,
-        }
+        todo!("Implement new")
     }
 
     /// Formats a value with decorations.
     pub fn format(&self, value: T) -> String {
-        format!("{}{}{}", self.left, value, self.right)
+        todo!("Implement format")
     }
 }
 

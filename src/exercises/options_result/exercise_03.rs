@@ -9,17 +9,17 @@
 /// Check if a string contains a given character.
 /// Returns true if the character is found, false otherwise.
 pub fn contains_char(s: &str, c: char) -> bool {
-    s.find(c).is_some()
+    todo!("Implement contains_char")
 }
 
 /// Check if a vector is empty by checking if pop returns None.
 pub fn is_empty_via_pop(mut v: Vec<i32>) -> bool {
-    v.pop().is_none()
+    todo!("Implement is_empty_via_pop")
 }
 
 /// Count how many Options in a slice contain a value.
 pub fn count_some(options: &[Option<i32>]) -> usize {
-    options.iter().filter(|opt| opt.is_some()).count()
+    todo!("Implement count_some")
 }
 
 #[cfg(test)]

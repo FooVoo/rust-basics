@@ -19,53 +19,34 @@ pub enum BinaryTree<T> {
 impl<T> BinaryTree<T> {
     /// Creates an empty tree
     pub fn empty() -> Self {
-        BinaryTree::Empty
+        todo!("Implement empty")
     }
 
     /// Creates a leaf node
     pub fn leaf(value: T) -> Self {
-        BinaryTree::Node {
-            value,
-            left: Box::new(BinaryTree::Empty),
-            right: Box::new(BinaryTree::Empty),
-        }
+        todo!("Implement leaf")
     }
 
     /// Creates a node with children
     pub fn node(value: T, left: BinaryTree<T>, right: BinaryTree<T>) -> Self {
-        BinaryTree::Node {
-            value,
-            left: Box::new(left),
-            right: Box::new(right),
-        }
+        todo!("Implement node")
     }
 
     /// Returns the height of the tree
     pub fn height(&self) -> usize {
-        match self {
-            BinaryTree::Empty => 0,
-            BinaryTree::Node { left, right, .. } => {
-                1 + std::cmp::max(left.height(), right.height())
-            }
-        }
+        todo!("Implement height")
     }
 
     /// Counts the number of nodes in the tree
     pub fn size(&self) -> usize {
-        match self {
-            BinaryTree::Empty => 0,
-            BinaryTree::Node { left, right, .. } => 1 + left.size() + right.size(),
-        }
+        todo!("Implement size")
     }
 }
 
 impl BinaryTree<i32> {
     /// Returns the sum of all values in the tree
     pub fn sum(&self) -> i32 {
-        match self {
-            BinaryTree::Empty => 0,
-            BinaryTree::Node { value, left, right } => value + left.sum() + right.sum(),
-        }
+        todo!("Implement sum")
     }
 }
 

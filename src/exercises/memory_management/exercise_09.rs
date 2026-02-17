@@ -8,21 +8,17 @@
 
 /// Return the longer of two string slices.
 pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() {
-        x
-    } else {
-        y
-    }
+    todo!("Implement longest")
 }
 
 /// Get the first element of a slice if it exists.
 pub fn first_element<'a, T>(slice: &'a [T]) -> Option<&'a T> {
-    slice.first()
+    todo!("Implement first_element")
 }
 
 /// Concatenate two strings with a separator.
 pub fn concat_with_sep<'a>(a: &'a str, b: &'a str, sep: &str) -> String {
-    format!("{}{}{}", a, sep, b)
+    todo!("Implement concat_with_sep")
 }
 
 #[cfg(test)]

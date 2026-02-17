@@ -8,30 +8,17 @@
 
 /// Find a value in a vector asynchronously.
 pub async fn async_find(values: Vec<i32>, target: i32) -> Option<usize> {
-    for (index, value) in values.iter().enumerate() {
-        if *value == target {
-            return Some(index);
-        }
-    }
-    None
+    todo!("Implement async_find")
 }
 
 /// Get first valid parse result from a list of strings.
 pub async fn first_valid_parse(strings: Vec<&str>) -> Option<i32> {
-    for s in strings {
-        if let Ok(value) = s.parse::<i32>() {
-            return Some(value);
-        }
-    }
-    None
+    todo!("Implement first_valid_parse")
 }
 
 /// Chain optional async operations.
 pub async fn chain_optional_ops(value: Option<i32>) -> Option<i32> {
-    let v1 = value?;
-    let v2 = if v1 > 0 { Some(v1 * 2) } else { None }?;
-    let v3 = if v2 < 100 { Some(v2 + 10) } else { None }?;
-    Some(v3)
+    todo!("Implement chain_optional_ops")
 }
 
 #[cfg(test)]

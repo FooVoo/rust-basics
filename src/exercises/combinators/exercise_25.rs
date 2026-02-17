@@ -8,25 +8,12 @@
 
 /// Parse all strings, fail if any fails.
 pub fn parse_all_or_fail(strings: &[&str]) -> Result<Vec<i32>, String> {
-    strings
-        .iter()
-        .map(|s| s.parse::<i32>().map_err(|_| format!("Failed to parse '{}'", s)))
-        .collect()
+    todo!("Implement parse_all_or_fail")
 }
 
 /// Process all items, collect successes and failures.
 pub fn partition_results<T, E>(results: Vec<Result<T, E>>) -> (Vec<T>, Vec<E>) {
-    let mut successes = Vec::new();
-    let mut failures = Vec::new();
-    
-    for result in results {
-        match result {
-            Ok(value) => successes.push(value),
-            Err(error) => failures.push(error),
-        }
-    }
-    
-    (successes, failures)
+    todo!("Implement partition_results")
 }
 
 #[cfg(test)]

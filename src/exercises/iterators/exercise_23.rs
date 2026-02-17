@@ -20,7 +20,7 @@ where
     I: Iterator,
 {
     pub fn new(iter: I, size: usize) -> Self {
-        Batch { iter, size }
+        todo!("Implement new")
     }
 }
 
@@ -31,23 +31,7 @@ where
     type Item = Vec<I::Item>;
     
     fn next(&mut self) -> Option<Self::Item> {
-        if self.size == 0 {
-            return None;
-        }
-        
-        let mut batch = Vec::with_capacity(self.size);
-        for _ in 0..self.size {
-            match self.iter.next() {
-                Some(item) => batch.push(item),
-                None => break,
-            }
-        }
-        
-        if batch.is_empty() {
-            None
-        } else {
-            Some(batch)
-        }
+        todo!("Implement next")
     }
 }
 
@@ -65,10 +49,7 @@ where
     I: Iterator,
 {
     pub fn new(iter: I) -> Self {
-        Unique {
-            iter,
-            seen: std::collections::HashSet::new(),
-        }
+        todo!("Implement new")
     }
 }
 
@@ -80,17 +61,7 @@ where
     type Item = I::Item;
     
     fn next(&mut self) -> Option<Self::Item> {
-        loop {
-            match self.iter.next() {
-                None => return None,
-                Some(item) => {
-                    let key = item.to_string();
-                    if self.seen.insert(key) {
-                        return Some(item);
-                    }
-                }
-            }
-        }
+        todo!("Implement next")
     }
 }
 
@@ -98,16 +69,16 @@ where
 pub fn batch<I>(iter: I, size: usize) -> Batch<I>
 where
     I: Iterator,
-{
-    Batch::new(iter, size)
+ {
+    todo!("Create a batching iterator from any iterator.")
 }
 
 /// Create a unique iterator from any iterator.
 pub fn unique<I>(iter: I) -> Unique<I>
 where
     I: Iterator,
-{
-    Unique::new(iter)
+ {
+    todo!("Create a unique iterator from any iterator.")
 }
 
 #[cfg(test)]

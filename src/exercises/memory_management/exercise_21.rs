@@ -10,8 +10,8 @@
 pub fn choose_str<'a, 'b>(x: &'a str, y: &'b str, use_first: bool) -> &'a str
 where
     'b: 'a,
-{
-    if use_first { x } else { y }
+ {
+    todo!("Choose the string with the longer lifetime.")
 }
 
 pub struct Context<'s, 't> {
@@ -21,26 +21,25 @@ pub struct Context<'s, 't> {
 
 impl<'s, 't> Context<'s, 't> {
     pub fn new(source: &'s str, target: &'t str) -> Self {
-        Context { source, target }
+        todo!("Implement new")
     }
     
     pub fn source(&self) -> &'s str {
-        self.source
+        todo!("Implement source")
     }
     
     pub fn target(&self) -> &'t str {
-        self.target
+        todo!("Implement target")
     }
     
     pub fn combine(&self) -> String {
-        format!("{} -> {}", self.source, self.target)
+        todo!("Implement combine")
     }
 }
 
 /// Create a context and get combined string.
 pub fn process_context<'a, 'b>(source: &'a str, target: &'b str) -> String {
-    let ctx = Context::new(source, target);
-    ctx.combine()
+    todo!("Implement process_context")
 }
 
 pub struct RefPair<'a, 'b, T> {
@@ -50,15 +49,15 @@ pub struct RefPair<'a, 'b, T> {
 
 impl<'a, 'b, T> RefPair<'a, 'b, T> {
     pub fn new(first: &'a T, second: &'b T) -> Self {
-        RefPair { first, second }
+        todo!("Implement new")
     }
     
     pub fn first(&self) -> &'a T {
-        self.first
+        todo!("Implement first")
     }
     
     pub fn second(&self) -> &'b T {
-        self.second
+        todo!("Implement second")
     }
 }
 

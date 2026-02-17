@@ -14,12 +14,8 @@ pub trait Iterator {
     fn count(mut self) -> usize
     where
         Self: Sized,
-    {
-        let mut count = 0;
-        while self.next().is_some() {
-            count += 1;
-        }
-        count
+     {
+        todo!("Implement count")
     }
 }
 
@@ -30,7 +26,7 @@ pub struct RangeIterator {
 
 impl RangeIterator {
     pub fn new(start: i32, end: i32) -> Self {
-        RangeIterator { current: start, end }
+        todo!("Implement new")
     }
 }
 
@@ -38,13 +34,7 @@ impl Iterator for RangeIterator {
     type Item = i32;
     
     fn next(&mut self) -> Option<Self::Item> {
-        if self.current < self.end {
-            let value = self.current;
-            self.current += 1;
-            Some(value)
-        } else {
-            None
-        }
+        todo!("Implement next")
     }
 }
 
@@ -65,10 +55,7 @@ pub struct SimpleGraph {
 
 impl SimpleGraph {
     pub fn new() -> Self {
-        SimpleGraph {
-            nodes: Vec::new(),
-            edges: Vec::new(),
-        }
+        todo!("Implement new")
     }
 }
 
@@ -77,19 +64,19 @@ impl Graph for SimpleGraph {
     type Edge = (usize, usize);
     
     fn nodes(&self) -> Vec<Self::Node> {
-        self.nodes.clone()
+        todo!("Implement nodes")
     }
     
     fn edges(&self) -> Vec<Self::Edge> {
-        self.edges.clone()
+        todo!("Implement edges")
     }
     
     fn add_node(&mut self, node: Self::Node) {
-        self.nodes.push(node);
+        todo!("Implement add_node")
     }
     
     fn add_edge(&mut self, edge: Self::Edge) {
-        self.edges.push(edge);
+        todo!("Implement add_edge")
     }
 }
 
@@ -105,15 +92,15 @@ impl<T> Container for Vec<T> {
     type Item = T;
     
     fn add(&mut self, item: Self::Item) {
-        self.push(item);
+        todo!("Implement add")
     }
     
     fn get(&self, index: usize) -> Option<&Self::Item> {
-        <[T]>::get(self, index)
+        todo!("Implement get")
     }
     
     fn len(&self) -> usize {
-        <[T]>::len(self)
+        todo!("Implement len")
     }
 }
 

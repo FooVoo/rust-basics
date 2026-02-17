@@ -26,25 +26,25 @@ pub struct Student {
 
 impl Named for Student {
     fn name(&self) -> &str {
-        &self.name
+        todo!("Implement name")
     }
 }
 
 impl Aged for Student {
     fn age(&self) -> u32 {
-        self.age
+        todo!("Implement age")
     }
 }
 
 impl Greetable for Student {
     fn greet(&self) -> String {
-        format!("Hi, I'm {} and I'm in grade {}", self.name, self.grade)
+        todo!("Implement greet")
     }
 }
 
 /// A function that works with anything that is both Named and Aged.
 pub fn introduce<T: Named + Aged>(entity: &T) -> String {
-    format!("{} is {} years old", entity.name(), entity.age())
+    todo!("Implement introduce")
 }
 
 #[cfg(test)]

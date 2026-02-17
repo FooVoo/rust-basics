@@ -8,49 +8,27 @@
 
 /// Parse strings to numbers, ignoring invalid ones.
 pub fn parse_numbers(strings: &[&str]) -> Vec<i32> {
-    strings
-        .iter()
-        .filter_map(|s| s.parse::<i32>().ok())
-        .collect()
+    todo!("Implement parse_numbers")
 }
 
 /// Get lengths of non-empty strings.
 pub fn non_empty_lengths(strings: &[&str]) -> Vec<usize> {
-    strings
-        .iter()
-        .filter_map(|s| {
-            if s.is_empty() {
-                None
-            } else {
-                Some(s.len())
-            }
-        })
-        .collect()
+    todo!("Implement non_empty_lengths")
 }
 
 /// Square positive numbers only.
 pub fn square_positives(numbers: &[i32]) -> Vec<i32> {
-    numbers
-        .iter()
-        .filter_map(|&n| if n > 0 { Some(n * n) } else { None })
-        .collect()
+    todo!("Implement square_positives")
 }
 
 /// Extract first character of non-empty strings.
 pub fn first_chars(strings: &[&str]) -> Vec<char> {
-    strings
-        .iter()
-        .filter_map(|s| s.chars().next())
-        .collect()
+    todo!("Implement first_chars")
 }
 
 /// Divide numbers, skipping zeros in divisor.
 pub fn safe_divisions(dividends: &[i32], divisors: &[i32]) -> Vec<i32> {
-    dividends
-        .iter()
-        .zip(divisors.iter())
-        .filter_map(|(&a, &b)| if b != 0 { Some(a / b) } else { None })
-        .collect()
+    todo!("Implement safe_divisions")
 }
 
 #[cfg(test)]

@@ -24,24 +24,17 @@ pub enum OptimizedEnum {
 
 /// Demonstrates that Option<&T> has the same size as &T due to niche optimization
 pub fn option_reference_size_demo() -> (usize, usize) {
-    let ref_size = mem::size_of::<&u32>();
-    let option_ref_size = mem::size_of::<Option<&u32>>();
-    (ref_size, option_ref_size)
+    todo!("Implement option_reference_size_demo")
 }
 
 /// Demonstrates that Option<Box<T>> has the same size as Box<T> due to niche optimization
 pub fn option_box_size_demo() -> (usize, usize) {
-    let box_size = mem::size_of::<Box<u32>>();
-    let option_box_size = mem::size_of::<Option<Box<u32>>>();
-    (box_size, option_box_size)
+    todo!("Implement option_box_size_demo")
 }
 
 /// Compares the size of an enum with and without data
 pub fn enum_size_comparison() -> (usize, usize, usize) {
-    let simple_enum_size = mem::size_of::<Status>();
-    let enum_with_data = mem::size_of::<Result<u64, String>>();
-    let option_enum = mem::size_of::<Option<Status>>();
-    (simple_enum_size, enum_with_data, option_enum)
+    todo!("Implement enum_size_comparison")
 }
 
 #[derive(Debug)]
@@ -55,17 +48,13 @@ pub enum ExplicitDiscriminant {
 impl ExplicitDiscriminant {
     /// Gets the discriminant value as u8
     pub fn discriminant(&self) -> u8 {
-        match self {
-            ExplicitDiscriminant::First => 10,
-            ExplicitDiscriminant::Second => 20,
-            ExplicitDiscriminant::Third => 30,
-        }
+        todo!("Implement discriminant")
     }
 }
 
 /// Demonstrates enum with explicit discriminants
 pub fn explicit_discriminant_demo(value: ExplicitDiscriminant) -> u8 {
-    value.discriminant()
+    todo!("Implement explicit_discriminant_demo")
 }
 
 /// Complex enum to demonstrate layout
@@ -79,7 +68,7 @@ pub enum ComplexEnum {
 
 /// Returns the size and alignment of ComplexEnum
 pub fn complex_enum_layout() -> (usize, usize) {
-    (mem::size_of::<ComplexEnum>(), mem::align_of::<ComplexEnum>())
+    todo!("Implement complex_enum_layout")
 }
 
 /// Demonstrates fieldless enum (C-like enum)
@@ -93,7 +82,7 @@ pub enum FieldlessEnum {
 
 /// Converts fieldless enum to u8
 pub fn fieldless_to_u8(e: FieldlessEnum) -> u8 {
-    e as u8
+    todo!("Implement fieldless_to_u8")
 }
 
 #[cfg(test)]

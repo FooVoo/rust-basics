@@ -8,24 +8,17 @@
 
 /// Return a string slice from input (lifetime elision applies).
 pub fn trim_spaces(s: &str) -> &str {
-    s.trim()
+    todo!("Implement trim_spaces")
 }
 
 /// Get first n characters of a string.
 pub fn take_prefix(s: &str, n: usize) -> &str {
-    if n >= s.len() {
-        s
-    } else {
-        &s[..n]
-    }
+    todo!("Implement take_prefix")
 }
 
 /// Extract substring between delimiters.
 pub fn extract_between<'a>(s: &'a str, start: &str, end: &str) -> Option<&'a str> {
-    let start_pos = s.find(start)? + start.len();
-    let remaining = &s[start_pos..];
-    let end_pos = remaining.find(end)?;
-    Some(&remaining[..end_pos])
+    todo!("Implement extract_between")
 }
 
 pub struct Parser<'a> {
@@ -35,15 +28,15 @@ pub struct Parser<'a> {
 
 impl<'a> Parser<'a> {
     pub fn new(input: &'a str) -> Self {
-        Parser { input, position: 0 }
+        todo!("Implement new")
     }
     
     pub fn peek(&self) -> Option<char> {
-        self.input[self.position..].chars().next()
+        todo!("Implement peek")
     }
     
     pub fn remaining(&self) -> &str {
-        &self.input[self.position..]
+        todo!("Implement remaining")
     }
 }
 

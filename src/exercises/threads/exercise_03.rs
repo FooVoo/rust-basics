@@ -11,11 +11,7 @@ use std::time::Duration;
 
 /// Spawn a thread that sleeps for the given milliseconds, then returns the value.
 pub fn sleep_and_return(millis: u64, value: i32) -> i32 {
-    let handle = thread::spawn(move || {
-        thread::sleep(Duration::from_millis(millis));
-        value
-    });
-    handle.join().unwrap()
+    todo!("Implement sleep_and_return")
 }
 
 #[cfg(test)]

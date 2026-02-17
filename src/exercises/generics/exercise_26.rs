@@ -21,13 +21,13 @@ pub struct Pure<T> {
 
 impl<T: Clone> Pure<T> {
     pub fn new(value: T) -> Self {
-        Pure { value }
+        todo!("Implement new")
     }
 }
 
 impl<'a, T: Clone> Parser<'a, T> for Pure<T> {
     fn parse(&self, input: &'a str) -> ParseResult<'a, T> {
-        Ok((self.value.clone(), input))
+        todo!("Implement parse")
     }
 }
 
@@ -38,20 +38,13 @@ pub struct CharParser {
 
 impl CharParser {
     pub fn new(expected: char) -> Self {
-        CharParser { expected }
+        todo!("Implement new")
     }
 }
 
 impl<'a> Parser<'a, char> for CharParser {
     fn parse(&self, input: &'a str) -> ParseResult<'a, char> {
-        let mut chars = input.chars();
-        match chars.next() {
-            Some(ch) if ch == self.expected => {
-                Ok((ch, &input[ch.len_utf8()..]))
-            }
-            Some(ch) => Err(format!("Expected '{}', found '{}'", self.expected, ch)),
-            None => Err("Unexpected end of input".to_string()),
-        }
+        todo!("Implement parse")
     }
 }
 
@@ -72,24 +65,17 @@ where
     F: Fn(A) -> B,
 {
     pub fn new(parser: P, func: F) -> Self {
-        Map {
-            parser,
-            func,
-            _phantom: std::marker::PhantomData,
-        }
+        todo!("Implement new")
     }
 }
 
 impl<'a, P, F, A, B> Parser<'a, B> for Map<P, F, A, B>
 where
-    P: Parser<'a, A>,
+    P: for<'b> Parser<'b, A>,
     F: Fn(A) -> B,
 {
     fn parse(&self, input: &'a str) -> ParseResult<'a, B> {
-        match self.parser.parse(input) {
-            Ok((value, rest)) => Ok(((self.func)(value), rest)),
-            Err(e) => Err(e),
-        }
+        todo!("Implement parse")
     }
 }
 
@@ -98,15 +84,7 @@ pub struct DigitParser;
 
 impl<'a> Parser<'a, u32> for DigitParser {
     fn parse(&self, input: &'a str) -> ParseResult<'a, u32> {
-        let mut chars = input.chars();
-        match chars.next() {
-            Some(ch) if ch.is_ascii_digit() => {
-                let digit = ch.to_digit(10).unwrap();
-                Ok((digit, &input[1..]))
-            }
-            Some(ch) => Err(format!("Expected digit, found '{}'", ch)),
-            None => Err("Unexpected end of input".to_string()),
-        }
+        todo!("Implement parse")
     }
 }
 
@@ -114,21 +92,8 @@ impl<'a> Parser<'a, u32> for DigitParser {
 pub fn parse_many<'a, T, P>(parser: &P, input: &'a str) -> ParseResult<'a, Vec<T>>
 where
     P: Parser<'a, T>,
-{
-    let mut results = Vec::new();
-    let mut remaining = input;
-
-    loop {
-        match parser.parse(remaining) {
-            Ok((value, rest)) => {
-                results.push(value);
-                remaining = rest;
-            }
-            Err(_) => break,
-        }
-    }
-
-    Ok((results, remaining))
+ {
+    todo!("Parse zero or more items.")
 }
 
 #[cfg(test)]

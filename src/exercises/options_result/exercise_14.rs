@@ -8,45 +8,17 @@
 
 /// Parse a string and validate it's positive.
 pub fn parse_positive(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|e| e.to_string())
-        .and_then(|n| {
-            if n > 0 {
-                Ok(n)
-            } else {
-                Err(String::from("Number is not positive"))
-            }
-        })
+    todo!("Implement parse_positive")
 }
 
 /// Parse and divide in one chain.
 pub fn parse_and_safe_divide(a: &str, b: &str) -> Result<i32, String> {
-    a.parse::<i32>()
-        .map_err(|e| e.to_string())
-        .and_then(|num_a| {
-            b.parse::<i32>()
-                .map_err(|e| e.to_string())
-                .and_then(|num_b| {
-                    if num_b == 0 {
-                        Err(String::from("Division by zero"))
-                    } else {
-                        Ok(num_a / num_b)
-                    }
-                })
-        })
+    todo!("Implement parse_and_safe_divide")
 }
 
 /// Parse a number and check if it's even.
 pub fn parse_even(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|e| format!("Parse error: {}", e))
-        .and_then(|n| {
-            if n % 2 == 0 {
-                Ok(n)
-            } else {
-                Err(format!("{} is not even", n))
-            }
-        })
+    todo!("Implement parse_even")
 }
 
 #[cfg(test)]

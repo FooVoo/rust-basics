@@ -8,20 +8,17 @@
 
 /// Convert an Option to Result with a static error message.
 pub fn option_to_result(opt: Option<i32>) -> Result<i32, String> {
-    opt.ok_or(String::from("Value is None"))
+    todo!("Implement option_to_result")
 }
 
 /// Convert Option to Result with computed error.
 pub fn option_to_result_lazy(opt: Option<String>) -> Result<String, String> {
-    opt.ok_or_else(|| String::from("No value provided"))
+    todo!("Implement option_to_result_lazy")
 }
 
 /// Find an element and convert to Result.
 pub fn find_or_error(numbers: &[i32], target: i32) -> Result<usize, String> {
-    numbers
-        .iter()
-        .position(|&x| x == target)
-        .ok_or_else(|| format!("Value {} not found", target))
+    todo!("Implement find_or_error")
 }
 
 #[cfg(test)]

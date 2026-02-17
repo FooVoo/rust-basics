@@ -8,17 +8,17 @@
 
 /// Takes ownership of a String and returns its length.
 pub fn take_ownership(s: String) -> usize {
-    s.len()
+    todo!("Implement take_ownership")
 }
 
 /// Creates a new String and transfers ownership to the caller.
 pub fn give_ownership() -> String {
-    String::from("Hello, ownership!")
+    todo!("Implement give_ownership")
 }
 
 /// Takes ownership and gives it back to the caller.
 pub fn take_and_give_back(s: String) -> String {
-    s
+    todo!("Implement take_and_give_back")
 }
 
 #[cfg(test)]

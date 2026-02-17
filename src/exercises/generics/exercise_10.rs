@@ -10,12 +10,8 @@
 pub fn safe_divide<T>(a: T, b: T) -> Result<T, String>
 where
     T: std::ops::Div<Output = T> + PartialEq + Default + std::fmt::Display + Copy,
-{
-    if b == T::default() {
-        Err("Division by zero".to_string())
-    } else {
-        Ok(a / b)
-    }
+ {
+    todo!("A generic function that safely divides two numbers.")
 }
 
 /// A generic function that parses a string to any FromStr type.
@@ -23,8 +19,8 @@ pub fn parse_value<T>(s: &str) -> Result<T, String>
 where
     T: std::str::FromStr,
     T::Err: std::fmt::Display,
-{
-    s.parse::<T>().map_err(|e| format!("Parse error: {}", e))
+ {
+    todo!("A generic function that parses a string to any FromStr type.")
 }
 
 /// A custom Result type with detailed errors.
@@ -38,29 +34,23 @@ impl<T, E> Outcome<T, E> {
     pub fn map<U, F>(self, f: F) -> Outcome<U, E>
     where
         F: FnOnce(T) -> U,
-    {
-        match self {
-            Outcome::Success(value) => Outcome::Success(f(value)),
-            Outcome::Failure(err) => Outcome::Failure(err),
-        }
+     {
+        todo!("Maps an Outcome<T, E> to Outcome<U, E> by applying a function to Success.")
     }
 
     /// Returns the success value or a default.
     pub fn unwrap_or(self, default: T) -> T {
-        match self {
-            Outcome::Success(value) => value,
-            Outcome::Failure(_) => default,
-        }
+        todo!("Implement unwrap_or")
     }
 
     /// Returns true if the outcome is Success.
     pub fn is_success(&self) -> bool {
-        matches!(self, Outcome::Success(_))
+        todo!("Implement is_success")
     }
 
     /// Returns true if the outcome is Failure.
     pub fn is_failure(&self) -> bool {
-        matches!(self, Outcome::Failure(_))
+        todo!("Implement is_failure")
     }
 }
 
@@ -120,7 +110,7 @@ mod tests {
 
     #[test]
     fn test_outcome_map() {
-        let outcome = Outcome::Success(5);
+        let outcome: Outcome<i32, String> = Outcome::Success(5);
         let result = outcome.map(|x| x * 2);
         assert_eq!(result.unwrap_or(0), 10);
     }

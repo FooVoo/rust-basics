@@ -9,23 +9,20 @@
 /// Convert Option<Result<T, E>> to Result<Option<T>, E>.
 pub fn transpose_option_result<T, E>(
     opt: Option<Result<T, E>>,
-) -> Result<Option<T>, E> {
-    opt.transpose()
+) -> Result<Option<T>, E>  {
+    todo!("Convert Option<Result<T, E>> to Result<Option<T>, E>.")
 }
 
 /// Parse optional strings, transposing the result.
 pub fn parse_optional(opt: Option<&str>) -> Result<Option<i32>, std::num::ParseIntError> {
-    opt.map(|s| s.parse::<i32>()).transpose()
+    todo!("Implement parse_optional")
 }
 
 /// Process a vector of optional parse results.
 pub fn parse_all_or_none(
     strings: Vec<Option<&str>>,
-) -> Result<Vec<Option<i32>>, std::num::ParseIntError> {
-    strings
-        .into_iter()
-        .map(|opt| opt.map(|s| s.parse::<i32>()).transpose())
-        .collect()
+) -> Result<Vec<Option<i32>>, std::num::ParseIntError>  {
+    todo!("Process a vector of optional parse results.")
 }
 
 #[cfg(test)]

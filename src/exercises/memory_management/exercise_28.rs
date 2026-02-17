@@ -15,24 +15,21 @@ pub struct Lock<'a, T> {
 
 impl<'a, T> Lock<'a, T> {
     pub fn new(data: &'a mut T) -> Self {
-        Lock {
-            data,
-            _phantom: PhantomData,
-        }
+        todo!("Implement new")
     }
     
     pub fn access(&self) -> &T {
-        self.data
+        todo!("Implement access")
     }
     
     pub fn access_mut(&mut self) -> &mut T {
-        self.data
+        todo!("Implement access_mut")
     }
 }
 
 impl<'a, T> Drop for Lock<'a, T> {
     fn drop(&mut self) {
-        // Cleanup happens automatically
+        todo!("Implement drop")
     }
 }
 
@@ -43,22 +40,17 @@ pub struct Transaction<'a> {
 
 impl<'a> Transaction<'a> {
     pub fn new(rollback_fn: impl FnMut() + 'a) -> Self {
-        Transaction {
-            committed: false,
-            rollback_fn: Box::new(rollback_fn),
-        }
+        todo!("Implement new")
     }
     
     pub fn commit(&mut self) {
-        self.committed = true;
+        todo!("Implement commit")
     }
 }
 
 impl<'a> Drop for Transaction<'a> {
     fn drop(&mut self) {
-        if !self.committed {
-            (self.rollback_fn)();
-        }
+        todo!("Implement drop")
     }
 }
 
@@ -68,29 +60,23 @@ pub struct ScopeGuard<F: FnOnce()> {
 
 impl<F: FnOnce()> ScopeGuard<F> {
     pub fn new(cleanup: F) -> Self {
-        ScopeGuard {
-            cleanup: Some(cleanup),
-        }
+        todo!("Implement new")
     }
     
     pub fn disarm(mut self) {
-        self.cleanup = None;
+        todo!("Implement disarm")
     }
 }
 
 impl<F: FnOnce()> Drop for ScopeGuard<F> {
     fn drop(&mut self) {
-        if let Some(cleanup) = self.cleanup.take() {
-            cleanup();
-        }
+        todo!("Implement drop")
     }
 }
 
 /// Create a scope guard that increments a counter on drop.
 pub fn create_counter_guard(counter: &mut i32) -> ScopeGuard<impl FnOnce() + '_> {
-    ScopeGuard::new(move || {
-        *counter += 1;
-    })
+    todo!("Implement create_counter_guard")
 }
 
 #[cfg(test)]

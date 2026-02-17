@@ -14,7 +14,7 @@ pub trait ColoredShape: Shape {
     fn color(&self) -> &str;
     
     fn describe(&self) -> String {
-        format!("A {} shape with area {}", self.color(), self.area())
+        todo!("Implement describe")
     }
 }
 
@@ -22,7 +22,7 @@ pub trait NamedColoredShape: ColoredShape {
     fn name(&self) -> &str;
     
     fn full_description(&self) -> String {
-        format!("{}: {}", self.name(), self.describe())
+        todo!("Implement full_description")
     }
 }
 
@@ -34,19 +34,19 @@ pub struct ColoredCircle {
 
 impl Shape for ColoredCircle {
     fn area(&self) -> f64 {
-        std::f64::consts::PI * self.radius * self.radius
+        todo!("Implement area")
     }
 }
 
 impl ColoredShape for ColoredCircle {
     fn color(&self) -> &str {
-        &self.color
+        todo!("Implement color")
     }
 }
 
 impl NamedColoredShape for ColoredCircle {
     fn name(&self) -> &str {
-        &self.name
+        todo!("Implement name")
     }
 }
 
@@ -58,19 +58,19 @@ pub struct ColoredRectangle {
 
 impl Shape for ColoredRectangle {
     fn area(&self) -> f64 {
-        self.width * self.height
+        todo!("Implement area")
     }
 }
 
 impl ColoredShape for ColoredRectangle {
     fn color(&self) -> &str {
-        &self.color
+        todo!("Implement color")
     }
 }
 
 /// Function requiring ColoredShape (which requires Shape)
 pub fn print_colored_shape<T: ColoredShape>(shape: &T) -> String {
-    format!("Color: {}, Area: {}", shape.color(), shape.area())
+    todo!("Implement print_colored_shape")
 }
 
 #[cfg(test)]

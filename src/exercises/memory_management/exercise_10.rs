@@ -13,26 +13,26 @@ pub struct Excerpt<'a> {
 
 impl<'a> Excerpt<'a> {
     pub fn new(text: &'a str) -> Self {
-        Excerpt { text }
+        todo!("Implement new")
     }
     
     pub fn get_text(&self) -> &str {
-        self.text
+        todo!("Implement get_text")
     }
     
     pub fn len(&self) -> usize {
-        self.text.len()
+        todo!("Implement len")
     }
 }
 
 /// Create an excerpt from a longer text.
 pub fn create_excerpt<'a>(text: &'a str, start: usize, end: usize) -> Excerpt<'a> {
-    Excerpt::new(&text[start..end])
+    todo!("Implement create_excerpt")
 }
 
 /// Find the longest excerpt from a list.
 pub fn longest_excerpt<'a>(excerpts: &'a [Excerpt<'a>]) -> Option<&'a Excerpt<'a>> {
-    excerpts.iter().max_by_key(|e| e.len())
+    todo!("Implement longest_excerpt")
 }
 
 #[cfg(test)]

@@ -8,34 +8,20 @@
 
 /// Try parsing as i32, fallback to trying as f64.
 pub fn parse_number_flexible(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|e| e.to_string())
-        .or_else(|_| {
-            s.parse::<f64>()
-                .map(|f| f as i32)
-                .map_err(|e| format!("Failed to parse as number: {}", e))
-        })
+    todo!("Implement parse_number_flexible")
 }
 
 /// Try first operation, fallback to second if it fails.
 pub fn try_with_fallback(
     first: Result<i32, String>,
     second: Result<i32, String>,
-) -> Result<i32, String> {
-    first.or(second)
+) -> Result<i32, String>  {
+    todo!("Try first operation, fallback to second if it fails.")
 }
 
 /// Parse with multiple fallback attempts.
 pub fn parse_with_fallbacks(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|_| String::from("Failed"))
-        .or_else(|_| {
-            if s == "zero" {
-                Ok(0)
-            } else {
-                Err(String::from("Not a number"))
-            }
-        })
+    todo!("Implement parse_with_fallbacks")
 }
 
 #[cfg(test)]

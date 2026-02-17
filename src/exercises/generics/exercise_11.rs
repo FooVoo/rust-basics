@@ -12,9 +12,8 @@ use std::fmt::Display;
 pub fn print_and_clone<T>(value: T) -> T
 where
     T: Display + Clone,
-{
-    println!("{}", value);
-    value.clone()
+ {
+    todo!("A function with multiple trait bounds using where clause.")
 }
 
 /// A function with complex bounds on multiple parameters.
@@ -22,13 +21,8 @@ pub fn compare_and_display<T, U>(a: T, b: U) -> String
 where
     T: Display + PartialOrd,
     U: Display + Into<T>,
-{
-    let b_converted = b.into();
-    if a > b_converted {
-        format!("{} is greater than {}", a, b_converted)
-    } else {
-        format!("{} is not greater than {}", a, b_converted)
-    }
+ {
+    todo!("A function with complex bounds on multiple parameters.")
 }
 
 /// A generic struct with where clause constraints.
@@ -48,25 +42,22 @@ where
 {
     /// Creates a new Processor with default output.
     pub fn new(input: T) -> Self {
-        Processor {
-            input,
-            output: U::default(),
-        }
+        todo!("Implement new")
     }
 
     /// Gets a clone of the input.
     pub fn get_input(&self) -> T {
-        self.input.clone()
+        todo!("Implement get_input")
     }
 
     /// Gets a reference to the output.
     pub fn get_output(&self) -> &U {
-        &self.output
+        todo!("Implement get_output")
     }
 
     /// Sets the output value.
     pub fn set_output(&mut self, output: U) {
-        self.output = output;
+        todo!("Implement set_output")
     }
 }
 
@@ -77,7 +68,7 @@ where
 {
     /// Displays both input and output.
     pub fn display_both(&self) -> String {
-        format!("Input: {}, Output: {}", self.input, self.output)
+        todo!("Implement display_both")
     }
 }
 

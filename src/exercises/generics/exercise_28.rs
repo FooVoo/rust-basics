@@ -22,58 +22,46 @@ pub struct Document<State> {
 impl Document<Draft> {
     /// Creates a new draft document.
     pub fn new(content: String) -> Self {
-        Document {
-            content,
-            _state: PhantomData,
-        }
+        todo!("Implement new")
     }
 
     /// Edits the content (only available in Draft state).
     pub fn edit(&mut self, new_content: String) {
-        self.content = new_content;
+        todo!("Implement edit")
     }
 
     /// Submits the document for review.
     pub fn submit_for_review(self) -> Document<Review> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+        todo!("Implement submit_for_review")
     }
 }
 
 impl Document<Review> {
     /// Approves the document for publishing.
     pub fn approve(self) -> Document<Published> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+        todo!("Implement approve")
     }
 
     /// Rejects the document back to draft.
     pub fn reject(self) -> Document<Draft> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+        todo!("Implement reject")
     }
 
     /// Gets the content for review.
     pub fn content(&self) -> &str {
-        &self.content
+        todo!("Implement content")
     }
 }
 
 impl Document<Published> {
     /// Gets the published content.
     pub fn content(&self) -> &str {
-        &self.content
+        todo!("Implement content")
     }
 
     /// Archives the document (ends its lifecycle).
     pub fn archive(self) -> String {
-        self.content
+        todo!("Implement archive")
     }
 }
 
@@ -92,77 +80,46 @@ pub struct Connection<State> {
 impl Connection<Disconnected> {
     /// Creates a new disconnected connection.
     pub fn new(host: String, port: u16) -> Self {
-        Connection {
-            host,
-            port,
-            _state: PhantomData,
-        }
+        todo!("Implement new")
     }
 
     /// Connects to the server.
     pub fn connect(self) -> Result<Connection<Connected>, String> {
-        if self.host.is_empty() {
-            return Err("Invalid host".to_string());
-        }
-        Ok(Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        })
+        todo!("Implement connect")
     }
 }
 
 impl Connection<Connected> {
     /// Authenticates the connection.
     pub fn authenticate(self, _password: &str) -> Result<Connection<Authenticated>, String> {
-        // In a real scenario, would check password
-        Ok(Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        })
+        todo!("Implement authenticate")
     }
 
     /// Disconnects from the server.
     pub fn disconnect(self) -> Connection<Disconnected> {
-        Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        }
+        todo!("Implement disconnect")
     }
 
     /// Gets the connection info.
     pub fn info(&self) -> String {
-        format!("{}:{}", self.host, self.port)
+        todo!("Implement info")
     }
 }
 
 impl Connection<Authenticated> {
     /// Sends data (only available when authenticated).
     pub fn send(&self, data: &str) -> Result<(), String> {
-        if data.is_empty() {
-            return Err("Cannot send empty data".to_string());
-        }
-        Ok(())
+        todo!("Implement send")
     }
 
     /// Logs out and returns to connected state.
     pub fn logout(self) -> Connection<Connected> {
-        Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        }
+        todo!("Implement logout")
     }
 
     /// Disconnects and logs out.
     pub fn disconnect(self) -> Connection<Disconnected> {
-        Connection {
-            host: self.host,
-            port: self.port,
-            _state: PhantomData,
-        }
+        todo!("Implement disconnect")
     }
 }
 

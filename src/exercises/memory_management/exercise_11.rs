@@ -8,30 +8,22 @@
 
 /// Find the maximum value in a slice and return a reference to it.
 pub fn find_max<'a>(slice: &'a [i32]) -> Option<&'a i32> {
-    slice.iter().max()
+    todo!("Implement find_max")
 }
 
 /// Return references to both min and max values.
 pub fn find_min_max<'a>(slice: &'a [i32]) -> Option<(&'a i32, &'a i32)> {
-    if slice.is_empty() {
-        return None;
-    }
-    let min = slice.iter().min()?;
-    let max = slice.iter().max()?;
-    Some((min, max))
+    todo!("Implement find_min_max")
 }
 
 /// Filter and return references to even numbers.
 pub fn filter_even<'a>(numbers: &'a [i32]) -> Vec<&'a i32> {
-    numbers.iter().filter(|&&n| n % 2 == 0).collect()
+    todo!("Implement filter_even")
 }
 
 /// Find the first and last elements.
 pub fn first_and_last<'a, T>(slice: &'a [T]) -> Option<(&'a T, &'a T)> {
-    if slice.is_empty() {
-        return None;
-    }
-    Some((&slice[0], &slice[slice.len() - 1]))
+    todo!("Implement first_and_last")
 }
 
 #[cfg(test)]

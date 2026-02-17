@@ -8,26 +8,17 @@
 
 /// Divide two numbers, returning an error message if dividing by zero.
 pub fn divide(a: i32, b: i32) -> Result<i32, String> {
-    if b == 0 {
-        Err(String::from("Division by zero"))
-    } else {
-        Ok(a / b)
-    }
+    todo!("Implement divide")
 }
 
 /// Parse a string to i32, converting parse error to custom message.
 pub fn parse_number(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|_| format!("Failed to parse '{}' as a number", s))
+    todo!("Implement parse_number")
 }
 
 /// Check if a number is positive, return error otherwise.
 pub fn validate_positive(n: i32) -> Result<i32, String> {
-    if n > 0 {
-        Ok(n)
-    } else {
-        Err(format!("{} is not positive", n))
-    }
+    todo!("Implement validate_positive")
 }
 
 #[cfg(test)]

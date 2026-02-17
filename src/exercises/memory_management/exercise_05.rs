@@ -8,28 +8,17 @@
 
 /// Get the first word from a string.
 pub fn first_word(s: &str) -> &str {
-    let bytes = s.as_bytes();
-    
-    for (i, &byte) in bytes.iter().enumerate() {
-        if byte == b' ' {
-            return &s[..i];
-        }
-    }
-    
-    s
+    todo!("Implement first_word")
 }
 
 /// Get a slice of a vector.
 pub fn get_slice(v: &[i32], start: usize, end: usize) -> &[i32] {
-    &v[start..end]
+    todo!("Implement get_slice")
 }
 
 /// Count words in a string.
 pub fn count_words(s: &str) -> usize {
-    if s.is_empty() {
-        return 0;
-    }
-    s.split_whitespace().count()
+    todo!("Implement count_words")
 }
 
 #[cfg(test)]

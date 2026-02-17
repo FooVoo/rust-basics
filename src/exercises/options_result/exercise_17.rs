@@ -8,25 +8,22 @@
 
 /// Convert Result to Option, discarding the error.
 pub fn result_to_option(result: Result<i32, String>) -> Option<i32> {
-    result.ok()
+    todo!("Implement result_to_option")
 }
 
 /// Parse a string to Option, ignoring parse errors.
 pub fn parse_to_option(s: &str) -> Option<i32> {
-    s.parse::<i32>().ok()
+    todo!("Implement parse_to_option")
 }
 
 /// Extract the error from a Result as an Option.
 pub fn get_error(result: Result<i32, String>) -> Option<String> {
-    result.err()
+    todo!("Implement get_error")
 }
 
 /// Try parsing and return Ok values only.
 pub fn collect_valid_numbers(strings: &[&str]) -> Vec<i32> {
-    strings
-        .iter()
-        .filter_map(|s| s.parse::<i32>().ok())
-        .collect()
+    todo!("Implement collect_valid_numbers")
 }
 
 #[cfg(test)]

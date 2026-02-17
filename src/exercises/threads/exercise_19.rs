@@ -13,36 +13,7 @@ use std::thread;
 /// n_readers threads read, n_writers threads increment.
 /// Return final value.
 pub fn rwlock_multi_writer(n_readers: usize, n_writers: usize, increments_per_writer: usize) -> i32 {
-    let data = Arc::new(RwLock::new(0));
-
-    // Spawn readers
-    let reader_handles: Vec<_> = (0..n_readers)
-        .map(|_| {
-            let data = Arc::clone(&data);
-            thread::spawn(move || {
-                let _val = *data.read().unwrap();
-            })
-        })
-        .collect();
-
-    // Spawn writers
-    let writer_handles: Vec<_> = (0..n_writers)
-        .map(|_| {
-            let data = Arc::clone(&data);
-            thread::spawn(move || {
-                for _ in 0..increments_per_writer {
-                    let mut val = data.write().unwrap();
-                    *val += 1;
-                }
-            })
-        })
-        .collect();
-
-    for handle in reader_handles.into_iter().chain(writer_handles) {
-        handle.join().unwrap();
-    }
-
-    *data.read().unwrap()
+    todo!("Implement rwlock_multi_writer")
 }
 
 #[cfg(test)]

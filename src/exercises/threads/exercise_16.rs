@@ -10,21 +10,7 @@ use std::thread;
 
 /// Use scoped threads to increment each element of a slice in parallel.
 pub fn parallel_increment(data: &mut [i32], n_threads: usize) {
-    if data.is_empty() || n_threads == 0 {
-        return;
-    }
-
-    let chunk_size = (data.len() + n_threads - 1) / n_threads;
-    
-    thread::scope(|s| {
-        for chunk in data.chunks_mut(chunk_size) {
-            s.spawn(move || {
-                for item in chunk {
-                    *item += 1;
-                }
-            });
-        }
-    });
+    todo!("Implement parallel_increment")
 }
 
 #[cfg(test)]

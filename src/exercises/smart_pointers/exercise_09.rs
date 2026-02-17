@@ -10,31 +10,27 @@ use std::rc::Rc;
 
 /// Create a shared reference-counted value.
 pub fn create_shared(value: i32) -> Rc<i32> {
-    Rc::new(value)
+    todo!("Implement create_shared")
 }
 
 /// Clone an Rc to create another reference.
 pub fn clone_rc(rc: &Rc<i32>) -> Rc<i32> {
-    Rc::clone(rc)
+    todo!("Implement clone_rc")
 }
 
 /// Get the strong count of an Rc.
 pub fn get_count(rc: &Rc<i32>) -> usize {
-    Rc::strong_count(rc)
+    todo!("Implement get_count")
 }
 
 /// Create multiple references to the same data.
 pub fn create_multiple_refs(value: i32, count: usize) -> Vec<Rc<i32>> {
-    let rc = Rc::new(value);
-    (0..count).map(|_| Rc::clone(&rc)).collect()
+    todo!("Implement create_multiple_refs")
 }
 
 /// Share data between two vectors.
 pub fn share_between_vecs() -> (Vec<Rc<String>>, Vec<Rc<String>>) {
-    let data = Rc::new(String::from("shared"));
-    let vec1 = vec![Rc::clone(&data), Rc::clone(&data)];
-    let vec2 = vec![Rc::clone(&data)];
-    (vec1, vec2)
+    todo!("Implement share_between_vecs")
 }
 
 #[cfg(test)]

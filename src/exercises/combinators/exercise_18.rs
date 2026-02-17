@@ -8,12 +8,12 @@
 
 /// Double value or return 0.
 pub fn double_or_zero(value: Option<i32>) -> i32 {
-    value.map_or(0, |x| x * 2)
+    todo!("Implement double_or_zero")
 }
 
 /// Get length of optional string or 0.
 pub fn length_or_zero(s: Option<&str>) -> usize {
-    s.map_or(0, |s| s.len())
+    todo!("Implement length_or_zero")
 }
 
 #[cfg(test)]

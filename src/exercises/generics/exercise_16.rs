@@ -16,47 +16,33 @@ pub struct Builder<T, U> {
 impl<T, U> Builder<T, U> {
     /// Creates a new empty builder.
     pub fn new() -> Self {
-        Builder {
-            name: None,
-            value: None,
-            metadata: None,
-        }
+        todo!("Implement new")
     }
 
     /// Sets the name.
     pub fn name(mut self, name: String) -> Self {
-        self.name = Some(name);
-        self
+        todo!("Implement name")
     }
 
     /// Sets the value.
     pub fn value(mut self, value: T) -> Self {
-        self.value = Some(value);
-        self
+        todo!("Implement value")
     }
 
     /// Sets the metadata.
     pub fn metadata(mut self, metadata: U) -> Self {
-        self.metadata = Some(metadata);
-        self
+        todo!("Implement metadata")
     }
 
     /// Builds the final object.
     pub fn build(self) -> Result<Built<T, U>, String> {
-        let name = self.name.ok_or("Name is required")?;
-        let value = self.value.ok_or("Value is required")?;
-        
-        Ok(Built {
-            name,
-            value,
-            metadata: self.metadata,
-        })
+        todo!("Implement build")
     }
 }
 
 impl<T, U> Default for Builder<T, U> {
     fn default() -> Self {
-        Self::new()
+        todo!("Implement default")
     }
 }
 
@@ -70,22 +56,22 @@ pub struct Built<T, U> {
 impl<T, U> Built<T, U> {
     /// Gets the name.
     pub fn name(&self) -> &str {
-        &self.name
+        todo!("Implement name")
     }
 
     /// Gets a reference to the value.
     pub fn value(&self) -> &T {
-        &self.value
+        todo!("Implement value")
     }
 
     /// Gets a reference to the metadata if present.
     pub fn metadata(&self) -> Option<&U> {
-        self.metadata.as_ref()
+        todo!("Implement metadata")
     }
 
     /// Checks if metadata is present.
     pub fn has_metadata(&self) -> bool {
-        self.metadata.is_some()
+        todo!("Implement has_metadata")
     }
 }
 

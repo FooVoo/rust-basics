@@ -19,17 +19,17 @@ pub struct Context<T, U> {
 impl<T, U> Context<T, U> {
     /// Creates a new context with a strategy.
     pub fn new(strategy: Box<dyn Strategy<T, U>>) -> Self {
-        Context { strategy }
+        todo!("Implement new")
     }
 
     /// Executes the strategy.
     pub fn execute(&self, input: T) -> U {
-        self.strategy.execute(input)
+        todo!("Implement execute")
     }
 
     /// Changes the strategy.
     pub fn set_strategy(&mut self, strategy: Box<dyn Strategy<T, U>>) {
-        self.strategy = strategy;
+        todo!("Implement set_strategy")
     }
 }
 
@@ -38,7 +38,7 @@ pub struct DoublingStrategy;
 
 impl Strategy<i32, i32> for DoublingStrategy {
     fn execute(&self, input: i32) -> i32 {
-        input * 2
+        todo!("Implement execute")
     }
 }
 
@@ -47,7 +47,7 @@ pub struct SquaringStrategy;
 
 impl Strategy<i32, i32> for SquaringStrategy {
     fn execute(&self, input: i32) -> i32 {
-        input * input
+        todo!("Implement execute")
     }
 }
 
@@ -56,7 +56,7 @@ pub struct UppercaseStrategy;
 
 impl Strategy<String, String> for UppercaseStrategy {
     fn execute(&self, input: String) -> String {
-        input.to_uppercase()
+        todo!("Implement execute")
     }
 }
 
@@ -65,7 +65,7 @@ pub struct ReverseStrategy;
 
 impl Strategy<String, String> for ReverseStrategy {
     fn execute(&self, input: String) -> String {
-        input.chars().rev().collect()
+        todo!("Implement execute")
     }
 }
 
@@ -77,26 +77,23 @@ pub struct Pipeline<T> {
 impl<T> Pipeline<T> {
     /// Creates a new empty pipeline.
     pub fn new() -> Self {
-        Pipeline { steps: Vec::new() }
+        todo!("Implement new")
     }
 
     /// Adds a strategy to the pipeline.
     pub fn add_step(&mut self, strategy: Box<dyn Strategy<T, T>>) {
-        self.steps.push(strategy);
+        todo!("Implement add_step")
     }
 
     /// Executes all strategies in sequence.
     pub fn process(&self, mut input: T) -> T {
-        for step in &self.steps {
-            input = step.execute(input);
-        }
-        input
+        todo!("Implement process")
     }
 }
 
 impl<T> Default for Pipeline<T> {
     fn default() -> Self {
-        Self::new()
+        todo!("Implement default")
     }
 }
 

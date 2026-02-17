@@ -8,22 +8,22 @@
 
 /// Add an element to a vector.
 pub fn add_element(v: &mut Vec<i32>, element: i32) {
-    v.push(element);
+    todo!("Implement add_element")
 }
 
 /// Remove and return the last element from a vector.
 pub fn remove_last(v: &mut Vec<i32>) -> Option<i32> {
-    v.pop()
+    todo!("Implement remove_last")
 }
 
 /// Create a new vector with doubled values.
 pub fn double_values(v: &[i32]) -> Vec<i32> {
-    v.iter().map(|&x| x * 2).collect()
+    todo!("Implement double_values")
 }
 
 /// Sum all elements in a vector.
 pub fn sum_vector(v: &[i32]) -> i32 {
-    v.iter().sum()
+    todo!("Implement sum_vector")
 }
 
 #[cfg(test)]

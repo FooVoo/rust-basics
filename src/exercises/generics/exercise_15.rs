@@ -16,55 +16,45 @@ pub enum State<T, U, V> {
 impl<T, U, V> State<T, U, V> {
     /// Creates a new state machine in the Initial state.
     pub fn new(value: T) -> Self {
-        State::Initial(value)
+        todo!("Implement new")
     }
 
     /// Checks if the state is Initial.
     pub fn is_initial(&self) -> bool {
-        matches!(self, State::Initial(_))
+        todo!("Implement is_initial")
     }
 
     /// Checks if the state is Processing.
     pub fn is_processing(&self) -> bool {
-        matches!(self, State::Processing(_))
+        todo!("Implement is_processing")
     }
 
     /// Checks if the state is Complete.
     pub fn is_complete(&self) -> bool {
-        matches!(self, State::Complete(_))
+        todo!("Implement is_complete")
     }
 
     /// Transitions from Initial to Processing.
     pub fn start_processing<F>(self, f: F) -> Result<State<T, U, V>, &'static str>
     where
         F: FnOnce(T) -> U,
-    {
-        match self {
-            State::Initial(value) => Ok(State::Processing(f(value))),
-            _ => Err("Can only start processing from Initial state"),
-        }
+     {
+        todo!("Transitions from Initial to Processing.")
     }
 
     /// Transitions from Processing to Complete.
     pub fn complete<F>(self, f: F) -> Result<State<T, U, V>, &'static str>
     where
         F: FnOnce(U) -> V,
-    {
-        match self {
-            State::Processing(value) => Ok(State::Complete(f(value))),
-            _ => Err("Can only complete from Processing state"),
-        }
+     {
+        todo!("Transitions from Processing to Complete.")
     }
 }
 
 impl<T: Clone, U: Clone, V: Clone> State<T, U, V> {
     /// Gets a clone of the current state value.
     pub fn get_value(&self) -> StateValue<T, U, V> {
-        match self {
-            State::Initial(v) => StateValue::Initial(v.clone()),
-            State::Processing(v) => StateValue::Processing(v.clone()),
-            State::Complete(v) => StateValue::Complete(v.clone()),
-        }
+        todo!("Implement get_value")
     }
 }
 

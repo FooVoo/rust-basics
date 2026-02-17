@@ -9,21 +9,7 @@
 /// Check if a filename has a valid extension from the allowed list.
 /// Return Ok(extension) if valid, Err otherwise.
 pub fn validate_file_extension(filename: &str, allowed: &[&str]) -> Result<String, String> {
-    let extension = filename
-        .rsplit('.')
-        .next()
-        .filter(|ext| !ext.is_empty() && *ext != filename)
-        .ok_or_else(|| "No file extension found".to_string())?;
-    
-    if allowed.contains(&extension) {
-        Ok(extension.to_string())
-    } else {
-        Err(format!(
-            "Invalid extension '{}'. Allowed: {}",
-            extension,
-            allowed.join(", ")
-        ))
-    }
+    todo!("Implement validate_file_extension")
 }
 
 #[cfg(test)]

@@ -21,11 +21,7 @@ pub enum FetchError {
 
 impl std::fmt::Display for FetchError {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            FetchError::NetworkError => write!(f, "Network error"),
-            FetchError::ParseError => write!(f, "Parse error"),
-            FetchError::Timeout => write!(f, "Request timeout"),
-        }
+        todo!("Implement fmt")
     }
 }
 
@@ -39,28 +35,23 @@ pub fn fetch_with_fallback<F1, F2>(
 where
     F1: FnOnce() -> Result<Data, FetchError>,
     F2: FnOnce() -> Result<Data, FetchError>,
-{
-    primary().or_else(|_| fallback())
+ {
+    todo!("Try to fetch from primary source, fall back to secondary on error.")
 }
 
 /// Try multiple sources in order until one succeeds.
 pub fn fetch_with_multiple_fallbacks(
     sources: Vec<fn() -> Result<Data, FetchError>>,
-) -> Result<Data, FetchError> {
-    for source in sources {
-        if let Ok(data) = source() {
-            return Ok(data);
-        }
-    }
-    Err(FetchError::NetworkError)
+) -> Result<Data, FetchError>  {
+    todo!("Try multiple sources in order until one succeeds.")
 }
 
 /// Fetch data or use default value on error.
 pub fn fetch_or_default<F>(fetcher: F, default: Data) -> Data
 where
     F: FnOnce() -> Result<Data, FetchError>,
-{
-    fetcher().unwrap_or(default)
+ {
+    todo!("Fetch data or use default value on error.")
 }
 
 /// Fetch multiple items, returning successes and collecting errors.
@@ -69,18 +60,8 @@ pub fn fetch_multiple<F>(
 ) -> (Vec<Data>, Vec<FetchError>)
 where
     F: FnOnce() -> Result<Data, FetchError>,
-{
-    let mut successes = Vec::new();
-    let mut errors = Vec::new();
-    
-    for fetcher in fetchers {
-        match fetcher() {
-            Ok(data) => successes.push(data),
-            Err(e) => errors.push(e),
-        }
-    }
-    
-    (successes, errors)
+ {
+    todo!("Fetch multiple items, returning successes and collecting errors.")
 }
 
 #[cfg(test)]

@@ -10,41 +10,17 @@ use tokio::time::{sleep, timeout, Duration};
 
 /// Execute an operation with a timeout.
 pub async fn with_timeout(delay_ms: u64, timeout_ms: u64) -> Result<String, String> {
-    let operation = async {
-        sleep(Duration::from_millis(delay_ms)).await;
-        "Completed".to_string()
-    };
-    
-    match timeout(Duration::from_millis(timeout_ms), operation).await {
-        Ok(result) => Ok(result),
-        Err(_) => Err("Timeout".to_string()),
-    }
+    todo!("Implement with_timeout")
 }
 
 /// Try to parse with a timeout.
 pub async fn timed_parse(s: &str, timeout_ms: u64) -> Result<i32, String> {
-    let parse_op = async move {
-        sleep(Duration::from_millis(10)).await;
-        s.parse::<i32>().map_err(|e| e.to_string())
-    };
-    
-    match timeout(Duration::from_millis(timeout_ms), parse_op).await {
-        Ok(Ok(value)) => Ok(value),
-        Ok(Err(e)) => Err(e),
-        Err(_) => Err("Timeout".to_string()),
-    }
+    todo!("Implement timed_parse")
 }
 
 /// Execute multiple operations with individual timeouts.
 pub async fn multiple_timeouts(operations: Vec<u64>, timeout_ms: u64) -> Vec<Result<String, String>> {
-    let mut results = vec![];
-    
-    for delay in operations {
-        let result = with_timeout(delay, timeout_ms).await;
-        results.push(result);
-    }
-    
-    results
+    todo!("Implement multiple_timeouts")
 }
 
 #[cfg(test)]

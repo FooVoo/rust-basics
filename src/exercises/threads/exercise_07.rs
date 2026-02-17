@@ -10,15 +10,7 @@ use std::thread;
 
 /// Create a named thread using Builder that returns its name.
 pub fn create_named_thread(name: &str) -> String {
-    let name = name.to_string();
-    let handle = thread::Builder::new()
-        .name(name.clone())
-        .spawn(move || {
-            thread::current().name().unwrap().to_string()
-        })
-        .unwrap();
-
-    handle.join().unwrap()
+    todo!("Implement create_named_thread")
 }
 
 #[cfg(test)]

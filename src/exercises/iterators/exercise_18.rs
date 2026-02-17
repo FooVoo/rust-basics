@@ -8,53 +8,22 @@
 
 /// Parse all strings, returning error on first failure.
 pub fn parse_all(strings: &[&str]) -> Result<Vec<i32>, String> {
-    strings
-        .iter()
-        .map(|s| s.parse::<i32>().map_err(|e| e.to_string()))
-        .collect()
+    todo!("Implement parse_all")
 }
 
 /// Divide all pairs, failing on division by zero.
 pub fn safe_divide_all(pairs: &[(i32, i32)]) -> Result<Vec<i32>, String> {
-    pairs
-        .iter()
-        .map(|&(a, b)| {
-            if b == 0 {
-                Err("Division by zero".to_string())
-            } else {
-                Ok(a / b)
-            }
-        })
-        .collect()
+    todo!("Implement safe_divide_all")
 }
 
 /// Convert strings to lengths, failing if any string is empty.
 pub fn lengths_no_empty(strings: &[&str]) -> Result<Vec<usize>, String> {
-    strings
-        .iter()
-        .map(|s| {
-            if s.is_empty() {
-                Err("Empty string found".to_string())
-            } else {
-                Ok(s.len())
-            }
-        })
-        .collect()
+    todo!("Implement lengths_no_empty")
 }
 
 /// Parse and validate that all numbers are positive.
 pub fn parse_positive(strings: &[&str]) -> Result<Vec<i32>, String> {
-    strings
-        .iter()
-        .map(|s| {
-            let num = s.parse::<i32>().map_err(|e| e.to_string())?;
-            if num <= 0 {
-                Err(format!("{} is not positive", num))
-            } else {
-                Ok(num)
-            }
-        })
-        .collect()
+    todo!("Implement parse_positive")
 }
 
 #[cfg(test)]

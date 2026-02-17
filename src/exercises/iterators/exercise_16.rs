@@ -8,58 +8,20 @@
 
 /// Process numbers and count how many pass each stage.
 pub fn count_stages(numbers: &[i32]) -> (usize, usize, usize) {
-    let mut after_filter = 0;
-    let mut after_map = 0;
-    
-    let result: Vec<_> = numbers
-        .iter()
-        .inspect(|_| {})
-        .filter(|&&n| n > 0)
-        .inspect(|_| after_filter += 1)
-        .map(|&n| n * 2)
-        .inspect(|_| after_map += 1)
-        .collect();
-    
-    (numbers.len(), after_filter, result.len())
+    todo!("Implement count_stages")
 }
 
 /// Group consecutive equal elements.
 pub fn group_consecutive_equal(numbers: Vec<i32>) -> Vec<Vec<i32>> {
-    let mut result = Vec::new();
-    let mut iter = numbers.into_iter().peekable();
-    
-    while let Some(current) = iter.next() {
-        let mut group = vec![current];
-        
-        while let Some(&next) = iter.peek() {
-            if next == current {
-                group.push(iter.next().unwrap());
-            } else {
-                break;
-            }
-        }
-        
-        result.push(group);
-    }
-    
-    result
+    todo!("Implement group_consecutive_equal")
 }
 
 /// Take elements until a condition is met, including the matching element.
 pub fn take_until_inclusive<I>(iter: I, predicate: impl Fn(&i32) -> bool) -> Vec<i32>
 where
     I: IntoIterator<Item = i32>,
-{
-    let mut result = Vec::new();
-    
-    for item in iter {
-        result.push(item);
-        if predicate(&item) {
-            break;
-        }
-    }
-    
-    result
+ {
+    todo!("Take elements until a condition is met, including the matching element.")
 }
 
 #[cfg(test)]

@@ -10,16 +10,16 @@
 pub fn filter<T, F>(vec: Vec<T>, predicate: F) -> Vec<T>
 where
     F: Fn(&T) -> bool,
-{
-    vec.into_iter().filter(|item| predicate(item)).collect()
+ {
+    todo!("Filters a vector based on a predicate.")
 }
 
 /// Maps a vector from type T to type U.
 pub fn map<T, U, F>(vec: Vec<T>, f: F) -> Vec<U>
 where
     F: Fn(T) -> U,
-{
-    vec.into_iter().map(f).collect()
+ {
+    todo!("Maps a vector from type T to type U.")
 }
 
 /// A generic collection wrapper with utility methods.
@@ -30,51 +30,51 @@ pub struct Collection<T> {
 impl<T> Collection<T> {
     /// Creates a new empty collection.
     pub fn new() -> Self {
-        Collection { items: Vec::new() }
+        todo!("Implement new")
     }
 
     /// Creates a collection from a vector.
     pub fn from_vec(items: Vec<T>) -> Self {
-        Collection { items }
+        todo!("Implement from_vec")
     }
 
     /// Adds an item to the collection.
     pub fn add(&mut self, item: T) {
-        self.items.push(item);
+        todo!("Implement add")
     }
 
     /// Returns the number of items.
     pub fn len(&self) -> usize {
-        self.items.len()
+        todo!("Implement len")
     }
 
     /// Returns true if the collection is empty.
     pub fn is_empty(&self) -> bool {
-        self.items.is_empty()
+        todo!("Implement is_empty")
     }
 
     /// Converts the collection into a vector.
     pub fn into_vec(self) -> Vec<T> {
-        self.items
+        todo!("Implement into_vec")
     }
 }
 
 impl<T: Clone> Collection<T> {
     /// Gets a clone of the item at the given index.
     pub fn get(&self, index: usize) -> Option<T> {
-        self.items.get(index).cloned()
+        todo!("Implement get")
     }
 }
 
 impl<T: PartialEq> Collection<T> {
     /// Checks if the collection contains an item.
     pub fn contains(&self, item: &T) -> bool {
-        self.items.contains(item)
+        todo!("Implement contains")
     }
 
     /// Removes all occurrences of an item.
     pub fn remove_all(&mut self, item: &T) {
-        self.items.retain(|x| x != item);
+        todo!("Implement remove_all")
     }
 }
 

@@ -17,11 +17,11 @@ pub struct HtmlRenderer {
 
 impl Renderer for HtmlRenderer {
     fn render(&self) -> String {
-        format!("<html>{}</html>", self.content)
+        todo!("Implement render")
     }
     
     fn get_type(&self) -> &'static str {
-        "HTML"
+        todo!("Implement get_type")
     }
 }
 
@@ -31,11 +31,11 @@ pub struct JsonRenderer {
 
 impl Renderer for JsonRenderer {
     fn render(&self) -> String {
-        format!("{{\"content\":\"{}\"}}", self.content)
+        todo!("Implement render")
     }
     
     fn get_type(&self) -> &'static str {
-        "JSON"
+        todo!("Implement get_type")
     }
 }
 
@@ -45,27 +45,27 @@ pub struct XmlRenderer {
 
 impl Renderer for XmlRenderer {
     fn render(&self) -> String {
-        format!("<xml>{}</xml>", self.content)
+        todo!("Implement render")
     }
     
     fn get_type(&self) -> &'static str {
-        "XML"
+        todo!("Implement get_type")
     }
 }
 
 /// Dynamic dispatch using trait object reference
 pub fn render_dynamic(renderer: &dyn Renderer) -> String {
-    format!("[{}] {}", renderer.get_type(), renderer.render())
+    todo!("Implement render_dynamic")
 }
 
 /// Static dispatch using generic
 pub fn render_static<T: Renderer>(renderer: &T) -> String {
-    format!("[{}] {}", renderer.get_type(), renderer.render())
+    todo!("Implement render_static")
 }
 
 /// Process multiple renderers dynamically
 pub fn render_all(renderers: &[&dyn Renderer]) -> Vec<String> {
-    renderers.iter().map(|r| render_dynamic(*r)).collect()
+    todo!("Implement render_all")
 }
 
 #[cfg(test)]

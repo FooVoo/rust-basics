@@ -17,34 +17,23 @@ pub enum Suit {
 impl Suit {
     /// Returns all suits in order
     pub fn all() -> [Suit; 4] {
-        [Suit::Hearts, Suit::Diamonds, Suit::Clubs, Suit::Spades]
+        todo!("Implement all")
     }
 
     /// Returns the next suit in circular order
     pub fn next(&self) -> Suit {
-        match self {
-            Suit::Hearts => Suit::Diamonds,
-            Suit::Diamonds => Suit::Clubs,
-            Suit::Clubs => Suit::Spades,
-            Suit::Spades => Suit::Hearts,
-        }
+        todo!("Implement next")
     }
 
     /// Returns true if the suit is red (Hearts or Diamonds)
     pub fn is_red(&self) -> bool {
-        matches!(self, Suit::Hearts | Suit::Diamonds)
+        todo!("Implement is_red")
     }
 }
 
 /// Generates a vector of n suits starting from the given suit
 pub fn generate_suit_sequence(start: Suit, n: usize) -> Vec<Suit> {
-    let mut result = Vec::with_capacity(n);
-    let mut current = start;
-    for _ in 0..n {
-        result.push(current);
-        current = current.next();
-    }
-    result
+    todo!("Implement generate_suit_sequence")
 }
 
 #[cfg(test)]

@@ -10,22 +10,17 @@ use std::collections::HashMap;
 
 /// Demonstrate lazy evaluation: only process what's needed.
 pub fn lazy_filter_take(numbers: &[i32], predicate: impl Fn(&i32) -> bool, count: usize) -> Vec<i32> {
-    numbers
-        .iter()
-        .copied()
-        .filter(predicate)
-        .take(count)
-        .collect()
+    todo!("Implement lazy_filter_take")
 }
 
 /// Count without collecting: pure lazy evaluation.
 pub fn count_matching(numbers: &[i32], predicate: impl Fn(&i32) -> bool) -> usize {
-    numbers.iter().filter(|&n| predicate(n)).count()
+    todo!("Implement count_matching")
 }
 
 /// Check existence without processing all elements.
 pub fn exists_matching(numbers: &[i32], predicate: impl Fn(&i32) -> bool) -> bool {
-    numbers.iter().any(|n| predicate(n))
+    todo!("Implement exists_matching")
 }
 
 /// Process in streaming fashion: no intermediate allocations.
@@ -40,7 +35,7 @@ where
     F: FnMut(T) -> T,
 {
     pub fn new(iter: I, processor: F) -> Self {
-        StreamProcessor { iter, processor }
+        todo!("Implement new")
     }
 }
 
@@ -52,31 +47,20 @@ where
     type Item = T;
     
     fn next(&mut self) -> Option<Self::Item> {
-        self.iter.next().map(|item| (self.processor)(item))
+        todo!("Implement next")
     }
 }
 
 /// Create a lazy chain of operations.
 pub fn lazy_pipeline(numbers: &[i32]) -> impl Iterator<Item = i32> + '_ {
-    numbers
-        .iter()
-        .copied()
-        .filter(|&n| n > 0)
-        .map(|n| n * 2)
-        .filter(|&n| n < 100)
+    todo!("Implement lazy_pipeline")
 }
 
 /// Build frequency map lazily.
 pub fn frequency_map_lazy<'a>(
     words: &'a [&'a str],
-) -> impl Iterator<Item = (&'a str, usize)> + 'a {
-    let mut map = HashMap::new();
-    
-    words.iter().for_each(|&word| {
-        *map.entry(word).or_insert(0) += 1;
-    });
-    
-    map.into_iter()
+) -> impl Iterator<Item = (&'a str, usize)> + 'a  {
+    todo!("Build frequency map lazily.")
 }
 
 #[cfg(test)]

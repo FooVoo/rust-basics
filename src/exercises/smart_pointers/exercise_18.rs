@@ -16,23 +16,19 @@ pub struct ImmutableCache {
 
 impl ImmutableCache {
     pub fn new() -> Self {
-        ImmutableCache {
-            entries: Vec::new(),
-        }
+        todo!("Implement new")
     }
 
     pub fn add(&mut self, value: String) -> Rc<String> {
-        let rc = Rc::new(value);
-        self.entries.push(Rc::clone(&rc));
-        rc
+        todo!("Implement add")
     }
 
     pub fn get(&self, index: usize) -> Option<Rc<String>> {
-        self.entries.get(index).map(|rc| Rc::clone(rc))
+        todo!("Implement get")
     }
 
     pub fn len(&self) -> usize {
-        self.entries.len()
+        todo!("Implement len")
     }
 }
 
@@ -43,27 +39,23 @@ pub struct MutableCache {
 
 impl MutableCache {
     pub fn new() -> Self {
-        MutableCache {
-            entries: Rc::new(RefCell::new(Vec::new())),
-        }
+        todo!("Implement new")
     }
 
     pub fn add(&self, value: String) {
-        self.entries.borrow_mut().push(value);
+        todo!("Implement add")
     }
 
     pub fn get(&self, index: usize) -> Option<String> {
-        self.entries.borrow().get(index).cloned()
+        todo!("Implement get")
     }
 
     pub fn len(&self) -> usize {
-        self.entries.borrow().len()
+        todo!("Implement len")
     }
 
     pub fn clone_handle(&self) -> Self {
-        MutableCache {
-            entries: Rc::clone(&self.entries),
-        }
+        todo!("Implement clone_handle")
     }
 }
 
@@ -74,23 +66,19 @@ pub struct Observable<T> {
 
 impl<T: Clone> Observable<T> {
     pub fn new(value: T) -> Self {
-        Observable {
-            value: Rc::new(RefCell::new(value)),
-        }
+        todo!("Implement new")
     }
 
     pub fn get(&self) -> T {
-        self.value.borrow().clone()
+        todo!("Implement get")
     }
 
     pub fn set(&self, value: T) {
-        *self.value.borrow_mut() = value;
+        todo!("Implement set")
     }
 
     pub fn subscribe(&self) -> Self {
-        Observable {
-            value: Rc::clone(&self.value),
-        }
+        todo!("Implement subscribe")
     }
 }
 

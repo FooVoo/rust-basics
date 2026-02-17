@@ -18,12 +18,7 @@ pub struct Config {
 
 impl Default for Config {
     fn default() -> Self {
-        Config {
-            host: "localhost".to_string(),
-            port: 8080,
-            timeout: 30,
-            max_connections: 100,
-        }
+        todo!("Implement default")
     }
 }
 
@@ -37,12 +32,7 @@ pub enum ConfigError {
 
 impl std::fmt::Display for ConfigError {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            ConfigError::InvalidPort(msg) => write!(f, "Invalid port: {}", msg),
-            ConfigError::InvalidTimeout(msg) => write!(f, "Invalid timeout: {}", msg),
-            ConfigError::InvalidMaxConnections(msg) => write!(f, "Invalid max_connections: {}", msg),
-            ConfigError::EmptyHost => write!(f, "Host cannot be empty"),
-        }
+        todo!("Implement fmt")
     }
 }
 
@@ -50,48 +40,7 @@ impl std::error::Error for ConfigError {}
 
 /// Parse configuration from key-value map with defaults.
 pub fn parse_config(data: &HashMap<String, String>) -> Result<Config, ConfigError> {
-    let mut config = Config::default();
-    
-    if let Some(host) = data.get("host") {
-        if host.is_empty() {
-            return Err(ConfigError::EmptyHost);
-        }
-        config.host = host.clone();
-    }
-    
-    if let Some(port_str) = data.get("port") {
-        config.port = port_str
-            .parse::<u16>()
-            .map_err(|e| ConfigError::InvalidPort(e.to_string()))?;
-        
-        if config.port == 0 {
-            return Err(ConfigError::InvalidPort("Port cannot be 0".to_string()));
-        }
-    }
-    
-    if let Some(timeout_str) = data.get("timeout") {
-        config.timeout = timeout_str
-            .parse::<u32>()
-            .map_err(|e| ConfigError::InvalidTimeout(e.to_string()))?;
-        
-        if config.timeout == 0 {
-            return Err(ConfigError::InvalidTimeout("Timeout must be positive".to_string()));
-        }
-    }
-    
-    if let Some(max_conn_str) = data.get("max_connections") {
-        config.max_connections = max_conn_str
-            .parse::<u32>()
-            .map_err(|e| ConfigError::InvalidMaxConnections(e.to_string()))?;
-        
-        if config.max_connections == 0 {
-            return Err(ConfigError::InvalidMaxConnections(
-                "Max connections must be positive".to_string()
-            ));
-        }
-    }
-    
-    Ok(config)
+    todo!("Implement parse_config")
 }
 
 #[cfg(test)]

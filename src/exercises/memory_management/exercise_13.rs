@@ -8,25 +8,25 @@
 
 /// Find all strings that start with a given prefix.
 pub fn find_with_prefix<'a>(strings: &'a [String], prefix: &str) -> Vec<&'a String> {
-    strings.iter().filter(|s| s.starts_with(prefix)).collect()
+    todo!("Implement find_with_prefix")
 }
 
 /// Get references to strings longer than a specified length.
 pub fn longer_than<'a>(strings: &'a [String], min_len: usize) -> Vec<&'a String> {
-    strings.iter().filter(|s| s.len() > min_len).collect()
+    todo!("Implement longer_than")
 }
 
 /// Map strings to their first characters.
 pub fn first_chars(strings: &[String]) -> Vec<Option<char>> {
-    strings.iter().map(|s| s.chars().next()).collect()
+    todo!("Implement first_chars")
 }
 
 /// Count strings matching a predicate.
 pub fn count_matching<F>(strings: &[String], predicate: F) -> usize
 where
     F: Fn(&String) -> bool,
-{
-    strings.iter().filter(|&s| predicate(s)).count()
+ {
+    todo!("Count strings matching a predicate.")
 }
 
 #[cfg(test)]

@@ -10,21 +10,17 @@ use tokio::time::{sleep, Duration};
 
 /// Wait for the specified milliseconds, then return a message.
 pub async fn delayed_greeting(name: &str, delay_ms: u64) -> String {
-    sleep(Duration::from_millis(delay_ms)).await;
-    format!("Hello, {}!", name)
+    todo!("Implement delayed_greeting")
 }
 
 /// Perform a computation after a delay.
 pub async fn delayed_computation(value: i32, delay_ms: u64) -> i32 {
-    sleep(Duration::from_millis(delay_ms)).await;
-    value * 2
+    todo!("Implement delayed_computation")
 }
 
 /// Return the first value after its delay, then the second.
 pub async fn sequential_delays(delay1_ms: u64, delay2_ms: u64) -> (String, String) {
-    let first = delayed_greeting("First", delay1_ms).await;
-    let second = delayed_greeting("Second", delay2_ms).await;
-    (first, second)
+    todo!("Implement sequential_delays")
 }
 
 #[cfg(test)]

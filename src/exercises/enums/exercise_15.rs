@@ -8,28 +8,17 @@
 
 /// Processes a stack of options, returning sum of all Some values
 pub fn sum_stack(mut stack: Vec<Option<i32>>) -> i32 {
-    let mut sum = 0;
-    while let Some(item) = stack.pop() {
-        if let Some(value) = item {
-            sum += value;
-        }
-    }
-    sum
+    todo!("Implement sum_stack")
 }
 
 /// Counts consecutive Some values from the start of the vector
 pub fn count_consecutive_some(values: &[Option<i32>]) -> usize {
-    let mut count = 0;
-    let mut iter = values.iter();
-    while let Some(Some(_)) = iter.next() {
-        count += 1;
-    }
-    count
+    todo!("Implement count_consecutive_some")
 }
 
 /// Extracts all Some values from a vector
 pub fn extract_some_values(values: Vec<Option<i32>>) -> Vec<i32> {
-    values.into_iter().flatten().collect()
+    todo!("Implement extract_some_values")
 }
 
 #[cfg(test)]

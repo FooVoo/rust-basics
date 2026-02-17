@@ -18,58 +18,32 @@ pub enum Expr {
 impl Expr {
     /// Creates a number expression
     pub fn num(n: f64) -> Self {
-        Expr::Num(n)
+        todo!("Implement num")
     }
 
     /// Creates an addition expression
     pub fn add(left: Expr, right: Expr) -> Self {
-        Expr::Add(Box::new(left), Box::new(right))
+        todo!("Implement add")
     }
 
     /// Creates a subtraction expression
     pub fn sub(left: Expr, right: Expr) -> Self {
-        Expr::Sub(Box::new(left), Box::new(right))
+        todo!("Implement sub")
     }
 
     /// Creates a multiplication expression
     pub fn mul(left: Expr, right: Expr) -> Self {
-        Expr::Mul(Box::new(left), Box::new(right))
+        todo!("Implement mul")
     }
 
     /// Creates a division expression
     pub fn div(left: Expr, right: Expr) -> Self {
-        Expr::Div(Box::new(left), Box::new(right))
+        todo!("Implement div")
     }
 
     /// Evaluates the expression
     pub fn eval(&self) -> Result<f64, String> {
-        match self {
-            Expr::Num(n) => Ok(*n),
-            Expr::Add(left, right) => {
-                let l = left.eval()?;
-                let r = right.eval()?;
-                Ok(l + r)
-            }
-            Expr::Sub(left, right) => {
-                let l = left.eval()?;
-                let r = right.eval()?;
-                Ok(l - r)
-            }
-            Expr::Mul(left, right) => {
-                let l = left.eval()?;
-                let r = right.eval()?;
-                Ok(l * r)
-            }
-            Expr::Div(left, right) => {
-                let l = left.eval()?;
-                let r = right.eval()?;
-                if r == 0.0 {
-                    Err("Division by zero".to_string())
-                } else {
-                    Ok(l / r)
-                }
-            }
-        }
+        todo!("Implement eval")
     }
 }
 

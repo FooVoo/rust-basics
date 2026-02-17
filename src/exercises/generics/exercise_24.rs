@@ -29,10 +29,7 @@ where
 {
     /// Creates a new function converter.
     pub fn new(func: F) -> Self {
-        FunctionConverter {
-            func,
-            _phantom: std::marker::PhantomData,
-        }
+        todo!("Implement new")
     }
 }
 
@@ -44,7 +41,7 @@ where
     type Output = O;
 
     fn convert(&self, input: Self::Input) -> Self::Output {
-        (self.func)(input)
+        todo!("Implement convert")
     }
 }
 
@@ -56,7 +53,7 @@ pub trait Container {
     fn iter(&self) -> Self::Iter;
     fn len(&self) -> usize;
     fn is_empty(&self) -> bool {
-        self.len() == 0
+        todo!("Implement is_empty")
     }
 }
 
@@ -68,7 +65,7 @@ pub struct Wrapper<T> {
 impl<T> Wrapper<T> {
     /// Creates a new wrapper.
     pub fn new(items: Vec<T>) -> Self {
-        Wrapper { items }
+        todo!("Implement new")
     }
 }
 
@@ -77,11 +74,11 @@ impl<T: Clone> Container for Wrapper<T> {
     type Iter = std::vec::IntoIter<T>;
 
     fn iter(&self) -> Self::Iter {
-        self.items.clone().into_iter()
+        todo!("Implement iter")
     }
 
     fn len(&self) -> usize {
-        self.items.len()
+        todo!("Implement len")
     }
 }
 
@@ -102,17 +99,17 @@ pub struct MappedResult<T> {
 impl<T> MappedResult<T> {
     /// Creates a new MappedResult.
     pub fn new(value: Option<T>) -> Self {
-        MappedResult { value }
+        todo!("Implement new")
     }
 
     /// Unwraps the value.
     pub fn unwrap(self) -> T {
-        self.value.unwrap()
+        todo!("Implement unwrap")
     }
 
     /// Gets the value or a default.
     pub fn unwrap_or(self, default: T) -> T {
-        self.value.unwrap_or(default)
+        todo!("Implement unwrap_or")
     }
 }
 
@@ -122,8 +119,8 @@ impl<T> Mappable for Option<T> {
     fn map<U, F>(self, f: F) -> MappedResult<U>
     where
         F: FnOnce(Self::Item) -> U,
-    {
-        MappedResult::new(self.map(f))
+     {
+        todo!("Implement map")
     }
 }
 

@@ -8,20 +8,17 @@
 
 /// Clone a string and modify the clone.
 pub fn clone_and_modify(s: &String, suffix: &str) -> String {
-    let mut cloned = s.clone();
-    cloned.push_str(suffix);
-    cloned
+    todo!("Implement clone_and_modify")
 }
 
 /// Create a vector of cloned strings from a slice.
 pub fn clone_all(strings: &[String]) -> Vec<String> {
-    strings.iter().map(|s| s.clone()).collect()
+    todo!("Implement clone_all")
 }
 
 /// Count occurrences of a character in a string (using clone for demonstration).
 pub fn count_char_in_clone(s: &String, ch: char) -> usize {
-    let cloned = s.clone();
-    cloned.chars().filter(|&c| c == ch).count()
+    todo!("Implement count_char_in_clone")
 }
 
 #[cfg(test)]

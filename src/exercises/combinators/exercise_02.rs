@@ -8,16 +8,12 @@
 
 /// Divide two numbers safely, returning None if divisor is zero.
 pub fn safe_divide(numerator: i32, denominator: i32) -> Option<i32> {
-    if denominator == 0 {
-        None
-    } else {
-        Some(numerator / denominator)
-    }
+    todo!("Implement safe_divide")
 }
 
 /// Chain two divisions using and_then.
 pub fn divide_twice(value: i32, div1: i32, div2: i32) -> Option<i32> {
-    safe_divide(value, div1).and_then(|result| safe_divide(result, div2))
+    todo!("Implement divide_twice")
 }
 
 #[cfg(test)]

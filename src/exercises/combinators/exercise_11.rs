@@ -8,15 +8,12 @@
 
 /// Try primary parser, fallback to default value.
 pub fn parse_or_default(s: &str, default: i32) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|_| format!("Failed to parse '{}'", s))
-        .or_else(|_| Ok(default))
+    todo!("Implement parse_or_default")
 }
 
 /// Try parsing as i32, fallback to parsing length.
 pub fn parse_or_length(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .or_else(|_| Ok(s.len() as i32))
+    todo!("Implement parse_or_length")
 }
 
 #[cfg(test)]

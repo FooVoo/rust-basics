@@ -14,7 +14,7 @@ pub struct Account {
 
 impl Account {
     pub fn new(id: u32, balance: i64) -> Self {
-        Account { id, balance }
+        todo!("Implement new")
     }
 }
 
@@ -28,12 +28,7 @@ pub enum TransactionError {
 
 impl std::fmt::Display for TransactionError {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            TransactionError::InsufficientFunds => write!(f, "Insufficient funds"),
-            TransactionError::AccountNotFound => write!(f, "Account not found"),
-            TransactionError::NegativeAmount => write!(f, "Amount must be positive"),
-            TransactionError::SameAccount => write!(f, "Cannot transfer to same account"),
-        }
+        todo!("Implement fmt")
     }
 }
 
@@ -45,46 +40,18 @@ pub fn transfer(
     from: &mut Account,
     to: &mut Account,
     amount: i64,
-) -> Result<(), TransactionError> {
-    if from.id == to.id {
-        return Err(TransactionError::SameAccount);
-    }
-    
-    if amount < 0 {
-        return Err(TransactionError::NegativeAmount);
-    }
-    
-    if from.balance < amount {
-        return Err(TransactionError::InsufficientFunds);
-    }
-    
-    from.balance -= amount;
-    to.balance += amount;
-    Ok(())
+) -> Result<(), TransactionError>  {
+    todo!("Return Ok with updated balances or Err without modifying accounts.")
 }
 
 /// Withdraw money from an account.
 pub fn withdraw(account: &mut Account, amount: i64) -> Result<(), TransactionError> {
-    if amount < 0 {
-        return Err(TransactionError::NegativeAmount);
-    }
-    
-    if account.balance < amount {
-        return Err(TransactionError::InsufficientFunds);
-    }
-    
-    account.balance -= amount;
-    Ok(())
+    todo!("Implement withdraw")
 }
 
 /// Deposit money to an account.
 pub fn deposit(account: &mut Account, amount: i64) -> Result<(), TransactionError> {
-    if amount < 0 {
-        return Err(TransactionError::NegativeAmount);
-    }
-    
-    account.balance += amount;
-    Ok(())
+    todo!("Implement deposit")
 }
 
 #[cfg(test)]

@@ -8,8 +8,7 @@
 
 /// Parse a string and convert error to custom message.
 pub fn parse_with_custom_error(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|_| format!("Failed to parse '{}' as integer", s))
+    todo!("Implement parse_with_custom_error")
 }
 
 #[cfg(test)]

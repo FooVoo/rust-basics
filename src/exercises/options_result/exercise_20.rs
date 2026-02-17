@@ -8,25 +8,17 @@
 
 /// Parse two numbers and compute their average.
 pub fn average_from_strings(a: &str, b: &str) -> Result<f64, String> {
-    let num_a = a.parse::<i32>().map_err(|e| e.to_string())?;
-    let num_b = b.parse::<i32>().map_err(|e| e.to_string())?;
-    Ok((num_a + num_b) as f64 / 2.0)
+    todo!("Implement average_from_strings")
 }
 
 /// Parse and perform a calculation (a + b) * c.
 pub fn calculate(a: &str, b: &str, c: &str) -> Result<i32, String> {
-    let num_a = a.parse::<i32>().map_err(|e| e.to_string())?;
-    let num_b = b.parse::<i32>().map_err(|e| e.to_string())?;
-    let num_c = c.parse::<i32>().map_err(|e| e.to_string())?;
-    Ok((num_a + num_b) * num_c)
+    todo!("Implement calculate")
 }
 
 /// Get element from slice by index and parse it.
 pub fn get_and_parse(strings: &[&str], index: usize) -> Result<i32, String> {
-    let s = strings
-        .get(index)
-        .ok_or(String::from("Index out of bounds"))?;
-    s.parse::<i32>().map_err(|e| e.to_string())
+    todo!("Implement get_and_parse")
 }
 
 #[cfg(test)]

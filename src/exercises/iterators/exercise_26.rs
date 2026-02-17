@@ -10,29 +10,12 @@ use std::collections::HashMap;
 
 /// Use try_fold to find first error or compute result.
 pub fn try_accumulate(numbers: &[i32]) -> Result<i32, String> {
-    numbers.iter().try_fold(0, |acc, &n| {
-        if n < 0 {
-            Err(format!("Negative number: {}", n))
-        } else {
-            Ok(acc + n)
-        }
-    })
+    todo!("Implement try_accumulate")
 }
 
 /// Process with early termination on condition.
 pub fn process_until_threshold(numbers: &[i32], threshold: i32) -> Result<Vec<i32>, String> {
-    let mut result = Vec::new();
-    
-    numbers.iter().try_for_each(|&n| {
-        if n > threshold {
-            Err(format!("Exceeded threshold: {}", n))
-        } else {
-            result.push(n * 2);
-            Ok(())
-        }
-    })?;
-    
-    Ok(result)
+    todo!("Implement process_until_threshold")
 }
 
 /// Group elements by a key function.
@@ -41,32 +24,18 @@ where
     T: Clone,
     K: std::hash::Hash + Eq,
     F: Fn(&T) -> K,
-{
-    items.iter().fold(HashMap::new(), |mut map, item| {
-        map.entry(key_fn(item)).or_insert_with(Vec::new).push(item.clone());
-        map
-    })
+ {
+    todo!("Group elements by a key function.")
 }
 
 /// Cartesian product of two slices.
 pub fn cartesian_product(a: &[i32], b: &[i32]) -> Vec<(i32, i32)> {
-    a.iter()
-        .flat_map(|&x| b.iter().map(move |&y| (x, y)))
-        .collect()
+    todo!("Implement cartesian_product")
 }
 
 /// Transpose a matrix represented as Vec<Vec<T>>.
 pub fn transpose<T: Clone>(matrix: Vec<Vec<T>>) -> Vec<Vec<T>> {
-    if matrix.is_empty() || matrix[0].is_empty() {
-        return vec![];
-    }
-    
-    let rows = matrix.len();
-    let cols = matrix[0].len();
-    
-    (0..cols)
-        .map(|col| (0..rows).map(|row| matrix[row][col].clone()).collect())
-        .collect()
+    todo!("Implement transpose")
 }
 
 #[cfg(test)]

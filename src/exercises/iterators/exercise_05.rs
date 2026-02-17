@@ -8,38 +8,22 @@
 
 /// Filter even numbers and double them.
 pub fn filter_and_double_evens(numbers: &[i32]) -> Vec<i32> {
-    numbers
-        .iter()
-        .filter(|&&n| n % 2 == 0)
-        .map(|&n| n * 2)
-        .collect()
+    todo!("Implement filter_and_double_evens")
 }
 
 /// Get lengths of strings longer than min_length, then sum them.
 pub fn sum_long_string_lengths(strings: &[&str], min_length: usize) -> usize {
-    strings
-        .iter()
-        .filter(|s| s.len() > min_length)
-        .map(|s| s.len())
-        .sum()
+    todo!("Implement sum_long_string_lengths")
 }
 
 /// Square positive numbers and collect them.
 pub fn square_positive(numbers: &[i32]) -> Vec<i32> {
-    numbers
-        .iter()
-        .filter(|&&n| n > 0)
-        .map(|&n| n * n)
-        .collect()
+    todo!("Implement square_positive")
 }
 
 /// Convert strings to uppercase, filter those starting with 'A', and collect.
 pub fn uppercase_starting_with_a(strings: &[&str]) -> Vec<String> {
-    strings
-        .iter()
-        .map(|s| s.to_uppercase())
-        .filter(|s| s.starts_with('A'))
-        .collect()
+    todo!("Implement uppercase_starting_with_a")
 }
 
 #[cfg(test)]

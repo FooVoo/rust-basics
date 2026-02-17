@@ -9,10 +9,7 @@
 /// Safely get an element from a slice at the given index.
 /// Return Ok(element) if index is valid, Err with message otherwise.
 pub fn safe_get<T: Clone>(slice: &[T], index: usize) -> Result<T, String> {
-    slice
-        .get(index)
-        .cloned()
-        .ok_or_else(|| format!("Index {} out of bounds for slice of length {}", index, slice.len()))
+    todo!("Implement safe_get")
 }
 
 #[cfg(test)]

@@ -10,19 +10,8 @@
 pub fn retry<T, E, F>(mut operation: F, max_attempts: usize) -> Result<T, E>
 where
     F: FnMut() -> Result<T, E>,
-{
-    let mut attempts = 0;
-    loop {
-        attempts += 1;
-        match operation() {
-            Ok(value) => return Ok(value),
-            Err(error) => {
-                if attempts >= max_attempts {
-                    return Err(error);
-                }
-            }
-        }
-    }
+ {
+    todo!("Retry a fallible operation multiple times.")
 }
 
 /// Retry with exponential backoff (simulated).
@@ -33,19 +22,8 @@ pub fn retry_with_transform<T, E, F>(
 ) -> Result<T, E>
 where
     F: FnMut() -> Result<T, E>,
-{
-    let mut attempts = 0;
-    loop {
-        attempts += 1;
-        match operation() {
-            Ok(value) => return Ok(value),
-            Err(error) => {
-                if attempts >= max_attempts {
-                    return Err(transform_error(error, attempts));
-                }
-            }
-        }
-    }
+ {
+    todo!("Retry with exponential backoff (simulated).")
 }
 
 #[cfg(test)]

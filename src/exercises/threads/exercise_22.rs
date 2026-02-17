@@ -11,30 +11,7 @@ use std::thread;
 
 /// Producer sets value when ready, consumer waits via condvar.
 pub fn condvar_pattern(value: i32) -> i32 {
-    let pair = Arc::new((Mutex::new((false, 0)), Condvar::new()));
-    let pair_clone = Arc::clone(&pair);
-
-    let consumer = thread::spawn(move || {
-        let (lock, cvar) = &*pair_clone;
-        let mut data = lock.lock().unwrap();
-        
-        while !data.0 {
-            data = cvar.wait(data).unwrap();
-        }
-        
-        data.1
-    });
-
-    let producer = thread::spawn(move || {
-        let (lock, cvar) = &*pair;
-        let mut data = lock.lock().unwrap();
-        data.0 = true;
-        data.1 = value;
-        cvar.notify_one();
-    });
-
-    producer.join().unwrap();
-    consumer.join().unwrap()
+    todo!("Implement condvar_pattern")
 }
 
 #[cfg(test)]

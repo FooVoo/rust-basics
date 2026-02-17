@@ -12,25 +12,23 @@ pub struct Arena<T> {
 
 impl<T> Arena<T> {
     pub fn new() -> Self {
-        Arena { items: Vec::new() }
+        todo!("Implement new")
     }
     
     pub fn add(&mut self, item: T) -> usize {
-        let id = self.items.len();
-        self.items.push(item);
-        id
+        todo!("Implement add")
     }
     
     pub fn get(&self, id: usize) -> Option<&T> {
-        self.items.get(id)
+        todo!("Implement get")
     }
     
     pub fn get_mut(&mut self, id: usize) -> Option<&mut T> {
-        self.items.get_mut(id)
+        todo!("Implement get_mut")
     }
     
     pub fn len(&self) -> usize {
-        self.items.len()
+        todo!("Implement len")
     }
 }
 
@@ -43,11 +41,7 @@ pub struct TreeNode {
 
 impl TreeNode {
     pub fn new(value: i32, parent: Option<usize>) -> Self {
-        TreeNode {
-            value,
-            parent,
-            children: Vec::new(),
-        }
+        todo!("Implement new")
     }
 }
 
@@ -57,54 +51,25 @@ pub struct Tree {
 
 impl Tree {
     pub fn new() -> Self {
-        Tree {
-            arena: Arena::new(),
-        }
+        todo!("Implement new")
     }
     
     pub fn add_node(&mut self, value: i32, parent: Option<usize>) -> usize {
-        let id = self.arena.add(TreeNode::new(value, parent));
-        if let Some(parent_id) = parent {
-            if let Some(parent_node) = self.arena.get_mut(parent_id) {
-                parent_node.children.push(id);
-            }
-        }
-        id
+        todo!("Implement add_node")
     }
     
     pub fn get_node(&self, id: usize) -> Option<&TreeNode> {
-        self.arena.get(id)
+        todo!("Implement get_node")
     }
     
     pub fn node_count(&self) -> usize {
-        self.arena.len()
+        todo!("Implement node_count")
     }
 }
 
 /// Build a simple tree and return its depth.
 pub fn build_and_measure_tree() -> usize {
-    let mut tree = Tree::new();
-    let root = tree.add_node(1, None);
-    let child1 = tree.add_node(2, Some(root));
-    let _child2 = tree.add_node(3, Some(root));
-    let _grandchild = tree.add_node(4, Some(child1));
-    
-    // Calculate depth
-    let mut max_depth = 0;
-    for i in 0..tree.node_count() {
-        let mut depth = 0;
-        let mut current = Some(i);
-        while let Some(id) = current {
-            if let Some(node) = tree.get_node(id) {
-                depth += 1;
-                current = node.parent;
-            } else {
-                break;
-            }
-        }
-        max_depth = max_depth.max(depth);
-    }
-    max_depth
+    todo!("Implement build_and_measure_tree")
 }
 
 #[cfg(test)]

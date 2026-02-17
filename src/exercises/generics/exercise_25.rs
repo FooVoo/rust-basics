@@ -23,83 +23,50 @@ where
 {
     /// Creates a new empty graph.
     pub fn new() -> Self {
-        Graph {
-            adjacency: HashMap::new(),
-        }
+        todo!("Implement new")
     }
 
     /// Adds a node to the graph.
     pub fn add_node(&mut self, node: T) {
-        self.adjacency.entry(node).or_insert_with(Vec::new);
+        todo!("Implement add_node")
     }
 
     /// Adds a directed edge from source to destination.
     pub fn add_edge(&mut self, from: T, to: T) {
-        self.add_node(from.clone());
-        self.add_node(to.clone());
-        self.adjacency.get_mut(&from).unwrap().push(to);
+        todo!("Implement add_edge")
     }
 
     /// Gets all neighbors of a node.
     pub fn neighbors(&self, node: &T) -> Option<&Vec<T>> {
-        self.adjacency.get(node)
+        todo!("Implement neighbors")
     }
 
     /// Checks if a node exists in the graph.
     pub fn contains(&self, node: &T) -> bool {
-        self.adjacency.contains_key(node)
+        todo!("Implement contains")
     }
 
     /// Returns the number of nodes in the graph.
     pub fn node_count(&self) -> usize {
-        self.adjacency.len()
+        todo!("Implement node_count")
     }
 
     /// Performs a depth-first search starting from a node.
     pub fn dfs(&self, start: &T) -> Vec<T> {
-        let mut visited = HashSet::new();
-        let mut result = Vec::new();
-        self.dfs_helper(start, &mut visited, &mut result);
-        result
+        todo!("Implement dfs")
     }
 
     fn dfs_helper(&self, node: &T, visited: &mut HashSet<T>, result: &mut Vec<T>) {
-        if visited.contains(node) {
-            return;
-        }
-        visited.insert(node.clone());
-        result.push(node.clone());
-
-        if let Some(neighbors) = self.neighbors(node) {
-            for neighbor in neighbors {
-                self.dfs_helper(neighbor, visited, result);
-            }
-        }
+        todo!("Implement dfs_helper")
     }
 
     /// Checks if there's a path from source to destination.
     pub fn has_path(&self, from: &T, to: &T) -> bool {
-        let mut visited = HashSet::new();
-        self.has_path_helper(from, to, &mut visited)
+        todo!("Implement has_path")
     }
 
     fn has_path_helper(&self, current: &T, target: &T, visited: &mut HashSet<T>) -> bool {
-        if current == target {
-            return true;
-        }
-        if visited.contains(current) {
-            return false;
-        }
-        visited.insert(current.clone());
-
-        if let Some(neighbors) = self.neighbors(current) {
-            for neighbor in neighbors {
-                if self.has_path_helper(neighbor, target, visited) {
-                    return true;
-                }
-            }
-        }
-        false
+        todo!("Implement has_path_helper")
     }
 }
 
@@ -108,7 +75,7 @@ where
     T: Eq + Hash + Clone,
 {
     fn default() -> Self {
-        Self::new()
+        todo!("Implement default")
     }
 }
 

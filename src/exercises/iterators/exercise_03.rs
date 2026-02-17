@@ -8,34 +8,22 @@
 
 /// Filter even numbers from a slice.
 pub fn filter_even(numbers: &[i32]) -> Vec<i32> {
-    numbers.iter().filter(|&&n| n % 2 == 0).copied().collect()
+    todo!("Implement filter_even")
 }
 
 /// Filter strings longer than a given length.
 pub fn filter_long_strings(strings: &[&str], min_length: usize) -> Vec<String> {
-    strings
-        .iter()
-        .filter(|s| s.len() > min_length)
-        .map(|&s| s.to_string())
-        .collect()
+    todo!("Implement filter_long_strings")
 }
 
 /// Filter numbers in a specific range [min, max].
 pub fn filter_in_range(numbers: &[i32], min: i32, max: i32) -> Vec<i32> {
-    numbers
-        .iter()
-        .filter(|&&n| n >= min && n <= max)
-        .copied()
-        .collect()
+    todo!("Implement filter_in_range")
 }
 
 /// Filter out empty strings.
 pub fn filter_non_empty(strings: &[&str]) -> Vec<String> {
-    strings
-        .iter()
-        .filter(|s| !s.is_empty())
-        .map(|&s| s.to_string())
-        .collect()
+    todo!("Implement filter_non_empty")
 }
 
 #[cfg(test)]

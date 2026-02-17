@@ -12,18 +12,7 @@ use std::thread;
 /// Spawn n_threads threads, each sending its thread index to a channel.
 /// Return the sum of all received values.
 pub fn sum_from_threads(n_threads: usize) -> usize {
-    let (tx, rx) = mpsc::channel();
-
-    for i in 0..n_threads {
-        let tx_clone = tx.clone();
-        thread::spawn(move || {
-            tx_clone.send(i).unwrap();
-        });
-    }
-
-    drop(tx); // Drop original sender so rx.iter() can terminate
-
-    rx.iter().sum()
+    todo!("Implement sum_from_threads")
 }
 
 #[cfg(test)]

@@ -11,12 +11,8 @@ pub async fn async_map<F, Fut, T, R>(items: Vec<T>, f: F) -> Vec<R>
 where
     F: Fn(T) -> Fut,
     Fut: std::future::Future<Output = R>,
-{
-    let mut results = vec![];
-    for item in items {
-        results.push(f(item).await);
-    }
-    results
+ {
+    todo!("Process each item asynchronously and collect results.")
 }
 
 /// Filter items using an async predicate.
@@ -25,14 +21,8 @@ where
     F: Fn(T) -> Fut,
     Fut: std::future::Future<Output = bool>,
     T: Clone,
-{
-    let mut results = vec![];
-    for item in items {
-        if pred(item.clone()).await {
-            results.push(item);
-        }
-    }
-    results
+ {
+    todo!("Filter items using an async predicate.")
 }
 
 /// Fold items using an async operation.
@@ -40,12 +30,8 @@ pub async fn async_fold<F, Fut, T, R>(items: Vec<T>, init: R, f: F) -> R
 where
     F: Fn(R, T) -> Fut,
     Fut: std::future::Future<Output = R>,
-{
-    let mut acc = init;
-    for item in items {
-        acc = f(acc, item).await;
-    }
-    acc
+ {
+    todo!("Fold items using an async operation.")
 }
 
 #[cfg(test)]

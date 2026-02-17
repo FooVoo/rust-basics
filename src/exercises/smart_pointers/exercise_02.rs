@@ -15,25 +15,22 @@ pub enum List {
 impl List {
     /// Create an empty list.
     pub fn new() -> Self {
-        List::Nil
+        todo!("Implement new")
     }
 
     /// Prepend a value to the list.
     pub fn prepend(self, value: i32) -> Self {
-        List::Cons(value, Box::new(self))
+        todo!("Implement prepend")
     }
 
     /// Get the length of the list.
     pub fn len(&self) -> usize {
-        match self {
-            List::Nil => 0,
-            List::Cons(_, tail) => 1 + tail.len(),
-        }
+        todo!("Implement len")
     }
 
     /// Check if the list is empty.
     pub fn is_empty(&self) -> bool {
-        matches!(self, List::Nil)
+        todo!("Implement is_empty")
     }
 }
 

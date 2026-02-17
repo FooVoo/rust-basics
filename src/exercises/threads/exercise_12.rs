@@ -12,31 +12,7 @@ use std::thread;
 /// Multiple threads read a value, one thread writes.
 /// Return the final value after all operations.
 pub fn rwlock_operations(n_readers: usize, value: i32) -> i32 {
-    let data = Arc::new(RwLock::new(value));
-    
-    // Spawn readers
-    let reader_handles: Vec<_> = (0..n_readers)
-        .map(|_| {
-            let data = Arc::clone(&data);
-            thread::spawn(move || {
-                let _val = *data.read().unwrap();
-            })
-        })
-        .collect();
-
-    // Spawn one writer
-    let data_clone = Arc::clone(&data);
-    let writer_handle = thread::spawn(move || {
-        let mut val = data_clone.write().unwrap();
-        *val += 10;
-    });
-
-    for handle in reader_handles {
-        handle.join().unwrap();
-    }
-    writer_handle.join().unwrap();
-
-    *data.read().unwrap()
+    todo!("Implement rwlock_operations")
 }
 
 #[cfg(test)]

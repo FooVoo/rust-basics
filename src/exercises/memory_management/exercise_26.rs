@@ -15,18 +15,17 @@ pub struct Logger {
 
 impl Logger {
     pub fn new(logs: Rc<RefCell<Vec<String>>>) -> Self {
-        logs.borrow_mut().push("Logger created".to_string());
-        Logger { logs }
+        todo!("Implement new")
     }
     
     pub fn log(&self, message: &str) {
-        self.logs.borrow_mut().push(message.to_string());
+        todo!("Implement log")
     }
 }
 
 impl Drop for Logger {
     fn drop(&mut self) {
-        self.logs.borrow_mut().push("Logger dropped".to_string());
+        todo!("Implement drop")
     }
 }
 
@@ -37,31 +36,25 @@ pub struct Connection {
 
 impl Connection {
     pub fn new(id: u32) -> Self {
-        Connection {
-            id,
-            connected: true,
-        }
+        todo!("Implement new")
     }
     
     pub fn disconnect(&mut self) {
-        self.connected = false;
+        todo!("Implement disconnect")
     }
     
     pub fn is_connected(&self) -> bool {
-        self.connected
+        todo!("Implement is_connected")
     }
     
     pub fn id(&self) -> u32 {
-        self.id
+        todo!("Implement id")
     }
 }
 
 impl Drop for Connection {
     fn drop(&mut self) {
-        if self.connected {
-            // Ensure we disconnect before dropping
-            self.disconnect();
-        }
+        todo!("Implement drop")
     }
 }
 
@@ -71,29 +64,21 @@ pub struct ConnectionPool {
 
 impl ConnectionPool {
     pub fn new(size: usize) -> Self {
-        let connections = (0..size)
-            .map(|i| Connection::new(i as u32))
-            .collect();
-        ConnectionPool { connections }
+        todo!("Implement new")
     }
     
     pub fn get(&mut self, index: usize) -> Option<&mut Connection> {
-        self.connections.get_mut(index)
+        todo!("Implement get")
     }
     
     pub fn size(&self) -> usize {
-        self.connections.len()
+        todo!("Implement size")
     }
 }
 
 impl Drop for ConnectionPool {
     fn drop(&mut self) {
-        // Explicitly disconnect all connections
-        for conn in &mut self.connections {
-            if conn.is_connected() {
-                conn.disconnect();
-            }
-        }
+        todo!("Implement drop")
     }
 }
 

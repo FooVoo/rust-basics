@@ -8,18 +8,17 @@
 
 /// Parse a known-good number string using unwrap.
 pub fn parse_known_good(s: &str) -> i32 {
-    s.parse::<i32>().unwrap()
+    todo!("Implement parse_known_good")
 }
 
 /// Parse a number with a descriptive error using expect.
 pub fn parse_with_context(s: &str) -> i32 {
-    s.parse::<i32>()
-        .expect("String should contain a valid number")
+    todo!("Implement parse_with_context")
 }
 
 /// Safely extract the Ok value if Result is Ok, panic otherwise.
 pub fn extract_ok<T, E: std::fmt::Debug>(result: Result<T, E>) -> T {
-    result.unwrap()
+    todo!("Implement extract_ok")
 }
 
 #[cfg(test)]

@@ -8,17 +8,17 @@
 
 /// Create a Box containing the given value.
 pub fn create_boxed_value(value: i32) -> Box<i32> {
-    Box::new(value)
+    todo!("Implement create_boxed_value")
 }
 
 /// Double the value inside a Box.
 pub fn double_boxed(b: Box<i32>) -> Box<i32> {
-    Box::new(*b * 2)
+    todo!("Implement double_boxed")
 }
 
 /// Sum two boxed values.
 pub fn sum_boxes(a: Box<i32>, b: Box<i32>) -> i32 {
-    *a + *b
+    todo!("Implement sum_boxes")
 }
 
 #[cfg(test)]

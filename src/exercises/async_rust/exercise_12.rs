@@ -10,45 +10,21 @@ use tokio::time::{sleep, Duration};
 
 /// Execute two fallible operations concurrently.
 pub async fn try_parse_both(s1: &str, s2: &str) -> Result<(i32, i32), String> {
-    let parse1 = async { s1.parse::<i32>().map_err(|e| e.to_string()) };
-    let parse2 = async { s2.parse::<i32>().map_err(|e| e.to_string()) };
-    
-    tokio::try_join!(parse1, parse2)
+    todo!("Implement try_parse_both")
 }
 
 /// Concurrent division operations with error handling.
 pub async fn concurrent_divisions(operations: Vec<(i32, i32)>) -> Result<Vec<i32>, String> {
-    if operations.is_empty() {
-        return Ok(vec![]);
-    }
-    
-    let mut results = vec![];
-    for (a, b) in operations {
-        let result = divide(a, b).await?;
-        results.push(result);
-    }
-    Ok(results)
+    todo!("Implement concurrent_divisions")
 }
 
 async fn divide(a: i32, b: i32) -> Result<i32, String> {
-    sleep(Duration::from_millis(10)).await;
-    if b == 0 {
-        Err("Division by zero".to_string())
-    } else {
-        Ok(a / b)
-    }
+    todo!("Implement divide")
 }
 
 /// Try to parse multiple strings concurrently, fail fast on error.
 pub async fn parse_all_or_none(strings: Vec<String>) -> Result<Vec<i32>, String> {
-    let mut results = vec![];
-    
-    for s in strings {
-        let parsed = async { s.parse::<i32>().map_err(|e| e.to_string()) }.await?;
-        results.push(parsed);
-    }
-    
-    Ok(results)
+    todo!("Implement parse_all_or_none")
 }
 
 #[cfg(test)]

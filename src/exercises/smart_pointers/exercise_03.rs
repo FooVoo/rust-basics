@@ -16,37 +16,27 @@ pub struct TreeNode {
 impl TreeNode {
     /// Create a new leaf node.
     pub fn new(value: i32) -> Self {
-        TreeNode {
-            value,
-            left: None,
-            right: None,
-        }
+        todo!("Implement new")
     }
 
     /// Create a node with left and right children.
     pub fn with_children(value: i32, left: Option<Box<TreeNode>>, right: Option<Box<TreeNode>>) -> Self {
-        TreeNode { value, left, right }
+        todo!("Implement with_children")
     }
 
     /// Count the total number of nodes in the tree.
     pub fn count_nodes(&self) -> usize {
-        let left_count = self.left.as_ref().map_or(0, |node| node.count_nodes());
-        let right_count = self.right.as_ref().map_or(0, |node| node.count_nodes());
-        1 + left_count + right_count
+        todo!("Implement count_nodes")
     }
 
     /// Calculate the sum of all values in the tree.
     pub fn sum(&self) -> i32 {
-        let left_sum = self.left.as_ref().map_or(0, |node| node.sum());
-        let right_sum = self.right.as_ref().map_or(0, |node| node.sum());
-        self.value + left_sum + right_sum
+        todo!("Implement sum")
     }
 
     /// Get the maximum depth of the tree.
     pub fn max_depth(&self) -> usize {
-        let left_depth = self.left.as_ref().map_or(0, |node| node.max_depth());
-        let right_depth = self.right.as_ref().map_or(0, |node| node.max_depth());
-        1 + left_depth.max(right_depth)
+        todo!("Implement max_depth")
     }
 }
 

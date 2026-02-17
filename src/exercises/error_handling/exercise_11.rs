@@ -8,13 +8,7 @@
 
 /// Parse three numbers and return their product.
 pub fn parse_and_multiply(a: &str, b: &str, c: &str) -> Result<i32, String> {
-    let num_a = a.parse::<i32>().map_err(|e| format!("First number: {}", e))?;
-    let num_b = b.parse::<i32>().map_err(|e| format!("Second number: {}", e))?;
-    let num_c = c.parse::<i32>().map_err(|e| format!("Third number: {}", e))?;
-    
-    num_a.checked_mul(num_b)
-        .and_then(|result| result.checked_mul(num_c))
-        .ok_or_else(|| "Multiplication overflow".to_string())
+    todo!("Implement parse_and_multiply")
 }
 
 /// Combine two Results using a combining function.
@@ -25,8 +19,8 @@ pub fn combine_results<T, E, F>(
 ) -> Result<T, E>
 where
     F: FnOnce(T, T) -> T,
-{
-    r1.and_then(|v1| r2.map(|v2| f(v1, v2)))
+ {
+    todo!("Combine two Results using a combining function.")
 }
 
 #[cfg(test)]

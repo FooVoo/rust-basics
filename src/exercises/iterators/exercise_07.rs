@@ -8,30 +8,27 @@
 
 /// Find the first even number.
 pub fn find_first_even(numbers: &[i32]) -> Option<i32> {
-    numbers.iter().find(|&&n| n % 2 == 0).copied()
+    todo!("Implement find_first_even")
 }
 
 /// Find the position of the first negative number.
 pub fn find_negative_position(numbers: &[i32]) -> Option<usize> {
-    numbers.iter().position(|&n| n < 0)
+    todo!("Implement find_negative_position")
 }
 
 /// Check if all numbers are positive.
 pub fn all_positive(numbers: &[i32]) -> bool {
-    numbers.iter().all(|&n| n > 0)
+    todo!("Implement all_positive")
 }
 
 /// Check if any string contains a target character.
 pub fn any_contains_char(strings: &[&str], target: char) -> bool {
-    strings.iter().any(|s| s.contains(target))
+    todo!("Implement any_contains_char")
 }
 
 /// Find the first string longer than the given length.
 pub fn find_long_string(strings: &[&str], min_length: usize) -> Option<String> {
-    strings
-        .iter()
-        .find(|s| s.len() > min_length)
-        .map(|&s| s.to_string())
+    todo!("Implement find_long_string")
 }
 
 #[cfg(test)]

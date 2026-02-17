@@ -15,37 +15,8 @@ where
     T: Send + 'static + Clone,
     U: Send + 'static,
     F: Fn(T) -> U + Send + Sync + 'static,
-{
-    if data.is_empty() || n_threads == 0 {
-        return Vec::new();
-    }
-
-    let f = std::sync::Arc::new(f);
-    let chunk_size = (data.len() + n_threads - 1) / n_threads;
-    
-    let handles: Vec<_> = data
-        .into_iter()
-        .enumerate()
-        .collect::<Vec<_>>()
-        .chunks(chunk_size)
-        .map(|chunk| {
-            let chunk = chunk.to_vec();
-            let f = std::sync::Arc::clone(&f);
-            thread::spawn(move || {
-                chunk.into_iter()
-                    .map(|(idx, item)| (idx, f(item)))
-                    .collect::<Vec<_>>()
-            })
-        })
-        .collect();
-
-    let mut results: Vec<(usize, U)> = handles
-        .into_iter()
-        .flat_map(|h| h.join().unwrap())
-        .collect();
-    
-    results.sort_by_key(|(idx, _)| *idx);
-    results.into_iter().map(|(_, val)| val).collect()
+ {
+    todo!("Return results in original order.")
 }
 
 #[cfg(test)]

@@ -15,32 +15,19 @@ pub enum Color {
 
 impl From<u8> for Color {
     fn from(value: u8) -> Self {
-        match value % 3 {
-            0 => Color::Red,
-            1 => Color::Green,
-            _ => Color::Blue,
-        }
+        todo!("Implement from")
     }
 }
 
 impl From<Color> for u8 {
     fn from(color: Color) -> Self {
-        match color {
-            Color::Red => 0,
-            Color::Green => 1,
-            Color::Blue => 2,
-        }
+        todo!("Implement from")
     }
 }
 
 /// Converts a string to a Color (case-insensitive)
 pub fn parse_color(s: &str) -> Option<Color> {
-    match s.to_lowercase().as_str() {
-        "red" => Some(Color::Red),
-        "green" => Some(Color::Green),
-        "blue" => Some(Color::Blue),
-        _ => None,
-    }
+    todo!("Implement parse_color")
 }
 
 #[cfg(test)]

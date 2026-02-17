@@ -21,7 +21,7 @@ where
 {
     /// Creates a new enumerated iterator.
     pub fn new(iter: I) -> Self {
-        Enumerated { iter, index: 0 }
+        todo!("Implement new")
     }
 }
 
@@ -32,11 +32,7 @@ where
     type Item = (usize, T);
 
     fn next(&mut self) -> Option<Self::Item> {
-        self.iter.next().map(|item| {
-            let current_index = self.index;
-            self.index += 1;
-            (current_index, item)
-        })
+        todo!("Implement next")
     }
 }
 
@@ -58,11 +54,7 @@ where
 {
     /// Creates a new TakeWhile iterator.
     pub fn new(iter: I, predicate: F) -> Self {
-        TakeWhile {
-            iter,
-            predicate,
-            done: false,
-        }
+        todo!("Implement new")
     }
 }
 
@@ -74,17 +66,7 @@ where
     type Item = T;
 
     fn next(&mut self) -> Option<Self::Item> {
-        if self.done {
-            return None;
-        }
-        
-        match self.iter.next() {
-            Some(item) if (self.predicate)(&item) => Some(item),
-            _ => {
-                self.done = true;
-                None
-            }
-        }
+        todo!("Implement next")
     }
 }
 
@@ -92,8 +74,8 @@ where
 pub fn enumerate<I, T>(iter: I) -> Enumerated<I, T>
 where
     I: Iterator<Item = T>,
-{
-    Enumerated::new(iter)
+ {
+    todo!("Helper function to create an enumerated iterator.")
 }
 
 /// Helper function to create a take_while iterator.
@@ -101,8 +83,8 @@ pub fn take_while<I, T, F>(iter: I, predicate: F) -> TakeWhile<I, T, F>
 where
     I: Iterator<Item = T>,
     F: FnMut(&T) -> bool,
-{
-    TakeWhile::new(iter, predicate)
+ {
+    todo!("Helper function to create a take_while iterator.")
 }
 
 #[cfg(test)]

@@ -12,38 +12,34 @@ pub struct TextAnalyzer<'a> {
 
 impl<'a> TextAnalyzer<'a> {
     pub fn new(text: &'a str) -> Self {
-        TextAnalyzer { text }
+        todo!("Implement new")
     }
     
     pub fn get_text(&self) -> &str {
-        self.text
+        todo!("Implement get_text")
     }
     
     pub fn find_word(&self, word: &str) -> Option<usize> {
-        self.text.find(word)
+        todo!("Implement find_word")
     }
     
     pub fn get_line(&self, n: usize) -> Option<&str> {
-        self.text.lines().nth(n)
+        todo!("Implement get_line")
     }
     
     pub fn first_sentence(&self) -> &str {
-        if let Some(pos) = self.text.find('.') {
-            &self.text[..=pos]
-        } else {
-            self.text
-        }
+        todo!("Implement first_sentence")
     }
 }
 
 /// Count lines in text.
 pub fn count_lines(analyzer: &TextAnalyzer) -> usize {
-    analyzer.get_text().lines().count()
+    todo!("Implement count_lines")
 }
 
 /// Get all words from text.
 pub fn extract_words(text: &str) -> Vec<&str> {
-    text.split_whitespace().collect()
+    todo!("Implement extract_words")
 }
 
 #[cfg(test)]

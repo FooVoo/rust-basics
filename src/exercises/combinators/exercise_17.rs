@@ -8,33 +8,12 @@
 
 /// Parse, validate range, and compute.
 pub fn parse_validate_compute(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|_| format!("Parse error: '{}'", s))
-        .and_then(|x| {
-            if x >= 0 && x <= 100 {
-                Ok(x)
-            } else {
-                Err(format!("Value {} out of range [0, 100]", x))
-            }
-        })
-        .map(|x| x * x)
+    todo!("Implement parse_validate_compute")
 }
 
 /// Parse two values, validate, and combine.
 pub fn parse_and_max(a: &str, b: &str) -> Result<i32, String> {
-    let parse_positive = |s: &str| -> Result<i32, String> {
-        s.parse::<i32>()
-            .map_err(|_| format!("Parse error: '{}'", s))
-            .and_then(|x| {
-                if x > 0 {
-                    Ok(x)
-                } else {
-                    Err(format!("Value must be positive: {}", x))
-                }
-            })
-    };
-
-    parse_positive(a).and_then(|x| parse_positive(b).map(|y| x.max(y)))
+    todo!("Implement parse_and_max")
 }
 
 #[cfg(test)]

@@ -12,15 +12,7 @@ use std::thread;
 /// Spawn a thread that sends numbers 0..n through a channel.
 /// Collect and return all received numbers.
 pub fn channel_numbers(n: i32) -> Vec<i32> {
-    let (tx, rx) = mpsc::channel();
-
-    thread::spawn(move || {
-        for i in 0..n {
-            tx.send(i).unwrap();
-        }
-    });
-
-    rx.iter().collect()
+    todo!("Implement channel_numbers")
 }
 
 #[cfg(test)]

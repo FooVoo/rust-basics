@@ -15,11 +15,11 @@ pub struct UppercasePlugin;
 
 impl Plugin for UppercasePlugin {
     fn name(&self) -> &str {
-        "uppercase"
+        todo!("Implement name")
     }
 
     fn execute(&self, input: &str) -> String {
-        input.to_uppercase()
+        todo!("Implement execute")
     }
 }
 
@@ -27,11 +27,11 @@ pub struct ReversePlugin;
 
 impl Plugin for ReversePlugin {
     fn name(&self) -> &str {
-        "reverse"
+        todo!("Implement name")
     }
 
     fn execute(&self, input: &str) -> String {
-        input.chars().rev().collect()
+        todo!("Implement execute")
     }
 }
 
@@ -41,17 +41,17 @@ pub struct RepeatPlugin {
 
 impl RepeatPlugin {
     pub fn new(times: usize) -> Self {
-        RepeatPlugin { times }
+        todo!("Implement new")
     }
 }
 
 impl Plugin for RepeatPlugin {
     fn name(&self) -> &str {
-        "repeat"
+        todo!("Implement name")
     }
 
     fn execute(&self, input: &str) -> String {
-        input.repeat(self.times)
+        todo!("Implement execute")
     }
 }
 
@@ -62,35 +62,27 @@ pub struct PluginManager {
 
 impl PluginManager {
     pub fn new() -> Self {
-        PluginManager {
-            plugins: Vec::new(),
-        }
+        todo!("Implement new")
     }
 
     pub fn register(&mut self, plugin: Box<dyn Plugin>) {
-        self.plugins.push(plugin);
+        todo!("Implement register")
     }
 
     pub fn execute(&self, plugin_name: &str, input: &str) -> Option<String> {
-        self.plugins
-            .iter()
-            .find(|p| p.name() == plugin_name)
-            .map(|p| p.execute(input))
+        todo!("Implement execute")
     }
 
     pub fn execute_all(&self, input: &str) -> Vec<(String, String)> {
-        self.plugins
-            .iter()
-            .map(|p| (p.name().to_string(), p.execute(input)))
-            .collect()
+        todo!("Implement execute_all")
     }
 
     pub fn plugin_count(&self) -> usize {
-        self.plugins.len()
+        todo!("Implement plugin_count")
     }
 
     pub fn list_plugins(&self) -> Vec<String> {
-        self.plugins.iter().map(|p| p.name().to_string()).collect()
+        todo!("Implement list_plugins")
     }
 }
 
@@ -103,14 +95,12 @@ impl BoxedFunction {
     pub fn new<F>(func: F) -> Self
     where
         F: Fn(i32) -> i32 + 'static,
-    {
-        BoxedFunction {
-            func: Box::new(func),
-        }
+     {
+        todo!("Implement new")
     }
 
     pub fn call(&self, input: i32) -> i32 {
-        (self.func)(input)
+        todo!("Implement call")
     }
 }
 

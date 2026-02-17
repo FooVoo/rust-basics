@@ -21,31 +21,21 @@ impl<T, E> ResultInspect<T, E> for Result<T, E> {
     fn inspect_ok<F>(self, f: F) -> Self
     where
         F: FnOnce(&T),
-    {
-        if let Ok(ref value) = self {
-            f(value);
-        }
-        self
+     {
+        todo!("Implement inspect_ok")
     }
 
     fn inspect_err<F>(self, f: F) -> Self
     where
         F: FnOnce(&E),
-    {
-        if let Err(ref error) = self {
-            f(error);
-        }
-        self
+     {
+        todo!("Implement inspect_err")
     }
 }
 
 /// Process with inspection at each step.
 pub fn parse_with_inspection(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map_err(|e| e.to_string())
-        .inspect_err(|e| eprintln!("Parse error: {}", e))
-        .map(|x| x * 2)
-        .inspect_ok(|x| println!("Doubled: {}", x))
+    todo!("Implement parse_with_inspection")
 }
 
 #[cfg(test)]

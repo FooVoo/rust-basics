@@ -8,31 +8,22 @@
 
 /// Return a static string.
 pub fn get_greeting() -> &'static str {
-    "Hello, Rust!"
+    todo!("Implement get_greeting")
 }
 
 /// Choose between a static string and a reference based on condition.
 pub fn choose_string<'a>(use_static: bool, dynamic: &'a str) -> &'a str {
-    if use_static {
-        "static string"
-    } else {
-        dynamic
-    }
+    todo!("Implement choose_string")
 }
 
 /// Create a string with proper lifetime management.
 pub fn format_name(first: &str, last: &str) -> String {
-    format!("{} {}", first, last)
+    todo!("Implement format_name")
 }
 
 /// Return the appropriate error message.
 pub fn get_error_message(code: i32) -> &'static str {
-    match code {
-        404 => "Not Found",
-        500 => "Internal Server Error",
-        403 => "Forbidden",
-        _ => "Unknown Error",
-    }
+    todo!("Implement get_error_message")
 }
 
 #[cfg(test)]

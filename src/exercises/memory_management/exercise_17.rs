@@ -13,50 +13,35 @@ pub struct Node {
 
 impl Node {
     pub fn new(value: i32) -> Self {
-        Node {
-            value,
-            children: Vec::new(),
-        }
+        todo!("Implement new")
     }
     
     pub fn add_child(&mut self, child: Node) {
-        self.children.push(child);
+        todo!("Implement add_child")
     }
     
     pub fn value(&self) -> i32 {
-        self.value
+        todo!("Implement value")
     }
     
     pub fn children(&self) -> &[Node] {
-        &self.children
+        todo!("Implement children")
     }
 }
 
 /// Sum all values in a tree.
 pub fn sum_tree(node: &Node) -> i32 {
-    let mut sum = node.value;
-    for child in &node.children {
-        sum += sum_tree(child);
-    }
-    sum
+    todo!("Implement sum_tree")
 }
 
 /// Count total nodes in tree.
 pub fn count_nodes(node: &Node) -> usize {
-    let mut count = 1;
-    for child in &node.children {
-        count += count_nodes(child);
-    }
-    count
+    todo!("Implement count_nodes")
 }
 
 /// Find maximum value in tree.
 pub fn max_value(node: &Node) -> i32 {
-    let mut max = node.value;
-    for child in &node.children {
-        max = max.max(max_value(child));
-    }
-    max
+    todo!("Implement max_value")
 }
 
 #[cfg(test)]

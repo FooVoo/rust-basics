@@ -16,49 +16,21 @@ struct SpinLock {
 
 impl SpinLock {
     fn new() -> Self {
-        SpinLock {
-            locked: AtomicBool::new(false),
-        }
+        todo!("Implement new")
     }
 
     fn lock(&self) {
-        while self.locked.compare_exchange(false, true, Ordering::Acquire, Ordering::Relaxed).is_err() {
-            while self.locked.load(Ordering::Relaxed) {
-                std::hint::spin_loop();
-            }
-        }
+        todo!("Implement lock")
     }
 
     fn unlock(&self) {
-        self.locked.store(false, Ordering::Release);
+        todo!("Implement unlock")
     }
 }
 
 /// Use a spinlock to protect a counter.
 pub fn spinlock_counter(n_threads: usize, increments_per_thread: usize) -> usize {
-    let lock = Arc::new(SpinLock::new());
-    let counter = Arc::new(AtomicUsize::new(0));
-
-    let handles: Vec<_> = (0..n_threads)
-        .map(|_| {
-            let lock = Arc::clone(&lock);
-            let counter = Arc::clone(&counter);
-            thread::spawn(move || {
-                for _ in 0..increments_per_thread {
-                    lock.lock();
-                    let val = counter.load(Ordering::Relaxed);
-                    counter.store(val + 1, Ordering::Relaxed);
-                    lock.unlock();
-                }
-            })
-        })
-        .collect();
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    counter.load(Ordering::SeqCst)
+    todo!("Implement spinlock_counter")
 }
 
 #[cfg(test)]

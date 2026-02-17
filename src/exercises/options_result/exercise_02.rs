@@ -9,13 +9,13 @@
 /// Get the last element of a non-empty slice using unwrap.
 /// This function assumes the slice is non-empty.
 pub fn get_last_unwrap(numbers: &[i32]) -> i32 {
-    *numbers.last().unwrap()
+    todo!("Implement get_last_unwrap")
 }
 
 /// Get the last element of a non-empty slice using expect.
 /// This function assumes the slice is non-empty.
 pub fn get_last_expect(numbers: &[i32]) -> i32 {
-    *numbers.last().expect("Slice should not be empty")
+    todo!("Implement get_last_expect")
 }
 
 #[cfg(test)]

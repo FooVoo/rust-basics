@@ -17,11 +17,11 @@ pub struct Circle {
 
 impl Shape for Circle {
     fn area(&self) -> f64 {
-        std::f64::consts::PI * self.radius * self.radius
+        todo!("Implement area")
     }
 
     fn name(&self) -> &str {
-        "Circle"
+        todo!("Implement name")
     }
 }
 
@@ -32,26 +32,22 @@ pub struct Rectangle {
 
 impl Shape for Rectangle {
     fn area(&self) -> f64 {
-        self.width * self.height
+        todo!("Implement area")
     }
 
     fn name(&self) -> &str {
-        "Rectangle"
+        todo!("Implement name")
     }
 }
 
 /// Create a vector of boxed shapes.
 pub fn create_shapes() -> Vec<Box<dyn Shape>> {
-    vec![
-        Box::new(Circle { radius: 5.0 }),
-        Box::new(Rectangle { width: 4.0, height: 6.0 }),
-        Box::new(Circle { radius: 3.0 }),
-    ]
+    todo!("Implement create_shapes")
 }
 
 /// Calculate total area of all shapes.
 pub fn total_area(shapes: &[Box<dyn Shape>]) -> f64 {
-    shapes.iter().map(|s| s.area()).sum()
+    todo!("Implement total_area")
 }
 
 #[cfg(test)]

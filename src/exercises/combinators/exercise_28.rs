@@ -11,8 +11,8 @@ pub fn bind_chain<T, U, V>(
     value: Option<T>,
     f: impl FnOnce(T) -> Option<U>,
     g: impl FnOnce(U) -> Option<V>,
-) -> Option<V> {
-    value.and_then(f).and_then(g)
+) -> Option<V>  {
+    todo!("Bind operation for chaining optional computations.")
 }
 
 /// Triple bind composition.
@@ -21,16 +21,16 @@ pub fn triple_bind<T, U, V, W>(
     f: impl FnOnce(T) -> Option<U>,
     g: impl FnOnce(U) -> Option<V>,
     h: impl FnOnce(V) -> Option<W>,
-) -> Option<W> {
-    value.and_then(f).and_then(g).and_then(h)
+) -> Option<W>  {
+    todo!("Triple bind composition.")
 }
 
 /// Kleisli composition - compose two functions that return Options.
 pub fn kleisli_compose<T, U, V>(
     f: impl FnOnce(T) -> Option<U>,
     g: impl FnOnce(U) -> Option<V>,
-) -> impl FnOnce(T) -> Option<V> {
-    move |x| f(x).and_then(g)
+) -> impl FnOnce(T) -> Option<V>  {
+    todo!("Kleisli composition - compose two functions that return Options.")
 }
 
 #[cfg(test)]

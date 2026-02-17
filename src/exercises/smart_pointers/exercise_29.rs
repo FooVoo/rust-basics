@@ -17,42 +17,24 @@ pub struct Arena {
 
 impl Arena {
     pub fn new(capacity: usize) -> Self {
-        Arena {
-            buffer: vec![0; capacity],
-            offset: 0,
-        }
+        todo!("Implement new")
     }
 
     /// Allocate space for a value of type T.
     pub fn alloc<T>(&mut self, value: T) -> Option<&mut T> {
-        let size = std::mem::size_of::<T>();
-        let align = std::mem::align_of::<T>();
-
-        // Align the offset
-        let offset = (self.offset + align - 1) & !(align - 1);
-
-        if offset + size > self.buffer.len() {
-            return None;
-        }
-
-        unsafe {
-            let ptr = self.buffer.as_mut_ptr().add(offset) as *mut T;
-            ptr.write(value);
-            self.offset = offset + size;
-            Some(&mut *ptr)
-        }
+        todo!("Implement alloc")
     }
 
     pub fn used(&self) -> usize {
-        self.offset
+        todo!("Implement used")
     }
 
     pub fn capacity(&self) -> usize {
-        self.buffer.len()
+        todo!("Implement capacity")
     }
 
     pub fn reset(&mut self) {
-        self.offset = 0;
+        todo!("Implement reset")
     }
 }
 
@@ -69,46 +51,33 @@ struct Node<T> {
 
 impl<T> RawLinkedList<T> {
     pub fn new() -> Self {
-        RawLinkedList { head: None, len: 0 }
+        todo!("Implement new")
     }
 
     pub fn push(&mut self, value: T) {
-        unsafe {
-            let new_node = Box::new(Node {
-                value,
-                next: self.head,
-            });
-            let new_node_ptr = NonNull::new_unchecked(Box::into_raw(new_node));
-            self.head = Some(new_node_ptr);
-            self.len += 1;
-        }
+        todo!("Implement push")
     }
 
     pub fn pop(&mut self) -> Option<T> {
-        self.head.map(|head_ptr| unsafe {
-            let head = Box::from_raw(head_ptr.as_ptr());
-            self.head = head.next;
-            self.len -= 1;
-            head.value
-        })
+        todo!("Implement pop")
     }
 
     pub fn len(&self) -> usize {
-        self.len
+        todo!("Implement len")
     }
 
     pub fn is_empty(&self) -> bool {
-        self.len == 0
+        todo!("Implement is_empty")
     }
 
     pub fn peek(&self) -> Option<&T> {
-        self.head.map(|head_ptr| unsafe { &(*head_ptr.as_ptr()).value })
+        todo!("Implement peek")
     }
 }
 
 impl<T> Drop for RawLinkedList<T> {
     fn drop(&mut self) {
-        while self.pop().is_some() {}
+        todo!("Implement drop")
     }
 }
 

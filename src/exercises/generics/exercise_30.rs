@@ -24,7 +24,7 @@ pub struct SimpleContainer<T> {
 
 impl<T> SimpleContainer<T> {
     pub fn new(value: T) -> Self {
-        SimpleContainer { value }
+        todo!("Implement new")
     }
 }
 
@@ -32,7 +32,7 @@ impl<T> Container for SimpleContainer<T> {
     type Item<'a> = &'a T where T: 'a;
 
     fn get<'a>(&'a self) -> Self::Item<'a> {
-        &self.value
+        todo!("Implement get")
     }
 }
 
@@ -55,15 +55,15 @@ pub struct VecWrapper<T> {
 
 impl<T> VecWrapper<T> {
     pub fn new(items: Vec<T>) -> Self {
-        VecWrapper { items }
+        todo!("Implement new")
     }
 
     pub fn len(&self) -> usize {
-        self.items.len()
+        todo!("Implement len")
     }
 
     pub fn is_empty(&self) -> bool {
-        self.items.is_empty()
+        todo!("Implement is_empty")
     }
 }
 
@@ -72,7 +72,7 @@ impl<T> Collection for VecWrapper<T> {
     type Iter<'a> = std::slice::Iter<'a, T> where T: 'a;
 
     fn iter<'a>(&'a self) -> Self::Iter<'a> {
-        self.items.iter()
+        todo!("Implement iter")
     }
 }
 
@@ -93,8 +93,8 @@ impl<T> Mappable for Vec<T> {
     fn map<'a, U, F>(&'a self, f: F) -> Vec<U>
     where
         F: Fn(Self::Item<'a>) -> U,
-    {
-        self.iter().map(f).collect()
+     {
+        todo!("Implement map")
     }
 }
 
@@ -115,7 +115,7 @@ pub struct CounterStreamer {
 
 impl CounterStreamer {
     pub fn new(max: i32) -> Self {
-        CounterStreamer { current: 0, max }
+        todo!("Implement new")
     }
 }
 
@@ -123,13 +123,7 @@ impl Streamer for CounterStreamer {
     type Item<'a> = i32;
 
     fn next<'a>(&'a mut self) -> Option<Self::Item<'a>> {
-        if self.current < self.max {
-            let value = self.current;
-            self.current += 1;
-            Some(value)
-        } else {
-            None
-        }
+        todo!("Implement next")
     }
 }
 
@@ -150,7 +144,7 @@ pub struct SmartContainer<T> {
 
 impl<T> SmartContainer<T> {
     pub fn new(inner: T, metadata: String) -> Self {
-        SmartContainer { inner, metadata }
+        todo!("Implement new")
     }
 }
 
@@ -163,20 +157,17 @@ impl<T> Borrowable for SmartContainer<T> {
     type Borrowed<'a> = BorrowedContainer<'a, T> where T: 'a;
 
     fn borrow<'a>(&'a self) -> Self::Borrowed<'a> {
-        BorrowedContainer {
-            inner: &self.inner,
-            metadata: &self.metadata,
-        }
+        todo!("Implement borrow")
     }
 }
 
 impl<'a, T> BorrowedContainer<'a, T> {
     pub fn inner(&self) -> &T {
-        self.inner
+        todo!("Implement inner")
     }
 
     pub fn metadata(&self) -> &str {
-        self.metadata
+        todo!("Implement metadata")
     }
 }
 
@@ -229,7 +220,7 @@ impl<T> Selector<T> for RefSelector {
     type Selected<'a> = &'a T where T: 'a;
 
     fn select<'a>(&'a self, value: &'a T) -> Self::Selected<'a> {
-        value
+        todo!("Implement select")
     }
 }
 

@@ -23,24 +23,17 @@ where
 {
     /// Creates a new lazy value.
     pub fn new(func: F) -> Self {
-        Lazy {
-            func: Some(func),
-            value: None,
-        }
+        todo!("Implement new")
     }
 
     /// Forces evaluation and returns a reference to the value.
     pub fn force(&mut self) -> &T {
-        if self.value.is_none() {
-            let func = self.func.take().unwrap();
-            self.value = Some(func());
-        }
-        self.value.as_ref().unwrap()
+        todo!("Implement force")
     }
 
     /// Checks if the value has been computed.
     pub fn is_evaluated(&self) -> bool {
-        self.value.is_some()
+        todo!("Implement is_evaluated")
     }
 }
 
@@ -58,51 +51,32 @@ enum DeferredState<T> {
 impl<T> Deferred<T> {
     /// Creates a new pending deferred.
     pub fn pending() -> Self {
-        Deferred {
-            state: DeferredState::Pending,
-        }
+        todo!("Implement pending")
     }
 
     /// Creates a deferred with a ready value.
     pub fn ready(value: T) -> Self {
-        Deferred {
-            state: DeferredState::Ready(value),
-        }
+        todo!("Implement ready")
     }
 
     /// Polls the deferred for a value.
     pub fn poll(&mut self) -> Poll<&T> {
-        match &self.state {
-            DeferredState::Ready(ref value) => Poll::Ready(value),
-            _ => Poll::Pending,
-        }
+        todo!("Implement poll")
     }
 
     /// Sets the value, transitioning from Pending to Ready.
     pub fn set(&mut self, value: T) -> Result<(), &'static str> {
-        match self.state {
-            DeferredState::Pending => {
-                self.state = DeferredState::Ready(value);
-                Ok(())
-            }
-            _ => Err("Deferred already has a value"),
-        }
+        todo!("Implement set")
     }
 
     /// Takes the value out, consuming it.
     pub fn take(&mut self) -> Option<T> {
-        match std::mem::replace(&mut self.state, DeferredState::Consumed) {
-            DeferredState::Ready(value) => Some(value),
-            other => {
-                self.state = other;
-                None
-            }
-        }
+        todo!("Implement take")
     }
 
     /// Checks if the deferred is ready.
     pub fn is_ready(&self) -> bool {
-        matches!(self.state, DeferredState::Ready(_))
+        todo!("Implement is_ready")
     }
 }
 
@@ -122,18 +96,12 @@ where
 {
     /// Creates a new chain.
     pub fn new(value: T, func: F) -> Self {
-        Chain {
-            first: Some(value),
-            func: Some(func),
-            _phantom: std::marker::PhantomData,
-        }
+        todo!("Implement new")
     }
 
     /// Executes the chain and returns the result.
     pub fn run(mut self) -> U {
-        let value = self.first.take().unwrap();
-        let func = self.func.take().unwrap();
-        func(value)
+        todo!("Implement run")
     }
 }
 

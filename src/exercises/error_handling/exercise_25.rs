@@ -16,10 +16,7 @@ pub enum LookupError {
 
 impl std::fmt::Display for LookupError {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            LookupError::KeyNotFound(key) => write!(f, "Key not found: {}", key),
-            LookupError::InvalidValue(msg) => write!(f, "Invalid value: {}", msg),
-        }
+        todo!("Implement fmt")
     }
 }
 
@@ -30,12 +27,8 @@ pub fn nested_lookup(
     data: &HashMap<String, HashMap<String, String>>,
     outer_key: &str,
     inner_key: &str,
-) -> Result<String, LookupError> {
-    data.get(outer_key)
-        .ok_or_else(|| LookupError::KeyNotFound(outer_key.to_string()))?
-        .get(inner_key)
-        .ok_or_else(|| LookupError::KeyNotFound(inner_key.to_string()))
-        .map(|s| s.clone())
+) -> Result<String, LookupError>  {
+    todo!("Look up nested values in a map structure.")
 }
 
 /// Parse a nested value as an integer.
@@ -43,34 +36,16 @@ pub fn nested_lookup_and_parse(
     data: &HashMap<String, HashMap<String, String>>,
     outer_key: &str,
     inner_key: &str,
-) -> Result<i32, LookupError> {
-    let value = nested_lookup(data, outer_key, inner_key)?;
-    
-    value
-        .parse::<i32>()
-        .map_err(|e| LookupError::InvalidValue(format!("Cannot parse '{}': {}", value, e)))
+) -> Result<i32, LookupError>  {
+    todo!("Parse a nested value as an integer.")
 }
 
 /// Get multiple nested values, collecting all errors.
 pub fn multi_nested_lookup(
     data: &HashMap<String, HashMap<String, String>>,
     queries: &[(&str, &str)],
-) -> Result<Vec<String>, Vec<LookupError>> {
-    let mut results = Vec::new();
-    let mut errors = Vec::new();
-    
-    for (outer, inner) in queries {
-        match nested_lookup(data, outer, inner) {
-            Ok(value) => results.push(value),
-            Err(e) => errors.push(e),
-        }
-    }
-    
-    if errors.is_empty() {
-        Ok(results)
-    } else {
-        Err(errors)
-    }
+) -> Result<Vec<String>, Vec<LookupError>>  {
+    todo!("Get multiple nested values, collecting all errors.")
 }
 
 /// Chain multiple lookups together.
@@ -80,10 +55,8 @@ pub fn chain_lookups(
     inner1: &str,
     outer2: &str,
     inner2: &str,
-) -> Result<(String, String), LookupError> {
-    let val1 = nested_lookup(data, outer1, inner1)?;
-    let val2 = nested_lookup(data, outer2, inner2)?;
-    Ok((val1, val2))
+) -> Result<(String, String), LookupError>  {
+    todo!("Chain multiple lookups together.")
 }
 
 #[cfg(test)]

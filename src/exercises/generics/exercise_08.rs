@@ -10,15 +10,15 @@ use std::ops::Add;
 
 /// Adds two values together.
 pub fn add<T: Add<Output = T>>(a: T, b: T) -> T {
-    a + b
+    todo!("Implement add")
 }
 
 /// Sums all elements in a slice.
 pub fn sum_all<T>(slice: &[T]) -> T
 where
     T: Add<Output = T> + Copy + Default,
-{
-    slice.iter().copied().fold(T::default(), |acc, x| acc + x)
+ {
+    todo!("Sums all elements in a slice.")
 }
 
 /// A generic accumulator for addable types.
@@ -35,22 +35,22 @@ where
 {
     /// Creates a new Accumulator with an initial value.
     pub fn new(initial: T) -> Self {
-        Accumulator { total: initial }
+        todo!("Implement new")
     }
 
     /// Adds a value to the accumulator.
     pub fn add(&mut self, value: T) {
-        self.total = self.total + value;
+        todo!("Implement add")
     }
 
     /// Returns the current total.
     pub fn total(&self) -> T {
-        self.total
+        todo!("Implement total")
     }
 
     /// Resets to a new value.
     pub fn reset(&mut self, value: T) {
-        self.total = value;
+        todo!("Implement reset")
     }
 }
 
@@ -70,8 +70,9 @@ mod tests {
 
     #[test]
     fn test_add_strings() {
-        let result = add("hello".to_string(), " world".to_string());
-        assert_eq!(result, "hello world");
+        // Note: String doesn't implement Add<String>, only Add<&str>
+        // This test is removed as the generic add function requires Add<Output = T>
+        // For strings, use format! or push_str instead
     }
 
     #[test]

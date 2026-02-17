@@ -17,11 +17,11 @@ pub struct Dog {
 
 impl Animal for Dog {
     fn speak(&self) -> String {
-        "Woof!".to_string()
+        todo!("Implement speak")
     }
     
     fn name(&self) -> &str {
-        &self.name
+        todo!("Implement name")
     }
 }
 
@@ -31,11 +31,11 @@ pub struct Cat {
 
 impl Animal for Cat {
     fn speak(&self) -> String {
-        "Meow!".to_string()
+        todo!("Implement speak")
     }
     
     fn name(&self) -> &str {
-        &self.name
+        todo!("Implement name")
     }
 }
 
@@ -45,28 +45,22 @@ pub struct Bird {
 
 impl Animal for Bird {
     fn speak(&self) -> String {
-        "Tweet!".to_string()
+        todo!("Implement speak")
     }
     
     fn name(&self) -> &str {
-        &self.name
+        todo!("Implement name")
     }
 }
 
 /// Create a vector of different animals using trait objects
 pub fn create_zoo() -> Vec<Box<dyn Animal>> {
-    vec![
-        Box::new(Dog { name: "Rex".to_string() }),
-        Box::new(Cat { name: "Whiskers".to_string() }),
-        Box::new(Bird { name: "Tweety".to_string() }),
-    ]
+    todo!("Implement create_zoo")
 }
 
 /// Make all animals in the zoo speak
 pub fn zoo_chorus(animals: &[Box<dyn Animal>]) -> Vec<String> {
-    animals.iter().map(|animal| {
-        format!("{} says: {}", animal.name(), animal.speak())
-    }).collect()
+    todo!("Implement zoo_chorus")
 }
 
 #[cfg(test)]

@@ -15,7 +15,7 @@ pub struct StepRange {
 
 impl StepRange {
     pub fn new(start: i32, end: i32, step: i32) -> Self {
-        StepRange { start, end, step }
+        todo!("Implement new")
     }
 }
 
@@ -23,51 +23,24 @@ impl Iterator for StepRange {
     type Item = i32;
     
     fn next(&mut self) -> Option<Self::Item> {
-        if (self.step > 0 && self.start < self.end) || (self.step < 0 && self.start > self.end) {
-            let current = self.start;
-            self.start += self.step;
-            Some(current)
-        } else {
-            None
-        }
+        todo!("Implement next")
     }
 }
 
 impl DoubleEndedIterator for StepRange {
     fn next_back(&mut self) -> Option<Self::Item> {
-        if (self.step > 0 && self.start < self.end) || (self.step < 0 && self.start > self.end) {
-            // Calculate the last value that would be yielded
-            let steps = ((self.end - self.start - 1) / self.step) * self.step;
-            let last = self.start + steps;
-            
-            if (self.step > 0 && last >= self.start) || (self.step < 0 && last <= self.start) {
-                self.end = last;
-                Some(last)
-            } else {
-                None
-            }
-        } else {
-            None
-        }
+        todo!("Implement next_back")
     }
 }
 
 /// Palindrome checker using double-ended iteration.
 pub fn is_palindrome<T: PartialEq>(items: &[T]) -> bool {
-    let mut iter = items.iter();
-    
-    while let (Some(front), Some(back)) = (iter.next(), iter.next_back()) {
-        if front != back {
-            return false;
-        }
-    }
-    
-    true
+    todo!("Implement is_palindrome")
 }
 
 /// Reverse and merge two slices using double-ended iteration.
 pub fn reverse_merge(a: &[i32], b: &[i32]) -> Vec<i32> {
-    a.iter().rev().chain(b.iter().rev()).copied().collect()
+    todo!("Implement reverse_merge")
 }
 
 #[cfg(test)]

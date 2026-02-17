@@ -8,17 +8,12 @@
 
 /// Parse with fallback based on error.
 pub fn parse_with_recovery(s: &str) -> i32 {
-    s.parse::<i32>().unwrap_or_else(|_| s.len() as i32)
+    todo!("Implement parse_with_recovery")
 }
 
 /// Divide with fallback to zero on error.
 pub fn divide_or_zero(a: i32, b: i32) -> i32 {
-    if b == 0 {
-        Err("Division by zero")
-    } else {
-        Ok(a / b)
-    }
-    .unwrap_or_else(|_| 0)
+    todo!("Implement divide_or_zero")
 }
 
 #[cfg(test)]

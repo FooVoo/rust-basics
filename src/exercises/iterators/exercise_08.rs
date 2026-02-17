@@ -8,39 +8,27 @@
 
 /// Get the first n elements.
 pub fn take_first(numbers: &[i32], n: usize) -> Vec<i32> {
-    numbers.iter().take(n).copied().collect()
+    todo!("Implement take_first")
 }
 
 /// Skip the first n elements and collect the rest.
 pub fn skip_first(numbers: &[i32], n: usize) -> Vec<i32> {
-    numbers.iter().skip(n).copied().collect()
+    todo!("Implement skip_first")
 }
 
 /// Take while condition is true.
 pub fn take_while_positive(numbers: &[i32]) -> Vec<i32> {
-    numbers.iter().take_while(|&&n| n > 0).copied().collect()
+    todo!("Implement take_while_positive")
 }
 
 /// Skip first n, then take next m elements.
 pub fn skip_and_take(numbers: &[i32], skip_count: usize, take_count: usize) -> Vec<i32> {
-    numbers
-        .iter()
-        .skip(skip_count)
-        .take(take_count)
-        .copied()
-        .collect()
+    todo!("Implement skip_and_take")
 }
 
 /// Take every nth element.
 pub fn take_every_nth(numbers: &[i32], n: usize) -> Vec<i32> {
-    if n == 0 {
-        return Vec::new();
-    }
-    numbers
-        .iter()
-        .step_by(n)
-        .copied()
-        .collect()
+    todo!("Implement take_every_nth")
 }
 
 #[cfg(test)]

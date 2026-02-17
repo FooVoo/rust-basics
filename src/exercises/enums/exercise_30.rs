@@ -28,31 +28,22 @@ pub struct Document<State> {
 impl Document<Draft> {
     /// Creates a new draft document
     pub fn new() -> Self {
-        Document {
-            content: String::new(),
-            _state: PhantomData,
-        }
+        todo!("Implement new")
     }
 
     /// Creates a draft from existing content
     pub fn from_content(content: String) -> Self {
-        Document {
-            content,
-            _state: PhantomData,
-        }
+        todo!("Implement from_content")
     }
 
     /// Adds content to the draft
     pub fn add_content(&mut self, text: &str) {
-        self.content.push_str(text);
+        todo!("Implement add_content")
     }
 
     /// Submits the document for review
     pub fn submit_for_review(self) -> Document<PendingReview> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+        todo!("Implement submit_for_review")
     }
 }
 
@@ -60,23 +51,17 @@ impl Document<Draft> {
 impl Document<PendingReview> {
     /// Approves the document and publishes it
     pub fn approve(self) -> Document<Published> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+        todo!("Implement approve")
     }
 
     /// Rejects the document and returns it to draft
     pub fn reject(self) -> Document<Draft> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+        todo!("Implement reject")
     }
 
     /// Gets content for review (read-only)
     pub fn preview(&self) -> &str {
-        &self.content
+        todo!("Implement preview")
     }
 }
 
@@ -84,15 +69,12 @@ impl Document<PendingReview> {
 impl Document<Published> {
     /// Gets the published content
     pub fn content(&self) -> &str {
-        &self.content
+        todo!("Implement content")
     }
 
     /// Archives the published document (returns to draft for revision)
     pub fn archive(self) -> Document<Draft> {
-        Document {
-            content: self.content,
-            _state: PhantomData,
-        }
+        todo!("Implement archive")
     }
 }
 
@@ -118,50 +100,28 @@ pub struct ConnectionBuilder<Host, Auth> {
 impl ConnectionBuilder<NoHost, NoAuth> {
     /// Creates a new connection builder
     pub fn new() -> Self {
-        ConnectionBuilder {
-            host: None,
-            username: None,
-            password: None,
-            _host_state: PhantomData,
-            _auth_state: PhantomData,
-        }
+        todo!("Implement new")
     }
 }
 
 impl<Auth> ConnectionBuilder<NoHost, Auth> {
     /// Sets the host
     pub fn host(self, host: String) -> ConnectionBuilder<HasHost, Auth> {
-        ConnectionBuilder {
-            host: Some(host),
-            username: self.username,
-            password: self.password,
-            _host_state: PhantomData,
-            _auth_state: PhantomData,
-        }
+        todo!("Implement host")
     }
 }
 
 impl<Host> ConnectionBuilder<Host, NoAuth> {
     /// Sets authentication credentials
     pub fn auth(self, username: String, password: String) -> ConnectionBuilder<Host, HasAuth> {
-        ConnectionBuilder {
-            host: self.host,
-            username: Some(username),
-            password: Some(password),
-            _host_state: PhantomData,
-            _auth_state: PhantomData,
-        }
+        todo!("Implement auth")
     }
 }
 
 impl ConnectionBuilder<HasHost, HasAuth> {
     /// Builds the connection (only available when host and auth are set)
     pub fn build(self) -> Connection {
-        Connection {
-            host: self.host.unwrap(),
-            username: self.username.unwrap(),
-            password: self.password.unwrap(),
-        }
+        todo!("Implement build")
     }
 }
 
@@ -174,11 +134,11 @@ pub struct Connection {
 
 impl Connection {
     pub fn host(&self) -> &str {
-        &self.host
+        todo!("Implement host")
     }
 
     pub fn username(&self) -> &str {
-        &self.username
+        todo!("Implement username")
     }
 }
 

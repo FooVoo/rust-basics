@@ -11,37 +11,37 @@ use std::sync::Arc;
 
 /// Convert Box to Rc.
 pub fn box_to_rc<T>(boxed: Box<T>) -> Rc<T> {
-    Rc::from(boxed)
+    todo!("Implement box_to_rc")
 }
 
 /// Convert Box to Arc.
 pub fn box_to_arc<T>(boxed: Box<T>) -> Arc<T> {
-    Arc::from(boxed)
+    todo!("Implement box_to_arc")
 }
 
 /// Convert Vec to Box slice.
 pub fn vec_to_boxed_slice<T>(vec: Vec<T>) -> Box<[T]> {
-    vec.into_boxed_slice()
+    todo!("Implement vec_to_boxed_slice")
 }
 
 /// Convert String to Box str.
 pub fn string_to_boxed_str(s: String) -> Box<str> {
-    s.into_boxed_str()
+    todo!("Implement string_to_boxed_str")
 }
 
 /// Try to unwrap Rc if it's the only reference.
 pub fn try_unwrap_rc<T>(rc: Rc<T>) -> Result<T, Rc<T>> {
-    Rc::try_unwrap(rc)
+    todo!("Implement try_unwrap_rc")
 }
 
 /// Try to unwrap Arc if it's the only reference.
 pub fn try_unwrap_arc<T>(arc: Arc<T>) -> Result<T, Arc<T>> {
-    Arc::try_unwrap(arc)
+    todo!("Implement try_unwrap_arc")
 }
 
 /// Make Rc mutable if possible.
 pub fn make_rc_mut<T: Clone>(rc: &mut Rc<T>) -> &mut T {
-    Rc::make_mut(rc)
+    todo!("Implement make_rc_mut")
 }
 
 #[cfg(test)]

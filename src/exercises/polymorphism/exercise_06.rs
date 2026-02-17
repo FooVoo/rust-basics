@@ -17,7 +17,7 @@ pub struct Article {
 
 impl Summarizable for Article {
     fn summary(&self) -> String {
-        format!("Article: {} - {}", self.title, &self.content[..50.min(self.content.len())])
+        todo!("Implement summary")
     }
 }
 
@@ -28,23 +28,23 @@ pub struct Tweet {
 
 impl Summarizable for Tweet {
     fn summary(&self) -> String {
-        format!("@{}: {}", self.username, self.message)
+        todo!("Implement summary")
     }
 }
 
 /// Function that takes any type implementing Summarizable
 pub fn print_summary(item: &impl Summarizable) -> String {
-    format!("Summary: {}", item.summary())
+    todo!("Implement print_summary")
 }
 
 /// Alternative syntax using trait bounds
 pub fn get_summary<T: Summarizable>(item: &T) -> String {
-    item.summary()
+    todo!("Implement get_summary")
 }
 
 /// Function that takes multiple items with the same trait
 pub fn combine_summaries<T: Summarizable>(item1: &T, item2: &T) -> String {
-    format!("{} | {}", item1.summary(), item2.summary())
+    todo!("Implement combine_summaries")
 }
 
 #[cfg(test)]

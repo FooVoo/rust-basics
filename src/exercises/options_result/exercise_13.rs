@@ -8,9 +8,7 @@
 
 /// Parse two strings and add them using ?.
 pub fn parse_and_add(a: &str, b: &str) -> Result<i32, std::num::ParseIntError> {
-    let num_a = a.parse::<i32>()?;
-    let num_b = b.parse::<i32>()?;
-    Ok(num_a + num_b)
+    todo!("Implement parse_and_add")
 }
 
 /// Parse three strings and multiply them.
@@ -18,22 +16,13 @@ pub fn parse_and_multiply(
     a: &str,
     b: &str,
     c: &str,
-) -> Result<i32, std::num::ParseIntError> {
-    let num_a = a.parse::<i32>()?;
-    let num_b = b.parse::<i32>()?;
-    let num_c = c.parse::<i32>()?;
-    Ok(num_a * num_b * num_c)
+) -> Result<i32, std::num::ParseIntError>  {
+    todo!("Parse three strings and multiply them.")
 }
 
 /// Divide two parsed numbers.
 pub fn parse_and_divide(a: &str, b: &str) -> Result<i32, String> {
-    let num_a = a.parse::<i32>().map_err(|e| e.to_string())?;
-    let num_b = b.parse::<i32>().map_err(|e| e.to_string())?;
-    if num_b == 0 {
-        Err(String::from("Division by zero"))
-    } else {
-        Ok(num_a / num_b)
-    }
+    todo!("Implement parse_and_divide")
 }
 
 #[cfg(test)]

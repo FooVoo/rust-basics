@@ -8,15 +8,15 @@
 
 /// A generic function that safely gets the first element of a slice.
 pub fn first_element<T: Clone>(slice: &[T]) -> Option<T> {
-    slice.first().cloned()
+    todo!("Implement first_element")
 }
 
 /// A generic function that finds an element matching a predicate.
 pub fn find_by<T, F>(slice: &[T], predicate: F) -> Option<&T>
 where
     F: Fn(&T) -> bool,
-{
-    slice.iter().find(|item| predicate(item))
+ {
+    todo!("A generic function that finds an element matching a predicate.")
 }
 
 /// A custom Maybe type similar to Option.
@@ -30,29 +30,23 @@ impl<T> Maybe<T> {
     pub fn map<U, F>(self, f: F) -> Maybe<U>
     where
         F: FnOnce(T) -> U,
-    {
-        match self {
-            Maybe::Just(value) => Maybe::Just(f(value)),
-            Maybe::Nothing => Maybe::Nothing,
-        }
+     {
+        todo!("Maps a Maybe<T> to Maybe<U> by applying a function.")
     }
 
     /// Returns the contained value or a default.
     pub fn unwrap_or(self, default: T) -> T {
-        match self {
-            Maybe::Just(value) => value,
-            Maybe::Nothing => default,
-        }
+        todo!("Implement unwrap_or")
     }
 
     /// Returns true if the Maybe is Just.
     pub fn is_just(&self) -> bool {
-        matches!(self, Maybe::Just(_))
+        todo!("Implement is_just")
     }
 
     /// Returns true if the Maybe is Nothing.
     pub fn is_nothing(&self) -> bool {
-        matches!(self, Maybe::Nothing)
+        todo!("Implement is_nothing")
     }
 }
 

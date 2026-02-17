@@ -8,7 +8,7 @@
 
 /// Convert an Option<T> to Result<T, String>.
 pub fn option_to_result<T>(opt: Option<T>, error_msg: &str) -> Result<T, String> {
-    opt.ok_or_else(|| error_msg.to_string())
+    todo!("Implement option_to_result")
 }
 
 #[cfg(test)]

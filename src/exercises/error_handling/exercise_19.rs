@@ -14,12 +14,7 @@ pub enum RetryError<E> {
 
 impl<E: std::fmt::Display> std::fmt::Display for RetryError<E> {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            RetryError::MaxRetriesExceeded(errors) => {
-                write!(f, "Max retries exceeded after {} attempts", errors.len())
-            }
-            RetryError::PermanentError(e) => write!(f, "Permanent error: {}", e),
-        }
+        todo!("Implement fmt")
     }
 }
 
@@ -30,17 +25,8 @@ impl<E: std::fmt::Debug + std::fmt::Display> std::error::Error for RetryError<E>
 pub fn retry<T, E, F>(mut f: F, max_attempts: usize) -> Result<T, RetryError<E>>
 where
     F: FnMut() -> Result<T, E>,
-{
-    let mut errors = Vec::new();
-    
-    for _ in 0..max_attempts {
-        match f() {
-            Ok(value) => return Ok(value),
-            Err(e) => errors.push(e),
-        }
-    }
-    
-    Err(RetryError::MaxRetriesExceeded(errors))
+ {
+    todo!("Collect all errors and return them if all attempts fail.")
 }
 
 /// Retry with a predicate to determine if error is retryable.
@@ -52,22 +38,8 @@ pub fn retry_with_predicate<T, E, F, P>(
 where
     F: FnMut() -> Result<T, E>,
     P: Fn(&E) -> bool,
-{
-    let mut errors = Vec::new();
-    
-    for _ in 0..max_attempts {
-        match f() {
-            Ok(value) => return Ok(value),
-            Err(e) => {
-                if !is_retryable(&e) {
-                    return Err(RetryError::PermanentError(e));
-                }
-                errors.push(e);
-            }
-        }
-    }
-    
-    Err(RetryError::MaxRetriesExceeded(errors))
+ {
+    todo!("Implement retry_with_predicate")
 }
 
 #[cfg(test)]

@@ -19,42 +19,23 @@ pub enum Token {
 
 impl fmt::Display for Token {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            Token::Number(n) => write!(f, "{}", n),
-            Token::Plus => write!(f, "+"),
-            Token::Minus => write!(f, "-"),
-            Token::Multiply => write!(f, "*"),
-            Token::Divide => write!(f, "/"),
-        }
+        todo!("Implement fmt")
     }
 }
 
 /// Converts a vector of tokens to a string
 pub fn tokens_to_string(tokens: &[Token]) -> String {
-    tokens
-        .iter()
-        .map(|t| t.to_string())
-        .collect::<Vec<_>>()
-        .join(" ")
+    todo!("Implement tokens_to_string")
 }
 
 /// Filters only number tokens
 pub fn filter_numbers(tokens: Vec<Token>) -> Vec<i32> {
-    tokens
-        .into_iter()
-        .filter_map(|t| match t {
-            Token::Number(n) => Some(n),
-            _ => None,
-        })
-        .collect()
+    todo!("Implement filter_numbers")
 }
 
 /// Counts the number of operator tokens
 pub fn count_operators(tokens: &[Token]) -> usize {
-    tokens
-        .iter()
-        .filter(|t| !matches!(t, Token::Number(_)))
-        .count()
+    todo!("Implement count_operators")
 }
 
 #[cfg(test)]

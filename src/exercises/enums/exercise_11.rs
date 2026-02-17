@@ -8,26 +8,17 @@
 
 /// Divides two numbers, returns Err if divisor is zero
 pub fn safe_divide(a: f64, b: f64) -> Result<f64, String> {
-    if b == 0.0 {
-        Err("Division by zero".to_string())
-    } else {
-        Ok(a / b)
-    }
+    todo!("Implement safe_divide")
 }
 
 /// Parses a string to i32 and doubles it
 pub fn parse_and_double(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map(|x| x * 2)
-        .map_err(|e| format!("Parse error: {}", e))
+    todo!("Implement parse_and_double")
 }
 
 /// Combines two Result values with addition
 pub fn add_results(a: Result<i32, String>, b: Result<i32, String>) -> Result<i32, String> {
-    match (a, b) {
-        (Ok(x), Ok(y)) => Ok(x + y),
-        (Err(e), _) | (_, Err(e)) => Err(e),
-    }
+    todo!("Implement add_results")
 }
 
 #[cfg(test)]

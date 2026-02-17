@@ -23,37 +23,24 @@ pub struct Door<State> {
 impl Door<Locked> {
     /// Creates a new locked door
     pub fn new(code: String) -> Self {
-        Door {
-            code,
-            _state: PhantomData,
-        }
+        todo!("Implement new")
     }
 
     /// Unlocks the door with the correct code
     pub fn unlock(self, code: &str) -> Result<Door<Unlocked>, String> {
-        if self.code == code {
-            Ok(Door {
-                code: self.code,
-                _state: PhantomData,
-            })
-        } else {
-            Err("Incorrect code".to_string())
-        }
+        todo!("Implement unlock")
     }
 }
 
 impl Door<Unlocked> {
     /// Locks the door
     pub fn lock(self) -> Door<Locked> {
-        Door {
-            code: self.code,
-            _state: PhantomData,
-        }
+        todo!("Implement lock")
     }
 
     /// Opens the door (only possible when unlocked)
     pub fn open(&self) -> String {
-        "Door is now open".to_string()
+        todo!("Implement open")
     }
 }
 
@@ -67,40 +54,22 @@ pub enum DoorState {
 impl DoorState {
     /// Creates a new locked door
     pub fn new(code: String) -> Self {
-        DoorState::Locked { code }
+        todo!("Implement new")
     }
 
     /// Attempts to unlock the door
     pub fn unlock(&mut self, input_code: &str) -> Result<(), String> {
-        match self {
-            DoorState::Locked { code } => {
-                if code == input_code {
-                    let code = code.clone();
-                    *self = DoorState::Unlocked { code };
-                    Ok(())
-                } else {
-                    Err("Incorrect code".to_string())
-                }
-            }
-            DoorState::Unlocked { .. } => Err("Already unlocked".to_string()),
-        }
+        todo!("Implement unlock")
     }
 
     /// Locks the door
     pub fn lock(&mut self) -> Result<(), String> {
-        match self {
-            DoorState::Unlocked { code } => {
-                let code = code.clone();
-                *self = DoorState::Locked { code };
-                Ok(())
-            }
-            DoorState::Locked { .. } => Err("Already locked".to_string()),
-        }
+        todo!("Implement lock")
     }
 
     /// Checks if door is locked
     pub fn is_locked(&self) -> bool {
-        matches!(self, DoorState::Locked { .. })
+        todo!("Implement is_locked")
     }
 }
 

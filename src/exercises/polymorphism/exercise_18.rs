@@ -14,22 +14,15 @@ pub trait StringExtensions {
 
 impl StringExtensions for str {
     fn word_count(&self) -> usize {
-        self.split_whitespace().count()
+        todo!("Implement word_count")
     }
     
     fn is_palindrome(&self) -> bool {
-        let cleaned: String = self.chars()
-            .filter(|c| c.is_alphanumeric())
-            .map(|c| c.to_lowercase().next().unwrap())
-            .collect();
-        cleaned == cleaned.chars().rev().collect::<String>()
+        todo!("Implement is_palindrome")
     }
     
     fn reverse_words(&self) -> String {
-        self.split_whitespace()
-            .rev()
-            .collect::<Vec<_>>()
-            .join(" ")
+        todo!("Implement reverse_words")
     }
 }
 
@@ -49,24 +42,15 @@ impl<T> VecExtensions<T> for Vec<T> {
     where
         F: Fn(&T) -> bool,
         T: std::ops::Add<Output = T> + Default + Copy,
-    {
-        self.iter()
-            .filter(|&&x| predicate(&x))
-            .fold(T::default(), |acc, &x| acc + x)
+     {
+        todo!("Implement sum_if")
     }
     
     fn all_unique(&self) -> bool
     where
         T: PartialEq,
-    {
-        for i in 0..self.len() {
-            for j in (i + 1)..self.len() {
-                if self[i] == self[j] {
-                    return false;
-                }
-            }
-        }
-        true
+     {
+        todo!("Implement all_unique")
     }
 }
 

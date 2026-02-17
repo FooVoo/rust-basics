@@ -8,40 +8,22 @@
 
 /// Sum of each pair of consecutive numbers.
 pub fn pairwise_sum(numbers: &[i32]) -> Vec<i32> {
-    numbers.windows(2).map(|w| w[0] + w[1]).collect()
+    todo!("Implement pairwise_sum")
 }
 
 /// Find local maxima (element greater than neighbors).
 pub fn local_maxima(numbers: &[i32]) -> Vec<i32> {
-    if numbers.len() < 3 {
-        return vec![];
-    }
-    
-    numbers
-        .windows(3)
-        .filter_map(|w| {
-            if w[1] > w[0] && w[1] > w[2] {
-                Some(w[1])
-            } else {
-                None
-            }
-        })
-        .collect()
+    todo!("Implement local_maxima")
 }
 
 /// Group numbers into chunks and sum each chunk.
 pub fn chunk_sums(numbers: &[i32], chunk_size: usize) -> Vec<i32> {
-    numbers
-        .chunks(chunk_size)
-        .map(|chunk| chunk.iter().sum())
-        .collect()
+    todo!("Implement chunk_sums")
 }
 
 /// Check if any consecutive triple sums to target.
 pub fn has_triple_sum(numbers: &[i32], target: i32) -> bool {
-    numbers
-        .windows(3)
-        .any(|w| w[0] + w[1] + w[2] == target)
+    todo!("Implement has_triple_sum")
 }
 
 #[cfg(test)]

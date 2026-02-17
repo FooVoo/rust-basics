@@ -25,46 +25,43 @@ pub struct Event {
 
 impl Identifiable for Event {
     fn id(&self) -> u64 {
-        self.id
+        todo!("Implement id")
     }
 }
 
 impl Timestamped for Event {
     fn timestamp(&self) -> u64 {
-        self.timestamp
+        todo!("Implement timestamp")
     }
 }
 
 impl Display for Event {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "Event #{} at {}: {}", self.id, self.timestamp, self.message)
+        todo!("Implement fmt")
     }
 }
 
 /// Function requiring both Identifiable and Timestamped
 pub fn log_item<T: Identifiable + Timestamped>(item: &T) -> String {
-    format!("ID: {}, Time: {}", item.id(), item.timestamp())
+    todo!("Implement log_item")
 }
 
 /// Function requiring all three traits
 pub fn full_log<T: Identifiable + Timestamped + Display>(item: &T) -> String {
-    format!("{} | ID: {}, Time: {}", item, item.id(), item.timestamp())
+    todo!("Implement full_log")
 }
 
 /// Function with Clone bound
 pub fn duplicate_and_log<T: Identifiable + Clone>(item: &T) -> (T, String) {
-    let cloned = item.clone();
-    let log = format!("Duplicated item with ID: {}", item.id());
-    (cloned, log)
+    todo!("Implement duplicate_and_log")
 }
 
 /// Using where clause for readability
 pub fn complex_operation<T>(item: &T) -> String
 where
     T: Identifiable + Timestamped + Display + Clone,
-{
-    let log = full_log(item);
-    format!("Processed: {}", log)
+ {
+    todo!("Using where clause for readability")
 }
 
 #[cfg(test)]

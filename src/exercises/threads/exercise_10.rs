@@ -12,24 +12,7 @@ use std::thread;
 /// Multiple threads push their thread indices to a shared vector.
 /// Return the sorted vector.
 pub fn concurrent_vec_push(n_threads: usize) -> Vec<usize> {
-    let vec = Arc::new(Mutex::new(Vec::new()));
-    let handles: Vec<_> = (0..n_threads)
-        .map(|i| {
-            let vec = Arc::clone(&vec);
-            thread::spawn(move || {
-                let mut v = vec.lock().unwrap();
-                v.push(i);
-            })
-        })
-        .collect();
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    let mut result = vec.lock().unwrap().clone();
-    result.sort();
-    result
+    todo!("Implement concurrent_vec_push")
 }
 
 #[cfg(test)]

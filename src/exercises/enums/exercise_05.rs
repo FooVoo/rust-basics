@@ -15,19 +15,12 @@ pub enum Message {
 
 /// Returns the message type as a string
 pub fn message_type(msg: &Message) -> &'static str {
-    match msg {
-        Message::Quit => "quit",
-        Message::Echo(_) => "echo",
-        Message::Move(_, _) => "move",
-    }
+    todo!("Implement message_type")
 }
 
 /// Extracts the echo message if present, otherwise returns None
 pub fn get_echo_text(msg: &Message) -> Option<&str> {
-    match msg {
-        Message::Echo(text) => Some(text),
-        _ => None,
-    }
+    todo!("Implement get_echo_text")
 }
 
 #[cfg(test)]

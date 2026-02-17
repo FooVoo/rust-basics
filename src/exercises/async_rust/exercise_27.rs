@@ -16,34 +16,17 @@ pub struct AsyncResource {
 
 impl AsyncResource {
     pub fn new(id: String, cleanup_log: Arc<Mutex<Vec<String>>>) -> Self {
-        Self { id, cleanup_log }
+        todo!("Implement new")
     }
     
     pub async fn cleanup(&self) {
-        let mut log = self.cleanup_log.lock().await;
-        log.push(format!("Cleaned up {}", self.id));
+        todo!("Implement cleanup")
     }
 }
 
 /// Manage multiple resources with proper cleanup.
 pub async fn managed_resources(num_resources: usize) -> Vec<String> {
-    let cleanup_log = Arc::new(Mutex::new(Vec::new()));
-    let mut resources = vec![];
-    
-    for i in 0..num_resources {
-        let resource = AsyncResource::new(
-            format!("resource_{}", i),
-            Arc::clone(&cleanup_log),
-        );
-        resources.push(resource);
-    }
-    
-    for resource in resources {
-        resource.cleanup().await;
-    }
-    
-    let log = cleanup_log.lock().await;
-    log.clone()
+    todo!("Implement managed_resources")
 }
 
 pub struct Connection {
@@ -53,32 +36,17 @@ pub struct Connection {
 
 impl Connection {
     pub fn new(id: usize, closed: Arc<Mutex<Vec<usize>>>) -> Self {
-        Self { id, closed }
+        todo!("Implement new")
     }
     
     pub async fn close(self) {
-        let mut closed_list = self.closed.lock().await;
-        closed_list.push(self.id);
+        todo!("Implement close")
     }
 }
 
 /// Connection pool with graceful shutdown.
 pub async fn connection_pool_shutdown(num_connections: usize) -> Vec<usize> {
-    let closed_list = Arc::new(Mutex::new(Vec::new()));
-    let mut connections = vec![];
-    
-    for i in 0..num_connections {
-        connections.push(Connection::new(i, Arc::clone(&closed_list)));
-    }
-    
-    for conn in connections {
-        conn.close().await;
-    }
-    
-    let result = closed_list.lock().await;
-    let mut sorted = result.clone();
-    sorted.sort();
-    sorted
+    todo!("Implement connection_pool_shutdown")
 }
 
 /// Guard pattern for async cleanup.
@@ -89,28 +57,16 @@ pub struct AsyncGuard {
 
 impl AsyncGuard {
     pub fn new(name: String, log: Arc<Mutex<Vec<String>>>) -> Self {
-        Self { name, log }
+        todo!("Implement new")
     }
     
     pub async fn release(self) {
-        let mut l = self.log.lock().await;
-        l.push(format!("Released {}", self.name));
+        todo!("Implement release")
     }
 }
 
 pub async fn guarded_operation() -> Vec<String> {
-    let log = Arc::new(Mutex::new(Vec::new()));
-    
-    {
-        let guard1 = AsyncGuard::new("guard1".to_string(), Arc::clone(&log));
-        let guard2 = AsyncGuard::new("guard2".to_string(), Arc::clone(&log));
-        
-        guard1.release().await;
-        guard2.release().await;
-    }
-    
-    let result = log.lock().await;
-    result.clone()
+    todo!("Implement guarded_operation")
 }
 
 #[cfg(test)]

@@ -11,71 +11,17 @@ use tokio::time::{sleep, Duration};
 
 /// Broadcast value updates to multiple subscribers.
 pub async fn broadcast_updates(updates: Vec<i32>) -> Vec<Vec<i32>> {
-    let (tx, mut rx1) = watch::channel(0);
-    let mut rx2 = tx.subscribe();
-    
-    let handle1 = tokio::spawn(async move {
-        let mut values = vec![*rx1.borrow()];
-        while rx1.changed().await.is_ok() {
-            values.push(*rx1.borrow());
-        }
-        values
-    });
-    
-    let handle2 = tokio::spawn(async move {
-        let mut values = vec![*rx2.borrow()];
-        while rx2.changed().await.is_ok() {
-            values.push(*rx2.borrow());
-        }
-        values
-    });
-    
-    for value in updates {
-        sleep(Duration::from_millis(10)).await;
-        let _ = tx.send(value);
-    }
-    
-    drop(tx);
-    
-    vec![handle1.await.unwrap(), handle2.await.unwrap()]
+    todo!("Implement broadcast_updates")
 }
 
 /// Monitor state changes and react to them.
 pub async fn state_monitor(states: Vec<String>) -> Vec<String> {
-    let (tx, mut rx) = watch::channel("initial".to_string());
-    
-    let monitor = tokio::spawn(async move {
-        let mut observed = vec![];
-        observed.push(rx.borrow().clone());
-        
-        while rx.changed().await.is_ok() {
-            observed.push(rx.borrow().clone());
-        }
-        observed
-    });
-    
-    for state in states {
-        sleep(Duration::from_millis(10)).await;
-        let _ = tx.send(state);
-    }
-    
-    drop(tx);
-    monitor.await.unwrap()
+    todo!("Implement state_monitor")
 }
 
 /// Track latest value with watch channel.
 pub async fn latest_value_tracker(values: Vec<i32>, delay_ms: u64) -> i32 {
-    let (tx, rx) = watch::channel(0);
-    
-    tokio::spawn(async move {
-        for value in values {
-            sleep(Duration::from_millis(10)).await;
-            let _ = tx.send(value);
-        }
-    });
-    
-    sleep(Duration::from_millis(delay_ms)).await;
-    *rx.borrow()
+    todo!("Implement latest_value_tracker")
 }
 
 #[cfg(test)]

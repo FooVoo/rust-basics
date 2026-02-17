@@ -12,27 +12,27 @@ pub struct DataStore {
 
 impl DataStore {
     pub fn new() -> Self {
-        DataStore { data: Vec::new() }
+        todo!("Implement new")
     }
     
     pub fn add(&mut self, item: String) {
-        self.data.push(item);
+        todo!("Implement add")
     }
     
     pub fn get(&self, index: usize) -> Option<&String> {
-        self.data.get(index)
+        todo!("Implement get")
     }
     
     pub fn find(&self, query: &str) -> Option<&String> {
-        self.data.iter().find(|s| s.contains(query))
+        todo!("Implement find")
     }
     
     pub fn len(&self) -> usize {
-        self.data.len()
+        todo!("Implement len")
     }
     
     pub fn iter(&self) -> impl Iterator<Item = &String> {
-        self.data.iter()
+        todo!("Implement iter")
     }
 }
 
@@ -40,13 +40,13 @@ impl DataStore {
 pub fn filter_store<'a, F>(store: &'a DataStore, predicate: F) -> Vec<&'a String>
 where
     F: Fn(&String) -> bool,
-{
-    store.iter().filter(|s| predicate(s)).collect()
+ {
+    todo!("Filter strings from store matching predicate.")
 }
 
 /// Find longest string in store.
 pub fn longest_in_store(store: &DataStore) -> Option<&String> {
-    store.iter().max_by_key(|s| s.len())
+    todo!("Implement longest_in_store")
 }
 
 #[cfg(test)]

@@ -13,37 +13,23 @@ type Validator<T> = fn(T) -> Result<T, String>;
 pub fn validate_pipeline<T: Clone>(
     value: T,
     validators: Vec<Validator<T>>,
-) -> Result<T, String> {
-    validators
-        .into_iter()
-        .try_fold(value, |val, validator| validator(val))
+) -> Result<T, String>  {
+    todo!("Compose multiple validators into a pipeline.")
 }
 
 /// Validate number is positive.
 pub fn validate_positive(n: i32) -> Result<i32, String> {
-    if n > 0 {
-        Ok(n)
-    } else {
-        Err(format!("Must be positive, got {}", n))
-    }
+    todo!("Implement validate_positive")
 }
 
 /// Validate number is even.
 pub fn validate_even(n: i32) -> Result<i32, String> {
-    if n % 2 == 0 {
-        Ok(n)
-    } else {
-        Err(format!("Must be even, got {}", n))
-    }
+    todo!("Implement validate_even")
 }
 
 /// Validate number is less than 100.
 pub fn validate_less_than_100(n: i32) -> Result<i32, String> {
-    if n < 100 {
-        Ok(n)
-    } else {
-        Err(format!("Must be less than 100, got {}", n))
-    }
+    todo!("Implement validate_less_than_100")
 }
 
 #[cfg(test)]

@@ -16,36 +16,24 @@ pub struct ContextError {
 
 impl ContextError {
     pub fn new(message: impl Into<String>) -> Self {
-        ContextError {
-            message: message.into(),
-            context: Vec::new(),
-        }
+        todo!("Implement new")
     }
     
     pub fn context(mut self, ctx: impl Into<String>) -> Self {
-        self.context.push(ctx.into());
-        self
+        todo!("Implement context")
     }
     
     pub fn with_context<F>(result: Result<(), String>, ctx: F) -> Result<(), Self>
     where
         F: FnOnce() -> String,
-    {
-        result.map_err(|msg| ContextError::new(msg).context(ctx()))
+     {
+        todo!("Implement with_context")
     }
 }
 
 impl fmt::Display for ContextError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{}", self.message)?;
-        for (i, ctx) in self.context.iter().rev().enumerate() {
-            if i == 0 {
-                write!(f, "\n  Context: {}", ctx)?;
-            } else {
-                write!(f, "\n  ... in: {}", ctx)?;
-            }
-        }
-        Ok(())
+        todo!("Implement fmt")
     }
 }
 
@@ -53,55 +41,22 @@ impl std::error::Error for ContextError {}
 
 /// Layer 1: Low-level operation
 fn read_file(path: &str) -> Result<String, ContextError> {
-    if path.is_empty() {
-        Err(ContextError::new("Path is empty")
-            .context("read_file operation"))
-    } else if path.starts_with('/') {
-        Ok("file contents".to_string())
-    } else {
-        Err(ContextError::new("Invalid path format")
-            .context("read_file operation"))
-    }
+    todo!("Implement read_file")
 }
 
 /// Layer 2: Mid-level processing
 pub fn parse_config(path: &str) -> Result<String, ContextError> {
-    let contents = read_file(path)
-        .map_err(|e| e.context("parse_config function"))?;
-    
-    if contents.is_empty() {
-        Err(ContextError::new("Empty config file")
-            .context("parse_config function"))
-    } else {
-        Ok(contents)
-    }
+    todo!("Implement parse_config")
 }
 
 /// Layer 3: High-level application
 pub fn initialize_app(config_path: &str) -> Result<String, ContextError> {
-    let config = parse_config(config_path)
-        .map_err(|e| e.context("initialize_app"))?;
-    
-    Ok(config)
+    todo!("Implement initialize_app")
 }
 
 /// Add context to multiple operations
 pub fn process_batch(paths: &[&str]) -> Result<Vec<String>, Vec<ContextError>> {
-    let mut results = Vec::new();
-    let mut errors = Vec::new();
-    
-    for (i, path) in paths.iter().enumerate() {
-        match initialize_app(path) {
-            Ok(config) => results.push(config),
-            Err(e) => errors.push(e.context(format!("Processing item {}", i))),
-        }
-    }
-    
-    if errors.is_empty() {
-        Ok(results)
-    } else {
-        Err(errors)
-    }
+    todo!("Implement process_batch")
 }
 
 #[cfg(test)]

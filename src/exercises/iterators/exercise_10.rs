@@ -8,41 +8,27 @@
 
 /// Get indices of elements that match a predicate.
 pub fn indices_of_evens(numbers: &[i32]) -> Vec<usize> {
-    numbers
-        .iter()
-        .enumerate()
-        .filter(|&(_, n)| n % 2 == 0)
-        .map(|(i, _)| i)
-        .collect()
+    todo!("Implement indices_of_evens")
 }
 
 /// Create pairs of elements from two slices.
 pub fn zip_slices(a: &[i32], b: &[i32]) -> Vec<(i32, i32)> {
-    a.iter().zip(b.iter()).map(|(&x, &y)| (x, y)).collect()
+    todo!("Implement zip_slices")
 }
 
 /// Sum corresponding elements from two slices.
 pub fn sum_corresponding(a: &[i32], b: &[i32]) -> Vec<i32> {
-    a.iter().zip(b.iter()).map(|(&x, &y)| x + y).collect()
+    todo!("Implement sum_corresponding")
 }
 
 /// Find indices where two slices differ.
 pub fn diff_indices(a: &[i32], b: &[i32]) -> Vec<usize> {
-    a.iter()
-        .zip(b.iter())
-        .enumerate()
-        .filter(|&(_, (x, y))| x != y)
-        .map(|(i, _)| i)
-        .collect()
+    todo!("Implement diff_indices")
 }
 
 /// Create indexed strings.
 pub fn indexed_strings(strings: &[&str]) -> Vec<String> {
-    strings
-        .iter()
-        .enumerate()
-        .map(|(i, s)| format!("{}: {}", i, s))
-        .collect()
+    todo!("Implement indexed_strings")
 }
 
 #[cfg(test)]

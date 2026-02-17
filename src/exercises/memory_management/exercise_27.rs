@@ -17,7 +17,7 @@ impl Processor for StringProcessor {
     type Output = String;
     
     fn process(&self, input: &str) -> String {
-        input.to_uppercase()
+        todo!("Implement process")
     }
 }
 
@@ -25,8 +25,8 @@ impl Processor for StringProcessor {
 pub fn process_with_lifetime<'a, P>(processor: &P, input: &'a str) -> P::Output
 where
     P: Processor,
-{
-    processor.process(input)
+ {
+    todo!("Process with a processor that has lifetime bounds.")
 }
 
 pub struct FilterMap<'a, T> {
@@ -35,14 +35,14 @@ pub struct FilterMap<'a, T> {
 
 impl<'a, T> FilterMap<'a, T> {
     pub fn new(items: &'a [T]) -> Self {
-        FilterMap { items }
+        todo!("Implement new")
     }
     
     pub fn filter_map<B, F>(&self, f: F) -> Vec<B>
     where
         F: Fn(&T) -> Option<B>,
-    {
-        self.items.iter().filter_map(f).collect()
+     {
+        todo!("Implement filter_map")
     }
 }
 
@@ -50,8 +50,8 @@ impl<'a, T> FilterMap<'a, T> {
 pub fn transform_items<'a, T, U, F>(items: &'a [T], transform: F) -> Vec<U>
 where
     F: Fn(&'a T) -> U,
-{
-    items.iter().map(transform).collect()
+ {
+    todo!("Apply a transformation to items with proper lifetime handling.")
 }
 
 pub struct Validator<'a, T: 'a> {
@@ -60,18 +60,15 @@ pub struct Validator<'a, T: 'a> {
 
 impl<'a, T: 'a + PartialEq> Validator<'a, T> {
     pub fn new(valid_values: &'a [T]) -> Self {
-        Validator { valid_values }
+        todo!("Implement new")
     }
     
     pub fn is_valid(&self, value: &T) -> bool {
-        self.valid_values.contains(value)
+        todo!("Implement is_valid")
     }
     
     pub fn filter_valid(&self, values: &'a [T]) -> Vec<&'a T> {
-        values
-            .iter()
-            .filter(|v| self.is_valid(v))
-            .collect()
+        todo!("Implement filter_valid")
     }
 }
 

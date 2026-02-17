@@ -8,27 +8,20 @@
 
 /// Parse a string to a number and double it.
 pub fn parse_and_double(s: &str) -> Result<i32, String> {
-    s.parse::<i32>()
-        .map(|n| n * 2)
-        .map_err(|e| format!("Parse error: {}", e))
+    todo!("Implement parse_and_double")
 }
 
 /// Parse a string to a number, double it, and convert to string.
 pub fn parse_double_stringify(s: &str) -> Result<String, String> {
-    s.parse::<i32>()
-        .map(|n| n * 2)
-        .map(|n| n.to_string())
-        .map_err(|e| format!("Failed: {}", e))
+    todo!("Implement parse_double_stringify")
 }
 
 /// Parse and transform with a custom function.
 pub fn parse_and_transform<F>(s: &str, f: F) -> Result<i32, String>
 where
     F: FnOnce(i32) -> i32,
-{
-    s.parse::<i32>()
-        .map(f)
-        .map_err(|e| e.to_string())
+ {
+    todo!("Parse and transform with a custom function.")
 }
 
 #[cfg(test)]

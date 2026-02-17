@@ -8,29 +8,22 @@
 
 /// Flatten a vector of vectors.
 pub fn flatten_vectors(nested: &[Vec<i32>]) -> Vec<i32> {
-    nested.iter().flat_map(|v| v.iter().copied()).collect()
+    todo!("Implement flatten_vectors")
 }
 
 /// Split strings and collect all words.
 pub fn split_and_collect(strings: &[&str]) -> Vec<String> {
-    strings
-        .iter()
-        .flat_map(|s| s.split_whitespace())
-        .map(|s| s.to_string())
-        .collect()
+    todo!("Implement split_and_collect")
 }
 
 /// Get all characters from strings.
 pub fn all_chars(strings: &[&str]) -> Vec<char> {
-    strings.iter().flat_map(|s| s.chars()).collect()
+    todo!("Implement all_chars")
 }
 
 /// Generate pairs for each number with a list of multipliers.
 pub fn generate_pairs(numbers: &[i32], multipliers: &[i32]) -> Vec<(i32, i32)> {
-    numbers
-        .iter()
-        .flat_map(|&n| multipliers.iter().map(move |&m| (n, n * m)))
-        .collect()
+    todo!("Implement generate_pairs")
 }
 
 #[cfg(test)]

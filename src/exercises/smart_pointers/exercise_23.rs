@@ -19,39 +19,33 @@ pub struct Guard {
 
 impl Guard {
     pub fn new(name: String) -> Self {
-        Guard { name }
+        todo!("Implement new")
     }
 
     pub fn name(&self) -> &str {
-        &self.name
+        todo!("Implement name")
     }
 }
 
 impl Drop for Guard {
     fn drop(&mut self) {
-        DROP_COUNT.fetch_add(1, Ordering::SeqCst);
-        if let Ok(mut log) = DROP_LOG.lock() {
-            log.push(self.name.clone());
-        }
+        todo!("Implement drop")
     }
 }
 
 /// Reset global counters for testing.
 pub fn reset_drop_tracking() {
-    DROP_COUNT.store(0, Ordering::SeqCst);
-    if let Ok(mut log) = DROP_LOG.lock() {
-        log.clear();
-    }
+    todo!("Implement reset_drop_tracking")
 }
 
 /// Get total drop count.
 pub fn get_drop_count() -> usize {
-    DROP_COUNT.load(Ordering::SeqCst)
+    todo!("Implement get_drop_count")
 }
 
 /// Get drop log.
 pub fn get_drop_log() -> Vec<String> {
-    DROP_LOG.lock().unwrap().clone()
+    todo!("Implement get_drop_log")
 }
 
 /// A simple RAII file handle simulator.
@@ -62,27 +56,21 @@ pub struct FileHandle {
 
 impl FileHandle {
     pub fn open(filename: String) -> Self {
-        FileHandle {
-            filename,
-            closed: std::cell::Cell::new(false),
-        }
+        todo!("Implement open")
     }
 
     pub fn is_closed(&self) -> bool {
-        self.closed.get()
+        todo!("Implement is_closed")
     }
 
     pub fn close(&self) {
-        self.closed.set(true);
+        todo!("Implement close")
     }
 }
 
 impl Drop for FileHandle {
     fn drop(&mut self) {
-        if !self.closed.get() {
-            // Ensure resource is cleaned up
-            self.closed.set(true);
-        }
+        todo!("Implement drop")
     }
 }
 

@@ -14,16 +14,13 @@ pub struct ValidationError {
 
 impl ValidationError {
     pub fn new(field: impl Into<String>, message: impl Into<String>) -> Self {
-        ValidationError {
-            field: field.into(),
-            message: message.into(),
-        }
+        todo!("Implement new")
     }
 }
 
 impl std::fmt::Display for ValidationError {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        write!(f, "{}: {}", self.field, self.message)
+        todo!("Implement fmt")
     }
 }
 
@@ -36,41 +33,26 @@ pub struct Validator<T> {
 
 impl<T> Validator<T> {
     pub fn new(value: T) -> Self {
-        Validator {
-            value,
-            errors: Vec::new(),
-        }
+        todo!("Implement new")
     }
     
     /// Add a validation rule.
     pub fn validate<F>(mut self, field: &str, predicate: F, message: &str) -> Self
     where
         F: FnOnce(&T) -> bool,
-    {
-        if !predicate(&self.value) {
-            self.errors.push(ValidationError::new(field, message));
-        }
-        self
+     {
+        todo!("Add a validation rule.")
     }
     
     /// Finalize validation.
     pub fn build(self) -> Result<T, Vec<ValidationError>> {
-        if self.errors.is_empty() {
-            Ok(self.value)
-        } else {
-            Err(self.errors)
-        }
+        todo!("Implement build")
     }
 }
 
 /// Validate a product name and price.
 pub fn validate_product(name: &str, price: f64) -> Result<(String, f64), Vec<ValidationError>> {
-    Validator::new((name.to_string(), price))
-        .validate("name", |(n, _)| !n.is_empty(), "Name cannot be empty")
-        .validate("name", |(n, _)| n.len() <= 100, "Name too long")
-        .validate("price", |(_, p)| *p >= 0.0, "Price cannot be negative")
-        .validate("price", |(_, p)| *p <= 1_000_000.0, "Price too high")
-        .build()
+    todo!("Implement validate_product")
 }
 
 #[cfg(test)]

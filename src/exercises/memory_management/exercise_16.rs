@@ -10,27 +10,25 @@ use std::collections::HashMap;
 
 /// Find a value in a HashMap.
 pub fn find_in_map<'a>(map: &'a HashMap<String, i32>, key: &str) -> Option<&'a i32> {
-    map.get(key)
+    todo!("Implement find_in_map")
 }
 
 /// Get all values greater than threshold.
 pub fn values_greater_than<'a>(map: &'a HashMap<String, i32>, threshold: i32) -> Vec<&'a i32> {
-    map.values().filter(|&&v| v > threshold).collect()
+    todo!("Implement values_greater_than")
 }
 
 /// Find key with maximum value.
 pub fn key_with_max_value<'a>(map: &'a HashMap<String, i32>) -> Option<&'a String> {
-    map.iter()
-        .max_by_key(|(_, v)| *v)
-        .map(|(k, _)| k)
+    todo!("Implement key_with_max_value")
 }
 
 /// Get references to keys matching a predicate.
 pub fn filter_keys<'a, F>(map: &'a HashMap<String, i32>, predicate: F) -> Vec<&'a String>
 where
     F: Fn(&String) -> bool,
-{
-    map.keys().filter(|k| predicate(k)).collect()
+ {
+    todo!("Get references to keys matching a predicate.")
 }
 
 #[cfg(test)]

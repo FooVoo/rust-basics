@@ -20,7 +20,7 @@ pub enum DayOfWeek {
 
 /// Returns true if the given day is a weekend day
 pub fn is_weekend(day: DayOfWeek) -> bool {
-    matches!(day, DayOfWeek::Saturday | DayOfWeek::Sunday)
+    todo!("Implement is_weekend")
 }
 
 #[cfg(test)]

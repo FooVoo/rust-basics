@@ -16,46 +16,33 @@ pub enum Validation<T, E> {
 impl<T, E> Validation<T, E> {
     /// Create a success validation.
     pub fn success(value: T) -> Self {
-        Validation::Success(value)
+        todo!("Implement success")
     }
 
     /// Create a failure validation with a single error.
     pub fn failure(error: E) -> Self {
-        Validation::Failure(vec![error])
+        todo!("Implement failure")
     }
 
     /// Map the success value.
     pub fn map<U, F>(self, f: F) -> Validation<U, E>
     where
         F: FnOnce(T) -> U,
-    {
-        match self {
-            Validation::Success(value) => Validation::Success(f(value)),
-            Validation::Failure(errors) => Validation::Failure(errors),
-        }
+     {
+        todo!("Map the success value.")
     }
 
     /// Apply a function that returns a Validation.
     pub fn and_then<U, F>(self, f: F) -> Validation<U, E>
     where
         F: FnOnce(T) -> Validation<U, E>,
-    {
-        match self {
-            Validation::Success(value) => f(value),
-            Validation::Failure(errors) => Validation::Failure(errors),
-        }
+     {
+        todo!("Apply a function that returns a Validation.")
     }
 
     /// Combine two validations, accumulating errors.
     pub fn combine<U>(self, other: Validation<U, E>) -> Validation<(T, U), E> {
-        match (self, other) {
-            (Validation::Success(a), Validation::Success(b)) => Validation::Success((a, b)),
-            (Validation::Failure(mut e1), Validation::Failure(e2)) => {
-                e1.extend(e2);
-                Validation::Failure(e1)
-            }
-            (Validation::Failure(e), _) | (_, Validation::Failure(e)) => Validation::Failure(e),
-        }
+        todo!("Implement combine")
     }
 }
 
@@ -68,27 +55,15 @@ pub struct UserRegistration {
 }
 
 pub fn validate_username(username: &str) -> Validation<String, String> {
-    if username.len() >= 3 {
-        Validation::success(username.to_string())
-    } else {
-        Validation::failure("Username must be at least 3 characters".to_string())
-    }
+    todo!("Implement validate_username")
 }
 
 pub fn validate_email(email: &str) -> Validation<String, String> {
-    if email.contains('@') {
-        Validation::success(email.to_string())
-    } else {
-        Validation::failure("Email must contain @".to_string())
-    }
+    todo!("Implement validate_email")
 }
 
 pub fn validate_age(age: i32) -> Validation<i32, String> {
-    if age >= 18 {
-        Validation::success(age)
-    } else {
-        Validation::failure("Age must be at least 18".to_string())
-    }
+    todo!("Implement validate_age")
 }
 
 /// Validate complete user registration, accumulating all errors.
@@ -96,15 +71,8 @@ pub fn validate_user(
     username: &str,
     email: &str,
     age: i32,
-) -> Validation<UserRegistration, String> {
-    validate_username(username)
-        .combine(validate_email(email))
-        .combine(validate_age(age))
-        .map(|((username, email), age)| UserRegistration {
-            username,
-            email,
-            age,
-        })
+) -> Validation<UserRegistration, String>  {
+    todo!("Validate complete user registration, accumulating all errors.")
 }
 
 #[cfg(test)]

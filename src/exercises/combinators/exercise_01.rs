@@ -9,7 +9,7 @@
 /// Double the value inside an Option.
 /// If None, return None.
 pub fn double_option(value: Option<i32>) -> Option<i32> {
-    value.map(|x| x * 2)
+    todo!("Implement double_option")
 }
 
 #[cfg(test)]

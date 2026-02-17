@@ -8,23 +8,17 @@
 
 /// Double the value if parsing succeeds.
 pub fn parse_and_double(s: &str) -> Result<i32, std::num::ParseIntError> {
-    s.parse::<i32>().map(|n| n * 2)
+    todo!("Implement parse_and_double")
 }
 
 /// Parse a number and convert error to a custom message.
 pub fn parse_with_custom_error(s: &str) -> Result<i32, String> {
-    s.parse::<i32>().map_err(|e| format!("Parse error: {}", e))
+    todo!("Implement parse_with_custom_error")
 }
 
 /// Divide and convert both result and error.
 pub fn divide_verbose(a: i32, b: i32) -> Result<String, String> {
-    if b == 0 {
-        Err(String::from("Cannot divide by zero"))
-    } else {
-        Ok(a / b)
-    }
-    .map(|result| format!("Result: {}", result))
-    .map_err(|e| format!("Error: {}", e))
+    todo!("Implement divide_verbose")
 }
 
 #[cfg(test)]

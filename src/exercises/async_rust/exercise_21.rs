@@ -10,41 +10,22 @@ use futures::stream::{self, StreamExt};
 
 /// Create a stream and collect items.
 pub async fn stream_from_iter(values: Vec<i32>) -> Vec<i32> {
-    stream::iter(values)
-        .collect::<Vec<_>>()
-        .await
+    todo!("Implement stream_from_iter")
 }
 
 /// Transform stream items.
 pub async fn stream_map(values: Vec<i32>) -> Vec<i32> {
-    stream::iter(values)
-        .map(|x| x * 2)
-        .collect()
-        .await
+    todo!("Implement stream_map")
 }
 
 /// Filter stream items.
 pub async fn stream_filter(values: Vec<i32>) -> Vec<i32> {
-    stream::iter(values)
-        .filter(|x| {
-            let result = *x % 2 == 0;
-            async move { result }
-        })
-        .collect()
-        .await
+    todo!("Implement stream_filter")
 }
 
 /// Chain multiple stream operations.
 pub async fn stream_pipeline(values: Vec<i32>) -> Vec<i32> {
-    stream::iter(values)
-        .filter(|x| {
-            let result = *x > 0;
-            async move { result }
-        })
-        .map(|x| x * 2)
-        .take(5)
-        .collect()
-        .await
+    todo!("Implement stream_pipeline")
 }
 
 #[cfg(test)]

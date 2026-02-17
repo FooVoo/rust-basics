@@ -13,42 +13,7 @@ use std::thread;
 /// Increment a counter only if current value is less than max.
 /// Use compare-and-swap to handle races.
 pub fn atomic_bounded_increment(n_threads: usize, max_value: usize) -> usize {
-    let counter = Arc::new(AtomicUsize::new(0));
-
-    let handles: Vec<_> = (0..n_threads)
-        .map(|_| {
-            let counter = Arc::clone(&counter);
-            thread::spawn(move || {
-                loop {
-                    let current = counter.load(Ordering::SeqCst);
-                    if current >= max_value {
-                        break;
-                    }
-                    
-                    let new_value = current + 1;
-                    if new_value > max_value {
-                        break;
-                    }
-                    
-                    match counter.compare_exchange(
-                        current,
-                        new_value,
-                        Ordering::SeqCst,
-                        Ordering::SeqCst,
-                    ) {
-                        Ok(_) => {}
-                        Err(_) => continue,
-                    }
-                }
-            })
-        })
-        .collect();
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    counter.load(Ordering::SeqCst)
+    todo!("Implement atomic_bounded_increment")
 }
 
 #[cfg(test)]

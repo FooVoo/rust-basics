@@ -8,42 +8,17 @@
 
 /// Create and execute an async block.
 pub async fn execute_async_block(value: i32) -> i32 {
-    let future = async move {
-        value * 2 + 10
-    };
-    
-    future.await
+    todo!("Implement execute_async_block")
 }
 
 /// Map values using an async operation.
 pub async fn async_map(values: Vec<i32>) -> Vec<i32> {
-    let mut results = vec![];
-    
-    for value in values {
-        let result = async move {
-            value * 2
-        }.await;
-        results.push(result);
-    }
-    
-    results
+    todo!("Implement async_map")
 }
 
 /// Chain multiple async blocks.
 pub async fn chain_async_blocks(x: i32) -> i32 {
-    let step1 = async move {
-        x + 10
-    }.await;
-    
-    let step2 = async move {
-        step1 * 2
-    }.await;
-    
-    let step3 = async move {
-        step2 - 5
-    }.await;
-    
-    step3
+    todo!("Implement chain_async_blocks")
 }
 
 #[cfg(test)]

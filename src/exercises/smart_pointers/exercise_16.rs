@@ -10,18 +10,17 @@ use std::sync::{Arc, Mutex};
 
 /// Create a shared mutable counter.
 pub fn create_shared_counter(initial: i32) -> Arc<Mutex<i32>> {
-    Arc::new(Mutex::new(initial))
+    todo!("Implement create_shared_counter")
 }
 
 /// Increment a shared counter.
 pub fn increment_counter(counter: &Arc<Mutex<i32>>) {
-    let mut guard = counter.lock().unwrap();
-    *guard += 1;
+    todo!("Implement increment_counter")
 }
 
 /// Get the current counter value.
 pub fn get_counter_value(counter: &Arc<Mutex<i32>>) -> i32 {
-    *counter.lock().unwrap()
+    todo!("Implement get_counter_value")
 }
 
 /// A thread-safe accumulator.
@@ -31,27 +30,23 @@ pub struct Accumulator {
 
 impl Accumulator {
     pub fn new() -> Self {
-        Accumulator {
-            value: Arc::new(Mutex::new(0)),
-        }
+        todo!("Implement new")
     }
 
     pub fn add(&self, n: i32) {
-        *self.value.lock().unwrap() += n;
+        todo!("Implement add")
     }
 
     pub fn get(&self) -> i32 {
-        *self.value.lock().unwrap()
+        todo!("Implement get")
     }
 
     pub fn reset(&self) {
-        *self.value.lock().unwrap() = 0;
+        todo!("Implement reset")
     }
 
     pub fn clone_handle(&self) -> Self {
-        Accumulator {
-            value: Arc::clone(&self.value),
-        }
+        todo!("Implement clone_handle")
     }
 }
 

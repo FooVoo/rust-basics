@@ -10,60 +10,17 @@ use tokio::sync::mpsc;
 
 /// Send multiple values through a channel.
 pub async fn send_values(values: Vec<i32>) -> Vec<i32> {
-    let (tx, mut rx) = mpsc::channel(10);
-    
-    tokio::spawn(async move {
-        for value in values {
-            let _ = tx.send(value).await;
-        }
-    });
-    
-    let mut results = vec![];
-    while let Some(value) = rx.recv().await {
-        results.push(value);
-    }
-    
-    results
+    todo!("Implement send_values")
 }
 
 /// Process values through a channel with transformation.
 pub async fn channel_transform(values: Vec<i32>) -> Vec<i32> {
-    let (tx, mut rx) = mpsc::channel(10);
-    
-    tokio::spawn(async move {
-        for value in values {
-            let _ = tx.send(value * 2).await;
-        }
-    });
-    
-    let mut results = vec![];
-    while let Some(value) = rx.recv().await {
-        results.push(value);
-    }
-    
-    results
+    todo!("Implement channel_transform")
 }
 
 /// Use a channel to communicate between multiple producers and one consumer.
 pub async fn multiple_producers(count: usize) -> Vec<i32> {
-    let (tx, mut rx) = mpsc::channel(100);
-    
-    for i in 0..count {
-        let tx_clone = tx.clone();
-        tokio::spawn(async move {
-            let _ = tx_clone.send(i as i32).await;
-        });
-    }
-    
-    drop(tx);
-    
-    let mut results = vec![];
-    while let Some(value) = rx.recv().await {
-        results.push(value);
-    }
-    
-    results.sort();
-    results
+    todo!("Implement multiple_producers")
 }
 
 #[cfg(test)]

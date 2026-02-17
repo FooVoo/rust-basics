@@ -15,7 +15,7 @@ pub trait Printable {
 // Blanket implementation for types that implement Display
 impl<T: Display> Printable for T {
     fn print(&self) -> String {
-        format!("Printing: {}", self)
+        todo!("Implement print")
     }
 }
 
@@ -30,7 +30,7 @@ pub trait PrettyPrint {
 // Conditional implementation: Wrapper<T> gets PrettyPrint if T: Display
 impl<T: Display> PrettyPrint for Wrapper<T> {
     fn pretty_print(&self) -> String {
-        format!("Container[{}]", self.get())
+        todo!("Implement pretty_print")
     }
 }
 
@@ -40,13 +40,13 @@ pub struct Wrapper<T> {
 
 impl<T> Wrapper<T> {
     pub fn new(value: T) -> Self {
-        Wrapper { value }
+        todo!("Implement new")
     }
 }
 
 impl<T> Container<T> for Wrapper<T> {
     fn get(&self) -> &T {
-        &self.value
+        todo!("Implement get")
     }
 }
 
@@ -63,7 +63,7 @@ where
     type Item = T;
     
     fn sum(&self) -> Self::Item {
-        self.iter().fold(T::default(), |acc, &x| acc + x)
+        todo!("Implement sum")
     }
 }
 

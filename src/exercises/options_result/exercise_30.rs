@@ -19,21 +19,15 @@ pub enum Validation<T, E> {
 impl<T, E> Validation<T, E> {
     /// Map over the success value.
     pub fn map<U>(self, f: impl FnOnce(T) -> U) -> Validation<U, E> {
-        match self {
-            Validation::Success(val) => Validation::Success(f(val)),
-            Validation::Failure(errs) => Validation::Failure(errs),
-        }
+        todo!("Implement map")
     }
 
     /// Apply a fallible function.
     pub fn and_then<U>(
         self,
         f: impl FnOnce(T) -> Validation<U, E>,
-    ) -> Validation<U, E> {
-        match self {
-            Validation::Success(val) => f(val),
-            Validation::Failure(errs) => Validation::Failure(errs),
-        }
+    ) -> Validation<U, E>  {
+        todo!("Apply a fallible function.")
     }
 
     /// Combine two Validations, accumulating errors.
@@ -41,70 +35,29 @@ impl<T, E> Validation<T, E> {
         self,
         other: Validation<U, E>,
         f: impl FnOnce(T, U) -> R,
-    ) -> Validation<R, E> {
-        match (self, other) {
-            (Validation::Success(a), Validation::Success(b)) => {
-                Validation::Success(f(a, b))
-            }
-            (Validation::Failure(mut e1), Validation::Failure(e2)) => {
-                e1.extend(e2);
-                Validation::Failure(e1)
-            }
-            (Validation::Failure(e), _) | (_, Validation::Failure(e)) => {
-                Validation::Failure(e)
-            }
-        }
+    ) -> Validation<R, E>  {
+        todo!("Combine two Validations, accumulating errors.")
     }
 }
 
 /// Validate that a number is positive.
 pub fn validate_positive(n: i32) -> Validation<i32, String> {
-    if n > 0 {
-        Validation::Success(n)
-    } else {
-        Validation::Failure(vec![format!("{} is not positive", n)])
-    }
+    todo!("Implement validate_positive")
 }
 
 /// Validate that a number is even.
 pub fn validate_even(n: i32) -> Validation<i32, String> {
-    if n % 2 == 0 {
-        Validation::Success(n)
-    } else {
-        Validation::Failure(vec![format!("{} is not even", n)])
-    }
+    todo!("Implement validate_even")
 }
 
 /// Combine multiple validations, accumulating all errors.
 pub fn validate_all(numbers: Vec<i32>) -> Validation<Vec<i32>, String> {
-    let mut successes = Vec::new();
-    let mut errors = Vec::new();
-
-    for n in numbers {
-        match validate_positive(n) {
-            Validation::Success(val) => match validate_even(val) {
-                Validation::Success(v) => successes.push(v),
-                Validation::Failure(mut e) => errors.append(&mut e),
-            },
-            Validation::Failure(mut e) => errors.append(&mut e),
-        }
-    }
-
-    if errors.is_empty() {
-        Validation::Success(successes)
-    } else {
-        Validation::Failure(errors)
-    }
+    todo!("Implement validate_all")
 }
 
 /// Implement a monadic pipeline with custom error handling.
 pub fn complex_pipeline(a: i32, b: i32) -> Validation<String, String> {
-    validate_positive(a)
-        .and_then(|x| validate_even(x).map(|_| x))
-        .combine(
-            validate_positive(b).and_then(|y| validate_even(y).map(|_| y)),
-            |x, y| format!("Result: {} + {} = {}", x, y, x + y),
-        )
+    todo!("Implement complex_pipeline")
 }
 
 #[cfg(test)]

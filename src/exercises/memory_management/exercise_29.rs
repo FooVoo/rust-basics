@@ -15,8 +15,8 @@ impl<F> StringFn for F where F: Fn(&str) -> String {}
 pub fn apply_to_all<F>(strings: &[String], f: F) -> Vec<String>
 where
     F: for<'a> Fn(&'a str) -> String,
-{
-    strings.iter().map(|s| f(s)).collect()
+ {
+    todo!("Apply a function to multiple strings.")
 }
 
 pub trait Mapper<T> {
@@ -31,7 +31,7 @@ pub struct RefMapper<F> {
 
 impl<F> RefMapper<F> {
     pub fn new(func: F) -> Self {
-        RefMapper { func }
+        todo!("Implement new")
     }
 }
 
@@ -43,13 +43,13 @@ where
     type Output = U;
     
     fn map(&self, input: &T) -> U {
-        (self.func)(input)
+        todo!("Implement map")
     }
 }
 
 /// Create a mapper that converts strings to uppercase.
 pub fn create_uppercase_mapper() -> RefMapper<impl for<'a> Fn(&'a str) -> String> {
-    RefMapper::new(|s: &str| s.to_uppercase())
+    todo!("Implement create_uppercase_mapper")
 }
 
 pub struct Comparator<F> {
@@ -58,7 +58,7 @@ pub struct Comparator<F> {
 
 impl<F> Comparator<F> {
     pub fn new(compare: F) -> Self {
-        Comparator { compare }
+        todo!("Implement new")
     }
 }
 
@@ -66,33 +66,33 @@ impl<F> Comparator<F> {
     pub fn are_equal<T: ?Sized>(&self, a: &T, b: &T) -> bool
     where
         F: for<'a, 'b> Fn(&'a T, &'b T) -> bool,
-    {
-        (self.compare)(a, b)
+     {
+        todo!("Implement are_equal")
     }
     
     pub fn find_equal<'s, T>(&self, items: &'s [T], target: &T) -> Option<&'s T>
     where
         F: for<'a, 'b> Fn(&'a T, &'b T) -> bool,
-    {
-        items.iter().find(|item| (self.compare)(item, target))
+     {
+        todo!("Implement find_equal")
     }
 }
 
 /// Compare two strings ignoring case.
 pub fn case_insensitive_compare(a: &str, b: &str) -> bool {
-    a.to_lowercase() == b.to_lowercase()
+    todo!("Implement case_insensitive_compare")
 }
 
 pub fn create_string_comparator() -> Comparator<impl for<'a, 'b> Fn(&'a str, &'b str) -> bool> {
-    Comparator::new(case_insensitive_compare)
+    todo!("Implement create_string_comparator")
 }
 
 /// Process data with a higher-rank function.
 pub fn process_with_hrtb<F, T, U>(items: &[T], processor: F) -> Vec<U>
 where
     F: for<'a> Fn(&'a T) -> U,
-{
-    items.iter().map(|item| processor(item)).collect()
+ {
+    todo!("Process data with a higher-rank function.")
 }
 
 #[cfg(test)]

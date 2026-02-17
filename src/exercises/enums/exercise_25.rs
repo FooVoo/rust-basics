@@ -18,58 +18,32 @@ pub enum OrderState {
 impl OrderState {
     /// Creates a new pending order
     pub fn new(items: Vec<String>, total: f64) -> Self {
-        OrderState::Pending { items, total }
+        todo!("Implement new")
     }
 
     /// Processes the order
     pub fn process(self, order_id: u64) -> Result<Self, String> {
-        match self {
-            OrderState::Pending { items, .. } => {
-                Ok(OrderState::Processing { order_id, items })
-            }
-            _ => Err("Can only process pending orders".to_string()),
-        }
+        todo!("Implement process")
     }
 
     /// Ships the order
     pub fn ship(self, tracking_number: String) -> Result<Self, String> {
-        match self {
-            OrderState::Processing { order_id, .. } => Ok(OrderState::Shipped {
-                order_id,
-                tracking_number,
-            }),
-            _ => Err("Can only ship processing orders".to_string()),
-        }
+        todo!("Implement ship")
     }
 
     /// Marks the order as delivered
     pub fn deliver(self, delivery_date: String) -> Result<Self, String> {
-        match self {
-            OrderState::Shipped { order_id, .. } => Ok(OrderState::Delivered {
-                order_id,
-                delivery_date,
-            }),
-            _ => Err("Can only deliver shipped orders".to_string()),
-        }
+        todo!("Implement deliver")
     }
 
     /// Cancels the order
     pub fn cancel(self, reason: String) -> Result<Self, String> {
-        match self {
-            OrderState::Delivered { .. } => Err("Cannot cancel delivered orders".to_string()),
-            _ => Ok(OrderState::Cancelled { reason }),
-        }
+        todo!("Implement cancel")
     }
 
     /// Returns the order status as a string
     pub fn status(&self) -> &'static str {
-        match self {
-            OrderState::Pending { .. } => "pending",
-            OrderState::Processing { .. } => "processing",
-            OrderState::Shipped { .. } => "shipped",
-            OrderState::Delivered { .. } => "delivered",
-            OrderState::Cancelled { .. } => "cancelled",
-        }
+        todo!("Implement status")
     }
 }
 

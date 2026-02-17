@@ -17,35 +17,23 @@ pub enum MathError {
 
 impl fmt::Display for MathError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            MathError::DivisionByZero => write!(f, "Cannot divide by zero"),
-            MathError::NegativeSquareRoot => write!(f, "Cannot take square root of negative number"),
-            MathError::Overflow => write!(f, "Arithmetic overflow occurred"),
-        }
+        todo!("Implement fmt")
     }
 }
 
 /// Safe division operation
 pub fn divide(a: f64, b: f64) -> Result<f64, MathError> {
-    if b == 0.0 {
-        Err(MathError::DivisionByZero)
-    } else {
-        Ok(a / b)
-    }
+    todo!("Implement divide")
 }
 
 /// Safe square root operation
 pub fn sqrt(x: f64) -> Result<f64, MathError> {
-    if x < 0.0 {
-        Err(MathError::NegativeSquareRoot)
-    } else {
-        Ok(x.sqrt())
-    }
+    todo!("Implement sqrt")
 }
 
 /// Safe checked addition
 pub fn checked_add(a: i32, b: i32) -> Result<i32, MathError> {
-    a.checked_add(b).ok_or(MathError::Overflow)
+    todo!("Implement checked_add")
 }
 
 #[cfg(test)]

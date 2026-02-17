@@ -12,24 +12,7 @@ use std::thread;
 
 /// Increment an atomic counter from multiple threads.
 pub fn atomic_counter(n_threads: usize, increments_per_thread: usize) -> usize {
-    let counter = Arc::new(AtomicUsize::new(0));
-
-    let handles: Vec<_> = (0..n_threads)
-        .map(|_| {
-            let counter = Arc::clone(&counter);
-            thread::spawn(move || {
-                for _ in 0..increments_per_thread {
-                    counter.fetch_add(1, Ordering::SeqCst);
-                }
-            })
-        })
-        .collect();
-
-    for handle in handles {
-        handle.join().unwrap();
-    }
-
-    counter.load(Ordering::SeqCst)
+    todo!("Implement atomic_counter")
 }
 
 #[cfg(test)]

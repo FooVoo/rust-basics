@@ -8,12 +8,12 @@
 
 /// Keep only even numbers, return None for odd numbers.
 pub fn keep_even(value: Option<i32>) -> Option<i32> {
-    value.filter(|&x| x % 2 == 0)
+    todo!("Implement keep_even")
 }
 
 /// Keep only positive numbers.
 pub fn keep_positive(value: Option<i32>) -> Option<i32> {
-    value.filter(|&x| x > 0)
+    todo!("Implement keep_positive")
 }
 
 #[cfg(test)]

@@ -15,62 +15,45 @@ pub enum List<T> {
 impl<T> List<T> {
     /// Creates an empty list
     pub fn new() -> Self {
-        List::Nil
+        todo!("Implement new")
     }
 
     /// Adds an element to the front of the list
     pub fn cons(value: T, list: List<T>) -> Self {
-        List::Cons(value, Box::new(list))
+        todo!("Implement cons")
     }
 
     /// Returns the length of the list
     pub fn len(&self) -> usize {
-        match self {
-            List::Nil => 0,
-            List::Cons(_, tail) => 1 + tail.len(),
-        }
+        todo!("Implement len")
     }
 
     /// Returns true if the list is empty
     pub fn is_empty(&self) -> bool {
-        matches!(self, List::Nil)
+        todo!("Implement is_empty")
     }
 
     /// Gets the first element
     pub fn head(&self) -> Option<&T> {
-        match self {
-            List::Nil => None,
-            List::Cons(value, _) => Some(value),
-        }
+        todo!("Implement head")
     }
 
     /// Gets the tail of the list
     pub fn tail(&self) -> Option<&List<T>> {
-        match self {
-            List::Nil => None,
-            List::Cons(_, tail) => Some(tail),
-        }
+        todo!("Implement tail")
     }
 }
 
 impl<T: Clone> List<T> {
     /// Converts the list to a vector
     pub fn to_vec(&self) -> Vec<T> {
-        let mut result = Vec::new();
-        let mut current = self;
-        while let List::Cons(value, tail) = current {
-            result.push(value.clone());
-            current = tail;
-        }
-        result
+        todo!("Implement to_vec")
     }
 }
 
 /// Creates a list from a vector
 pub fn from_vec<T>(vec: Vec<T>) -> List<T> {
-    vec.into_iter()
-        .rev()
-        .fold(List::new(), |acc, item| List::cons(item, acc))
+    todo!("Implement from_vec")
 }
 
 #[cfg(test)]

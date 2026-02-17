@@ -15,30 +15,27 @@ pub struct Pair<T, U> {
 impl<T, U> Pair<T, U> {
     /// Creates a new Pair.
     pub fn new(first: T, second: U) -> Self {
-        Pair { first, second }
+        todo!("Implement new")
     }
 
     /// Returns references to both values.
     pub fn get_both(&self) -> (&T, &U) {
-        (&self.first, &self.second)
+        todo!("Implement get_both")
     }
 
     /// Returns a reference to the first value.
     pub fn first(&self) -> &T {
-        &self.first
+        todo!("Implement first")
     }
 
     /// Returns a reference to the second value.
     pub fn second(&self) -> &U {
-        &self.second
+        todo!("Implement second")
     }
 
     /// Swaps the pair.
     pub fn swap(self) -> Pair<U, T> {
-        Pair {
-            first: self.second,
-            second: self.first,
-        }
+        todo!("Implement swap")
     }
 }
 

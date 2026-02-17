@@ -11,14 +11,7 @@ use std::thread;
 /// Spawn a thread that panics if value is negative, otherwise returns value * 2.
 /// Return Ok with the result, or Err if the thread panicked.
 pub fn safe_compute(value: i32) -> Result<i32, String> {
-    let handle = thread::spawn(move || {
-        if value < 0 {
-            panic!("Negative value!");
-        }
-        value * 2
-    });
-
-    handle.join().map_err(|_| "Thread panicked".to_string())
+    todo!("Implement safe_compute")
 }
 
 #[cfg(test)]

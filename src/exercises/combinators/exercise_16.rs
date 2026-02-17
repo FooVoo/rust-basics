@@ -8,16 +8,12 @@
 
 /// Parse only if string is not empty.
 pub fn parse_non_empty(s: &str) -> Result<Option<i32>, std::num::ParseIntError> {
-    if s.is_empty() {
-        Ok(None)
-    } else {
-        Some(s.parse::<i32>()).transpose()
-    }
+    todo!("Implement parse_non_empty")
 }
 
 /// Get and parse first element.
 pub fn parse_first(strings: &[&str]) -> Result<Option<i32>, std::num::ParseIntError> {
-    strings.first().map(|s| s.parse::<i32>()).transpose()
+    todo!("Implement parse_first")
 }
 
 #[cfg(test)]

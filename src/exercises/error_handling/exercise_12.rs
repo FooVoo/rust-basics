@@ -18,49 +18,14 @@ pub enum EmailError {
 
 impl std::fmt::Display for EmailError {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            EmailError::Empty => write!(f, "Email cannot be empty"),
-            EmailError::NoAtSign => write!(f, "Email must contain @ sign"),
-            EmailError::MultipleAtSigns => write!(f, "Email cannot contain multiple @ signs"),
-            EmailError::NoUsername => write!(f, "Email must have a username before @"),
-            EmailError::NoDomain => write!(f, "Email must have a domain after @"),
-            EmailError::InvalidDomain => write!(f, "Domain must contain at least one dot"),
-        }
+        todo!("Implement fmt")
     }
 }
 
 /// Validate an email address.
 /// Must have format: username@domain.tld
 pub fn validate_email(email: &str) -> Result<String, EmailError> {
-    if email.is_empty() {
-        return Err(EmailError::Empty);
-    }
-    
-    let at_count = email.matches('@').count();
-    if at_count == 0 {
-        return Err(EmailError::NoAtSign);
-    }
-    if at_count > 1 {
-        return Err(EmailError::MultipleAtSigns);
-    }
-    
-    let parts: Vec<&str> = email.split('@').collect();
-    let username = parts[0];
-    let domain = parts[1];
-    
-    if username.is_empty() {
-        return Err(EmailError::NoUsername);
-    }
-    
-    if domain.is_empty() {
-        return Err(EmailError::NoDomain);
-    }
-    
-    if !domain.contains('.') {
-        return Err(EmailError::InvalidDomain);
-    }
-    
-    Ok(email.to_string())
+    todo!("Implement validate_email")
 }
 
 #[cfg(test)]

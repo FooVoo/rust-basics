@@ -16,17 +16,17 @@ pub struct DropCounter {
 
 impl DropCounter {
     pub fn new(name: String, counter: Arc<AtomicUsize>) -> Self {
-        DropCounter { name, counter }
+        todo!("Implement new")
     }
     
     pub fn name(&self) -> &str {
-        &self.name
+        todo!("Implement name")
     }
 }
 
 impl Drop for DropCounter {
     fn drop(&mut self) {
-        self.counter.fetch_add(1, Ordering::SeqCst);
+        todo!("Implement drop")
     }
 }
 
@@ -37,33 +37,27 @@ pub struct Resource {
 
 impl Resource {
     pub fn new(id: u32, size: usize) -> Self {
-        Resource {
-            id,
-            data: vec![0; size],
-        }
+        todo!("Implement new")
     }
     
     pub fn id(&self) -> u32 {
-        self.id
+        todo!("Implement id")
     }
     
     pub fn size(&self) -> usize {
-        self.data.len()
+        todo!("Implement size")
     }
 }
 
 impl Drop for Resource {
     fn drop(&mut self) {
-        // Simulate cleanup
-        self.data.clear();
+        todo!("Implement drop")
     }
 }
 
 /// Create and drop a resource, returning its ID.
 pub fn use_resource(id: u32) -> u32 {
-    let resource = Resource::new(id, 1024);
-    resource.id()
-    // resource is dropped here
+    todo!("Implement use_resource")
 }
 
 #[cfg(test)]

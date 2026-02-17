@@ -13,54 +13,28 @@ pub struct Parser<'a> {
 
 impl<'a> Parser<'a> {
     pub fn new(content: &'a str) -> Self {
-        Parser {
-            content,
-            position: 0,
-        }
+        todo!("Implement new")
     }
     
     pub fn take_while<F>(&mut self, predicate: F) -> &'a str
     where
         F: Fn(char) -> bool,
-    {
-        let start = self.position;
-        while self.position < self.content.len() {
-            if let Some(ch) = self.content[self.position..].chars().next() {
-                if predicate(ch) {
-                    self.position += ch.len_utf8();
-                } else {
-                    break;
-                }
-            } else {
-                break;
-            }
-        }
-        &self.content[start..self.position]
+     {
+        todo!("Implement take_while")
     }
     
     pub fn skip_whitespace(&mut self) {
-        self.take_while(|c| c.is_whitespace());
+        todo!("Implement skip_whitespace")
     }
     
     pub fn remaining(&self) -> &'a str {
-        &self.content[self.position..]
+        todo!("Implement remaining")
     }
 }
 
 /// Parse words from text.
 pub fn parse_words<'a>(parser: &mut Parser<'a>) -> Vec<&'a str> {
-    let mut words = Vec::new();
-    loop {
-        parser.skip_whitespace();
-        if parser.remaining().is_empty() {
-            break;
-        }
-        let word = parser.take_while(|c| !c.is_whitespace());
-        if !word.is_empty() {
-            words.push(word);
-        }
-    }
-    words
+    todo!("Implement parse_words")
 }
 
 pub struct Splitter<'text> {
@@ -70,11 +44,11 @@ pub struct Splitter<'text> {
 
 impl<'text> Splitter<'text> {
     pub fn new(text: &'text str, delimiter: char) -> Self {
-        Splitter { text, delimiter }
+        todo!("Implement new")
     }
     
     pub fn split(&self) -> Vec<&'text str> {
-        self.text.split(self.delimiter).collect()
+        todo!("Implement split")
     }
 }
 

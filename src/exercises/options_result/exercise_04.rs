@@ -8,17 +8,17 @@
 
 /// Get a value from Option or return a default.
 pub fn get_or_default(opt: Option<i32>, default: i32) -> i32 {
-    opt.unwrap_or(default)
+    todo!("Implement get_or_default")
 }
 
 /// Get the first element of a slice, or 0 if empty.
 pub fn first_or_zero(numbers: &[i32]) -> i32 {
-    numbers.first().copied().unwrap_or(0)
+    todo!("Implement first_or_zero")
 }
 
 /// Parse a string to i32, returning 0 on failure.
 pub fn parse_or_zero(s: &str) -> i32 {
-    s.parse().unwrap_or(0)
+    todo!("Implement parse_or_zero")
 }
 
 #[cfg(test)]

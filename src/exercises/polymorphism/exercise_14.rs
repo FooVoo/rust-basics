@@ -19,11 +19,11 @@ pub struct EmailTask {
 
 impl Task for EmailTask {
     fn execute(&self) -> String {
-        format!("Sending email to {} with subject: {}", self.to, self.subject)
+        todo!("Implement execute")
     }
     
     fn priority(&self) -> u32 {
-        self.priority
+        todo!("Implement priority")
     }
 }
 
@@ -35,11 +35,11 @@ pub struct FileTask {
 
 impl Task for FileTask {
     fn execute(&self) -> String {
-        format!("Performing {} on file: {}", self.operation, self.filename)
+        todo!("Implement execute")
     }
     
     fn priority(&self) -> u32 {
-        self.priority
+        todo!("Implement priority")
     }
 }
 
@@ -50,11 +50,11 @@ pub struct DatabaseTask {
 
 impl Task for DatabaseTask {
     fn execute(&self) -> String {
-        format!("Executing query: {}", self.query)
+        todo!("Implement execute")
     }
     
     fn priority(&self) -> u32 {
-        self.priority
+        todo!("Implement priority")
     }
 }
 
@@ -65,31 +65,23 @@ pub struct TaskQueue {
 
 impl TaskQueue {
     pub fn new() -> Self {
-        TaskQueue { tasks: Vec::new() }
+        todo!("Implement new")
     }
     
     pub fn add_task(&mut self, task: Box<dyn Task>) {
-        self.tasks.push(task);
+        todo!("Implement add_task")
     }
     
     pub fn execute_all(&self) -> Vec<String> {
-        self.tasks.iter().map(|task| task.execute()).collect()
+        todo!("Implement execute_all")
     }
     
     pub fn execute_by_priority(&self) -> Vec<String> {
-        let mut tasks_with_priority: Vec<_> = self.tasks.iter()
-            .map(|task| (task.priority(), task))
-            .collect();
-        
-        tasks_with_priority.sort_by(|a, b| b.0.cmp(&a.0));
-        
-        tasks_with_priority.iter()
-            .map(|(_, task)| task.execute())
-            .collect()
+        todo!("Implement execute_by_priority")
     }
     
     pub fn count(&self) -> usize {
-        self.tasks.len()
+        todo!("Implement count")
     }
 }
 

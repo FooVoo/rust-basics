@@ -8,7 +8,7 @@
 
 /// Creates a vector with n default values.
 pub fn create_defaults<T: Default>(n: usize) -> Vec<T> {
-    (0..n).map(|_| T::default()).collect()
+    todo!("Implement create_defaults")
 }
 
 /// A generic wrapper that can reset to default.
@@ -19,34 +19,32 @@ pub struct Resettable<T: Default> {
 impl<T: Default> Resettable<T> {
     /// Creates a new Resettable with the given value.
     pub fn new(value: T) -> Self {
-        Resettable { value }
+        todo!("Implement new")
     }
 
     /// Creates a Resettable with the default value.
     pub fn default() -> Self {
-        Resettable {
-            value: T::default(),
-        }
+        todo!("Implement default")
     }
 
     /// Returns a reference to the value.
     pub fn get(&self) -> &T {
-        &self.value
+        todo!("Implement get")
     }
 
     /// Sets a new value.
     pub fn set(&mut self, value: T) {
-        self.value = value;
+        todo!("Implement set")
     }
 
     /// Resets the value to default.
     pub fn reset(&mut self) {
-        self.value = T::default();
+        todo!("Implement reset")
     }
 
     /// Consumes self and returns the value.
     pub fn into_inner(self) -> T {
-        self.value
+        todo!("Implement into_inner")
     }
 }
 

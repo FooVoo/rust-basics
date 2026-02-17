@@ -11,14 +11,7 @@ use std::thread;
 /// Spawn N threads, each computing i*i for i in 0..n.
 /// Return a vector with all results in order.
 pub fn parallel_squares(n: usize) -> Vec<usize> {
-    let handles: Vec<_> = (0..n)
-        .map(|i| thread::spawn(move || i * i))
-        .collect();
-
-    handles
-        .into_iter()
-        .map(|h| h.join().unwrap())
-        .collect()
+    todo!("Implement parallel_squares")
 }
 
 #[cfg(test)]

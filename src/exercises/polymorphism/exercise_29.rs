@@ -20,11 +20,11 @@ pub struct Add {
 
 impl Operation for Add {
     fn execute(&self) -> i32 {
-        self.a + self.b
+        todo!("Implement execute")
     }
     
     fn name(&self) -> &'static str {
-        "Add"
+        todo!("Implement name")
     }
 }
 
@@ -35,11 +35,11 @@ pub struct Multiply {
 
 impl Operation for Multiply {
     fn execute(&self) -> i32 {
-        self.a * self.b
+        todo!("Implement execute")
     }
     
     fn name(&self) -> &'static str {
-        "Multiply"
+        todo!("Implement name")
     }
 }
 
@@ -50,29 +50,27 @@ pub struct Subtract {
 
 impl Operation for Subtract {
     fn execute(&self) -> i32 {
-        self.a - self.b
+        todo!("Implement execute")
     }
     
     fn name(&self) -> &'static str {
-        "Subtract"
+        todo!("Implement name")
     }
 }
 
 /// Static dispatch - compiler knows exact type, can inline
 pub fn execute_static<T: Operation>(op: &T) -> (i32, &'static str) {
-    (op.execute(), op.name())
+    todo!("Implement execute_static")
 }
 
 /// Dynamic dispatch - runtime lookup through vtable
 pub fn execute_dynamic(op: &dyn Operation) -> (i32, &'static str) {
-    (op.execute(), op.name())
+    todo!("Implement execute_dynamic")
 }
 
 /// Demonstrate fat pointer - trait object contains both data pointer and vtable pointer
 pub fn analyze_trait_object_size() -> (usize, usize) {
-    let concrete_size = std::mem::size_of::<Add>();
-    let trait_object_size = std::mem::size_of::<&dyn Operation>();
-    (concrete_size, trait_object_size)
+    todo!("Implement analyze_trait_object_size")
 }
 
 /// Collection using dynamic dispatch - heterogeneous
@@ -82,33 +80,20 @@ pub struct OperationChain {
 
 impl OperationChain {
     pub fn new() -> Self {
-        OperationChain {
-            operations: Vec::new(),
-        }
+        todo!("Implement new")
     }
     
     pub fn add_operation(&mut self, op: Box<dyn Operation>) {
-        self.operations.push(op);
+        todo!("Implement add_operation")
     }
     
     pub fn execute_all(&self) -> Vec<(i32, &'static str)> {
-        self.operations
-            .iter()
-            .map(|op| (op.execute(), op.name()))
-            .collect()
+        todo!("Implement execute_all")
     }
     
     /// Demonstrate vtable indirection for each call
     pub fn execute_with_logging(&self) -> Vec<String> {
-        self.operations
-            .iter()
-            .map(|op| {
-                // Each method call goes through vtable
-                let result = op.execute();
-                let name = op.name();
-                format!("{}: {}", name, result)
-            })
-            .collect()
+        todo!("Implement execute_with_logging")
     }
 }
 
@@ -127,26 +112,26 @@ pub struct MultiImpl {
 
 impl MultiMethod for MultiImpl {
     fn method1(&self) -> i32 {
-        self.value * 1
+        todo!("Implement method1")
     }
     fn method2(&self) -> i32 {
-        self.value * 2
+        todo!("Implement method2")
     }
     fn method3(&self) -> i32 {
-        self.value * 3
+        todo!("Implement method3")
     }
     fn method4(&self) -> i32 {
-        self.value * 4
+        todo!("Implement method4")
     }
 }
 
 /// Demonstrate vtable overhead
 pub fn call_all_methods_static(obj: &MultiImpl) -> Vec<i32> {
-    vec![obj.method1(), obj.method2(), obj.method3(), obj.method4()]
+    todo!("Implement call_all_methods_static")
 }
 
 pub fn call_all_methods_dynamic(obj: &dyn MultiMethod) -> Vec<i32> {
-    vec![obj.method1(), obj.method2(), obj.method3(), obj.method4()]
+    todo!("Implement call_all_methods_dynamic")
 }
 
 /// Show object safety and vtable requirements
@@ -161,19 +146,17 @@ pub struct VTableImpl {
 
 impl ObjectSafeVTable for VTableImpl {
     fn process(&self, value: i32) -> i32 {
-        value * self.multiplier
+        todo!("Implement process")
     }
     
     fn get_multiplier(&self) -> i32 {
-        self.multiplier
+        todo!("Implement get_multiplier")
     }
 }
 
 /// Demonstrate trait object coercion
 pub fn demonstrate_coercion() -> Box<dyn Operation> {
-    // Concrete type is coerced to trait object
-    // VTable is constructed at this point
-    Box::new(Add { a: 10, b: 20 })
+    todo!("Implement demonstrate_coercion")
 }
 
 #[cfg(test)]

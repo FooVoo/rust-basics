@@ -8,7 +8,7 @@
 
 /// A generic function that duplicates a value.
 pub fn duplicate<T: Clone>(value: T) -> (T, T) {
-    (value.clone(), value)
+    todo!("Implement duplicate")
 }
 
 /// A generic struct that stores a cloneable value and provides a duplicate.
@@ -19,22 +19,22 @@ pub struct Duplicator<T: Clone> {
 impl<T: Clone> Duplicator<T> {
     /// Creates a new Duplicator.
     pub fn new(value: T) -> Self {
-        Duplicator { original: value }
+        todo!("Implement new")
     }
 
     /// Returns a clone of the original value.
     pub fn get_copy(&self) -> T {
-        self.original.clone()
+        todo!("Implement get_copy")
     }
 
     /// Returns a reference to the original value.
     pub fn get_ref(&self) -> &T {
-        &self.original
+        todo!("Implement get_ref")
     }
 
     /// Creates a vector with n copies of the value.
     pub fn make_copies(&self, n: usize) -> Vec<T> {
-        vec![self.original.clone(); n]
+        todo!("Implement make_copies")
     }
 }
 

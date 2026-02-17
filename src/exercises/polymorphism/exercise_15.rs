@@ -11,19 +11,19 @@ pub trait Measurable {
     fn height(&self) -> f64;
     
     fn area(&self) -> f64 {
-        self.width() * self.height()
+        todo!("Implement area")
     }
     
     fn perimeter(&self) -> f64 {
-        2.0 * (self.width() + self.height())
+        todo!("Implement perimeter")
     }
     
     fn is_square(&self) -> bool {
-        (self.width() - self.height()).abs() < 0.001
+        todo!("Implement is_square")
     }
     
     fn is_larger_than(&self, other: &impl Measurable) -> bool {
-        self.area() > other.area()
+        todo!("Implement is_larger_than")
     }
 }
 
@@ -34,11 +34,11 @@ pub struct Rectangle {
 
 impl Measurable for Rectangle {
     fn width(&self) -> f64 {
-        self.width
+        todo!("Implement width")
     }
     
     fn height(&self) -> f64 {
-        self.height
+        todo!("Implement height")
     }
 }
 
@@ -49,27 +49,21 @@ pub struct Monitor {
 
 impl Measurable for Monitor {
     fn width(&self) -> f64 {
-        self.width_inches
+        todo!("Implement width")
     }
     
     fn height(&self) -> f64 {
-        self.height_inches
+        todo!("Implement height")
     }
     
     // Override area to compute diagonal
     fn area(&self) -> f64 {
-        (self.width_inches.powi(2) + self.height_inches.powi(2)).sqrt()
+        todo!("Implement area")
     }
 }
 
 pub fn compare_sizes<T: Measurable, U: Measurable>(a: &T, b: &U) -> String {
-    if a.area() > b.area() {
-        format!("First is larger: {} vs {}", a.area(), b.area())
-    } else if a.area() < b.area() {
-        format!("Second is larger: {} vs {}", b.area(), a.area())
-    } else {
-        "Both are equal in size".to_string()
-    }
+    todo!("Implement compare_sizes")
 }
 
 #[cfg(test)]

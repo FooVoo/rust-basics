@@ -21,47 +21,32 @@ pub enum JsonValue {
 impl JsonValue {
     /// Returns true if the value is null
     pub fn is_null(&self) -> bool {
-        matches!(self, JsonValue::Null)
+        todo!("Implement is_null")
     }
 
     /// Gets a value from an object by key
     pub fn get(&self, key: &str) -> Option<&JsonValue> {
-        match self {
-            JsonValue::Object(map) => map.get(key),
-            _ => None,
-        }
+        todo!("Implement get")
     }
 
     /// Gets a value from an array by index
     pub fn get_index(&self, index: usize) -> Option<&JsonValue> {
-        match self {
-            JsonValue::Array(vec) => vec.get(index),
-            _ => None,
-        }
+        todo!("Implement get_index")
     }
 
     /// Extracts a string value
     pub fn as_string(&self) -> Option<&str> {
-        match self {
-            JsonValue::String(s) => Some(s),
-            _ => None,
-        }
+        todo!("Implement as_string")
     }
 
     /// Extracts a number value
     pub fn as_number(&self) -> Option<f64> {
-        match self {
-            JsonValue::Number(n) => Some(*n),
-            _ => None,
-        }
+        todo!("Implement as_number")
     }
 
     /// Extracts a boolean value
     pub fn as_bool(&self) -> Option<bool> {
-        match self {
-            JsonValue::Bool(b) => Some(*b),
-            _ => None,
-        }
+        todo!("Implement as_bool")
     }
 }
 
