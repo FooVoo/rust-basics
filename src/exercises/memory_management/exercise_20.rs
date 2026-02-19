@@ -32,7 +32,9 @@ impl DataStore {
     }
     
     pub fn iter(&self) -> impl Iterator<Item = &String> {
-        todo!("Implement iter")
+        todo!("Implement iter");
+        #[allow(unreachable_code)]
+        self.data.iter()
     }
 }
 

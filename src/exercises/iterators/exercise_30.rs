@@ -125,7 +125,9 @@ where
     T: Clone,
     U: Clone,
  {
-    todo!("Utility function to create a cartesian product.")
+    todo!("Utility function to create a cartesian product.");
+    #[allow(unreachable_code)]
+    std::iter::empty()
 }
 
 /// Utility to merge and deduplicate sorted iterators.
@@ -133,7 +135,9 @@ pub fn merge_unique<I>(iterators: Vec<I>) -> impl Iterator<Item = i32>
 where
     I: Iterator<Item = i32>,
  {
-    todo!("Utility to merge and deduplicate sorted iterators.")
+    todo!("Utility to merge and deduplicate sorted iterators.");
+    #[allow(unreachable_code)]
+    std::iter::empty()
 }
 
 #[cfg(test)]

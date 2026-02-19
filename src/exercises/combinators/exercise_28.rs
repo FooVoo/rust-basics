@@ -30,7 +30,9 @@ pub fn kleisli_compose<T, U, V>(
     f: impl FnOnce(T) -> Option<U>,
     g: impl FnOnce(U) -> Option<V>,
 ) -> impl FnOnce(T) -> Option<V>  {
-    todo!("Kleisli composition - compose two functions that return Options.")
+    todo!("Kleisli composition - compose two functions that return Options.");
+    #[allow(unreachable_code)]
+    move |_: T| { let _ = (f, g); None }
 }
 
 #[cfg(test)]

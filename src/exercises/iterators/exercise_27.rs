@@ -53,14 +53,18 @@ where
 
 /// Create a lazy chain of operations.
 pub fn lazy_pipeline(numbers: &[i32]) -> impl Iterator<Item = i32> + '_ {
-    todo!("Implement lazy_pipeline")
+    todo!("Implement lazy_pipeline");
+    #[allow(unreachable_code)]
+    numbers.iter().copied()
 }
 
 /// Build frequency map lazily.
 pub fn frequency_map_lazy<'a>(
     words: &'a [&'a str],
 ) -> impl Iterator<Item = (&'a str, usize)> + 'a  {
-    todo!("Build frequency map lazily.")
+    todo!("Build frequency map lazily.");
+    #[allow(unreachable_code)]
+    words.iter().map(|&w| (w, 0usize))
 }
 
 #[cfg(test)]

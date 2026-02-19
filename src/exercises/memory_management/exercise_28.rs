@@ -76,7 +76,9 @@ impl<F: FnOnce()> Drop for ScopeGuard<F> {
 
 /// Create a scope guard that increments a counter on drop.
 pub fn create_counter_guard(counter: &mut i32) -> ScopeGuard<impl FnOnce() + '_> {
-    todo!("Implement create_counter_guard")
+    todo!("Implement create_counter_guard");
+    #[allow(unreachable_code)]
+    ScopeGuard::new(move || { let _ = counter; })
 }
 
 #[cfg(test)]
