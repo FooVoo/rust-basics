@@ -94,7 +94,7 @@ where
  {
     todo!("A combinator that chains two processors.");
     #[allow(unreachable_code)]
-    move |_: &str| { let _ = (&f, &g); String::new() }
+    move |_: &str| String::new()
 }
 
 /// Applies a function to each element with borrowed context.

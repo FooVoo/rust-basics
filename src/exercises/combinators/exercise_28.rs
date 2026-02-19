@@ -32,7 +32,7 @@ pub fn kleisli_compose<T, U, V>(
 ) -> impl FnOnce(T) -> Option<V>  {
     todo!("Kleisli composition - compose two functions that return Options.");
     #[allow(unreachable_code)]
-    move |_: T| { let _ = (f, g); None }
+    move |_: T| None
 }
 
 #[cfg(test)]
