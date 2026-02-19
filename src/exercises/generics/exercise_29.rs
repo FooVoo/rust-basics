@@ -92,7 +92,9 @@ where
     F: for<'a> Fn(&'a str) -> String,
     G: Fn(&str) -> String,
  {
-    todo!("A combinator that chains two processors.")
+    todo!("A combinator that chains two processors.");
+    #[allow(unreachable_code)]
+    move |_: &str| String::new()
 }
 
 /// Applies a function to each element with borrowed context.

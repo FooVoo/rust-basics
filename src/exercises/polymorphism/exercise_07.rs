@@ -33,12 +33,16 @@ impl Drawable for Rectangle {
 
 /// Returns a Circle that implements Drawable
 pub fn create_circle(radius: f64) -> impl Drawable {
-    todo!("Implement create_circle")
+    todo!("Implement create_circle");
+    #[allow(unreachable_code)]
+    Circle { radius }
 }
 
 /// Returns a Rectangle that implements Drawable
 pub fn create_rectangle(width: f64, height: f64) -> impl Drawable {
-    todo!("Implement create_rectangle")
+    todo!("Implement create_rectangle");
+    #[allow(unreachable_code)]
+    Rectangle { width, height }
 }
 
 /// Function that uses the returned trait object

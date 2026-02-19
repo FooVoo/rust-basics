@@ -55,7 +55,9 @@ pub fn kleisli_compose<A, B, C>(
     f: impl Fn(A) -> Option<B>,
     g: impl Fn(B) -> Option<C>,
 ) -> impl Fn(A) -> Option<C>  {
-    todo!("Kleisli composition: compose two monadic functions.")
+    todo!("Kleisli composition: compose two monadic functions.");
+    #[allow(unreachable_code)]
+    move |_: A| None
 }
 
 #[cfg(test)]

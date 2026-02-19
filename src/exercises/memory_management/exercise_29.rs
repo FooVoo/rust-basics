@@ -49,7 +49,9 @@ where
 
 /// Create a mapper that converts strings to uppercase.
 pub fn create_uppercase_mapper() -> RefMapper<impl for<'a> Fn(&'a str) -> String> {
-    todo!("Implement create_uppercase_mapper")
+    todo!("Implement create_uppercase_mapper");
+    #[allow(unreachable_code)]
+    RefMapper::new(|_: &str| String::new())
 }
 
 pub struct Comparator<F> {
@@ -84,7 +86,9 @@ pub fn case_insensitive_compare(a: &str, b: &str) -> bool {
 }
 
 pub fn create_string_comparator() -> Comparator<impl for<'a, 'b> Fn(&'a str, &'b str) -> bool> {
-    todo!("Implement create_string_comparator")
+    todo!("Implement create_string_comparator");
+    #[allow(unreachable_code)]
+    Comparator::new(|_: &str, _: &str| false)
 }
 
 /// Process data with a higher-rank function.

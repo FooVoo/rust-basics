@@ -107,28 +107,33 @@ cd rust-basics
 cargo build
 ```
 
+The project compiles successfully out of the box — all exercises use `todo!()` placeholders that compile but panic at runtime, enabling a proper TDD workflow.
+
 ## 📖 How to Use
 
 ### TDD Workflow (Red-Green-Refactor)
 
-This project follows the Test-Driven Development methodology:
+This project follows the **Test-Driven Development** methodology. Every exercise has pre-written tests and function skeletons with `todo!()` markers. Your goal is to replace each `todo!()` with a working implementation.
 
-1. **🔴 Red**: Run tests to see what needs to be implemented
+1. **🔴 Red** — Pick an exercise and run its tests to see failures:
    ```bash
-   cargo test
+   cargo test enums::exercise_01
    ```
    Tests will fail with `todo!()` panic messages indicating what to implement.
 
-2. **🟢 Green**: Implement the function to make tests pass
+2. **🟢 Green** — Implement the function to make the tests pass:
    - Open the exercise file (e.g., `src/exercises/enums/exercise_01.rs`)
+   - Read the documentation, function signatures, and test cases
    - Replace the `todo!()` macro with your implementation
-   - Run tests again to verify your solution
+   - Run the tests again to verify your solution
 
-3. **♻️ Refactor**: Improve your implementation while keeping tests passing
+3. **♻️ Refactor** — Improve your implementation while keeping tests green:
+   - Simplify logic, remove duplication, use idiomatic Rust patterns
+   - Re-run the tests to ensure nothing broke
 
 ### Running Tests
 
-Run all tests:
+Run all tests (most will fail until you implement the exercises):
 ```bash
 cargo test
 ```
@@ -140,9 +145,9 @@ cargo test async_rust
 cargo test error_handling
 ```
 
-Run a specific exercise test:
+Run tests for a single exercise:
 ```bash
-cargo test exercise_01
+cargo test enums::exercise_01
 ```
 
 Run tests with output:
@@ -185,23 +190,28 @@ mod tests {
 ```
 rust-basics/
 ├── Cargo.toml              # Project configuration and dependencies
+├── README.md               # This file
+├── TRANSFORMATION_SUMMARY.md # Details on the TDD transformation
 ├── src/
-│   ├── lib.rs             # Library root
-│   ├── main.rs            # Main entry point
-│   └── exercises/         # Exercise modules
-│       ├── mod.rs         # Exercise module definitions
-│       ├── async_rust/    # 30 async/await exercises
-│       ├── combinators/   # 30 combinator exercises
-│       ├── enums/         # 30 enum exercises
-│       ├── error_handling/# 30 error handling exercises
-│       ├── generics/      # 30 generic exercises
-│       ├── iterators/     # 30 iterator exercises
+│   ├── lib.rs              # Library root — declares exercise modules
+│   ├── main.rs             # Default binary entry point
+│   ├── bin/
+│   │   └── traits/
+│   │       └── bin.rs      # Traits exploration binary (cargo run --bin traits)
+│   └── exercises/          # Exercise modules (330 exercises total)
+│       ├── mod.rs          # Exercise module declarations
+│       ├── async_rust/     # 30 async/await exercises
+│       ├── combinators/    # 30 combinator exercises
+│       ├── enums/          # 30 enum exercises
+│       ├── error_handling/ # 30 error handling exercises
+│       ├── generics/       # 30 generic exercises
+│       ├── iterators/      # 30 iterator exercises
 │       ├── memory_management/ # 30 ownership/lifetime exercises
-│       ├── options_result/# 30 Option/Result exercises
-│       ├── polymorphism/  # 30 polymorphism exercises
-│       ├── smart_pointers/# 30 smart pointer exercises
-│       └── threads/       # 30 threading exercises
-└── README.md              # This file
+│       ├── options_result/ # 30 Option/Result exercises
+│       ├── polymorphism/   # 30 polymorphism exercises
+│       ├── smart_pointers/ # 30 smart pointer exercises
+│       └── threads/        # 30 threading exercises
+└── Cargo.lock              # Dependency lock file
 ```
 
 ## 🎓 Difficulty Levels
